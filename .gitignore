@@ -34,3 +34,5 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+src/home_page/dev.db

@@ -1,6 +1,7 @@
 var RssReader = {
     init: function () {
         $(document).on('click', '.feed-expand', RssReader.feedExpand);
+        $(document).on('click', '.feed-refresh', RssReader.refreshFeed);
     },
     feedExpand: function(event) {
         event.preventDefault();
@@ -22,7 +23,13 @@ var RssReader = {
             $(entry_wrapper).addClass('hidden');
             $(entry_wrapper).removeClass('visible');
             $(target_a).children('.icon-minus').addClass('icon-plus');
-            $(target_a).children('.icon-minus').removeClass('icon-minus');    
+            $(target_a).children('.icon-minus').removeClass('icon-minus');
         }
     },
+    refreshFeed: function(event) {
+        event.preventDefault();
+        feed = $(event.target).parents('.feed');
+        url = feed.data('url');
+        feed.load(url);
+    }
 };

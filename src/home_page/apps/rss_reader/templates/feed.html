@@ -1,13 +1,22 @@
-<div><H2><a href="{{rss_feed.website_url}}">{{rss_feed.name}}</a></H2>
-{% for entry in rss_feed.get_entries|slice:":10" %}
-  <div class="entry">
-	  <a href="#" class="btn btn-mini feed-expand"><i class="icon-plus"></i></a>
-	  <div class="title"><a href="{{entry.link}}">{{entry.title}}</a></div>
-	  <div class="entry_wrapper hidden" style="display:none">
-	  {% autoescape off %}
-	    {{entry.content}}
-	  {% endautoescape %}
-	  </div>
-  </div>
-{% endfor %}
+<div>
+    <div class="row-fluid">
+        <div class="span7">
+            <H2>
+                <a href="{{rss_feed.website_url}}">{{rss_feed.name}}</a>
+                <a class="btn btn-small feed-refresh" href="#"><i class="icon-refresh"></i></a>
+            </H2>
+        </div>
+        <div class="span5"><small>Last updated: {{last_updated}}</small></div>
+    </div>
+    {% for entry in rss_feed.get_entries|slice:":10" %}
+    <div class="entry">
+        <a href="#" class="btn btn-mini feed-expand"><i class="icon-plus"></i></a>
+        <div class="title"><a href="{{entry.link}}">{{entry.title}}</a></div>
+        <div class="entry_wrapper hidden" style="display:none">
+            {% autoescape off %}
+            {{entry.content}}
+            {% endautoescape %}
+        </div>
+    </div>
+    {% endfor %}
 </div>
