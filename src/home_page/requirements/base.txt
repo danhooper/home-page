@@ -17,3 +17,4 @@ django-debug-toolbar==1.0.1
 django-stronghold==0.2.4
 django-user-accounts==1.0c4
 pylint==1.1.0
+django-bootstrap-form==3.1
