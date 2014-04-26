@@ -8,7 +8,7 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
-        
+
         <link rel="stylesheet" href="{{ STATIC_URL }}home_page/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,13 +29,13 @@
         {% endblock %}
     </head>
     <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
-        
+
         {% block topbar_base %}
             <div class="topbar">
                 <div class="fill">
                     <div class="container">
                         {% block topbar %}
-                            <h3><a href="{% url home %}">{{ SITE_NAME }}</a></h3>
+                            <h3><a href="{% url "home" %}">{{ SITE_NAME }}</a></h3>
                             {% block nav %}{% endblock %}
                             {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
                         {% endblock %}
@@ -43,7 +43,7 @@
                 </div>
             </div>
         {% endblock %}
-        
+
         {% block body_base %}
             <div class="container-fluid">
                 {% include "_messages.html" %}
@@ -51,7 +51,7 @@
                 {% endblock %}
             </div>
         {% endblock %}
-        
+
         {% block footer_base %}
             <div id="footer">
                 <div class="inner">
@@ -61,7 +61,7 @@
                 </div>
             </div>
         {% endblock %}
-        
+
         {% block extra_body_base %}
             {% block extra_body %}{% endblock %}
         {% endblock %}

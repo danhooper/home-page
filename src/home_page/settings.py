@@ -79,9 +79,8 @@ STATICFILES_DIRS = [
 
 
 STATICFILES_FINDERS = [
-    "staticfiles.finders.FileSystemFinder",
-    "staticfiles.finders.AppDirectoriesFinder",
-    "staticfiles.finders.LegacyAppDirectoriesFinder",
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     "compressor.finders.CompressorFinder",
 ]
 
@@ -98,8 +97,8 @@ SECRET_KEY = "!1t))7bgvn_vilvwhn*85cqfe*1syo*2e^izc*=9ut+usun07h"
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
-    "django.template.loaders.filesystem.load_template_source",
-    "django.template.loaders.app_directories.load_template_source",
+    "django.template.loaders.filesystem.Loader",
+    "django.template.loaders.app_directories.Loader",
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -109,6 +108,8 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
+    "account.middleware.LocaleMiddleware",
+    "account.middleware.TimezoneMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
@@ -125,11 +126,12 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
+    "django.core.context_processors.static",
     "django.contrib.messages.context_processors.messages",
 
-    "staticfiles.context_processors.static",
 
     "pinax.core.context_processors.pinax_settings",
+    "account.context_processors.account",
 ]
 
 INSTALLED_APPS = [
@@ -141,6 +143,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.humanize",
+    "django.contrib.staticfiles",
 
     "pinax.templatetags",
 
@@ -148,10 +151,10 @@ INSTALLED_APPS = [
     "pinax_theme_bootstrap",
 
     # external
-    "staticfiles",
     "compressor",
     "debug_toolbar",
     "south",
+    'account',
 
     # Pinax
 
