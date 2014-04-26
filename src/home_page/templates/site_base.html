@@ -1,5 +1,25 @@
 {% extends "theme_base.html" %}
-{% block account_bar %}{% endblock %}
+{% load account_tags %}
+{% block navbar_brand %}
+<a class="navbar-brand" href="#">Home Page</a>
+{% endblock %}
+{% block navbar_links %}
+<ul class="nav navbar-nav">
+    <li>Test</li>
+</ul>
+{% endblock %}
+{% block navbar_right %}
+<ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li>
+            <p class="navbar-text navbar-right">
+            Welcome <a href="#" class="navbar-link">{{user}}</a>
+            </p>
+        </li>
+        <li><a href="{% url 'account_logout' %}">Logout</a></li>
+        {% endif %}
+</ul>
+{% endblock %}
 {% block extra_head_base %}
 <link rel="stylesheet" href="{{ STATIC_URL }}home_page/css/home_page.css">
 <script src="{{ STATIC_URL }}home_page/js/home_page.js"></script>

@@ -3,9 +3,9 @@
     {% if forloop.counter0|divisibleby:"3" %}
     <div class="row-fluid">
     {% endif %}
-	 <div class="span4 feed" id="{{feed.name}}" data-url="{{feed.get_absolute_url}}">
+	 <div class="col-md-4 feed" id="{{feed.name}}" data-url="{{feed.get_absolute_url}}">
 	 </div>
-  
+
     {% if forloop.last or forloop.counter|divisibleby:"3" %}
     </div>
     {% endif %}
