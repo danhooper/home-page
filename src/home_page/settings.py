@@ -110,7 +110,6 @@ MIDDLEWARE_CLASSES = [
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
     "account.middleware.LocaleMiddleware",
     "account.middleware.TimezoneMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "home_page.urls"
@@ -152,9 +151,9 @@ INSTALLED_APPS = [
 
     # external
     "compressor",
-    "debug_toolbar",
     "south",
     'account',
+    'debug_toolbar',
 
     # Pinax
 
@@ -170,9 +169,7 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 EMAIL_BACKEND = "mailer.backend.DbBackend"
 
-DEBUG_TOOLBAR_CONFIG = {
-    "INTERCEPT_REDIRECTS": False,
-}
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
