@@ -12,7 +12,6 @@ var HomePage = {
     },
     loadRSSFeeds: function() {
         $('.feed').each(function () {
-            $('.feed').empty();
             $(this).load($(this).data('url'));
         });
         setTimeout(function() {
