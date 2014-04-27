@@ -1,15 +1,14 @@
-.feed-container, .website-health-container{
-    border:2px solid;
-    border-radius:7px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-.title {
-    padding-left: 35px;
-}
 .feed-expand {
     float: left;
+    margin-right: 10px;
 }
 .entry {
     min-height: 40px;
+}
+.panel-heading h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.feed-container {
+    min-height: 200px;
 }
