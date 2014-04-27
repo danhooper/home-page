@@ -1,27 +1,17 @@
-{% extends "theme_base.html" %}
+{% extends "base.html" %}
 {% load account_tags %}
-{% block navbar_brand %}
+{% block site_brand %}
 <a class="navbar-brand" href="#">Home Page</a>
 {% endblock %}
-{% block navbar_links %}
+{% block nav %}
 <ul class="nav navbar-nav">
 </ul>
 {% endblock %}
-{% block navbar_right %}
-<ul class="nav navbar-nav navbar-right">
-        {% if user.is_authenticated %}
-        <li>
-            <p class="navbar-text navbar-right">
-            Welcome <a href="#" class="navbar-link">{{user}}</a>
-            </p>
-        </li>
-        <li><a href="{% url 'account_logout' %}">Logout</a></li>
-        {% endif %}
-</ul>
-{% endblock %}
 {% block extra_head_base %}
-<link rel="stylesheet" href="{{ STATIC_URL }}home_page/css/home_page.css">
-<script src="{{ STATIC_URL }}home_page/js/home_page.js"></script>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/home_page.css">
+{% endblock %}
+{% block extra_script %}
+<script src="{{ STATIC_URL }}js/home_page.js"></script>
 <script src="{{ STATIC_URL }}js/website_health.js"></script>
 <script src="{{ STATIC_URL }}js/rss_reader.js"></script>
 {% endblock %}

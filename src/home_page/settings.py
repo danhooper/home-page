@@ -76,6 +76,7 @@ STATIC_URL = "/home_page/static/"
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'apps', 'website_health', 'static'),
     os.path.join(PROJECT_ROOT, 'apps', 'rss_reader', 'static'),
+    os.path.join(PROJECT_ROOT, 'home_page_static'),
 ]
 
 
