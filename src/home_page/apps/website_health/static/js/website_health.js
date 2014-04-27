@@ -14,6 +14,7 @@ var WebsiteHealth = {
                         numGood += 1
                         $(elem).appendTo('#website_good_pages');
                     } else {
+                        $(elem).appendTo('#website_bad_pages');
                         numBad += 1;
                     }
                     $(elem).children('.result').text(data['health']);

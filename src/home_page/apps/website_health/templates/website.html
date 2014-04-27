@@ -1,21 +1,18 @@
-<div class="website-health-container">
-    <div class="row">
-        <div class="col-md-7">
-            <H2>{{website.name}}</H2>
-        </div>
-    </div>
-    <div id="website_health_report"></div>
-    <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Good Pages</a><br/>
-    <div class="result hidden" id="website_good_pages"></div>
-    <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Bad Pages</a><br/>
-    <div class="result hidden" id="website_bad_pages"></div>
-    <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Checking</a><br/>
-    <div class="result hidden"  id="website_checking_pages">
-    {% for link in website.get_links%}
-        <div class="website_health_link" data-link-url="{{link.link}}">{{ link }}
-            <div class="result">Checking...</div>
-        </div>
-    {% endfor %}
+{% include "website_header.html" %}
+<div class="panel-body">
+    <div class="website-health-container">
+        <div id="website_health_report"></div>
+        <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Good Pages</a><br/>
+        <div class="result hidden" id="website_good_pages"></div>
+        <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Bad Pages</a><br/>
+        <div class="result hidden" id="website_bad_pages"></div>
+        <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Checking</a><br/>
+        <div class="result hidden"  id="website_checking_pages">
+        {% for link in website.get_links%}
+            <div class="website_health_link" data-link-url="{{link.link}}">{{ link }}
+                <div class="result">Checking...</div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 <script type="text/javascript">

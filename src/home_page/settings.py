@@ -161,6 +161,7 @@ INSTALLED_APPS = [
     # Pinax
 
     # project
+   'apps.home_page_base',
    'apps.rss_reader',
    'apps.website_health',
 ]

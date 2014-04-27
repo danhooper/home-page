@@ -3,8 +3,11 @@
     {% if forloop.counter0|divisibleby:"3" %}
     <div class="row">
     {% endif %}
-	 <div class="col-md-4 website" id="{{websitename}}" data-url="{{website.get_absolute_url}}">
-	 </div>
+    <div class="col-md-4">
+        <div class="panel panel-info website" id="{{websitename}}" data-url="{{website.get_absolute_url}}">
+        {% include "website_header.html" %}
+        </div>
+    </div>
     {% if forloop.last or forloop.counter|divisibleby:"3" %}
     </div>
     {% endif %}

@@ -1,0 +1,12 @@
+{% extends "home_page_base_header.html" %}
+{% block left_header %}
+<H2>
+    <a href="{{rss_feed.website_url}}">{{rss_feed.name}}</a>
+    <a class="btn btn-default btn-sm feed-refresh" href="#">
+        <span class="glyphicon glyphicon-refresh"></span>
+    </a>
+</H2>
+{% endblock %}
+{% block right_header %}
+<small>Last updated: {{last_updated}}</small>
+{% endblock %}
