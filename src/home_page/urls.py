@@ -20,13 +20,15 @@ handler500 = "pinax.views.server_error"
 
 urlpatterns = patterns(
     "",
-    url(r"^$", TemplateView.as_view(template_name="homepage.html"),
+    url(r"^%s/$" % settings.SITE_ROOT,
+        TemplateView.as_view(template_name="homepage.html"),
         name="home"),
-    url(r"^admin/", include(admin.site.urls)),
+    url(r"^%s/admin/" % settings.SITE_ROOT, include(admin.site.urls)),
     url(r'^%s/accounts/' % settings.SITE_ROOT,
         include('account.urls')),
-    (r'^rss_reader/', include(rss_reader_urls)),
-    (r'^website_health/', include(website_health_urls)),
+    url(r'^%s/rss_reader/' % settings.SITE_ROOT, include(rss_reader_urls)),
+    url(r'^%s/website_health/' % settings.SITE_ROOT,
+        include(website_health_urls)),
 )
 
 

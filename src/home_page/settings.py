@@ -49,7 +49,7 @@ TIME_ZONE = "US/Eastern"
 LANGUAGE_CODE = "en-us"
 
 SITE_ID = 1
-SITE_ROOT = ''
+SITE_ROOT = 'home_page'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -70,7 +70,10 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 
 # URL that handles the static files like app media.
 # Example: "http://media.lawrence.com"
-STATIC_URL = "/home_page/static/"
+STATIC_URL = "/%s/static/" % SITE_ROOT
+LOGIN_URL = '/%s/accounts/login' % SITE_ROOT
+LOGOUT_URL = '/%s/accounts/logout' % SITE_ROOT
+ACCOUNT_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
 
 # Additional directories which hold static files
 STATICFILES_DIRS = [
@@ -112,6 +115,7 @@ MIDDLEWARE_CLASSES = [
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
     "account.middleware.LocaleMiddleware",
     "account.middleware.TimezoneMiddleware",
+    "stronghold.middleware.LoginRequiredMiddleware",
 ]
 
 ROOT_URLCONF = "home_page.urls"
@@ -156,6 +160,7 @@ INSTALLED_APPS = [
     "compressor",
     "south",
     'account',
+    'stronghold',
     'debug_toolbar',
 
     # Pinax
@@ -173,7 +178,16 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 EMAIL_BACKEND = "mailer.backend.DbBackend"
 
+STRONGHOLD_PUBLIC_URLS = (
+    r'^%s/%s.+$' % (SITE_ROOT, STATIC_URL),
+    r'^%s/%s.+$' % (SITE_ROOT, MEDIA_URL),
+)
+STRONGHOLD_PUBLIC_NAMED_URLS = (
+    'account_login',
+    'account_signup',
+)
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
