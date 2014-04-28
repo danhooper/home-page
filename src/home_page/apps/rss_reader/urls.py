@@ -10,5 +10,6 @@ from home_page.apps.rss_reader import views
 urlpatterns = patterns(
     "",
     url(r"^$", views.show_feeds, name="show_feeds"),
-    url(r"^feed/(\d+)/$", views.show_feed, name='show_feed')
+    url(r"^feed/(\d+)/$", views.show_feed, name='show_feed'),
+    url(r"^sample/(\w+)/$", views.sample, name='sample'),
 )

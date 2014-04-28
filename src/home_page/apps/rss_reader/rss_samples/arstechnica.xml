@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.arstechnica.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+<channel>
+	<title>Ars Technica</title>
+	
+	<link>http://arstechnica.com</link>
+	<description>The Art of Technology</description>
+	<lastBuildDate>Mon, 28 Apr 2014 11:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9</generator>
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.arstechnica.com/arstechnica/index" /><feedburner:info uri="arstechnica/index" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+		<title>Android laptops? Leaked HP Slatebook 14 runs Google OS on a Tegra SoC</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/91cS7qoZfqk/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/android-laptops-leaked-hp-slatebook-14-runs-google-os-on-a-tegra-soc/#comments</comments>
+		<pubDate>Mon, 28 Apr 2014 11:00:56 +0000</pubDate>
+		<dc:creator><![CDATA[Ron Amadeo]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=453231</guid>
+		<description><![CDATA[14-inch device has a permanently-affixed touchscreen and mobile data connection.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/2014-04-27_23-36-11-640x409.jpg">
+</div>
+ <p>Google's typical mobile computing strategy employs Android for smartphones and tablets, and Chrome OS for laptops (and the occasional all-in-one), but it looks like HP is about to turn this paradigm on its ear.</p>
+<p>If a leaked promotional video found by <a href="http://notebookitalia.it/hp-slatebook-14-androidbook-tegra-full-hd-19512">Notebook Italia</a> (via <a href="http://9to5google.com/2014/04/27/hp-preparing-to-announce-first-google-blessed-touchscreen-android-notebook/">9to5Google</a>) is to be believed, HP is working on an Android-powered laptop that has been blessed by Google. The device, called the HP Slatebook 14, has a touchscreen and is devoid of any convertible shenanigans.</p>
+<p><object id="flashObj" width="640" height="360" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,47,0"><param name="movie" value="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&amp;isUI=1">
+<param name="bgcolor" value="#FFFFFF">
+<param name="flashVars" value="videoId=3507630053001&amp;linkBaseURL=http%3A%2F%2Fh20621.www2.hp.com%2Fvideo-gallery%2Fus%2Fen%2Fproducts%2Flaptops-and-notebooks%2Flaptop%2F3507630053001%2Fhp-slatebook-14-video-demo%2Fvideo%2F&amp;playerID=1111577658001&amp;playerKey=AQ~~,AAABAeI3VIE~,N0OfmZCPaxgxui0PhG4ilXrKUlL_O1tR&amp;domain=embed&amp;dynamicStreaming=true">
+<param name="base" value="http://admin.brightcove.com">
+<param name="seamlesstabbing" value="false">
+<param name="allowFullScreen" value="true">
+<param name="swLiveConnect" value="true">
+<param name="allowScriptAccess" value="always">
+<embed src="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&amp;isUI=1" bgcolor="#FFFFFF" flashvars="videoId=3507630053001&amp;linkBaseURL=http%3A%2F%2Fh20621.www2.hp.com%2Fvideo-gallery%2Fus%2Fen%2Fproducts%2Flaptops-and-notebooks%2Flaptop%2F3507630053001%2Fhp-slatebook-14-video-demo%2Fvideo%2F&amp;playerID=1111577658001&amp;playerKey=AQ~~,AAABAeI3VIE~,N0OfmZCPaxgxui0PhG4ilXrKUlL_O1tR&amp;domain=embed&amp;dynamicStreaming=true" base="http://admin.brightcove.com" name="flashObj" width="640" height="360" seamlesstabbing="false" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" swliveconnect="true" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></embed></object></p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/android-laptops-leaked-hp-slatebook-14-runs-google-os-on-a-tegra-soc/#p3">Read 5 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/android-laptops-leaked-hp-slatebook-14-runs-google-os-on-a-tegra-soc/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=91cS7qoZfqk:C0fmDmNW4iw:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=91cS7qoZfqk:C0fmDmNW4iw:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=91cS7qoZfqk:C0fmDmNW4iw:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=91cS7qoZfqk:C0fmDmNW4iw:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=91cS7qoZfqk:C0fmDmNW4iw:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=91cS7qoZfqk:C0fmDmNW4iw:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/91cS7qoZfqk" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/android-laptops-leaked-hp-slatebook-14-runs-google-os-on-a-tegra-soc/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/android-laptops-leaked-hp-slatebook-14-runs-google-os-on-a-tegra-soc/</feedburner:origLink></item>
+		<item>
+		<title>Fast, but compromised: Gigabyte’s AMD-powered mini gaming PC reviewed</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/Wcw6MYoxvRw/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/fast-but-compromised-gigabytes-amd-powered-mini-gaming-pc-reviewed/#comments</comments>
+		<pubDate>Mon, 28 Apr 2014 01:00:35 +0000</pubDate>
+		<dc:creator><![CDATA[Andrew Cunningham]]></dc:creator>
+				<category><![CDATA[Features]]></category>
+		<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Opposable Thumbs]]></category>
+		<category><![CDATA[AMD]]></category>
+		<category><![CDATA[Gadgetology]]></category>
+		<category><![CDATA[NUC]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=445505</guid>
+		<description><![CDATA[The Brix Gaming box is hobbled by heat, noise, and mediocre Linux support.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/IMG_9188-640x280.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">The Brix Gaming is a photogenic little machine, but it's not quite as good as it needs to be.</div>
+	
+			<div class="caption-credit">
+							Andrew Cunningham				</div>
+	  </div>
+  </div>
+ <p>Mini desktops are a growing market, but so far it's a market that Intel has had the run of. The company's own "<a href="http://arstechnica.com/gadgets/2014/01/smallness-uber-alles-intels-tiny-haswell-based-nuc-desktop-reviewed/">Next Unit of Computing</a>" (NUC) and efforts like <a href="http://arstechnica.com/gadgets/2014/02/a-turbo-charged-quad-core-mini-desktop-gigabytes-brix-pro-reviewed/">Gigabyte's Brix Pro</a> are diminutive but much more capable than the wimpy "<a href="http://en.wikipedia.org/wiki/Nettop">nettops</a>" of yesteryear.</p>
+<p>Now it's time for AMD to get in on the fun. The company sent us two Gigabyte mini PCs that are roughly the same size as the Intel versions, but these machines use AMD A8 chips instead of Intel ones. While the smaller, cheaper <a href="http://www.gigabyte.com/products/product-page.aspx?pid=4748#sp">GB-BXA8-5545</a> (which we'll be reviewing in full in a separate piece) is basically just an AMD version of the NUC, the Brix Gaming (yes, that's the device's full name) is something else altogether. The race-car-red machine combines AMD's CPU with a true dedicated AMD GPU, promising a level of graphics performance that we haven't yet seen in a mini desktop.</p>
+<p>Unfortunately, this is one of those times when reality doesn't quite match expectations. The Brix Gaming does have a much faster GPU than any mini PC we've seen, but it has to make a few too many compromises to get there.</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/fast-but-compromised-gigabytes-amd-powered-mini-gaming-pc-reviewed/#p3">Read 42 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/fast-but-compromised-gigabytes-amd-powered-mini-gaming-pc-reviewed/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Wcw6MYoxvRw:iwWkLkTlz0c:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Wcw6MYoxvRw:iwWkLkTlz0c:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Wcw6MYoxvRw:iwWkLkTlz0c:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Wcw6MYoxvRw:iwWkLkTlz0c:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Wcw6MYoxvRw:iwWkLkTlz0c:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Wcw6MYoxvRw:iwWkLkTlz0c:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/Wcw6MYoxvRw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/fast-but-compromised-gigabytes-amd-powered-mini-gaming-pc-reviewed/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/fast-but-compromised-gigabytes-amd-powered-mini-gaming-pc-reviewed/</feedburner:origLink></item>
+		<item>
+		<title>Video: Ars talks to the experts on Atari’s dump at yesterday’s big dig</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/8MFCCtgHiaw/</link>
+		<comments>http://arstechnica.com/gaming/2014/04/video-ars-talks-to-the-experts-on-ataris-dump-at-yesterdays-big-dig/#comments</comments>
+		<pubDate>Mon, 28 Apr 2014 00:10:09 +0000</pubDate>
+		<dc:creator><![CDATA[Megan Geuss]]></dc:creator>
+				<category><![CDATA[Ars Technica Videos]]></category>
+		<category><![CDATA[Opposable Thumbs]]></category>
+		<category><![CDATA[Atari]]></category>
+		<category><![CDATA[dig]]></category>
+		<category><![CDATA[E.T.]]></category>
+		<category><![CDATA[landfill]]></category>
+		<category><![CDATA[legend]]></category>
+		<category><![CDATA[video]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=453061</guid>
+		<description><![CDATA[In Alamogordo, NM, the people that helped make the dig happen talked to Ars.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/Photo-2-640x427.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							Microsoft				</div>
+	  </div>
+  </div>
+ <p>ALAMOGORDO, NM—When a film crew, a dig crew, and dozens of fans and journalists showed up at a decades-old desert landfill in New Mexico on Saturday, no one was certain what to expect. The <a href="http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/">crowd was hoping to confirm</a> a story that made its way into gaming legend: that Atari dumped thousands, perhaps millions, of <em>E.T.</em> (and perhaps other) cartridges in this particular landfill back in 1983 at the height of the <a href="http://en.wikipedia.org/wiki/North_American_video_game_crash_of_1983">Video Game Crash</a>.</p>
+<p>While the excavation crew was digging down into the 1983 layer of the landfill, Ars got a chance to talk to <em>E.T.</em> programmer Howard Scott Warshaw, who was milling about, talking to fans and press. Warshaw <a href="http://www.avclub.com/article/howard-scott-warshaw-13912">famously claimed</a> that the legend of <em>E.T.</em> cartridge burials was fake. Today, he's a licensed psychotherapist in California and says he aims to help people in high-tech circles work through their problems.</p>
+<p>Perhaps that big-picture view of the industry is what helps him put the legends of <em>E.T.</em> into perspective. "It would be pretty to think that <em>E.T.</em> really was the downfall of the industry and that I, as a programmer, over the course of five weeks, was able to topple a billion-dollar industry. But I also have a degree in economics," Warshaw told Ars yesterday.</p>
+</div><p><a href="http://arstechnica.com/gaming/2014/04/video-ars-talks-to-the-experts-on-ataris-dump-at-yesterdays-big-dig/#p3">Read 9 remaining paragraphs</a> | <a href="http://arstechnica.com/gaming/2014/04/video-ars-talks-to-the-experts-on-ataris-dump-at-yesterdays-big-dig/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8MFCCtgHiaw:zSVA94NQewM:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=8MFCCtgHiaw:zSVA94NQewM:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8MFCCtgHiaw:zSVA94NQewM:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=8MFCCtgHiaw:zSVA94NQewM:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8MFCCtgHiaw:zSVA94NQewM:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8MFCCtgHiaw:zSVA94NQewM:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/8MFCCtgHiaw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gaming/2014/04/video-ars-talks-to-the-experts-on-ataris-dump-at-yesterdays-big-dig/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gaming/2014/04/video-ars-talks-to-the-experts-on-ataris-dump-at-yesterdays-big-dig/</feedburner:origLink></item>
+		<item>
+		<title>Lessons from NYPD Twitter scandal: Careful when asking Internet’s opinion</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/WpbGTIxw-w0/</link>
+		<comments>http://arstechnica.com/business/2014/04/lessons-from-nypd-twitter-scandal-careful-when-asking-internets-opinion-of-you/#comments</comments>
+		<pubDate>Mon, 28 Apr 2014 00:00:51 +0000</pubDate>
+		<dc:creator><![CDATA[Joe Silver]]></dc:creator>
+				<category><![CDATA[Ministry of Innovation]]></category>
+		<category><![CDATA[#mynypd]]></category>
+		<category><![CDATA[social media campaign]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<category><![CDATA[web culture]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=451129</guid>
+		<description><![CDATA[NYPD Twitter flop is the latest PR tweeting bungle. Singer R. Kelly will confirm.  ]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/1.png"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="https://twitter.com/OccupyWallStNYC/status/458684716447973376/photo/1">OccupyWallStNYC/Twitter</a>
+				</div>
+	  </div>
+  </div>
+ <p>The Twitterverse was abuzz Tuesday evening after the New York City Police Department made what it thought was a harmless <a href="https://twitter.com/NYPDnews/status/458665477409996800/photo/1">request to its followers</a>: post pictures that include NYPD officers and use the #MyNYPD hashtag.</p>
+<p>Much to the NYPD’s surprise and chagrin, the simple tweet brought on a torrent of criticism from the Internet. The result was national coverage of hundreds of photos depicting apparent police brutality by NYPD officers, which individuals diligently tweeted with the hashtag #myNYPD.</p>
+<div class="image left medium">
+<a href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD.png"><img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD-300x337.png" srcset="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD.png 2x"></a><div class="caption" style="font-size:0.8em">
+<div class="caption-text"><a href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD.png" class="caption-link" rel="nofollow"></a></div> <div class="caption-credit"><a rel="nofollow" class="caption-link" href="https://twitter.com/NYPDnews/status/458665477409996800/photo/1">NYPD/Twitter</a></div>
+</div>
+</div>
+<div class="image right medium">
+<a href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD-2.png"><img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD-2-300x348.png" srcset="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD-2.png 2x"></a><div class="caption" style="font-size:0.8em">
+<div class="caption-text"><a href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/NYPD-2.png" class="caption-link" rel="nofollow"></a></div> <div class="caption-credit"><a rel="nofollow" class="caption-link" href="https://twitter.com/KimaniFilm/status/458687307013308416/photo/1">KimaniFilm/Twitter</a></div>
+</div>
+</div>
+<p> </p>
+</div><p><a href="http://arstechnica.com/business/2014/04/lessons-from-nypd-twitter-scandal-careful-when-asking-internets-opinion-of-you/#p3">Read 18 remaining paragraphs</a> | <a href="http://arstechnica.com/business/2014/04/lessons-from-nypd-twitter-scandal-careful-when-asking-internets-opinion-of-you/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WpbGTIxw-w0:Ryd1VVKIqzM:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=WpbGTIxw-w0:Ryd1VVKIqzM:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WpbGTIxw-w0:Ryd1VVKIqzM:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=WpbGTIxw-w0:Ryd1VVKIqzM:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WpbGTIxw-w0:Ryd1VVKIqzM:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WpbGTIxw-w0:Ryd1VVKIqzM:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/WpbGTIxw-w0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/business/2014/04/lessons-from-nypd-twitter-scandal-careful-when-asking-internets-opinion-of-you/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/business/2014/04/lessons-from-nypd-twitter-scandal-careful-when-asking-internets-opinion-of-you/</feedburner:origLink></item>
+		<item>
+		<title>Climate change, El Niño, cold winters, and California’s drought</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/QRXpvetWR-Q/</link>
+		<comments>http://arstechnica.com/science/2014/04/climate-change-el-nino-cold-winters-and-californias-drought/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 23:40:39 +0000</pubDate>
+		<dc:creator><![CDATA[Scott K. Johnson]]></dc:creator>
+				<category><![CDATA[Scientific Method]]></category>
+		<category><![CDATA[California]]></category>
+		<category><![CDATA[climate change]]></category>
+		<category><![CDATA[drought]]></category>
+		<category><![CDATA[El Niño]]></category>
+		<category><![CDATA[ENSO]]></category>
+		<category><![CDATA[jet stream]]></category>
+		<category><![CDATA[Weather]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452473</guid>
+		<description><![CDATA[Blame the western Pacific, but climate change might have made it worse. ]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/californiandvia_tmo_2014017-640x853.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Vegetation growth for late January 2014. Brown is below average; green is above average. The green areas in the Sierra Nevada mountains would normally be covered in snow at this time of year.</div>
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://earthobservatory.nasa.gov/IOTD/view.php?id=83124">NASA Earth Observatory/Jesse Allen</a>
+				</div>
+	  </div>
+  </div>
+ <p>It was a winter Charles Dickens would write an opening line about. Parts of the Midwest and Eastern US experienced periods of bitterly cold weather delivered from the Arctic by the <a href="http://en.wikipedia.org/wiki/Jet_stream">jet stream</a>. The West Coast, meanwhile, received very little precipitation—producing a historic drought in California that looms large over the coming summer—as a result of the jet stream zagging in the opposite direction.</p>
+<p>The detours of the jet stream were large, and they were persistent. The northward-bending “ridge” shielded the West Coast from moisture-bearing weather that would normally water the Californian landscape and restock the supply of mountain snow that provides meltwater over the dry summer.</p>
+<p>Many wondered if climate change could be partly responsible—a question that gets asked about every extreme now. It is, as always, a difficult question to answer, considering the inherent and substantial variability of weather. However, it’s also plainly true that average atmospheric conditions have changed over the past century. The hard part is teasing out the contribution of those changing conditions to specific weather events.</p>
+</div><p><a href="http://arstechnica.com/science/2014/04/climate-change-el-nino-cold-winters-and-californias-drought/#p3">Read 10 remaining paragraphs</a> | <a href="http://arstechnica.com/science/2014/04/climate-change-el-nino-cold-winters-and-californias-drought/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QRXpvetWR-Q:VgHWiH1MCXU:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=QRXpvetWR-Q:VgHWiH1MCXU:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QRXpvetWR-Q:VgHWiH1MCXU:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=QRXpvetWR-Q:VgHWiH1MCXU:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QRXpvetWR-Q:VgHWiH1MCXU:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QRXpvetWR-Q:VgHWiH1MCXU:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/QRXpvetWR-Q" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/science/2014/04/climate-change-el-nino-cold-winters-and-californias-drought/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/science/2014/04/climate-change-el-nino-cold-winters-and-californias-drought/</feedburner:origLink></item>
+		<item>
+		<title>Active 0day attack hijacking IE users threatens a quarter of browser market</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/UBQBuGPSwyU/</link>
+		<comments>http://arstechnica.com/security/2014/04/active-0day-attack-hijacking-ie-users-threatens-a-quarter-of-browser-market/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 23:00:36 +0000</pubDate>
+		<dc:creator><![CDATA[Dan Goodin]]></dc:creator>
+				<category><![CDATA[Risk Assessment]]></category>
+		<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[exploits]]></category>
+		<category><![CDATA[internet explorer]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[vulnerabilities]]></category>
+		<category><![CDATA[zero-day]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=453163</guid>
+		<description><![CDATA[No patch available yet for critical bug affecting all supported versions of IE.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/zero-day-ie-640x556.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="https://www.flickr.com/photos/33768647@N04/8353774137/">a_codepoet</a>
+				</div>
+	  </div>
+  </div>
+ <p>Attackers are actively exploiting a previously unknown vulnerability in all supported versions of Internet Explorer that allows them to surreptitiously hijack vulnerable computers, Microsoft warned Sunday.</p>
+<p>The zero-day code-execution hole in IE versions 6 through 11 represents a significant threat to the Internet security because there is currently no fix for the underlying bug, which affects an estimated 26 percent of the total browser market. It's also the first significant vulnerability to target Windows XP users since <a href="http://arstechnica.com/information-technology/2014/04/xpocalypse-now-windows-xp-support-has-ended/">Microsoft withdrew support for that aging OS</a> earlier this month. Users who have the option of using an alternate browser should avoid all use of IE for the time being. Those who remain dependent on the Microsoft browser should immediately install <a href="http://support.microsoft.com/kb/2458544">EMET</a>, Microsoft's freely available toolkit that greatly extends the security of Windows systems.</p>
+<p>The vulnerability is formally indexed as <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1776">CVE-2014-1776</a>. Microsoft has blog posts <a href="https://technet.microsoft.com/en-us/library/security/2963983">here</a>, <a href="http://blogs.technet.com/b/msrc/archive/2014/04/26/microsoft-releases-security-advisory.aspx">here</a>, and <a href="http://blogs.technet.com/b/srd/archive/2014/04/26/more-details-about-security-advisory-2963983-ie-0day.aspx">here</a> that lay out bare bones details uncovered at this early stage in its investigation. Although there is no exploited vulnerability in Adobe Flash, disabling the browser add-on will also neutralize attacks, analysts at security firm FireEye Research Labs wrote in a <a href="http://www.fireeye.com/blog/uncategorized/2014/04/new-zero-day-exploit-targeting-internet-explorer-versions-9-through-11-identified-in-targeted-attacks.html">separate blog post</a> published Sunday. Disabling vector markup language support in IE also mitigates attacks.</p>
+</div><p><a href="http://arstechnica.com/security/2014/04/active-0day-attack-hijacking-ie-users-threatens-a-quarter-of-browser-market/#p3">Read 4 remaining paragraphs</a> | <a href="http://arstechnica.com/security/2014/04/active-0day-attack-hijacking-ie-users-threatens-a-quarter-of-browser-market/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=UBQBuGPSwyU:HQiWvFJMN8w:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=UBQBuGPSwyU:HQiWvFJMN8w:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=UBQBuGPSwyU:HQiWvFJMN8w:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=UBQBuGPSwyU:HQiWvFJMN8w:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=UBQBuGPSwyU:HQiWvFJMN8w:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=UBQBuGPSwyU:HQiWvFJMN8w:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/UBQBuGPSwyU" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/security/2014/04/active-0day-attack-hijacking-ie-users-threatens-a-quarter-of-browser-market/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/security/2014/04/active-0day-attack-hijacking-ie-users-threatens-a-quarter-of-browser-market/</feedburner:origLink></item>
+		<item>
+		<title>Supreme Court to rule on warrantless searches of electronic devices</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/TNVlDV1UvPY/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/supreme-court-to-rule-on-warrantless-searches-of-electronic-devices/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 22:00:36 +0000</pubDate>
+		<dc:creator><![CDATA[David Kravets]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[Fourth Amendment]]></category>
+		<category><![CDATA[Gadgets]]></category>
+		<category><![CDATA[search and seizure]]></category>
+		<category><![CDATA[Supreme Court]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452723</guid>
+		<description><![CDATA[Cops want access, without warrants, to electronic devices of everybody arrested.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/arrested.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="https://secure.flickr.com/photos/perspective/2431586469/in/photolist-4GSvWD-2c5Ydq-ipzNZA-fLALp9-bop3JU-ejxVKE-5iwLyo-BV296-aLc1Di-2Y2K9U-dt5Kjs-5E8G7z-bqW5jS-faBoP8-bzBVgG-6sJ91R-9RWbGL-g7tGdv-an6Cik-jGdjRo-6gnRRR-9WWwLo-mVhn-gbzVsv-eDdWNt-fQ3CVb-niaJ7k-6czZUp-hLgimA-aKxrzi-4UfZRy-a5Nuyy-bDVfK5-bc2ZJv-ceGZCm-7jKDPg-6BsDCr-9Tbdoj-aJE2Yz-bc2T1e-gCuBq2-bc3v9M-7YeUhT-ex7ebU-Pizq6-5vRMxE-576iWJ-aAfKVF-9k3R7C-aszsB9">Elvert Barnes/Flickr</a>
+				</div>
+	  </div>
+  </div>
+ <p>The Supreme Court on Tuesday will take on the digital-age controversy over search and seizure of smartphones and other devices. In two cases coming before the court, warrantless searches of an electronic device not only provided the basis for criminal prosecutions but also strayed from the original reason for the arrests in question.</p>
+<p>President Barack Obama's administration and prosecutors from states across the country have lobbied for police officers to be able to search arrestees' gadgets—at or about the time of arrest—without a warrant. Such action, however, demands an examination of the Fourth Amendment's protection against "unreasonable searches and seizures." If <a href="http://www.pewresearch.org/fact-tank/2013/06/06/cell-phone-ownership-hits-91-of-adults/">nine out of 10 American adults own mobile phones</a> and the devices have advanced to become virtual extensions of our personal and private lives, at what point does law enforcement's access to their call logs, photos, and cloud-hosted data become "unreasonable" invasions of constitutionally protected privacy?</p>
+<p>Much of the attention on the two cases before the Supreme Court surrounds the government's demands to search mobile phones, because those are the most likely device an arrestee would be carrying or handling. Yet the broad dispute should be viewed as a demand for access to <em>all</em> electronic devices.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/supreme-court-to-rule-on-warrantless-searches-of-electronic-devices/#p3">Read 21 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/supreme-court-to-rule-on-warrantless-searches-of-electronic-devices/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=TNVlDV1UvPY:26PFwKNZivQ:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=TNVlDV1UvPY:26PFwKNZivQ:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=TNVlDV1UvPY:26PFwKNZivQ:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=TNVlDV1UvPY:26PFwKNZivQ:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=TNVlDV1UvPY:26PFwKNZivQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=TNVlDV1UvPY:26PFwKNZivQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/TNVlDV1UvPY" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/supreme-court-to-rule-on-warrantless-searches-of-electronic-devices/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/supreme-court-to-rule-on-warrantless-searches-of-electronic-devices/</feedburner:origLink></item>
+		<item>
+		<title>How I used Heartbleed to steal a site’s private crypto key</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/Mv610uSaHxU/</link>
+		<comments>http://arstechnica.com/security/2014/04/how-i-used-heartbleed-to-steal-a-sites-private-crypto-key/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 20:10:15 +0000</pubDate>
+		<dc:creator><![CDATA[Ars Staff]]></dc:creator>
+				<category><![CDATA[Risk Assessment]]></category>
+		<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[cryptography]]></category>
+		<category><![CDATA[heartbleed]]></category>
+		<category><![CDATA[openssl]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452509</guid>
+		<description><![CDATA[Extracting keys from unpatched servers requires skill, but it's eminently doable.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/heartbleed-keys.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							Aurich Lawson / Thinkstock				</div>
+	  </div>
+  </div>
+ <p>By now everyone knows about the OpenSSL <a href="http://heartbleed.com/">Heartbleed </a>vulnerability: a missing bounds check in one of the most popular TLS implementations has made millions of Web servers (and <a href="http://arstechnica.com/security/2014/04/heartbleed-exploited-to-hack-network-with-multifactor-authentication/">more</a>) leak all sorts of sensitive information from memory. This can leak login credentials, authentication cookies, and Web traffic to attackers. But could it be used to recover the site’s TLS private key? This would enable complete decryption of previously-recorded traffic if perfect forward secrecy was not negotiated at the time and otherwise Man-in-The-Middle attacks to all future TLS sessions.</p>
+<p>Since this would be a much more serious consequence of Heartbleed, I decided to investigate. The results were positive: I was able to extract private keys from a test Nginx server after a few days' work. Later I applied my techniques to solve the <a href="http://blog.cloudflare.com/answering-the-critical-question-can-you-get-private-ssl-keys-using-heartbleed">CloudFlare Challenge</a>. Along with a few other security researchers, we independently demonstrated that RSA private keys are indeed at risk. Let's go through the details on how to extract the private key and why the attack is possible.</p>
+<h2>How to extract the private key</h2>
+<p>Readers not familiar with RSA can read about it <a href="http://en.wikipedia.org/wiki/RSA_(cryptosystem)">here</a>. To simplify things a bit, a large (2048 bits) number <em>N</em> is constructed by multiplying together two large randomly generated prime numbers <em>p</em> and <em>q</em>. <em>N</em> is made public while <em>p</em> and <em>q </em>are kept secret. Finding <em>p</em> or <em>q </em>allows recovery of the private key. A generic attack is just factorizing <em>N</em>, but this is believed to be difficult. However, with a vulnerability like Heartbleed, the attack is much simpler: since the Web server needs the private key in memory to sign the TLS handshake, <em>p</em> and <em>q</em> must live in memory and we can try to obtain them with Heartbleed packets. The problem simply becomes how to identify them in the returned data. This is easy, as we know <em>p </em>and <em>q</em> are 1024 bits (128 bytes) long, and OpenSSL <a href="https://www.openssl.org/docs/crypto/bn_internal.html#The_BIGNUM_structure">represents</a> big numbers little-endian in memory. A brute-force approach treating every 128 consecutive bytes in the Heartbleed packets as little-endian numbers and testing if it divides <em>N</em> is sufficient to spot potential leaks. This is how most people solved the CloudFlare challenge.</p>
+</div><p><a href="http://arstechnica.com/security/2014/04/how-i-used-heartbleed-to-steal-a-sites-private-crypto-key/#p3">Read 10 remaining paragraphs</a> | <a href="http://arstechnica.com/security/2014/04/how-i-used-heartbleed-to-steal-a-sites-private-crypto-key/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Mv610uSaHxU:9p6ASQ7W6d4:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Mv610uSaHxU:9p6ASQ7W6d4:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Mv610uSaHxU:9p6ASQ7W6d4:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Mv610uSaHxU:9p6ASQ7W6d4:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Mv610uSaHxU:9p6ASQ7W6d4:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Mv610uSaHxU:9p6ASQ7W6d4:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/Mv610uSaHxU" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/security/2014/04/how-i-used-heartbleed-to-steal-a-sites-private-crypto-key/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/security/2014/04/how-i-used-heartbleed-to-steal-a-sites-private-crypto-key/</feedburner:origLink></item>
+		<item>
+		<title>Monowheels: The coolest deathtrap on one wheel</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/WH_R8jxSRyA/</link>
+		<comments>http://arstechnica.com/business/2014/04/monowheels-the-coolest-deathtrap-on-one-wheel/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 19:30:58 +0000</pubDate>
+		<dc:creator><![CDATA[WIRED UK]]></dc:creator>
+				<category><![CDATA[Ministry of Innovation]]></category>
+		<category><![CDATA[monowheels]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452425</guid>
+		<description><![CDATA[Build a big wheel, put a rider and motor inside, and it's time to roll.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/monowheel.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">A Swiss engineer known as Mr. Gerdes designed this monowheel. It is pictured here, ridden by a man who may or may not be Mr. Gerdes, apparently on a trip to Spain in 1931.</div>
+	
+	  </div>
+  </div>
+ <p>Well sir, there's nothing on earth like a genuine, bona fide, electrified, six-foot monowheel. It's on our list of ideas from early 20th century gearheads that we wish had caught on, if only because they look so cool (definitely not because they're <a href="http://youtu.be/K4YmVP6i4qw?t=2m50s">safe</a>).</p>
+<p>The monowheel became something of a trend between world wars, when excited visions of the future seemed to spring from the joy that there even <em>would</em> be a future. Although dozens of varieties rolled out over the years since the 1860s, you're unlikely to see one. They now exist mostly in patent applications, magazine covers, and a handful of garages. Unsurprisingly, they've made plenty of appearances in sci-fi flicks, adding a measure of cool to <a href="https://badbikegang.files.wordpress.com/2012/05/meninblackintlsmall.jpg">otherwise mediocre movies</a>.</p>
+<p>The basic principle of the monowheel is easy to understand: Build a big enough wheel, and you can put a rider insider of it along with a motor to move the whole works forward. Early versions featured various combinations of motors (gas, electric, pedal-powered) and gear assemblies and are said to have reached speeds up to 93mph—though their manufacturers were known to <a href="http://www.douglas-self.com/MUSEUM/TRANSPORT/motorwhl/odd1b.jpg">claim ludicrous speeds</a>. Some versions were refined into relatively practical, not-totally-guaranteed-to-kill-you ways of getting around, if you're brave enough to hop in.</p>
+</div><p><a href="http://arstechnica.com/business/2014/04/monowheels-the-coolest-deathtrap-on-one-wheel/#p3">Read 6 remaining paragraphs</a> | <a href="http://arstechnica.com/business/2014/04/monowheels-the-coolest-deathtrap-on-one-wheel/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WH_R8jxSRyA:L9rN6XBulUE:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=WH_R8jxSRyA:L9rN6XBulUE:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WH_R8jxSRyA:L9rN6XBulUE:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=WH_R8jxSRyA:L9rN6XBulUE:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WH_R8jxSRyA:L9rN6XBulUE:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=WH_R8jxSRyA:L9rN6XBulUE:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/WH_R8jxSRyA" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/business/2014/04/monowheels-the-coolest-deathtrap-on-one-wheel/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/business/2014/04/monowheels-the-coolest-deathtrap-on-one-wheel/</feedburner:origLink></item>
+		<item>
+		<title>RadiumOne CEO who attacked and abused girlfriend is fired by his board</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/8w6nQpM4U_s/</link>
+		<comments>http://arstechnica.com/business/2014/04/radiumone-ceo-is-fired-after-domestic-violence-convictions/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 18:45:45 +0000</pubDate>
+		<dc:creator><![CDATA[Casey Johnston]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[Ministry of Innovation]]></category>
+		<category><![CDATA[assault]]></category>
+		<category><![CDATA[battery]]></category>
+		<category><![CDATA[domestic abuse]]></category>
+		<category><![CDATA[domestic violence]]></category>
+		<category><![CDATA[gurbaksh chahal]]></category>
+		<category><![CDATA[radiumone]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=453013</guid>
+		<description><![CDATA[Gurbaksh Chahal not only exacted domestic abuse, but he publicly defended it.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/Screen-Shot-2014-04-27-at-2.18.59-PM.png"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Chahal in an interview with Oprah Winfrey, one year before he was brought up on domestic abuse charges. </div>
+	
+	  </div>
+  </div>
+ 
+<p>RadiumOne CEO Gurbaksh Chahal has been fired by the company's board of directors following his domestic abuse charges and conviction, <a href="http://recode.net/2014/04/27/exclusive-ceo-gurbaskh-chahal-fired-by-radiumone-board/">according to Recode</a>. Chahal recently faced 45 felony charges of domestic violence but was convicted of only two misdemeanors, and he has vigorously defended himself over social media and on his own website.</p>
+<p>The news of the domestic abuse case drew an ugly contrast to RadiumOne's <a href="http://valleywag.gawker.com/tech-ceo-dodges-felony-charge-despite-horrifying-abuse-1566515135">progress as a company</a>. The online advertising network was shooting to raise $100 million in an IPO and announced a partnership with Condé Nast, a deal the publishing company was <a href="http://adage.com/article/media/conde-nast-reviewing-relationship-radiumone/292892/">reportedly reconsidering</a> following the conviction (full disclosure: Ars Technica is owned by Condé Nast).</p>
+<p>The case against Chahal centered around a reported 30 minutes of security camera footage that showed Chahal hitting, kicking, and attempting to suffocate his girlfriend, totaling 117 assaults. Chahal's lawyers had the video thrown out under the Fourth Amendment, but there is an extensive description of its contents in the <a href="http://recode.net/2014/04/26/radiumones-all-male-board-is-now-deciding-whether-to-dump-the-ceo-over-domestic-violence-conviction/">criminal complaint</a> (via Scribd, at the bottom of this Recode piece).</p>
+</div><p><a href="http://arstechnica.com/business/2014/04/radiumone-ceo-is-fired-after-domestic-violence-convictions/#p3">Read 3 remaining paragraphs</a> | <a href="http://arstechnica.com/business/2014/04/radiumone-ceo-is-fired-after-domestic-violence-convictions/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8w6nQpM4U_s:mQ9xUqca564:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=8w6nQpM4U_s:mQ9xUqca564:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8w6nQpM4U_s:mQ9xUqca564:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=8w6nQpM4U_s:mQ9xUqca564:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8w6nQpM4U_s:mQ9xUqca564:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=8w6nQpM4U_s:mQ9xUqca564:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/8w6nQpM4U_s" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/business/2014/04/radiumone-ceo-is-fired-after-domestic-violence-convictions/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/business/2014/04/radiumone-ceo-is-fired-after-domestic-violence-convictions/</feedburner:origLink></item>
+		<item>
+		<title>Digging up meaning from the rubble of an excavated Atari landfill</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/soOErulGLi8/</link>
+		<comments>http://arstechnica.com/gaming/2014/04/digging-up-meaning-from-the-rubble-of-an-excavated-atari-landfill/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 15:42:40 +0000</pubDate>
+		<dc:creator><![CDATA[Kyle Orland]]></dc:creator>
+				<category><![CDATA[Opposable Thumbs]]></category>
+		<category><![CDATA[Atari]]></category>
+		<category><![CDATA[landfill]]></category>
+		<category><![CDATA[myth]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452937</guid>
+		<description><![CDATA[Why are we so interested in some buried hunks of plastic and silicon?]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/post-7-640x425.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Gaming archaeologists found a bunch of buried cartridges... but did they find a meaningful story?</div>
+	
+			<div class="caption-credit">
+							Megan Geuss				</div>
+	  </div>
+  </div>
+ <p>In a way, <a href="http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/">yesterday's excavation of Alamogordo, New Mexico's legendary Atari landfill</a> was an important, once-in-a-lifetime moment in video game history. The dig confirms a story that has taken on nearly mythical status in the annals of a still-young video game industry—a powerful physical reminder of the hubris of the company that was on top of the world in 1982 and at the bottom of the literal and metaphorical landfill by September of 1983.</p>
+<p>There's another way you could view it, though: some guys with cameras hired some garbage men to dig up a bunch of 31-year-old junk they knew was there and that no one wanted even when it was new.</p>
+<p>The truth is, there's always been a divergence between the legend of the Atari landfill and the historical facts behind it. The basic existence of the trove of Atari trash that was found yesterday was well-confirmed by contemporaneous news stories at the time. That includes <a href="http://www.nytimes.com/1983/09/28/business/atari-parts-are-dumped.html?scp=3&amp;sq=atari&amp;st=nyt">the oft-cited piece</a> in the paper of record, <i>The New York Times</i>, which even includes confirmation from an Atari spokesperson. The actual reason for the dumping seems to be a simple "unsold goods" tax write-off when Atari closed a west Texas plant in order to move manufacturing overseas.</p>
+</div><p><a href="http://arstechnica.com/gaming/2014/04/digging-up-meaning-from-the-rubble-of-an-excavated-atari-landfill/#p3">Read 14 remaining paragraphs</a> | <a href="http://arstechnica.com/gaming/2014/04/digging-up-meaning-from-the-rubble-of-an-excavated-atari-landfill/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=soOErulGLi8:8i-Au41-HLE:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=soOErulGLi8:8i-Au41-HLE:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=soOErulGLi8:8i-Au41-HLE:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=soOErulGLi8:8i-Au41-HLE:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=soOErulGLi8:8i-Au41-HLE:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=soOErulGLi8:8i-Au41-HLE:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/soOErulGLi8" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gaming/2014/04/digging-up-meaning-from-the-rubble-of-an-excavated-atari-landfill/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gaming/2014/04/digging-up-meaning-from-the-rubble-of-an-excavated-atari-landfill/</feedburner:origLink></item>
+		<item>
+		<title>Speed reading apps may kill comprehension</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/k7xkiB-dQ1A/</link>
+		<comments>http://arstechnica.com/science/2014/04/speed-reading-apps-may-kill-comprehension/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 15:00:38 +0000</pubDate>
+		<dc:creator><![CDATA[John Timmer]]></dc:creator>
+				<category><![CDATA[Scientific Method]]></category>
+		<category><![CDATA[Biology]]></category>
+		<category><![CDATA[Neuroscience]]></category>
+		<category><![CDATA[psychology]]></category>
+		<category><![CDATA[reading]]></category>
+		<category><![CDATA[visual processing]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452329</guid>
+		<description><![CDATA[Lots of words going in won't necessarily mean lots of meaning extracted.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/banner_reference-640x227.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://www.digitalgov.gov/resources/">DigitalGov</a>
+				</div>
+	  </div>
+  </div>
+ <p>A few months back, there was a lot of buzz about a new display technology that promised to greatly increase people's reading speeds. The approach, typified by <a href="http://www.spritzinc.com/">Spritz</a>, displays words one at a time in a single location. As the speed cranks up and words fly by, the service seems to live up to its promise: each word registers as it briefly flits across the screen.</p>
+<p>But a new paper suggests that the approach has some severe limitations. Quite literally, there's no going back once you shoot past a word, and the result is a noticeable decrease in reading comprehension.</p>
+<h2>At war with saccades</h2>
+<p>The point of contention for everyone involved centers on small, rapid eye movements called saccades. Saccades occur naturally in vertebrates from us to fish, as they allow the eye to rapidly focus its attention. These eye movements are central to reading. As you read across a page of normally formatted text, your brain directs your eyes through a series of saccades that focus attention on each succeeding word.</p>
+</div><p><a href="http://arstechnica.com/science/2014/04/speed-reading-apps-may-kill-comprehension/#p3">Read 12 remaining paragraphs</a> | <a href="http://arstechnica.com/science/2014/04/speed-reading-apps-may-kill-comprehension/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=k7xkiB-dQ1A:N5Zxh-1GdR8:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=k7xkiB-dQ1A:N5Zxh-1GdR8:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=k7xkiB-dQ1A:N5Zxh-1GdR8:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=k7xkiB-dQ1A:N5Zxh-1GdR8:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=k7xkiB-dQ1A:N5Zxh-1GdR8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=k7xkiB-dQ1A:N5Zxh-1GdR8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/k7xkiB-dQ1A" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/science/2014/04/speed-reading-apps-may-kill-comprehension/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/science/2014/04/speed-reading-apps-may-kill-comprehension/</feedburner:origLink></item>
+		<item>
+		<title>White House “big data” study to reveal potential for discrimination</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/9a1TG1cVTP0/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/white-house-big-data-study-to-reveal-potential-for-discrimination/#comments</comments>
+		<pubDate>Sun, 27 Apr 2014 04:56:38 +0000</pubDate>
+		<dc:creator><![CDATA[Sam Machkovech]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[NSA]]></category>
+		<category><![CDATA[obama]]></category>
+		<category><![CDATA[White House]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452829</guid>
+		<description><![CDATA[Job- and loan-seekers could be unfairly targeted by "clusters" of economic data.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2011/07/white_house_large.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://www.flickr.com/photos/tom_lohdan/4217661984/">Tom Lohdan</a>
+				</div>
+	  </div>
+  </div>
+ <p>Next week, White House counselor John Podesta is set to present the results of a 90-day "big data" study, commissioned by President Barack Obama in January as part of a wave of <a href="http://arstechnica.com/tech-policy/2014/01/obama-lays-down-new-limits-on-nsa-with-more-reforms-to-come/">NSA reform announcements</a>. According to the <a href="http://hosted.ap.org/dynamic/stories/U/US_WHITE_HOUSE_BIG_DATA?SITE=FLROC&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT">Associated Press</a>, Podesta's study will hinge largely on the discriminatory potential of the mountains of data accumulated by public and private firms alike.</p>
+<p>The study's results could mean changes to federal anti-discrimination laws, particularly in the case of financial and employment policies.</p>
+<p>The AP report used private data clustering as an example of potential abuse, describing customers lumped into an "Ethnic Second-City Struggler" category. Loan applicants could be lumped into that category based on geographic and social-media information, flagging them for higher-interest loans than they'd be offered as anonymous, off-the-street customers.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/white-house-big-data-study-to-reveal-potential-for-discrimination/#p3">Read 4 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/white-house-big-data-study-to-reveal-potential-for-discrimination/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9a1TG1cVTP0:xWNqMm5_mAI:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=9a1TG1cVTP0:xWNqMm5_mAI:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9a1TG1cVTP0:xWNqMm5_mAI:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=9a1TG1cVTP0:xWNqMm5_mAI:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9a1TG1cVTP0:xWNqMm5_mAI:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9a1TG1cVTP0:xWNqMm5_mAI:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/9a1TG1cVTP0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/white-house-big-data-study-to-reveal-potential-for-discrimination/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/white-house-big-data-study-to-reveal-potential-for-discrimination/</feedburner:origLink></item>
+		<item>
+		<title>Facebook-funded Silicon Valley police station, with free Wi-Fi, opens</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/OgMVbCAksUs/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/facebook-funded-silicon-valley-police-station-with-free-wi-fi-opens/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 22:20:44 +0000</pubDate>
+		<dc:creator><![CDATA[Cyrus Farivar]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[Ministry of Innovation]]></category>
+		<category><![CDATA[belle haven]]></category>
+		<category><![CDATA[Facebook]]></category>
+		<category><![CDATA[menlo park]]></category>
+		<category><![CDATA[police]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452813</guid>
+		<description><![CDATA[Rich Menlo Park accepts $600,000 to re-open substation in poorest part of town. ]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/14001262226_5ae35bb9c1_b-640x480.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							Cyrus Farivar				</div>
+	  </div>
+  </div>
+ <p>MENLO PARK, CALIFORNIA—On Saturday, in the presence of area dignitaries, the local police department opened up a new substation in the neighborhood of Belle Haven, just a short block down the street from Facebook’s massive corporate headquarters. This is no ordinary police station. Its <a href="http://www.mercurynews.com/peninsula/ci_25252305/facebook-offers-pay-menlo-park-600-000-hire">renovation, rent, and one officer’s salary</a> have been substantially paid for by Facebook, to the tune of $600,000 over the next two years.</p>
+<p>This wealthy Silicon Valley city of 32,000 people boasts a <a href="http://quickfacts.census.gov/qfd/states/06/0646870.html">median household income</a> of over $113,000. <a href="http://www.keplers.com/">Kepler’s</a>, a well-known independent bookstore, is one of the retail anchors of its downtown corridor. So far this year, the median home sales price in Menlo Park has been <a href="http://www.trulia.com/real_estate/Menlo_Park-California/">$1.5 million</a>.</p>
+<p>A major corporation funding a police department—particularly in a well-to-do city like Menlo Park—seems extremely rare in the United States, if unprecedented.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/facebook-funded-silicon-valley-police-station-with-free-wi-fi-opens/#p3">Read 23 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/facebook-funded-silicon-valley-police-station-with-free-wi-fi-opens/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=OgMVbCAksUs:Ka-NZVKJ2Ok:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=OgMVbCAksUs:Ka-NZVKJ2Ok:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=OgMVbCAksUs:Ka-NZVKJ2Ok:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=OgMVbCAksUs:Ka-NZVKJ2Ok:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=OgMVbCAksUs:Ka-NZVKJ2Ok:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=OgMVbCAksUs:Ka-NZVKJ2Ok:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/OgMVbCAksUs" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/facebook-funded-silicon-valley-police-station-with-free-wi-fi-opens/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/facebook-funded-silicon-valley-police-station-with-free-wi-fi-opens/</feedburner:origLink></item>
+		<item>
+		<title>Here’s what a Facebook-designed Silicon Valley cop shop looks like</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/Gxzm5tDDj7Y/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/heres-what-a-facebook-designed-silicon-valley-cop-shop-looks-like/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 22:19:47 +0000</pubDate>
+		<dc:creator><![CDATA[Cyrus Farivar]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[belle haven]]></category>
+		<category><![CDATA[Facebook]]></category>
+		<category><![CDATA[gallery]]></category>
+		<category><![CDATA[menlo park]]></category>
+		<category><![CDATA[police]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452873</guid>
+		<description><![CDATA[Gallery: Menlo Park police in the Belle Haven district "like" their new digs. ]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">   <div class="gallery">
+    <div class="gallery-main-image">
+      <div class="gallery-image-container">
+        <div class="gallery-image-wrap">
+        <a class="enlarge" href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/14021099412_6cea5f4fc6_b.jpg" data-width="1024" data-height="768">
+          <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/14021099412_6cea5f4fc6_b-980x735.jpg"></a>
+        </div>
+      </div>
+
+    <div class="gallery-image-description">
+          <p class="gallery-image-credit">
+              <em>Cyrus Farivar</em>
+            </p>
+    
+          <p>This is the nerve center of the new Belle Haven substation in Menlo Park.</p>
+        </div>
+
+    </div>
+
+       
+          <p><strong>12 more images in gallery</strong></p>
+      </div>
+    <style type="text/css"> .related-stories { display: none !important; } </style>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/heres-what-a-facebook-designed-silicon-valley-cop-shop-looks-like/">Read on Ars Technica</a> | <a href="http://arstechnica.com/tech-policy/2014/04/heres-what-a-facebook-designed-silicon-valley-cop-shop-looks-like/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Gxzm5tDDj7Y:-Ss6e6s-1Jg:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Gxzm5tDDj7Y:-Ss6e6s-1Jg:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Gxzm5tDDj7Y:-Ss6e6s-1Jg:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Gxzm5tDDj7Y:-Ss6e6s-1Jg:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Gxzm5tDDj7Y:-Ss6e6s-1Jg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Gxzm5tDDj7Y:-Ss6e6s-1Jg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/Gxzm5tDDj7Y" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/heres-what-a-facebook-designed-silicon-valley-cop-shop-looks-like/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/heres-what-a-facebook-designed-silicon-valley-cop-shop-looks-like/</feedburner:origLink></item>
+		<item>
+		<title>Landfill excavation unearths years of crushed Atari treasure [Updated]</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/12FHVV7uq5w/</link>
+		<comments>http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 19:36:41 +0000</pubDate>
+		<dc:creator><![CDATA[Megan Geuss]]></dc:creator>
+				<category><![CDATA[Opposable Thumbs]]></category>
+		<category><![CDATA[Atari]]></category>
+		<category><![CDATA[gallery]]></category>
+		<category><![CDATA[New Mexico]]></category>
+		<category><![CDATA[video game crash]]></category>
+		<category><![CDATA[Xbox Entertainment]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452265</guid>
+		<description><![CDATA[Defying fate: The pits in <em>E.T.</em> were practically impossible to get out of.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/DSC_1810.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							Megan Geuss				</div>
+	  </div>
+  </div>
+ <p>ALAMOGORDO, NM—The legend was true. Atari really did dump a bunch of <em>E.T.</em> and other Atari 2600 cartridges and paraphernalia into a landfill 30 years ago. Today, a team of video game archaeologists recovered the proof.</p>
+<p>With the wind at full blast out in the New Mexico desert, CAT tractors pulled heap after heap of waste from a 30-year-old landfill. It smelled faintly of sewage, and dust was everywhere. Occasionally the tractor dumped a heap off to the side in a cleared space, prompting a gaggle of men in hard hats and safety vests to gather around.</p>
+<p>This team was hired by Fuel Entertainment and Xbox Entertainment Studios to analyze the contents of the landfill, which legend has always said contained truckloads of Atari games, consoles, or factory waste. The two production companies <a href="http://arstechnica.com/gaming/2013/06/film-crew-to-dig-up-atari-landfill-site-maybe-score-3-5-million-copies-of-e-t/">intend to make a documentary</a> on the history of Atari, set to debut sometime this year.</p>
+</div><p><a href="http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/#p3">Read 22 remaining paragraphs</a> | <a href="http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=12FHVV7uq5w:FX5teXyBUEw:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=12FHVV7uq5w:FX5teXyBUEw:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=12FHVV7uq5w:FX5teXyBUEw:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=12FHVV7uq5w:FX5teXyBUEw:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=12FHVV7uq5w:FX5teXyBUEw:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=12FHVV7uq5w:FX5teXyBUEw:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/12FHVV7uq5w" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gaming/2014/04/landfill-excavation-unearths-years-of-crushed-atari-treasure/</feedburner:origLink></item>
+		<item>
+		<title>Reading human history using ancient chicken DNA and chili peppers</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/RRw1E91YN4w/</link>
+		<comments>http://arstechnica.com/science/2014/04/reading-human-history-using-ancient-chicken-dna-and-chili-peppers/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 19:00:53 +0000</pubDate>
+		<dc:creator><![CDATA[Kate Prengaman]]></dc:creator>
+				<category><![CDATA[Scientific Method]]></category>
+		<category><![CDATA[agriculture]]></category>
+		<category><![CDATA[Chickens]]></category>
+		<category><![CDATA[chili peppers]]></category>
+		<category><![CDATA[domestication]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=451997</guid>
+		<description><![CDATA[Studying domestication can shed light on human history.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/Red_jungle_fowl-640x439.png"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">The most likely wild chicken ancestor, photographed in India. </div>
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://commons.wikimedia.org/wiki/File:Red_jungle_fowl.png">Wikimedia Commons/Credit: Subramanya C K</a>
+				</div>
+	  </div>
+  </div>
+ <p>More than 10,000 years ago, our ancestors began to expand their organization of food production—purposefully promoting certain plants and animals they found tasty or useful. Over time, they domesticated those species, inserting human preferences into the process of natural selection.</p>
+<p>We know today that agriculture and domesticated species arose separately in different regions around the world. Grains, beans, and livestock appear to be some of the earliest species domesticated in Southwest Asia, for example. But many questions remain about why humans shifted from hunting and gathering to agriculture and how the process of domesticating species unfolded—a process that, in cases like wheat and rice, appears to have taken more than a thousand years.</p>
+<p>A special section in this week’s <em>Proceedings of the National Academy of Sciences</em> delved into what science has discovered about domestication and how to provide answers to our remaining questions about the lives of prehistoric people and their relationship with the plants and animals around them.</p>
+</div><p><a href="http://arstechnica.com/science/2014/04/reading-human-history-using-ancient-chicken-dna-and-chili-peppers/#p3">Read 12 remaining paragraphs</a> | <a href="http://arstechnica.com/science/2014/04/reading-human-history-using-ancient-chicken-dna-and-chili-peppers/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=RRw1E91YN4w:MjiZEwYkIXA:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=RRw1E91YN4w:MjiZEwYkIXA:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=RRw1E91YN4w:MjiZEwYkIXA:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=RRw1E91YN4w:MjiZEwYkIXA:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=RRw1E91YN4w:MjiZEwYkIXA:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=RRw1E91YN4w:MjiZEwYkIXA:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/RRw1E91YN4w" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/science/2014/04/reading-human-history-using-ancient-chicken-dna-and-chili-peppers/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/science/2014/04/reading-human-history-using-ancient-chicken-dna-and-chili-peppers/</feedburner:origLink></item>
+		<item>
+		<title>Netherlands’ glowing highway gets a temporary lights off</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/ZCqF8mX0Ap4/</link>
+		<comments>http://arstechnica.com/information-technology/2014/04/netherlands-glowing-highway-gets-a-temporary-lights-off/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 18:30:18 +0000</pubDate>
+		<dc:creator><![CDATA[Nathan Mattise]]></dc:creator>
+				<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[glowing highway]]></category>
+		<category><![CDATA[Netherlands]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452651</guid>
+		<description><![CDATA[Special paint isn't handling moisture perfectly and will get further lab work.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/Smart-Highway-dynamic-paint-Studio-Roosegaarde-640x426.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">A mock-up of the glowing highway's potential from its designers.</div>
+	
+			<div class="caption-credit">
+							Studio Roosegaarde				</div>
+	  </div>
+  </div>
+ <p>The glowing roads of Oss aren't working as planned and will be temporarily taken offline <a href="http://nos.nl/artikel/640364-glowing-lines-autoweg-werken-niet.html">according to NOS</a> (Google Translate), an outlet that's part of the Netherlands Public Broadcasting system.</p>
+<p>The roads were only in the experimental phase, integrating a photo-luminescent powder into the paint to create the highway's glowing ability. The current problem is that the light-absorbing stripes on provincial road N329 do not give off a consistent level of light across the 500m (0.3 mile) stretch. NOS reports this is due to the system's inability to deal with moisture, a problem that was anticipated when the experiment started.</p>
+<p>"There's no news yet on how the paint holds up against wear and tear," Wired UK reported when the stripes debuted. "The glow lasts up to eight hours once powered throughout the day, but a patchy inconsistent strip would not pave the way as effectively as energy-guzzling street lights. But it's of course in the interest of road operators and local government to employ these types of trials, considering the cost savings."</p>
+</div><p><a href="http://arstechnica.com/information-technology/2014/04/netherlands-glowing-highway-gets-a-temporary-lights-off/#p3">Read 2 remaining paragraphs</a> | <a href="http://arstechnica.com/information-technology/2014/04/netherlands-glowing-highway-gets-a-temporary-lights-off/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ZCqF8mX0Ap4:og79EuK_3-g:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=ZCqF8mX0Ap4:og79EuK_3-g:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ZCqF8mX0Ap4:og79EuK_3-g:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=ZCqF8mX0Ap4:og79EuK_3-g:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ZCqF8mX0Ap4:og79EuK_3-g:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ZCqF8mX0Ap4:og79EuK_3-g:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/ZCqF8mX0Ap4" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/information-technology/2014/04/netherlands-glowing-highway-gets-a-temporary-lights-off/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/information-technology/2014/04/netherlands-glowing-highway-gets-a-temporary-lights-off/</feedburner:origLink></item>
+		<item>
+		<title>Drone rock: Robotics company creates a flying, musical band</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/x_bB024HiX0/</link>
+		<comments>http://arstechnica.com/information-technology/2014/04/drone-rock-robotics-company-creates-a-flying-musical-band/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 17:30:47 +0000</pubDate>
+		<dc:creator><![CDATA[Sam Machkovech]]></dc:creator>
+				<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[drone]]></category>
+		<category><![CDATA[drones]]></category>
+		<category><![CDATA[kmel robotics]]></category>
+		<category><![CDATA[They Might Be Giants]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452579</guid>
+		<description><![CDATA[Robot sextet plays tempo-perfect classics, will perform live in DC this weekend.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/Screen-Shot-2014-04-25-at-5.57.26-PM-640x370.png"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">
+<em>Carol of the Bells</em> is nothing without the bells. KMel Robotics' demonstration proves that the song needs a fleet of flying robots tapping a bunch of bell-connected paper cups, as well!</div>
+	
+	  </div>
+  </div>
+ <p>Up until this point, the musical genre known as "drone rock" had been a weird, indie niche that consisted of slow, loud guitar noise. If machinists and programmers have their way, that description will need some major rewriting—but it'll probably seem just as weird.</p>
+<p>This week, a team at Philadelphia-based <a href="http://www.kmelrobotics.com/index.php?n=Main.HomePage">KMel Robotics</a>, known for building airborne video recording solutions, turned their robot-making talents to <a href="https://www.youtube.com/watch?v=Qlqe1DXnJKQ">creating a band</a>. The company pre-programmed a six-aircraft ensemble to hover over instruments and strum or strike without any human interaction, other than the team's initial strike of a "play" button.</p>
+<p>"We're sending commands to the vehicles at 100 times per second," KMel co-founder Daniel Mellinger told the BBC <a href="http://www.bbc.com/news/technology-27142634">in a video interview</a>. "The timing is very precise. To get to the base level where we can attempt something like that took several years." That helped KMel's robots pull off tempo-perfect renditions of the Strauss-composed theme to <em>2001: A Space Odyssey</em> (fitting, right?) and "Carol of the Bells," along with a trippy, slowed-down take on "The Star Spangled Banner."</p>
+</div><p><a href="http://arstechnica.com/information-technology/2014/04/drone-rock-robotics-company-creates-a-flying-musical-band/#p3">Read 3 remaining paragraphs</a> | <a href="http://arstechnica.com/information-technology/2014/04/drone-rock-robotics-company-creates-a-flying-musical-band/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=x_bB024HiX0:JlPPvEEAL6c:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=x_bB024HiX0:JlPPvEEAL6c:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=x_bB024HiX0:JlPPvEEAL6c:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=x_bB024HiX0:JlPPvEEAL6c:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=x_bB024HiX0:JlPPvEEAL6c:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=x_bB024HiX0:JlPPvEEAL6c:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/x_bB024HiX0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/information-technology/2014/04/drone-rock-robotics-company-creates-a-flying-musical-band/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/information-technology/2014/04/drone-rock-robotics-company-creates-a-flying-musical-band/</feedburner:origLink></item>
+		<item>
+		<title>How can I get colleagues to stop bickering about trivialities?</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/pIE7gRKqDRo/</link>
+		<comments>http://arstechnica.com/information-technology/2014/04/how-can-i-get-colleagues-to-stop-bickering-about-trivialities/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 16:52:07 +0000</pubDate>
+		<dc:creator><![CDATA[Stack Exchange]]></dc:creator>
+				<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[Stack Exchange]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452585</guid>
+		<description><![CDATA[Teaching a bit of code is getting one professional a whole lot of bikeshedding.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/arstechnica-20140425-rough01.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							Stack Exchange				</div>
+	  </div>
+  </div>
+ <p><em><i>This Q&amp;A is part of a weekly series of posts highlighting common questions encountered by technophiles and answered by users at <a href="http://stackexchange.com/?utm_source=arstechnica&amp;utm_medium=syndication&amp;utm_campaign=askstack&amp;utm_content=programmers-98">Stack Exchange</a>, a free, community-powered network of <a href="http://stackexchange.com/sites?utm_source=arstechnica&amp;utm_medium=syndication&amp;utm_campaign=askstack&amp;utm_content=programmers-98">100+ Q&amp;A sites</a>.</i></em></p>
+<p><strong><a href="http://programmers.stackexchange.com/users/51654/telastyn?utm_source=arstechnica&amp;utm_medium=syndication&amp;utm_campaign=askstack&amp;utm_content=programmers-98">Telastyn</a></strong> asks:</p>
+<p>I have been tasked with teaching other teams a new codebase, but I keep running into an issue. Whenever I go to actually walk through the code with people, we don't get very far before the entire exercise devolves into a <a href="http://en.wikipedia.org/wiki/Parkinson%27s_law_of_triviality">bikeshedding</a> exercise. Since they don't know the codebase, but think they need to help improve it, they focus on the things they <em>can</em> understand. Common questions include:</p>
+</div><p><a href="http://arstechnica.com/information-technology/2014/04/how-can-i-get-colleagues-to-stop-bickering-about-trivialities/#p3">Read 26 remaining paragraphs</a> | <a href="http://arstechnica.com/information-technology/2014/04/how-can-i-get-colleagues-to-stop-bickering-about-trivialities/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pIE7gRKqDRo:M8wWWOPtVjg:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=pIE7gRKqDRo:M8wWWOPtVjg:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pIE7gRKqDRo:M8wWWOPtVjg:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=pIE7gRKqDRo:M8wWWOPtVjg:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pIE7gRKqDRo:M8wWWOPtVjg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pIE7gRKqDRo:M8wWWOPtVjg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/pIE7gRKqDRo" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/information-technology/2014/04/how-can-i-get-colleagues-to-stop-bickering-about-trivialities/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/information-technology/2014/04/how-can-i-get-colleagues-to-stop-bickering-about-trivialities/</feedburner:origLink></item>
+		<item>
+		<title>Rohto Z Pro review: Kind of like pouring acid into your eyes, but good</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/CtAQxt5ZFp8/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/rohto-z-pro-review-kind-of-like-pouring-acid-into-your-eyes-but-good/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 15:43:39 +0000</pubDate>
+		<dc:creator><![CDATA[Lee Hutchinson]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[eye drops]]></category>
+		<category><![CDATA[rohto]]></category>
+		<category><![CDATA[ze goggles do nossink]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=451433</guid>
+		<description><![CDATA[Insane eyedrops burn, and then your eyeballs jump to light speed.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap"> <p>Ars Editor in Chief Ken Fisher mentioned on a phone call earlier this week that he was totally in love with a brand of eye drops. "Rohto eye drops," Fisher said. "They're like liquid cocaine for your eyes."</p>
+<p>How could I <em>not</em> try something with that kind of ringing endorsement? A quick check around the Internet revealed that Ken isn't alone: the Rohto brand is gaining a crazy amount of traction all over the place. The eyedrops, produced by <a href="http://en.wikipedia.org/wiki/Mentholatum">Mentholatum</a>, come in a wide variety of "flavors" and strengths, but all the varieties are designed not just to moisturize your eye, but to actually <em>force it to feel refreshed.</em></p>
+<p>The most often-used description on the 'Net is that Rohto drops are like "mouthwash for your eyes" and that they sting at first but then provide an amazing feeling of cool relief. As a frequent dry-eye sufferer—like Ken, I stare at computer screens all day long!—that was more than enough to get me to whip out my credit card and hit up Amazon, which had several varieties for sale.</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/rohto-z-pro-review-kind-of-like-pouring-acid-into-your-eyes-but-good/#p3">Read 7 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/rohto-z-pro-review-kind-of-like-pouring-acid-into-your-eyes-but-good/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=CtAQxt5ZFp8:bivsaRJkOpQ:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=CtAQxt5ZFp8:bivsaRJkOpQ:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=CtAQxt5ZFp8:bivsaRJkOpQ:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=CtAQxt5ZFp8:bivsaRJkOpQ:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=CtAQxt5ZFp8:bivsaRJkOpQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=CtAQxt5ZFp8:bivsaRJkOpQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/CtAQxt5ZFp8" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/rohto-z-pro-review-kind-of-like-pouring-acid-into-your-eyes-but-good/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/rohto-z-pro-review-kind-of-like-pouring-acid-into-your-eyes-but-good/</feedburner:origLink></item>
+		<item>
+		<title>As ridesharing firms expand, cities deploy cops in sting operations</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/b8dGYmL68m0/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/as-ridesharing-firms-expand-cities-deploy-cops-in-sting-operations/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 15:05:01 +0000</pubDate>
+		<dc:creator><![CDATA[Cyrus Farivar]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[houston]]></category>
+		<category><![CDATA[lyft]]></category>
+		<category><![CDATA[Madison]]></category>
+		<category><![CDATA[pittsburgh]]></category>
+		<category><![CDATA[st. louis]]></category>
+		<category><![CDATA[Uber]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452387</guid>
+		<description><![CDATA[Houston, Madison, and Pittsburgh cited Uber and Lyft cars as illegal taxis.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2012/07/uber-640x259.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Uber maintains that it "does not provide transportation services."</div>
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://uber.com">Uber</a>
+				</div>
+	  </div>
+  </div>
+ <p>This week, the Pennsylvania Public Utility Commission (PUC), which <a href="http://www.puc.state.pa.us/consumer_info/transportation/motor_carrier/limos_taxis_movers.aspx">regulates</a> taxis and limousines in the Keystone State, <a href="http://triblive.com/news/allegheny/6002996-74/drivers-lyft-officer#axzz2zva4pdPP">concluded</a> its month-long sting operation on Uber and Lyft drivers. The undercover operation resulted in the issuing of 23 criminal summary offenses, the first of their kind against those two companies.</p>
+<p>The two quasi-taxi companies, which allow users to summon cars with the tap of a smartphone app, have come under increasing fire from cities and taxi regulatory bodies nationwide as the companies expand.</p>
+<p>Many local and state agencies argue that the companies should be treated as traditional taxi firms and should be subject to relevant legislation. Both companies have fought and won similar battles in other jurisdictions; California <a href="http://arstechnica.com/tech-policy/2013/09/california-finally-legalizes-lyft-sidecar-and-other-rideshare-app-firms/">formalized rideshare operations</a> in September 2013.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/as-ridesharing-firms-expand-cities-deploy-cops-in-sting-operations/#p3">Read 7 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/as-ridesharing-firms-expand-cities-deploy-cops-in-sting-operations/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b8dGYmL68m0:q907XuKeW_U:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=b8dGYmL68m0:q907XuKeW_U:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b8dGYmL68m0:q907XuKeW_U:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=b8dGYmL68m0:q907XuKeW_U:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b8dGYmL68m0:q907XuKeW_U:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b8dGYmL68m0:q907XuKeW_U:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/b8dGYmL68m0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/as-ridesharing-firms-expand-cities-deploy-cops-in-sting-operations/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/as-ridesharing-firms-expand-cities-deploy-cops-in-sting-operations/</feedburner:origLink></item>
+		<item>
+		<title>The Walking Dead is now where brains are eaten, not used</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/7u9-toiVAYo/</link>
+		<comments>http://arstechnica.com/gaming/2014/04/understanding-and-the-zombie-apocalypse/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 14:38:35 +0000</pubDate>
+		<dc:creator><![CDATA[Nathan Mattise]]></dc:creator>
+				<category><![CDATA[Opposable Thumbs]]></category>
+		<category><![CDATA[The Returned]]></category>
+		<category><![CDATA[The Walking Dead]]></category>
+		<category><![CDATA[zombies]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=442361</guid>
+		<description><![CDATA[Understanding is a vital part of zombie fiction's DNA; there's a better show to watch.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/zombies-640x438.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="https://www.flickr.com/photos/g205/441858611/sizes/o/">Mark Lobo</a>
+				</div>
+	  </div>
+  </div>
+ <p><em><strong>Warning</strong>: this post contains mild spoilers  on modern zombie films and TV. </em></p>
+<p>For a show that's often been criticized for painfully slow pacing, there was no shortage of action in the <em>Walking Dead's </em>recent Season 4 finale. Our heroes arrived at a survivor camp called Terminus, a rumored safe haven that was teased all season long. But unlike the show's previous settings—say Hershel's farm, the Prison, or Woodbury—no time was wasted. Incumbent introductions gave way to gunfire within a single episode.</p>
+<p><span style="font-size: 14px; line-height: 1.5em;">It's the first time </span><em style="font-size: 14px; line-height: 1.5em;">The Walking Dead</em><span style="font-size: 14px; line-height: 1.5em;"> moved beyond walker-speed through a location since Season 1, when the survivors stumbled in and exploded out of the Atlanta-area CDC within a single hour. But there's a key difference between the show at these two plot points, one which makes following the series going forward feel like a chore.</span></p>
+</div><p><a href="http://arstechnica.com/gaming/2014/04/understanding-and-the-zombie-apocalypse/#p3">Read 15 remaining paragraphs</a> | <a href="http://arstechnica.com/gaming/2014/04/understanding-and-the-zombie-apocalypse/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7u9-toiVAYo:X-OcEfHwsPQ:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=7u9-toiVAYo:X-OcEfHwsPQ:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7u9-toiVAYo:X-OcEfHwsPQ:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=7u9-toiVAYo:X-OcEfHwsPQ:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7u9-toiVAYo:X-OcEfHwsPQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7u9-toiVAYo:X-OcEfHwsPQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/7u9-toiVAYo" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gaming/2014/04/understanding-and-the-zombie-apocalypse/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gaming/2014/04/understanding-and-the-zombie-apocalypse/</feedburner:origLink></item>
+		<item>
+		<title>Smart leg brace locks and unlocks knee automatically</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/FG0jdVJ4YRE/</link>
+		<comments>http://arstechnica.com/science/2014/04/smart-leg-brace-locks-and-unlocks-knee-automatically/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 13:33:50 +0000</pubDate>
+		<dc:creator><![CDATA[WIRED UK]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Scientific Method]]></category>
+		<category><![CDATA[cybernetics]]></category>
+		<category><![CDATA[Health]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452453</guid>
+		<description><![CDATA[Senses whether you're sitting, standing, or walking; adjusts brace accordingly.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/brace_sensor-640x426.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">The sensor hardware.</div>
+	
+	  </div>
+  </div>
+ <p><a href="http://nelocodebits.blogs.sapo.pt/">NeLo</a> is a flexible leg brace that uses sensor data to help polio patients—and people with sports injuries—lock and unlock their knees when walking.</p>
+<p>The brace is designed to switch between being flexible and rigid depending on whether the person wearing it is walking, standing, or sitting—when the person's weight needs to be supported on the braced leg it becomes rigid, but it then loosens when the person bends or sits down.</p>
+<p>It looks much like a flexible material leg brace, but is connected to two sensors—a foot pressure sensor and a gyroscope worn near the hip—which pair with an <a href="http://www.arduino.cc/">Arduino</a> board to analyze the person's position. This data is fed to servo motors that loosen and tighten the material in order to switch between rigid and flexible using a mechanism inspired by a Chinese finger trap. This mechanism, which required the inside of two pieces of fabric to be lined with a sandpaper-like material, allowed for the system to work using relatively small, low-powered motors.</p>
+</div><p><a href="http://arstechnica.com/science/2014/04/smart-leg-brace-locks-and-unlocks-knee-automatically/#p3">Read 8 remaining paragraphs</a> | <a href="http://arstechnica.com/science/2014/04/smart-leg-brace-locks-and-unlocks-knee-automatically/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FG0jdVJ4YRE:WF7CDODqo5A:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=FG0jdVJ4YRE:WF7CDODqo5A:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FG0jdVJ4YRE:WF7CDODqo5A:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=FG0jdVJ4YRE:WF7CDODqo5A:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FG0jdVJ4YRE:WF7CDODqo5A:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FG0jdVJ4YRE:WF7CDODqo5A:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/FG0jdVJ4YRE" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/science/2014/04/smart-leg-brace-locks-and-unlocks-knee-automatically/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/science/2014/04/smart-leg-brace-locks-and-unlocks-knee-automatically/</feedburner:origLink></item>
+		<item>
+		<title>In a world of me-first smart home gear, can smarthubs make them all play nice?</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/ceCQw0EfJ3o/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/in-a-world-of-me-first-smart-home-gear-can-smarthubs-make-them-all-play-nice/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 12:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[Sam Machkovech]]></dc:creator>
+				<category><![CDATA[Features]]></category>
+		<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Belkin]]></category>
+		<category><![CDATA[Gadgetology]]></category>
+		<category><![CDATA[Hardware Reviews]]></category>
+		<category><![CDATA[Nest]]></category>
+		<category><![CDATA[review]]></category>
+		<category><![CDATA[revolv]]></category>
+		<category><![CDATA[smartthings]]></category>
+		<category><![CDATA[wemo]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=436003</guid>
+		<description><![CDATA[Review: We automate this old house with the Revolv and SmartThings smarthubs.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/IMG_2412-640x426.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">The SmartThings hub (left) and Revolv hub (right).</div>
+	
+	  </div>
+  </div>
+ <p>“Home automation" has become ho-hum. It’s a catchall term describing the idea of a futuristic, connected home; what’s essentially an array of Internet-enabled home devices hopefully working in harmony. Current home automation appliances employ wireless protocols so that they can all be operated by a single remote—or, more commonly, smartphone app. So many so-called “smart” devices come out every month, these days you can even smarten up your fireplace.</p>
+<p>However, there’s a dirty little secret to all this modern intelligence—individual smart devices do <em>not</em> get along with each other.</p>
+<p class="p1">Each device in this scenario—each light bulb, motion sensor, wall plug, thermostat, speaker system, and more—ships with its own separate means of triggering, app or otherwise. By default, you’re better off walking to your various devices than picking through a glut of icons (and worse, loading times) on your smartphone. I received a box full of these devices, along with the seemingly nightmarish demand to automate this old house.</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/in-a-world-of-me-first-smart-home-gear-can-smarthubs-make-them-all-play-nice/#p3">Read 33 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/in-a-world-of-me-first-smart-home-gear-can-smarthubs-make-them-all-play-nice/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ceCQw0EfJ3o:O214Yl3fC4I:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=ceCQw0EfJ3o:O214Yl3fC4I:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ceCQw0EfJ3o:O214Yl3fC4I:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=ceCQw0EfJ3o:O214Yl3fC4I:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ceCQw0EfJ3o:O214Yl3fC4I:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=ceCQw0EfJ3o:O214Yl3fC4I:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/ceCQw0EfJ3o" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/in-a-world-of-me-first-smart-home-gear-can-smarthubs-make-them-all-play-nice/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/in-a-world-of-me-first-smart-home-gear-can-smarthubs-make-them-all-play-nice/</feedburner:origLink></item>
+		<item>
+		<title>After successful landing, SpaceX to sue Air Force to compete for launch contracts</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/_hjK4FJyOng/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/after-successful-landing-spacex-to-sue-air-force-to-compete-for-launch-contracts/#comments</comments>
+		<pubDate>Sat, 26 Apr 2014 00:25:14 +0000</pubDate>
+		<dc:creator><![CDATA[Joe Silver]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[lawsuits]]></category>
+		<category><![CDATA[spacex]]></category>
+		<category><![CDATA[US Air Force]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452421</guid>
+		<description><![CDATA[Company protests lack of private competition for federal rocket contracts. ]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2012/04/spacex_falcon_9_flight_2-4f9ec5c-intro.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://www.spacex.com/gallery-images/falcon9-flight-2-01-m.jpg">Photograph by SpaceX</a>
+				</div>
+	  </div>
+  </div>
+ <p>During a press conference Friday afternoon in Washington, DC, SpaceX CEO Elon Musk also <a href="http://www.nbcnews.com/watch/live-video/watch-live-elon-musk-makes-spacex-announcement-220373571711">explained</a> that his company intends to file a lawsuit against the US Air Force in a quest to compete for national security-related rocket launch contracts. His remarks came as part of the <a href="http://arstechnica.com/science/2014/04/spacex-names-texas-as-site-of-its-commercial-space-launch-facility/">announcement</a> of last week's successful soft-landing of the leg-equipped Falcon 9 rocket.</p>
+<p>Musk noted that SpaceX chose this approach after learning that the Air Force had entered into exclusive agreements with government contractors that locked out private companies from competing for launch contracts, without providing suitable justification for why they did so.</p>
+<p>The current system, Musk said, “blocks companies like SpaceX for competing for national security launches. We feel that this is not right." He continued, “We’re just protesting and saying these launches should be competed. And if we compete and lose, that’s fine, but why were they not even competed?”</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/after-successful-landing-spacex-to-sue-air-force-to-compete-for-launch-contracts/#p3">Read 6 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/after-successful-landing-spacex-to-sue-air-force-to-compete-for-launch-contracts/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_hjK4FJyOng:7jagmxbMV0c:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_hjK4FJyOng:7jagmxbMV0c:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_hjK4FJyOng:7jagmxbMV0c:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_hjK4FJyOng:7jagmxbMV0c:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_hjK4FJyOng:7jagmxbMV0c:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_hjK4FJyOng:7jagmxbMV0c:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/_hjK4FJyOng" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/after-successful-landing-spacex-to-sue-air-force-to-compete-for-launch-contracts/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/after-successful-landing-spacex-to-sue-air-force-to-compete-for-launch-contracts/</feedburner:origLink></item>
+		<item>
+		<title>Apple launches replacement program for defective iPhone 5 power buttons</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/N5KIawUhyoY/</link>
+		<comments>http://arstechnica.com/apple/2014/04/apple-launches-replacement-program-for-defective-iphone-5-power-buttons/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 22:05:14 +0000</pubDate>
+		<dc:creator><![CDATA[Andrew Cunningham]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Infinite Loop]]></category>
+		<category><![CDATA[iPhone 5]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452485</guid>
+		<description><![CDATA[Apple will repair your phone (and upgrade it to iOS 7, if you haven't already).]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/iphone5-intro.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Flaky power button on your iPhone 5? Apple will fix it free-of-charge.</div>
+	
+			<div class="caption-credit">
+							Jacqui Cheng				</div>
+	  </div>
+  </div>
+ <p>If you have an iPhone 5 with a flaky power button, good news: Apple has just initiated an "<a href="https://ssl.apple.com/support/iphone5-sleepwakebutton/">iPhone 5 Sleep/Wake Button Replacement Program</a>" that will replace your button, even if your phone's warranty has expired. The program begins today in the US and Canada, and it will launch on May 2 in other countries.</p>
+<p>Enter your serial number on Apple's page to see if you're eligible for the program—if your phone has other damage (say, a cracked screen), that damage will first have to be fixed at your expense. If you're one of those holdouts running iOS 6, your phone will also be upgraded to iOS 7 as part of the repair.</p>
+<p>If your phone is eligible, you can send it in by mail or bring it to an Apple store or to a service provider yourself. Repairs will take between four and six days, but 16GB loaner iPhones will be available for you to use while yours is being repaired, if you need one. My experience has been that most Apple stores will simply swap broken, in-warranty devices for working new or refurbished devices rather than repairing your specific unit, but the iPhone 5 has been out of production for several months at this point—Apple may not have enough left in circulation to replace all of the affected phones outright.</p>
+</div><p><a href="http://arstechnica.com/apple/2014/04/apple-launches-replacement-program-for-defective-iphone-5-power-buttons/">Read on Ars Technica</a> | <a href="http://arstechnica.com/apple/2014/04/apple-launches-replacement-program-for-defective-iphone-5-power-buttons/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=N5KIawUhyoY:uf_lk8IN7eA:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=N5KIawUhyoY:uf_lk8IN7eA:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=N5KIawUhyoY:uf_lk8IN7eA:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=N5KIawUhyoY:uf_lk8IN7eA:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=N5KIawUhyoY:uf_lk8IN7eA:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=N5KIawUhyoY:uf_lk8IN7eA:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/N5KIawUhyoY" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/apple/2014/04/apple-launches-replacement-program-for-defective-iphone-5-power-buttons/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/apple/2014/04/apple-launches-replacement-program-for-defective-iphone-5-power-buttons/</feedburner:origLink></item>
+		<item>
+		<title>Lucasfilm makes it official: New Star Wars films ignore Expanded Universe</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/hG9Z9g-V-20/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/lucasfilm-makes-it-official-new-star-wars-films-ignore-expanded-universe/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 20:57:19 +0000</pubDate>
+		<dc:creator><![CDATA[Lee Hutchinson]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Disney]]></category>
+		<category><![CDATA[George Lucas]]></category>
+		<category><![CDATA[Lucas]]></category>
+		<category><![CDATA[Lucasfilm]]></category>
+		<category><![CDATA[Star Wars]]></category>
+		<category><![CDATA[star wars episode 7]]></category>
+		<category><![CDATA[star wars expanded universe]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452349</guid>
+		<description><![CDATA[Some EU elements to live on in new books and games, but films are starting fresh.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap"> <div class="image right medium">
+<a href="http://cdn.arstechnica.net/wp-content/uploads/2014/01/Mara_Jade_SWGTCG.jpg"><img src="http://cdn.arstechnica.net/wp-content/uploads/2014/01/Mara_Jade_SWGTCG-300x300.jpg" srcset="http://cdn.arstechnica.net/wp-content/uploads/2014/01/Mara_Jade_SWGTCG-640x640.jpg 2x"></a><div class="caption" style="font-size:0.8em">
+<div class="caption-text"><a href="http://cdn.arstechnica.net/wp-content/uploads/2014/01/Mara_Jade_SWGTCG.jpg" class="caption-link" rel="nofollow">Fan favorite Mara Jade is now consigned to the <em>Star Wars Legends</em> non-canonical label.</a></div> <div class="caption-credit"><a rel="nofollow" class="caption-link" href="http://starwars.wikia.com/wiki/File:Mara_Jade_SWGTCG.jpg">Derek Herring / Sony</a></div>
+</div>
+</div>
+<p>A post on Starwars.com <a href="http://starwars.com/news/the-legendary-star-wars-expanded-universe-turns-a-new-page.html">officially confirms</a> what fans have been hearing for the past three months: the complex and detailed future history of the <em>Star Wars</em> universe that has been slowly accreting since the 1990s will be completely ignored by the new trilogy of films. Per the post, "<em>Star Wars</em> Episodes VII-IX will not tell the same story told in the post-<em>Return of the Jedi</em> Expanded Universe."</p>
+<p>The confirmation is being met with a mixed reaction from fans over on <em>Star Wars</em> uber-site <a href="http://www.theforce.net/v3-story/frontMoving_Beyond_Existing_EU_Lucasfilm_Announces_New_Direction_For_Star_Wars_Canon_157581.asp">TheForce.net</a>. "Thank you for wasting 20 years of my life," <a href="http://www.theforce.net/v3-story/frontMoving_Beyond_Existing_EU_Lucasfilm_Announces_New_Direction_For_Star_Wars_Canon_157581.asp#comment-1355600798">said one poster</a>. "I honestly may be done with Star Wars at this point."</p>
+<p>"The simple truth is that canon is whatever the license holder says it is. Fans need to wrap their heads around that," <a href="http://www.theforce.net/story/front/Moving_Beyond_Existing_EU_Lucasfilm_Announces_New_Direction_For_Star_Wars_Canon_157581.asp#comment-1355485925">responded another</a>.</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/lucasfilm-makes-it-official-new-star-wars-films-ignore-expanded-universe/#p3">Read 5 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/lucasfilm-makes-it-official-new-star-wars-films-ignore-expanded-universe/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hG9Z9g-V-20:sRMFABfZAyg:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=hG9Z9g-V-20:sRMFABfZAyg:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hG9Z9g-V-20:sRMFABfZAyg:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=hG9Z9g-V-20:sRMFABfZAyg:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hG9Z9g-V-20:sRMFABfZAyg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hG9Z9g-V-20:sRMFABfZAyg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/hG9Z9g-V-20" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/lucasfilm-makes-it-official-new-star-wars-films-ignore-expanded-universe/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/lucasfilm-makes-it-official-new-star-wars-films-ignore-expanded-universe/</feedburner:origLink></item>
+		<item>
+		<title>Netflix researching “large-scale peer-to-peer technology” for streaming</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/HPf9Lj6L6Ss/</link>
+		<comments>http://arstechnica.com/information-technology/2014/04/netflix-researching-large-scale-peer-to-peer-technology-for-streaming/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 20:45:33 +0000</pubDate>
+		<dc:creator><![CDATA[Jon Brodkin]]></dc:creator>
+				<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[BItTorrent]]></category>
+		<category><![CDATA[Netflix]]></category>
+		<category><![CDATA[peer-to-peer]]></category>
+		<category><![CDATA[Torrent]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452309</guid>
+		<description><![CDATA[Job ad says Netflix wants to "integrate P2P as an additional delivery mechanism."]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/netflix-jobs-640x312.png">
+</div>
+ <p>When we wrote about the possibility of Netflix using a peer-to-peer architecture for streaming <a href="https://arstechnica.com/information-technology/2014/04/bittorrent-netflix-should-defeat-isps-by-switching-to-peer-to-peer/">earlier today</a>, it seemed like more of a thought experiment than a real possibility.</p>
+<p>But it turns out Netflix is looking for an engineer to research this very type of system. By searching Netflix job postings we found an opening for a senior software engineer who would work on Netflix's Open Connect content delivery network while researching how P2P technology could be used for streaming.</p>
+<p>"Netflix seeks a seasoned Senior Software Engineer with a special focus in peer-to-peer networks," <a href="http://jobs.netflix.com/jobs.php?id=NFX00928">the listing says</a>. Responsibilities include:</p>
+</div><p><a href="http://arstechnica.com/information-technology/2014/04/netflix-researching-large-scale-peer-to-peer-technology-for-streaming/#p3">Read 20 remaining paragraphs</a> | <a href="http://arstechnica.com/information-technology/2014/04/netflix-researching-large-scale-peer-to-peer-technology-for-streaming/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HPf9Lj6L6Ss:wUVjnhg4QYk:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=HPf9Lj6L6Ss:wUVjnhg4QYk:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HPf9Lj6L6Ss:wUVjnhg4QYk:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=HPf9Lj6L6Ss:wUVjnhg4QYk:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HPf9Lj6L6Ss:wUVjnhg4QYk:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HPf9Lj6L6Ss:wUVjnhg4QYk:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/HPf9Lj6L6Ss" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/information-technology/2014/04/netflix-researching-large-scale-peer-to-peer-technology-for-streaming/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/information-technology/2014/04/netflix-researching-large-scale-peer-to-peer-technology-for-streaming/</feedburner:origLink></item>
+		<item>
+		<title>Stanford’s password policy shuns one-size-fits-all security</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/BA-A-xNW2cw/</link>
+		<comments>http://arstechnica.com/security/2014/04/stanfords-password-policy-shuns-one-size-fits-all-security/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 20:13:35 +0000</pubDate>
+		<dc:creator><![CDATA[Dan Goodin]]></dc:creator>
+				<category><![CDATA[Risk Assessment]]></category>
+		<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[Cracking]]></category>
+		<category><![CDATA[hacking]]></category>
+		<category><![CDATA[passwords]]></category>
+		<category><![CDATA[security]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452251</guid>
+		<description><![CDATA[University relaxes hated character complexity as password length increases.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap"> <p>Stanford University network engineers have unveiled a refreshingly enlightened password policy. By allowing extremely long passcodes and relaxing character complexity requirements as length increases, the new standards may make it easier to choose passwords that resist the most common types of cracking attacks.</p>
+<p>Students, faculty, and staff can use passwords as short as eight characters, but only if they contain a mix of upper- and lower-case letters, numbers, and symbols, according to the policy, which was <a href="http://itservices.stanford.edu/service/accounts/passwords">published last week</a> on Stanford's IT Services website. Even then, the short passwords must pass additional checks designed to flag common or weak passcodes (presumably choices such as "P@ssw0rd1", which can usually be cracked in a matter of seconds). The standards gradually reduce the character complexity requirements when lengths reach 12, 16, or 20 characters. At the other end of the spectrum, passcodes that have a length of 20 or more can contain any character type an end user wants, including all lower case.</p>
+<p>Ars hasn't tested the new system to ensure commonly used phrases found in the Bible, on YouTube, or myriad other places are automatically rejected. As Ars reported in October, even when such passphrases contain 40 or more characters, they are <a href="http://arstechnica.com/security/2013/10/how-the-bible-and-youtube-are-fueling-the-next-frontier-of-password-cracking/">becoming increasingly susceptible to "off-line" cracking</a>. Such attacks scrape popular websites and books, carve up the text into different phrases or sentences, and use them as guesses when cracking cryptographic hashes found in compromised password databases.</p>
+</div><p><a href="http://arstechnica.com/security/2014/04/stanfords-password-policy-shuns-one-size-fits-all-security/#p3">Read 5 remaining paragraphs</a> | <a href="http://arstechnica.com/security/2014/04/stanfords-password-policy-shuns-one-size-fits-all-security/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=BA-A-xNW2cw:-OWJTHR26UM:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=BA-A-xNW2cw:-OWJTHR26UM:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=BA-A-xNW2cw:-OWJTHR26UM:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=BA-A-xNW2cw:-OWJTHR26UM:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=BA-A-xNW2cw:-OWJTHR26UM:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=BA-A-xNW2cw:-OWJTHR26UM:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/BA-A-xNW2cw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/security/2014/04/stanfords-password-policy-shuns-one-size-fits-all-security/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/security/2014/04/stanfords-password-policy-shuns-one-size-fits-all-security/</feedburner:origLink></item>
+		<item>
+		<title>Microsoft is now a phone company, as Nokia deal closes</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/hiDDLg8Iong/</link>
+		<comments>http://arstechnica.com/information-technology/2014/04/microsoft-is-now-a-phone-company-as-nokia-deal-closes/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 20:02:43 +0000</pubDate>
+		<dc:creator><![CDATA[Peter Bright]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[Nokia]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452221</guid>
+		<description><![CDATA[Another 25,000 staff come aboard.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap"> <p>As announced <a href="http://arstechnica.com/information-technology/2014/04/nokia-devices-to-become-microsoft-mobile-on-april-25/">earlier this week</a>, Microsoft's purchase of Nokia's Devices and Services division has closed almost four months later than expected.</p>
+<p>Redmond is paying about $5 billion for the Nokia division, now named Microsoft Mobile Oy, and some 8,500 design patents. The software giant is also paying another $2 billion for a ten-year license for 30,000 utility patents, with an option to renew the licenses in perpetuity.</p>
+<p>Nokia is, however, keeping hold of two factories. Nokia will operate its 7,500-person factory in Chennai, India, <a href="http://www.thehindu.com/business/Industry/nokia-to-run-chennai-plant-for-now-as-microsoft-concludes-deal/article5943571.ece">on Microsoft's behalf</a>. The Finnish firm is involved in a tax dispute with the Indian government centered around the plant, and Indian authorities have blocked its transfer until the dispute is resolved. Microsoft announced earlier in the week that it would not take ownership of Nokia's South Korean factory.</p>
+</div><p><a href="http://arstechnica.com/information-technology/2014/04/microsoft-is-now-a-phone-company-as-nokia-deal-closes/#p3">Read 3 remaining paragraphs</a> | <a href="http://arstechnica.com/information-technology/2014/04/microsoft-is-now-a-phone-company-as-nokia-deal-closes/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hiDDLg8Iong:SccZRgjHPno:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=hiDDLg8Iong:SccZRgjHPno:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hiDDLg8Iong:SccZRgjHPno:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=hiDDLg8Iong:SccZRgjHPno:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hiDDLg8Iong:SccZRgjHPno:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=hiDDLg8Iong:SccZRgjHPno:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/hiDDLg8Iong" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/information-technology/2014/04/microsoft-is-now-a-phone-company-as-nokia-deal-closes/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/information-technology/2014/04/microsoft-is-now-a-phone-company-as-nokia-deal-closes/</feedburner:origLink></item>
+		<item>
+		<title>Unfixable Verizon Galaxy S5 camera failures require device replacement</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/Ve8Nmoobcpo/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/unfixable-verizon-galaxy-s5-camera-failures-require-device-replacement/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 19:48:52 +0000</pubDate>
+		<dc:creator><![CDATA[Andrew Cunningham]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[Galaxy S5]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452223</guid>
+		<description><![CDATA[Verizon and Samsung confirm a bug first reported on XDA Developers forum.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/fish1-640x320.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Samsung's Galaxy S5 is waterproof, and the Verizon version is also cameraproof.</div>
+	
+			<div class="caption-credit">
+							Ron Amadeo				</div>
+	  </div>
+  </div>
+ <p>Some owners of the Verizon version of the Galaxy S5 are running into problems with their new phone's camera: after throwing up a "Warning: Camera Failure" message, the phone's camera becomes completely unusable even if you totally reset the phone. Verizon has <a href="https://twitter.com/VZWnews/status/459723252697681921">acknowledged the problem</a> on its official Twitter account, saying that the company will "work to resolve" the problem "including replacing the device." Samsung has also acknowledged the issue in a <a href="http://www.droid-life.com/2014/04/25/samsung-acknowledges-galaxy-s5-camera-failed-issue-verizon-issuing-replacements/">statement to DroidLife</a>, saying that affected customers should call Samsung or their carrier directly for warranty service.</p>
+<p>Posters in an <a href="http://forum.xda-developers.com/showthread.php?t=2725398">XDA Developers forum thread</a> dated April 21 were among the first to discover the problem. One user tried force-stopping the app, clearing all of its settings and data, resetting the phone both from the Settings panel and from Recovery Mode, and installing a third-party camera app. None of these steps seem to have fixed the problem, though it's possible that a future software update from Samsung could either fix it or prevent it in phones that haven't been affected.</p>
+<p>It's not yet clear whether S5 owners on other carriers are having the same camera problems, though Boy Genius Report says that some Sprint customers are having the same problem. If Samsung or other carriers make further announcements about this problem, we'll update this article.</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/unfixable-verizon-galaxy-s5-camera-failures-require-device-replacement/">Read on Ars Technica</a> | <a href="http://arstechnica.com/gadgets/2014/04/unfixable-verizon-galaxy-s5-camera-failures-require-device-replacement/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Ve8Nmoobcpo:7_ithSKsMYM:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Ve8Nmoobcpo:7_ithSKsMYM:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Ve8Nmoobcpo:7_ithSKsMYM:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Ve8Nmoobcpo:7_ithSKsMYM:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Ve8Nmoobcpo:7_ithSKsMYM:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Ve8Nmoobcpo:7_ithSKsMYM:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/Ve8Nmoobcpo" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/unfixable-verizon-galaxy-s5-camera-failures-require-device-replacement/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/unfixable-verizon-galaxy-s5-camera-failures-require-device-replacement/</feedburner:origLink></item>
+		<item>
+		<title>Capitalism fells communism in Marx-Engels copyright flap [Updated]</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/G1svw7aB6X0/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/capitalism-fells-communism-in-marx-engels-copyright-flap/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 19:35:52 +0000</pubDate>
+		<dc:creator><![CDATA[David Kravets]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[copyright]]></category>
+		<category><![CDATA[intellectual property]]></category>
+		<category><![CDATA[Karl Marx]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452241</guid>
+		<description><![CDATA[Marxists Internet Archive to remove writings ahead of May Day.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/marx.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="https://secure.flickr.com/photos/8241392@N07/566564387/in/photolist-S4MRv-4PwDns-sqtJJ-8x5NLD-7aKR5m-5p5ixx-5KvfGq-afNKR9-4L8gKZ-5Xe5S2-5Uj1pp-dGbyDx-3owE37-c7FLMC-fZfi6A-fisEBG-aoS2zm-5fq1u4-4siCXk-dWjQdH-jzrZD-7UKR3P-fdyFhk-4dBYpi-fERWph-7tekvy-iR1ST-4hcQyr-7h5bHT-4PsoCz-a398dL-cvUMDS-5CiB5N-bwuKLo-afKZ9X-8TPwpx-4R7ZUe-dkVsCu-aKJPLR-5CtedP-62Y7GF-9kN5AQ-9racFW-coVgCN-5uyGbP-bqpWji-rhX1g-7UKSJT-bRxt5z-u1w4V">erdquadrat</a>
+				</div>
+	  </div>
+  </div>
+ <blockquote><p>"At a certain stage of development, the material productive forces of society come into conflict with the existing relations of production or—this merely expresses the same thing in legal terms—with the property relations within the framework of which they have operated hitherto. From forms of development of the productive forces these relations turn into their fetters. Then begins an era of social revolution. The changes in the economic foundation lead sooner or later to the transformation of the whole immense superstructure."</p></blockquote>
+<p>Political theorists have been debating this passage and the assumption of capitalism's demise ever since it appeared in Karl Marx's preface to "<a href="http://en.wikipedia.org/wiki/A_Contribution_to_the_Critique_of_Political_Economy">A Contribution to the Critique of Political Economy</a>" in 1859.</p>
+<p>But the question of when capitalism will burst asunder appears to be turned on its head when considering the copyright legal flap over Marx's writings.</p>
+<p>A radical publishing house, called Lawrence &amp; Wishart, who at one time was connected to Great Britain's Communist Party, is demanding the removal from the <a href="https://www.marxists.org/">Marxists Internet Archive</a> of the "Marx-Engels Collected Works"—hardcover books that sell for up to $50 a pop.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/capitalism-fells-communism-in-marx-engels-copyright-flap/#p3">Read 7 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/capitalism-fells-communism-in-marx-engels-copyright-flap/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=G1svw7aB6X0:yRGwt-INnro:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=G1svw7aB6X0:yRGwt-INnro:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=G1svw7aB6X0:yRGwt-INnro:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=G1svw7aB6X0:yRGwt-INnro:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=G1svw7aB6X0:yRGwt-INnro:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=G1svw7aB6X0:yRGwt-INnro:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/G1svw7aB6X0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/capitalism-fells-communism-in-marx-engels-copyright-flap/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/capitalism-fells-communism-in-marx-engels-copyright-flap/</feedburner:origLink></item>
+		<item>
+		<title>Man uses Raspberry Pi to build actual working cell phone for $158</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/bLaCbYrkxwU/</link>
+		<comments>http://arstechnica.com/information-technology/2014/04/man-uses-raspberry-pi-to-build-actual-working-cellphone-for-158/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 18:51:23 +0000</pubDate>
+		<dc:creator><![CDATA[Jon Brodkin]]></dc:creator>
+				<category><![CDATA[Technology Lab]]></category>
+		<category><![CDATA[Raspberry Pi]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452129</guid>
+		<description><![CDATA["PiPhone" powered by a Pi, a touchscreen, a wireless module, and a battery.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/pi-phone-3-640x418.png"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://www.davidhunt.ie/piphone-a-raspberry-pi-based-smartphone/">David Hunt</a>
+				</div>
+	  </div>
+  </div>
+ <p>Raspberry Pi-using tinkerer David Hunt—who previously built a <a href="http://www.raspberrypi.org/pi-rex-a-bark-activated-door-opener-for-dogs/">bark-activated door opener</a> for dogs—is at it again with a real, working cell phone powered by the tiny computer and a few other items.</p>
+<p>"PiPhone" cost Hunt $158 to build with these components, all held together with cable ties:</p>
+<blockquote>
+<ul>
+<li>
+<a href="http://www.adafruit.com/products/998">Raspberry Pi Model B</a> – $40</li>
+<li>
+<a href="http://www.adafruit.com/products/1601">PiTFT Touchscreen 320×240</a> – $35</li>
+<li>
+<a href="http://www.adafruit.com/products/328">2500mAh LiPo battery</a> – $15</li>
+<li>
+<a href="http://www.micro4you.com/store/sim900-gprs/gsm-module.html">SIM900 GSM/GPRS module</a> – $48</li>
+<li>
+<a href="http://www.ebay.ie/itm/191133345539">DC-DC boost converter 3.3V – 5V 1A</a> – $10</li>
+<li>Cables, connectors, switch, etc. – $10</li>
+</ul>
+</blockquote>
+<p>"As you can see from the cost of the components, you’d be FAR better off going into your local phone store and picking up a normal smartphone, but hey, where’s the fun in that?" Hunt <a href="http://www.davidhunt.ie/piphone-a-raspberry-pi-based-smartphone/">wrote on his blog today</a>. "I got a great kick out of the first phone call I made with this thing. And it won't stay in one piece for long, I’ll be using those parts for other projects very soon!"</p>
+</div><p><a href="http://arstechnica.com/information-technology/2014/04/man-uses-raspberry-pi-to-build-actual-working-cellphone-for-158/#p3">Read 5 remaining paragraphs</a> | <a href="http://arstechnica.com/information-technology/2014/04/man-uses-raspberry-pi-to-build-actual-working-cellphone-for-158/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=bLaCbYrkxwU:ACAt53k6Vuw:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=bLaCbYrkxwU:ACAt53k6Vuw:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=bLaCbYrkxwU:ACAt53k6Vuw:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=bLaCbYrkxwU:ACAt53k6Vuw:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=bLaCbYrkxwU:ACAt53k6Vuw:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=bLaCbYrkxwU:ACAt53k6Vuw:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/bLaCbYrkxwU" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/information-technology/2014/04/man-uses-raspberry-pi-to-build-actual-working-cellphone-for-158/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/information-technology/2014/04/man-uses-raspberry-pi-to-build-actual-working-cellphone-for-158/</feedburner:origLink></item>
+		<item>
+		<title>Dallas Buyers Club producer goes “trademark trolling” in Oregon</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/-iO4r3SZarQ/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/dallas-buyers-club-producer-goes-trademark-trolling-in-oregon/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 18:37:13 +0000</pubDate>
+		<dc:creator><![CDATA[Joe Mullin]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[copyright]]></category>
+		<category><![CDATA[troll]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452035</guid>
+		<description><![CDATA[Novel legal tactic employed to unmask file-sharers' identities.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/trademark.logo_.jpg"><div class="caption" style="font-size:0.8em">
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="https://www.flickr.com/photos/opensourceway/4968547682">opensource.com / flickr</a>
+				</div>
+	  </div>
+  </div>
+ <p>Mass-copyright litigation, in which hundreds or thousands of defendants are accused of illegally downloading a piece of media, is today mostly limited to pornography. Voltage Pictures' lawsuits are an exception. Since February, the company has <a href="http://arstechnica.com/tech-policy/2014/04/dallas-buyers-club-launches-post-oscar-copyright-salvo-sues-615-does/">sued 615 still-anonymous defendants</a> in 17 separate lawsuits, saying the defendants illegally shared the hit movie it produced last year, <em>Dallas Buyers Club, </em>using the BitTorrent protocol.</p>
+<p>Voltage has also filed two cases in Oregon courts making a more surprising claim with regard to the downloads: that the company's rights were infringed under Oregon state trademark law.</p>
+<p>Seattle lawyer Benjamin Justus is representing two defendants in the suits, who have received notices from their ISPs that their IP addresses have been identified in litigation.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/dallas-buyers-club-producer-goes-trademark-trolling-in-oregon/#p3">Read 11 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/dallas-buyers-club-producer-goes-trademark-trolling-in-oregon/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=-iO4r3SZarQ:N7A0N6yt2uY:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=-iO4r3SZarQ:N7A0N6yt2uY:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=-iO4r3SZarQ:N7A0N6yt2uY:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=-iO4r3SZarQ:N7A0N6yt2uY:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=-iO4r3SZarQ:N7A0N6yt2uY:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=-iO4r3SZarQ:N7A0N6yt2uY:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/-iO4r3SZarQ" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/dallas-buyers-club-producer-goes-trademark-trolling-in-oregon/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/dallas-buyers-club-producer-goes-trademark-trolling-in-oregon/</feedburner:origLink></item>
+		<item>
+		<title>SpaceX names Texas as site of its commercial space launch facility</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/cW_RIBykmh0/</link>
+		<comments>http://arstechnica.com/science/2014/04/spacex-names-texas-as-site-of-its-commercial-space-launch-facility/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 18:26:44 +0000</pubDate>
+		<dc:creator><![CDATA[Lee Hutchinson]]></dc:creator>
+				<category><![CDATA[Scientific Method]]></category>
+		<category><![CDATA[Commercial space]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[falcon]]></category>
+		<category><![CDATA[NASA]]></category>
+		<category><![CDATA[space]]></category>
+		<category><![CDATA[spacex]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452191</guid>
+		<description><![CDATA[Lone Star location beats out Florida and Georgia in search for spaceport site.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap"> <div class="image right medium">
+<a href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/SpaceX_private-launch_facility_location-TexasProposal-201304.jpg"><img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/SpaceX_private-launch_facility_location-TexasProposal-201304-300x396.jpg" srcset="http://cdn.arstechnica.net/wp-content/uploads/2014/04/SpaceX_private-launch_facility_location-TexasProposal-201304-640x846.jpg 2x"></a><div class="caption" style="font-size:0.8em">
+<div class="caption-text"><a href="http://cdn.arstechnica.net/wp-content/uploads/2014/04/SpaceX_private-launch_facility_location-TexasProposal-201304.jpg" class="caption-link" rel="nofollow">Proposed launch facility site.</a></div> <div class="caption-credit"><a rel="nofollow" class="caption-link" href="https://en.wikipedia.org/wiki/File:SpaceX_private-launch_facility_location--TexasProposal--201304.jpg">Federal Aviation Administration</a></div>
+</div>
+</div>
+<p>At a press conference held this afternoon at the National Press Club in Washington DC, SpaceX CEO Elon Musk announced that last week's <a href="http://arstechnica.com/science/2014/04/spacex-tries-again-on-space-station-resupply-booster-landing/">soft-landing of the leg-equipped Falcon 9 rocket</a> was a success. The company's founder also let slip that <a href="http://blog.chron.com/sciguy/2014/04/elon-musk-on-texas-spaceport-well-probably-have-that-site-active-in-a-couple-of-years/">SpaceX has chosen southern Texas</a> as the location where it will build its own <a href="https://en.wikipedia.org/wiki/SpaceX_private_launch_site">launch facility</a>.</p>
+<p>According to <em>Houston Chronicle</em> science reporter Eric Berger, Musk made the spaceport location announcement near the end of the news conference in response to a question from the audience. SpaceX has been searching for a location to build its own spaceport for some time and had narrowed the search down to Florida, Georgia, or Texas.</p>
+<p>Southerly locations are preferred for rocket launches in the northern hemisphere because the closer a launch is to the equator, the more of a momentum "boost" the rocket gets from the earth's rotation. This, coupled with favorable economic terms, is why the final location contenders were all southern states.</p>
+</div><p><a href="http://arstechnica.com/science/2014/04/spacex-names-texas-as-site-of-its-commercial-space-launch-facility/#p3">Read 3 remaining paragraphs</a> | <a href="http://arstechnica.com/science/2014/04/spacex-names-texas-as-site-of-its-commercial-space-launch-facility/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=cW_RIBykmh0:MfPF_W58gRw:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=cW_RIBykmh0:MfPF_W58gRw:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=cW_RIBykmh0:MfPF_W58gRw:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=cW_RIBykmh0:MfPF_W58gRw:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=cW_RIBykmh0:MfPF_W58gRw:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=cW_RIBykmh0:MfPF_W58gRw:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/cW_RIBykmh0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/science/2014/04/spacex-names-texas-as-site-of-its-commercial-space-launch-facility/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/science/2014/04/spacex-names-texas-as-site-of-its-commercial-space-launch-facility/</feedburner:origLink></item>
+		<item>
+		<title>Google getting slapped big for dodging French tax collector</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/QPy50TNAqz8/</link>
+		<comments>http://arstechnica.com/tech-policy/2014/04/google-getting-slapped-big-for-dodging-french-tax-collector/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 17:50:51 +0000</pubDate>
+		<dc:creator><![CDATA[Joe Silver]]></dc:creator>
+				<category><![CDATA[Law & Disorder]]></category>
+		<category><![CDATA[Ministry of Innovation]]></category>
+		<category><![CDATA[france]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[tax evasion]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=451963</guid>
+		<description><![CDATA[Tech giant appears $1 billion behind on payments to France. ]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/Google-Paris.png"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Google's office in Paris. </div>
+	
+			<div class="caption-credit">
+							<a rel="nofollow" href="http://www.google.com/about/careers/locations/paris/#tab=tab-gallery">Google</a>
+				</div>
+	  </div>
+  </div>
+ <p>Technology giant Google has been delinquent on its tax payments in France for the past few years, to the tune of <a href="http://www.lepoint.fr/politique/emmanuel-berretta/exclusif-le-fisc-redresse-google-d-un-milliard-d-euros-04-02-2014-1787948_1897.php">more than $1 billion in missed payments</a>, and it now may be hit with a sizable tax penalty by the French government<span style="font-size: 14px;">.</span></p>
+<p>Google has been put on notice of its <a href="http://arstechnica.com/tech-policy/2013/01/tax-man-trying-to-figure-out-a-way-to-outsmart-google/">delinquency</a> by the French tax authorities, and the company has acknowledged that it might be issued a large penalty for non-compliance by the French Direction Générale Des Finances Publiques, the French equivalent of the US Internal Revenue Service.</p>
+<p>In a Google <a href="http://www.sec.gov/Archives/edgar/data/1288776/000128877614000040/goog10-qq12014.htm">earnings report</a> filed for the quarterly period ending March 31, 2014, the company confirmed that France has started pressuring the company as a result of what the French government sees as Google’s evasive tax practices within the country over the past several years.</p>
+</div><p><a href="http://arstechnica.com/tech-policy/2014/04/google-getting-slapped-big-for-dodging-french-tax-collector/#p3">Read 5 remaining paragraphs</a> | <a href="http://arstechnica.com/tech-policy/2014/04/google-getting-slapped-big-for-dodging-french-tax-collector/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QPy50TNAqz8:fC5Oul1epa4:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=QPy50TNAqz8:fC5Oul1epa4:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QPy50TNAqz8:fC5Oul1epa4:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=QPy50TNAqz8:fC5Oul1epa4:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QPy50TNAqz8:fC5Oul1epa4:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=QPy50TNAqz8:fC5Oul1epa4:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/QPy50TNAqz8" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/tech-policy/2014/04/google-getting-slapped-big-for-dodging-french-tax-collector/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/tech-policy/2014/04/google-getting-slapped-big-for-dodging-french-tax-collector/</feedburner:origLink></item>
+		<item>
+		<title>Reminder: Third-party Google Voice apps shut down in 20 days</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/b6ngjdTAr_A/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/reminder-third-party-google-voice-apps-shut-down-in-20-days/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 17:10:10 +0000</pubDate>
+		<dc:creator><![CDATA[Ron Amadeo]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[Google Voice]]></category>
+		<category><![CDATA[google+]]></category>
+		<category><![CDATA[spring cleaning]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=451909</guid>
+		<description><![CDATA[GrooVe IP, Talkatone, Obihai, and others will stop working with Voice on May 15th.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/google-voice-logo-640x207.jpg">
+</div>
+ <p>Just a friendly reminder that if you rely on a third-party app's use of Google Voice services, it's time to start looking for alternatives. Google <a href="https://plus.google.com/u/0/+NikhylSinghal/posts/MjyncJEbzxK">announced</a> late last year that it would be shutting down "unauthorized" third-party Google Voice use as part of Google's transition away from the XMPP communications protocol. The shutdown happens on May 15, 2014, which means you have 20 days to find something else.</p>
+<p>In the announcement, Google+ Product Manager Nikhyl Singhal said:</p>
+<blockquote><p>We want to make Google Voice as secure as possible. There are a few third-party applications that provide calling and SMS services by making unauthorized use of Google Voice. These apps violate our Terms of Service and pose a threat to your security, so we’re notifying these app developers that they must stop making unauthorized use of Google Voice to run their services and transition users by May 15, 2014.</p></blockquote>
+<p>The shutdown looks to still be on, and vendors are scrambling to deal with the hole this move is leaving in the VoIP market. Popular mobile VoIP solution GrooveIP pretty much <a href="https://www.facebook.com/permalink.php?story_fbid=544918605588834&amp;id=118608074886558">stopped development</a> the day after the announcement. <a href="http://support.talkatone.com/customer/portal/articles/1410745-support-for-google-voice-ending-may-15-2014">Talkatone</a>, another VoIP service, recommends that users switch to its in house service, while <a href="http://blog.obihai.com/2014/03/obihai-announces-obitalk-approved_18.html">Obihai</a>, the makers of a home and business VoIP products, announced some services that can replace Google's offering (though plans start at around $40 a year).</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/reminder-third-party-google-voice-apps-shut-down-in-20-days/#p3">Read 2 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/reminder-third-party-google-voice-apps-shut-down-in-20-days/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b6ngjdTAr_A:RI4Hp4neMNU:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=b6ngjdTAr_A:RI4Hp4neMNU:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b6ngjdTAr_A:RI4Hp4neMNU:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=b6ngjdTAr_A:RI4Hp4neMNU:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b6ngjdTAr_A:RI4Hp4neMNU:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=b6ngjdTAr_A:RI4Hp4neMNU:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/b6ngjdTAr_A" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/reminder-third-party-google-voice-apps-shut-down-in-20-days/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/reminder-third-party-google-voice-apps-shut-down-in-20-days/</feedburner:origLink></item>
+		<item>
+		<title>FTC sides with Tesla, says it should be allowed to sell directly to consumers</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/9svAs4Of7L0/</link>
+		<comments>http://arstechnica.com/gadgets/2014/04/ftc-sides-with-tesla-says-it-should-be-allowed-to-sell-directly-to-consumers/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 16:50:27 +0000</pubDate>
+		<dc:creator><![CDATA[Lee Hutchinson]]></dc:creator>
+				<category><![CDATA[Gear & Gadgets]]></category>
+		<category><![CDATA[car dealerships]]></category>
+		<category><![CDATA[cars technica]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[Franchise]]></category>
+		<category><![CDATA[franchises]]></category>
+		<category><![CDATA[model s]]></category>
+		<category><![CDATA[Tesla]]></category>
+		<category><![CDATA[tesla motors]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=452021</guid>
+		<description><![CDATA[Agency blog post calls state car dealership laws "harmful" and anticompetitive.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2013/10/tesla00301-640x426.jpg"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">A Model S in flight.</div>
+	
+			<div class="caption-credit">
+							Steven Michael				</div>
+	  </div>
+  </div>
+ <p>Even as Tesla Motors plans on expanding its manufacturing efforts and selling more cars, the company's direct-to-consumer business model continues to draw fire from entrenched car dealership business interests. State legislatures are still <a href="http://arstechnica.com/business/2014/03/new-jersey-bars-tesla-from-selling-cars-directly/">throwing up roadblocks</a> intended to make it harder for Tesla to sell cars to customers unless the company adopts the local franchise dealership model—something Tesla founder Elon Musk has said he will never do.</p>
+<p>The latest salvo in the fight comes from the federal government, though: the Federal Trade Commission has published <a href="http://www.ftc.gov/news-events/blogs/competition-matters/2014/04/who-decides-how-consumers-should-shop">a heavily critical analysis</a> of the state-by-state legislation that protects car dealerships from competition.</p>
+<p>Automobile manufacturers are generally prohibited from selling directly to consumers in most states, with the actual details of the prohibition varying by state (some states, <a href="http://arstechnica.com/gadgets/2013/09/tesla-sets-its-sights-on-texas-with-more-supercharger-station-openings/">like Texas</a>, have extremely tough and detailed restrictions on auto manufacturers; others, like California, have looser rules). The post on the FTC's official blog levels a number of criticisms at the patchwork of laws that force carmakers to sell through dealerships instead of marketing directly to customers, including this particularly damning paragraph:</p>
+</div><p><a href="http://arstechnica.com/gadgets/2014/04/ftc-sides-with-tesla-says-it-should-be-allowed-to-sell-directly-to-consumers/#p3">Read 3 remaining paragraphs</a> | <a href="http://arstechnica.com/gadgets/2014/04/ftc-sides-with-tesla-says-it-should-be-allowed-to-sell-directly-to-consumers/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9svAs4Of7L0:rGcna4wYDqc:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=9svAs4Of7L0:rGcna4wYDqc:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9svAs4Of7L0:rGcna4wYDqc:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=9svAs4Of7L0:rGcna4wYDqc:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9svAs4Of7L0:rGcna4wYDqc:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=9svAs4Of7L0:rGcna4wYDqc:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/9svAs4Of7L0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gadgets/2014/04/ftc-sides-with-tesla-says-it-should-be-allowed-to-sell-directly-to-consumers/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gadgets/2014/04/ftc-sides-with-tesla-says-it-should-be-allowed-to-sell-directly-to-consumers/</feedburner:origLink></item>
+		<item>
+		<title>Danish government releases geographic data by way of 1:1 Minecraft map</title>
+		<link>http://feeds.arstechnica.com/~r/arstechnica/index/~3/PoTzp2xRQvo/</link>
+		<comments>http://arstechnica.com/gaming/2014/04/danish-government-releases-geographic-data-by-way-of-11-minecraft-map/#comments</comments>
+		<pubDate>Fri, 25 Apr 2014 16:30:53 +0000</pubDate>
+		<dc:creator><![CDATA[Sam Machkovech]]></dc:creator>
+				<category><![CDATA[Opposable Thumbs]]></category>
+
+		<guid isPermaLink="false">http://arstechnica.com/?p=451431</guid>
+		<description><![CDATA[Release of the nation's full topographical map to be mineable until Oct. 23.]]></description>
+				<content:encoded><![CDATA[<div id="rss-wrap">
+<div>
+      <img src="http://cdn.arstechnica.net/wp-content/uploads/2014/04/rundetaarn-640x360.png"><div class="caption" style="font-size:0.8em">
+			<div class="caption-text">Denmark opened its data doors for a full nationwide Minecraft recreation. Now we can finally estimate how well Copenhagen's Rundetårn observatory, seen here, could withstand a creeper invasion.</div>
+	
+	  </div>
+  </div>
+ <p>The world-building power of <i>Minecraft</i> has spawned a zillion blocky, pixelated approximations of some of the world's most famous landmarks and cities. But what can happen when a city—or even country—opens its data doors for a total <i>Minecraft</i> recreation? For an answer, take a look at Denmark. Really, <a href="https://www.youtube.com/watch?v=6rMebJWiNUQ">go look at it</a>. You can jump into <i>Minecraft</i> right now and virtually walk around the nation's shores, highways, and cities because the <a href="http://gst.dk/emner/frie-data/minecraft/">Danish Geodata Agency</a> has launched a full 1:1 recreation.</p>
+<p>(Warning: From here on out, many links are in Danish, and some do not play nice with Google Translate.)</p>
+<p>We thought we'd seen it all when a PhD student began building <a href="http://arstechnica.com/gaming/2014/03/manhattancraft-the-quest-to-make-a-full-size-city-of-minecraft-blocks/">a 1:1 model of New York City</a> this year. However, his work ran into more than a few logistical speed bumps. The project required a giant server farm and a mix of data from disparate sources, like US Geological Survey elevation maps, Google's 3D Warehouse, and for-profit map services like Bing and Here.com. As a result, that Manhattancraft project lacks a cohesive data core and will require a licensing partnership before it can truly go forward.</p>
+</div><p><a href="http://arstechnica.com/gaming/2014/04/danish-government-releases-geographic-data-by-way-of-11-minecraft-map/#p3">Read 7 remaining paragraphs</a> | <a href="http://arstechnica.com/gaming/2014/04/danish-government-releases-geographic-data-by-way-of-11-minecraft-map/?comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=PoTzp2xRQvo:0p9iuKd_WiE:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=PoTzp2xRQvo:0p9iuKd_WiE:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=PoTzp2xRQvo:0p9iuKd_WiE:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=PoTzp2xRQvo:0p9iuKd_WiE:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=PoTzp2xRQvo:0p9iuKd_WiE:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=PoTzp2xRQvo:0p9iuKd_WiE:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/arstechnica/index/~4/PoTzp2xRQvo" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://arstechnica.com/gaming/2014/04/danish-government-releases-geographic-data-by-way-of-11-minecraft-map/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://arstechnica.com/gaming/2014/04/danish-government-releases-geographic-data-by-way-of-11-minecraft-map/</feedburner:origLink></item>
+	</channel>
+</rss>

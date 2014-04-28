@@ -18,29 +18,21 @@ class SitemapParser(object):
                 self.start_loc = True
         except IndexError:
             print('did not find loc')
-        print('start tag:%s attrib:%s' % (tag, attrib))
 
     def end(self, tag):
         try:
             if tag[-3:] == 'loc' and self.start_loc:
-                print('found loc')
                 self.pages.append(WebsitePage(self.data_loc))
                 self.start_loc = False
                 self.data_loc = None
         except IndexError:
             print('did not find loc')
-        print('end %s' % tag)
 
     def data(self, data):
         if self.start_loc:
             self.data_loc = data
-        print("data %r" % data)
-
-    def comment(self, text):
-        print("comment %s" % text)
 
     def close(self):
-        print("close")
         return "closed!"
 
 
