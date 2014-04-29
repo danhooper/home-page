@@ -6,14 +6,16 @@ import models
 
 
 def show_websites(request):
-    websites = models.WebsiteHealthChecker.objects.all()
+    websites = models.WebsiteHealthChecker.objects.filter(
+        user=request.user).all()
     return render_to_response('website_health/templates/main.html',
                               {'websites': websites})
 
 
 def show_website(request, website_id):
     website_id = int(website_id)
-    website = models.WebsiteHealthChecker.objects.get(pk=website_id)
+    website = models.WebsiteHealthChecker.objects.filter(
+        user=request.user).get(pk=website_id)
     return render_to_response('website_health/templates/website.html',
                               {'website': website})
 

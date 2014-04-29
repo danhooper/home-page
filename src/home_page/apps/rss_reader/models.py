@@ -1,6 +1,7 @@
-from django.db import models
 from django import forms
+from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.db import models
 import feedparser
 
 
@@ -20,6 +21,7 @@ class Entry(object):
 
 
 class RSSFeed(models.Model):
+    user = models.ForeignKey(User)
     url = models.URLField(max_length=500)
     name = models.CharField(max_length=200)
     rank = models.IntegerField(default=9999)

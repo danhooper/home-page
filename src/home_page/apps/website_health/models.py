@@ -1,7 +1,8 @@
 import urllib2
-from django.db import models
 from django import forms
+from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.db import models
 from lxml import etree
 
 
@@ -52,6 +53,7 @@ class WebsitePage(object):
 
 
 class WebsiteHealthChecker(models.Model):
+    user = models.ForeignKey(User)
     url = models.URLField()
     sitemap_url = models.URLField()
     name = models.CharField(max_length=200)
