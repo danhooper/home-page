@@ -17,9 +17,13 @@ class TestRSSReader(unittest.TestCase):
         response = self.client.get('/home_page/rss_reader/')
         self.assertEqual(response.status_code, 200)
 
-    #def test_feed(self):
-    #    feed = models.RSSFeed('url': 'http://example.com',
-    #                          'name': 'test')
-    #    feed.save()
-    #    response = self.client.get('/rss_reader/feed/%d' % feed.id)
+    def test_feed(self):
+        feed = models.RSSFeed(user = self.user,
+                              url='http://example.com',
+                              name= 'arstechnica')
+        feed.save()
+        response = self.client.get('/home_page/rss_reader/feed/%d/' % feed.id)
+        self.assertEqual(response.status_code, 200)
 
+    def tearDown(self):
+        self.user.delete()

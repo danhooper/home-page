@@ -3,6 +3,7 @@
 
 import os.path
 import posixpath
+import sys
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
@@ -189,6 +190,9 @@ STRONGHOLD_PUBLIC_NAMED_URLS = (
 )
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
+
+
+TESTING = 'test' in sys.argv
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

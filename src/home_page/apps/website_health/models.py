@@ -1,5 +1,7 @@
+import os
 import urllib2
 from django import forms
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -15,7 +17,6 @@ class SitemapParser(object):
     def start(self, tag, attrib):
         try:
             if tag[-3:] == 'loc':
-                print('found loc')
                 self.start_loc = True
         except IndexError:
             print('did not find loc')
@@ -64,7 +65,13 @@ class WebsiteHealthChecker(models.Model):
     def get_links(self):
         sitemap_parser = SitemapParser()
         parser = etree.XMLParser(target=sitemap_parser)
-        etree.parse(self.sitemap_url, parser)
+        if settings.TESTING:
+            path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                'samples/%s.xml' % self.name)
+            etree.parse(path, parser)
+        else:
+           etree.parse(self.sitemap_url, parser)
+
         return sitemap_parser.pages
 
     def __unicode__(self):
