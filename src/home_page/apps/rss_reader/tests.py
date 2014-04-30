@@ -32,5 +32,15 @@ class TestRSSReader(unittest.TestCase):
                 '/home_page/rss_reader/feed/%d/' % feed.id)
             self.assertEqual(response.status_code, 200)
 
+    def test_sample(self):
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                            'rss_samples')
+        files = os.listdir(path)
+        for feed_file in files:
+            feed_name = feed_file.split('.xml')[0]
+            response = self.client.get(
+                '/home_page/rss_reader/sample/%s/' % feed_name)
+            self.assertEqual(response.status_code, 200)
+
     def tearDown(self):
         self.user.delete()
