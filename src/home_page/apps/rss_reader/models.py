@@ -1,4 +1,6 @@
+import os
 from django import forms
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -31,7 +33,12 @@ class RSSFeed(models.Model):
         return reverse('show_feed', args=(self.id,))
 
     def get_entries(self):
-        feed = feedparser.parse(self.url)
+        if settings.TESTING:
+            path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                'rss_samples/%s.xml' % self.name)
+            feed = feedparser.parse(path)
+        else:
+            feed = feedparser.parse(self.url)
         return [Entry(entry) for entry in feed.get('entries')]
 
     def __unicode__(self):
