@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://syndication.thedailywtf.com/~d/styles/itemcontent.css"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" version="2.0">
+	<channel>
+		<title>The Daily WTF</title> 
+		<link>http://thedailywtf.com/</link> 
+		<description>Curious Perversions in Information Technology</description> 
+
+		<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://syndication.thedailywtf.com/TheDailyWtf" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="thedailywtf" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><geo:lat>41.36995</geo:lat><geo:long>-81.862591</geo:long><item>
+			<author>Dan Adams-Jacobson</author> 
+			<title>cURLing Up With a Good Hook</title> 
+			<link>http://thedailywtf.com/Articles/cURLing-Up-With-a-Good-Hook.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Wed, 30 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7839</guid> 
+			<description>&lt;p&gt;A year into his gig as a senior web developer for ClientServiCo, &lt;strong&gt;Eddie&lt;/strong&gt; felt like he had a good grip on the many disparate systems he and his team had built for their clients over the years. Like most web-dev firms formed during the first bubble, the ClientServiCo team had survived by adopting whatever tools were the right combination of familiar, popular, and available&lt;!--READ: Free as in beer--&gt; at the time. This approach, while allowing them to be flexible in conforming to their clients' needs, also left a tangled legacy spread across a constellation of web hosts. Yeah, it was kludgy in parts. Sure, Eddie would look at some parts and wonder if the coder was high at the time, but hey - overall, it just worked and nobody complained! ...Then came the notification from their current host that a Drupal installation belonging to a ClientServiCo client was spewing spam and had to be taken offline.&lt;/p&gt;
+
+&lt;p&gt;The first oddity Eddie noticed was that Drupal wasn't running the entire site. Instead, it was just a calendar and event-registration system. The administrative section was powered by a CMS that ClientServiCo had written in-house during &lt;a href="http://en.wikipedia.org/wiki/2000s_(decade)#Names_for_the_decade"&gt;the aughts&lt;/a&gt;, and abandoned years ago in favor of something more robust. Though the site was meant to be accessible to authorized users only, the &lt;code&gt;.htaccess&lt;/code&gt; and &lt;code&gt;.htpasswd&lt;/code&gt; files which comprised the authorization system were only protecting the third part of the site: a set of static webpages written in &lt;a href="http://www.microsoftfrontpage.com/"&gt;FrontPage&lt;/a&gt;. With the Drupal system and admin backend both freely accessible from the web, it was incredible that the five year-old site had only &lt;em&gt;recently&lt;/em&gt; been compromised. As a simple first step to stop the bleeding, Eddie moved the &lt;code&gt;.htaccess&lt;/code&gt; file up one directory to protect the entire web root and trudged on.&lt;/p&gt;
+
+&lt;p&gt;Confident that the content was now protected, Eddie asked the host to restore permissions to the Drupal site so he could go looking for the actual attack vector. His suspicion, since the site hadn't seen an update since 2010, was a long-since patched &lt;a href="https://drupal.org/security"&gt;bug&lt;/a&gt; in Drupal core. He was in the midst of reviewing changelogs to see which holes had been patched when it occurred to Eddie to check the account-creation settings. There it was, not a bug but a feature: &lt;em&gt;"Visitors can create accounts and no administrator approval is required"&lt;/em&gt; was checked, meaning anyone on Earth could create an account, add stories or pages to the site or register for events, and that's exactly what they'd done. After zapping nine thousand users and ten times as many "stories", Eddie had a clean DB and restored it to the live site.&lt;/p&gt;
+
+&lt;p&gt;Naïve misconfiguration on a public-facing website earns an F, but is it really WTF? Perhaps not, but the very next day Eddie's phone lit up. Somehow, even the ringtone sounded frantic! On the other end was one of the clients' site administrators, and she was &lt;em&gt;not&lt;/em&gt; calling to congratulate him on getting their site taken off the host's blacklist. No, although the site was back online, no one could register for events through the Drupal calendar. The admin was more than familiar with the tradition that, since Eddie had touched it last, the problem must be his fault. After she walked him through the issue, all Eddie had to go on was a dropdown failing to populate and a cryptic PHP warning about &lt;code&gt;foreach()&lt;/code&gt; expecting certain parameters.&lt;/p&gt;
+
+&lt;p&gt;Eddie donned his fedora and bull whip and began another archaeological dig. This time, he found a custom Drupal module lurking in the &lt;code&gt;/modules&lt;/code&gt; directory. This shadowy script was apparently managing the event registrations and should have been pulling in the missing data. It was mostly luck that brought Eddie's attention to an inconspicuous ten-line function called &lt;code&gt;retrieveNameData&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;When he parsed the code, Eddie did a double take - since the site's admin system was using ClientServiCo's home-made CMS instead of a Drupal module, the name data was being retrieved by making a &lt;a href="http://curl.haxx.se"&gt;cURL&lt;/a&gt; call to the admin system's URL. The use of cURL was odd but, even worse, the target URL resolved just fine in Eddie's web browser. "That's weird," Eddie muttered to himself, "if &lt;em&gt;I&lt;/em&gt; can access the URL, why can't-" His eyes landed on the widget telling him he was logged into the site. Opening a different browser, he tried the URL again, and was left staring at an &lt;code&gt;htpasswd&lt;/code&gt; dialog. Now that Eddie had the admin system under the intended access control, cURL's unauthenticated call was being summarily rejected. For the first time, Eddie found himself wishing the site's original developers were still around; he wouldn't be surprised to hear that this roadblock had kept them from applying authorization to either CMS in the first place.&lt;/p&gt;
+
+&lt;p&gt;With a new user in the &lt;code&gt;.htpasswd&lt;/code&gt; file and the appropriate &lt;a href="http://curl.haxx.se/docs/manpage.html"&gt;curlopts&lt;/a&gt; in place, the newly-hardened site was working again. This time, the admin &lt;em&gt;did&lt;/em&gt; thank him, and Eddie was happy to tuck this chapter of ClientServiCo's history back in the drawer.&lt;/p&gt;
+&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=41aXJUJKyYk:J8Z2M-f-pac:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/41aXJUJKyYk" height="1" width="1"/&gt;</description> 
+			<slash:comments>47</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/cURLing-Up-With-a-Good-Hook.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Bruce Johnson</author> 
+			<title>CodeSOD: Seeing Sextuple</title> 
+			<link>http://thedailywtf.com/Articles/Seeing-Sextuple.aspx</link> 
+			<category>CodeSOD</category>
+			<pubDate>Tue, 29 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7830</guid> 
+			<description>&lt;p&gt;(Read to the tune of "The Way We Were")&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;
+Bitmaps
+Clog the corners of my RAM
+Giant, duplicated bitmaps
+of the memes that were
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;People say you can't have too much of a good thing. But for some things, even two of the same thing is one too many.&lt;/p&gt;
+&lt;p&gt;Such is the case with bitmaps. Well, not bitmaps, per se. Bitmaps are awesome. Bitmaps of memes involving the most interesting man in the world and some completely unrelated slogan. Bitmaps of fist pumping babies. Infogram bitmaps containing the insightful witticisms of Justin Bieber (admittedly, a small bitmap...but still). Everywhere you look, Bitmap awesomeness abounds.&lt;/p&gt;
+&lt;p&gt;But &lt;i&gt;in-memory&lt;/i&gt; copies of bitmaps are a different story. Consider the following code, which is used to push a JPG image into the output stream of an HTTP response.&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="cs"&gt;&lt;code class="cs"&gt;
+public void ResponseImageToBrowser(string fileName) 
+{ 
+	//convert image to byte array
+	byte[] objImgData = ConvertImageToByteArray(new Bitmap(fileName), ImageFormat.Jpeg);
+	MemoryStream objMemoryStream = new MemoryStream();
+	objMemoryStream.Write(objImgData, 0, objImgData.Length);
+	Image objImage = Image.FromStream(objMemoryStream);
+	HttpContext.Current.Response.AddHeader("Content-Disposition", "filename=" + fileName);
+	HttpContext.Current.Response.ContentType = "image/Jpeg";
+	objImage.Save(HttpContext.Current.Response.OutputStream, ImageFormat.Jpeg);
+	
+	//close the file stream
+	objMemoryStream.Close();
+	objMemoryStream.Dispose();
+	objImage.Dispose();
+}
+
+private byte[] ConvertImageToByteArray(Image objImageToConvert, ImageFormat objFormatOfImage) 
+{
+	byte[] objByteImage;
+	using (MemoryStream objMemoryStream = new MemoryStream())
+	{
+		objImageToConvert.Save(objMemoryStream, objFormatOfImage);
+		objByteImage = objMemoryStream.ToArray();
+	}
+	return objByteImage
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Let's follow along.&lt;/p&gt;
+&lt;p&gt;First, the image is loaded into memory through the Bitmap class constructor. Then the bitmap class is saved into a memory stream (copy 2). This stream is converted into an array of bytes (copy 3). &lt;/p&gt;
+&lt;p&gt;Next, the byte array is written into a memory stream (copy 4) which is then loaded into an Image object (copy 5). Next, the Image object is  saved into the output stream for the HTTP response (ostensibly, copy 6). &lt;/p&gt;
+&lt;p&gt;So in a mere 12 lines of code, a total of 6 copies of the images were placed into memory. Not sure if this qualifies, but Guinness has been notified just in case.&lt;/p&gt;
+&lt;p&gt;To rub salt into the wound, the above code could be replaced by two lines.&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre&gt;&lt;code&gt;
+HttpContext.Current.Response.ContentType = "image/jpeg";
+HttpContext.Current.Response.WriteFile(filename);
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;And finally, as a coup de grâce, notice how even the comments duplicate the method names. After all, if you're going to double down (or sextuple down), don't be afraid to go all in.&lt;/p&gt;
+&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css"&gt;
+&lt;script src="http://img.thedailywtf.com/images/remy/highlight.js/highlight.pack.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=1kgEhvyyN7w:Kf-Cqf4o_Cg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/1kgEhvyyN7w" height="1" width="1"/&gt;</description> 
+			<slash:comments>73</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Seeing-Sextuple.aspx</comments>
+		</item>
+	
+		<item>
+			<author>snoofle</author> 
+			<title>Left Hand, Meet Right Hand</title> 
+			<link>http://thedailywtf.com/Articles/Left-Hand,-Meet-Right-Hand.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Mon, 28 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7831</guid> 
+			<description>&lt;p&gt;You have to love the folly of big companies. Bear Stearns. Lehman. Tyco. Enron. MF Global. MegaCorp. WTF Inc. They always put out advertisements telling us how soft and gentle their products are for us, our children and the planet. They cajole us with ads extolling the virtues of their products, and how we can't live without them. Of course, you &lt;i&gt;know&lt;/i&gt; that they use the strictest rules and procedures to guaranty the safety of our personal data, and take every conceivable measure to make sure that things are done correctly. In short, we can trust them. There are rules for how to do everything. Protocols to be implemented. Procedures &lt;i&gt;will&lt;/i&gt; be followed. Period.&lt;/p&gt;
+
+&lt;p&gt;Phone companies, especially, take extreme precautions when releasing software because the communications grid simply cannot be allowed to go down. Ever. I mean, it's critical that you be able to get important messages through, like: &lt;i&gt;I'm on my way&lt;/i&gt;, or &lt;i&gt;Pick up milk&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;As such, it's important that every manager in every department involved in running any part of the phone system, including the call centers, can dot all the I's and cross all the T's.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Big Bob&lt;/b&gt; is not a &lt;i&gt;real&lt;/i&gt; engineer these days. Mostly, he gets paid to help engineers, managers and customers communicate. His company partnered with another company that had a very rigid release schedule. Together, they built a very complex product to perform several services.&lt;/p&gt;
+
+&lt;p&gt;Then they had a stroke of &lt;strike&gt;misfortune&lt;/strike&gt; luck; a large telco had taken an interest in the joint product and decided to purchase it. Naturally, some custom modifications were required, but BB and partners tried to remain as true to their corporate vision as possible.&lt;/p&gt;
+
+&lt;p&gt;The telco also demanded that they limit the frequency of their releases because the telco needed more time for their internal testing. BB and partners tried to accommodate the request.&lt;/p&gt;
+
+&lt;p&gt;One day, the telco started complaining that the partners' updates were causing a massive surge in support calls. Naturally, BB and partners shared their concern. However, the increase in volume wasn't unilateral; it was contained to one call center; the other call centers were unaffected. After BB made several adjustments, the telco still complained about the call volumes, but with varying levels of volume spikes, and only at the lone call center.&lt;/p&gt;
+
+&lt;p&gt;Eventually, an all-hands-on-deck conference call was set up so the telco project teams, procurement teams, test teams, call center managers, the cafeteria lady and BB &amp;amp; partner teams could hash it out.&lt;/p&gt;
+
+&lt;p&gt;Not long into the call, an all-out argument broke out between the call center management team and the other telco teams. Fingers were pointed. Blame was assigned. Nominees for being the sacrificial lamb were proffered:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;
+  Call Center:             &lt;i&gt;We are getting flooded with support calls at one call center!&lt;/i&gt;
+  Capacity Planning:       &lt;i&gt;We ensure that there's enough capability to move the data;
+                           we don't manage what data gets sent&lt;/i&gt;
+  Network Engineering:     &lt;i&gt;Our responsibility is to move the data across the network 
+                           between the sender and recipient: the messages are getting 
+                           through to you; we're good!&lt;/i&gt;
+  Customer GUI Team:       &lt;i&gt;We are only generating messages that are needed, based upon
+                           customer interactions; we have no choice...&lt;/i&gt;
+  Server Development Team: &lt;i&gt;Listen, if anybody from the network team would have been in 
+                           attendance at the last change control meeting, then MAYBE we 
+                           wouldn't be here now!&lt;/i&gt;
+  Network Engineering:     &lt;i&gt;It's not like we could go if we wanted to last week! Don't
+                           forget that we were fighting a fire caused by by your team! Need
+                           I rehash the domain controller issue?&lt;/i&gt;
+  Yet Another Manager:     &lt;i&gt;Cool it guys - this had nothing to do with a single network
+                           load-balancer firmware upgrade. There are many irregular weeks
+                           of unexplained call volume&lt;/i&gt;
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;BB had to nearly bite through his lip to keep from pouring fuel on the fire. Clearly, they had forgotten that external folks were on the call.&lt;/p&gt;
+
+&lt;p&gt;Apparently, the call volume had started to impact on their performance figures, and it was CYA mode all around.&lt;/p&gt;
+
+&lt;p&gt;After some digging, it turned out that the increase in calls was exactly correlating with an advertising campaign that had recently begun, and precisely matched the success rate of the campaign. It had nothing to do with BB or his partner company.&lt;/p&gt;
+
+&lt;p&gt;At the end of the call, BB and partners thanked everyone for their time and hung up. BB and the software release manager wondered about what they had just heard. The telco call center was using them as a stick to block software releases, just because the sales department hadn't accurately forecast their own success.&lt;/p&gt;
+&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=KNCL2EolFyE:NW8PrSD3du8:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/KNCL2EolFyE" height="1" width="1"/&gt;</description> 
+			<slash:comments>76</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Left-Hand,-Meet-Right-Hand.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Mark Bowytz</author> 
+			<title>Error'd: Clbuttic Journalism</title> 
+			<link>http://thedailywtf.com/Articles/Clbuttic-Journalism.aspx</link> 
+			<category>Error'd</category>
+			<pubDate>Fri, 25 Apr 2014 10:00:00 GMT</pubDate> 
+			<guid isPermaLink="false">7833</guid> 
+			<description>&lt;p&gt;"The Wall Street Journal was a little late in 'target'ing April Fool's Day," writes &lt;strong&gt;Ryan&lt;/strong&gt;.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-3"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e111/Pic-3.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Pascal&lt;/strong&gt; wrote, "Oh no! CaptialOne's website ran out of strings!" 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-1"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e111/Pic-1.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"This showed up on a Forbes article via the Android Newsstand app. I guess if you can't comment, 'null' will do," &lt;strong&gt;Bruce R.&lt;/strong&gt; writes.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-2"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e111/Pic-2.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+ 
+&lt;p&gt;&lt;strong&gt;Ben A.&lt;/strong&gt; wrote, "Call me crazy, but I don't think that's a kangaroo."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-4"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e111/Pic-4.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Andreas&lt;/strong&gt; writes, "Nice clothes? No cat hair on them? Need to get somewhere in style? &lt;u&gt;NO PROBLEM&lt;/u&gt;." 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-5"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e111/Pic-5.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"I was notified that I need to update Preme for Windows, but luckily for lazy me, the expiry date won't be coming up any time soon," &lt;strong&gt;Kate K.&lt;/strong&gt; writes.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-6"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e111/Pic-6.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Mike E.&lt;/strong&gt; writes, "My new wireless router was &lt;i&gt;supposed&lt;/i&gt; to come with an Ethernet cable but I received &lt;i&gt;this&lt;/i&gt; one instead. I sure hope it's compatible."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-7"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e111/Pic-7.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt; 
+&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=aFQm5elSsCY:tqC-m1LD4Ow:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/aFQm5elSsCY" height="1" width="1"/&gt;</description> 
+			<slash:comments>47</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Clbuttic-Journalism.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Charles Robinson</author> 
+			<title>Psychic Software</title> 
+			<link>http://thedailywtf.com/Articles/Psychic-Software.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Thu, 24 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7825</guid> 
+			<description>&lt;p&gt;&lt;strong&gt;Lawrence&lt;/strong&gt;&amp;#8217;s first task at his new job would be an easy one. &amp;#8220;All you gotta do is carry this across the finish line. It&amp;#8217;s practically done already,&amp;#8221; Chris the Costly Contractor informed him. Costly Chris was nearing the end of his contract and the company didn&amp;#8217;t want to keep paying his jacked-up rates. That&amp;#8217;s where Lawrence, the cheaper, full-time alternative to Chris, came in. &amp;#8220;But, there are some recent change requests that we need to do. You&amp;#8217;ll have the pleasure of talking to Becky about that,&amp;#8221; Chris said with a sly grin.&lt;br/&gt;
+&lt;a title="By Ali at en.wikipedia (Original text : Not attributed) [Public domain], from Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APoster_of_Alexander_Crystal_Seer.jpg"&gt;&lt;img style="float: right; margin: 8pt;" width="128" alt="Poster of Alexander Crystal Seer" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Poster_of_Alexander_Crystal_Seer.jpg/128px-Poster_of_Alexander_Crystal_Seer.jpg"/&gt;&lt;/a&gt;&lt;br/&gt;
+The software was a simple CRM with a PHP front end. It was a straight-forward MVC application with a slew of stored procedures responsible for managing the data. Lawrence&amp;#8217;s group worked on the UI layer. &lt;/p&gt;
+
+&lt;p&gt;Shepherd, guru, and leader of the UI effort was Becky, the designer. Becky&amp;#8217;s background was in graphic design for print, and someone up the management tree had decided that design was design, and appointed her head of the user interface and experience group. &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;I&amp;#8217;m really proud of the search interface I came up with. You&amp;#8217;ll love it,&amp;#8221; Becky gushed to Lawrence during their first design meeting. &amp;#8220;The results still need some work before they&amp;#8217;re as perfect as my design.&amp;#8221; Lawrence pulled up the application to find a simple search screen with exactly one field. It returned a single result field- the primary key of the user records. &amp;#8220;See, that&amp;#8217;s what I don&amp;#8217;t like,&amp;#8221; Becky said. &amp;#8220;We need better information.&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;Like… their names? This is just their database ID, I could show their names. Or put in a link to their details.&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;You can do that?&amp;#8221; Becky said. She smacked the conference room table with enthusiasm. &amp;#8220;That would be awesome! Get to making that change right away. Get it done before next week.&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;Lawrence made the change to the lone search field in all of 3.567 minutes. &lt;/p&gt;
+
+&lt;p&gt;A week later, Becky gushed again. &amp;#8220;That is so cool!&amp;#8221; She was honestly amazed at the simple change, and spent half the meeting puzzling over the &amp;#8220;computer geek secrets&amp;#8221; that Lawrence used. &amp;#8220;This still needs more work, though. Just seeing someone&amp;#8217;s name when you search isn&amp;#8217;t enough. If I search for Robert Pattinson, I&amp;#8217;ll see all of the Robert Pattinson&amp;#8217;s in the world, and I&amp;#8217;ll have no clue which one is which!&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;So… you want their company information in the search results? Displayed with their name? I can do that.&amp;#8221; After further discussion, Lawrence returned to his desk and changed the search to display the contact&amp;#8217;s full name, company, phone-number and address. He was sure that Becky would go through the roof with excitement after this round of changes. &lt;/p&gt;
+
+&lt;p&gt;Lawrence was wrong. &amp;#8220;No, no, no, no, NO! What did you do to it? The screen is way too busy. This is too much junk. Besides, this still shows me too many results. Which is why I have a &lt;em&gt;better&lt;/em&gt; idea.&amp;#8221; Lawrence clenched his teeth and prepared for what was to come. &amp;#8220;Say you do a search for Atlanta. You type Atlanta in the box, and it returns all &lt;em&gt;sorts&lt;/em&gt; of Atlanta stuff. Guys from Atlanta, the Atlanta Widget Company, and people named Johnny Atlanta. That&amp;#8217;s so confusing. If I want to call the City of Atlanta, I&amp;#8217;m stuck paging through results. So what you need to do is only show results based on &lt;em&gt;exactly&lt;/em&gt; what I meant to find.&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;On… exactly what you meant to find?&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;Exactly.&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;Lawrence pondered Becky&amp;#8217;s bright idea for a long moment. &amp;#8220;Well, to do that, we&amp;#8217;d need to add multiple search fields, or give the user a way to be more specifi-&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;No! That&amp;#8217;s too complicated. This isn&amp;#8217;t for computer geeks. If I type in &amp;#8216;Atlanta&amp;#8217;, it should show me the City of Atlanta, if that&amp;#8217;s who I wanted to call. If I want Johnny Atlanta, it should show me that!&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;I… but….&amp;#8221; Lawrence struggled to come up with an answer. &amp;#8220;Unless we somehow magically make the computer psychic, this is impossible. I don&amp;#8217;t even know how we&amp;#8217;d…&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;Larry, this is not a time for excuses,&amp;#8221; Becky said. &amp;#8220;Just make this happen. This is 2014, and if we can put a man on Mars, then we can make a search smart enough to give the users what they want. User experience Larry, user &lt;em&gt;experience&lt;/em&gt;!&amp;#8221; &lt;/p&gt;
+
+&lt;p&gt;Lawrence shuffled back to his desk pondering the stupidity of her last statement. Then he spent a week trying to make the search field appear clairvoyant enough to fool Becky into thinking it was reading her mind. He never finished, though, because the entire project was unexpectedly scrapped, the company switched to an off-the-shelf CRM, and Becky went back into print design. Lawrence was gladly reassigned to a different project that had less telepathic requirements.&lt;/p&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=NKPSxgdKHOk:AyxbahVAmDo:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/NKPSxgdKHOk" height="1" width="1"/&gt;</description> 
+			<slash:comments>101</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Psychic-Software.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Dan Adams-Jacobson</author> 
+			<title>CodeSOD: Your Letters are Numbered</title> 
+			<link>http://thedailywtf.com/Articles/Your-Letters-are-Numbered.aspx</link> 
+			<category>CodeSOD</category>
+			<pubDate>Wed, 23 Apr 2014 09:45:00 GMT</pubDate> 
+			<guid isPermaLink="false">7827</guid> 
+			<description>&lt;p&gt;The First Rule of Enterprise Software is: &lt;em&gt;don't talk about enterprise software&lt;/em&gt;. The Second Rule of Enterprise Software is: &lt;em&gt;when you&lt;/em&gt; do &lt;em&gt;talk about enterprise software, make references to stylish dramas from the '90s starring Brad Pitt and Edward Norton to make it seem more exciting&lt;/em&gt;. However, the most important rule of enterprise software by far is Rule Number Three: &lt;em&gt;Even the simplest little things can't be simple.&lt;/em&gt; &lt;strong&gt;Arthur&lt;/strong&gt; was reminded of Rule Number Three on a recent trip into his employer's company-wide database.&lt;/p&gt;
+
+&lt;p&gt;The codebase Arthur maintained had a method for just about everything. "Hah!" You're probably thinking. "I bet it doesn't have a method that returns an array containing the letters of the English alphabet!" Well, Hah! yourself: stumbling across a call to &lt;code&gt;GetAlphabetForHouseCombinedPortfolios&lt;/code&gt; in the bloated, inappropriately-generic &lt;code&gt;UploadingTool&lt;/code&gt; class, Arthur was curious. Would it contain a hard-coded list of letters? A complex mathematical formula dependent on the current date that would baffle everyone by returning Hebrew when the clock switched out of daylight-savings time? No, like all proper enterprise solutions, the method invoked a stored procedure in the database. And that's why Arthur is proud to present  &lt;code&gt;sp_UploadingToolGetAlphabetForHouseCombinedPortfolios&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+-- get alphabet and ids for each letter
+SELECT N.Number_ID AS [Filtering_ID],
+       CHAR(N.Number_ID) AS [Filtering]
+FROM dbo.stbl_Number N
+WHERE N.Number_ID &amp;gt;= 65 AND N.Number_ID &amp;lt;= 90
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The best thing about this solution is how easily it can be modified to support the exciting new lowercase letters that are starting to gain traction in some forward-looking businesses.&lt;/p&gt;
+
+&lt;p&gt;The perfect coda to this story is the &lt;code&gt;stbl_Number&lt;/code&gt; table definition itself, which Arthur found to be thoroughly documented:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE TABLE [dbo].[stbl_Number] AS (
+    Number_ID INT NOT NULL, -- Number ID. Should always match the value in the Number field
+    Number INT NOT NULL, -- The number
+    Number_Text VARCHAR(50) NULL, -- Textual representation of the number
+    Number_Roman VARCHAR(50) NULL, -- Roman numeral representation of the number
+    Number_GUID UNIQUEIDENTIFIER NOT NULL -- Globally unique identifier for the number
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Arthur wanted us to point out that the &lt;code&gt;Number_Text&lt;/code&gt; field sometimes contained a value like "nine", and other times contained a value like "17". Arthur, we feel your pain. Just don't forget the First Rule of Enterprise Software.&lt;/p&gt;
+&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css"&gt;
+&lt;script src="http://img.thedailywtf.com/images/remy/highlight.js/highlight.pack.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=5EiOz0XBck0:3dIaDxzu-Qc:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/5EiOz0XBck0" height="1" width="1"/&gt;</description> 
+			<slash:comments>100</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Your-Letters-are-Numbered.aspx</comments>
+		</item>
+	
+		<item>
+			<author>snoofle</author> 
+			<title>Desert Packet Storm</title> 
+			<link>http://thedailywtf.com/Articles/Desert-Packet-Storm.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Tue, 22 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7820</guid> 
+			<description>&lt;p&gt;&lt;B&gt;Jonathan D&lt;/b&gt;. was the system administrator for a school nestled in a war-ravaged city somewhere in the middle of the desert. What with bombings here, explosions there, and the odd RPG whizzing by, dealing with a converted bathroom as an office/datacenter just didn't seem to be all that big of a deal.&lt;/p&gt;
+
+&lt;p&gt;The school had roughly 100 computers split between two buildings, along with the laptops everyone used. His office, ...erm... converted bathroom housed all of the servers, and the main computer room for the high school/middle school (grades 6 and up) building was located right outside the door.&lt;/p&gt;
+ 
+&lt;p&gt;One morning, as the sun came up over the desert, he found that he was unable to connect to the internet. After trying to ping the gateway and getting no response, Jonathan tried pinging the data servers. Nada.&lt;/p&gt;
+ 
+&lt;p&gt;When he did a visual inspection of the servers which revealed that they looked fine, he thought that maybe the problem was with his desktop. While it was rebooting, he heard the volume of the students in the computer room explode. The computers in there were no longer able to see the server and had hung.&lt;/p&gt;
+ 
+&lt;p&gt;At this point, Jonathan knew the problem wasn't just with his desktop. If the computer room next door couldn't reach the 
+servers right next to them, then the odds of any of the other computers further out being able to get through were pretty 
+much nil. The network was down for the whole school. Had there been an attack?&lt;/p&gt;
+ 
+&lt;p&gt;Rebooting the (unmanaged) switches in his &lt;strike&gt;bathroom&lt;/strike&gt; office yielded nothing useful. Finally, in desperation, he disconnected the servers and the computer room from the rest of the school. Shouts of victory arose from the computer room; they were able to work again! &lt;/p&gt;
+ 
+&lt;p&gt;Now he had to figure out where the problem was rooted. Jonathan isolated one switch at a time, working his way through the school until he had reached the computer room in the elementary building (grades 1-5). With some help from the technician in 
+the computer room, he was able to identify one of the switches as being the cause of the problem.&lt;/p&gt;
+ 
+&lt;p&gt;He unplugged the ports in the switch, one at a time, until he noticed something strange. As he unplugged each port, both 
+its light and the light below turned off. When he plugged it in again, both lights came back on. &lt;/p&gt;
+ 
+&lt;p&gt;"What's plugged into this port?" he asked the technician.&lt;/p&gt;
+ 
+&lt;p&gt;"Nothing! We don't have any computers plugged into that socket," he replied.&lt;/p&gt; 
+ 
+&lt;p&gt;"Well something's plugged into it. Let's go take a look."&lt;/p&gt; 
+ 
+&lt;p&gt;They walked over to the other end of the cable in the computer room and saw that a teacher had set up a little work area with a box of papers and some pens. When they moved the box out of the way, they found... a network cable plugged into the socket... and the other end plugged into the neighboring socket.&lt;/p&gt;
+ 
+&lt;p&gt;They talked with the teacher who had set up the work area, and found out that he normally brought in his laptop, along 
+with a network cable. On this particular day he'd left the laptop at home, and he wanted to 
+clean his workspace. He decided to tidy up the network cable by plugging both sides in, creating a feedback loop, which caused a network storm and wound up taking down the whole network.&lt;/p&gt;
+
+&lt;p&gt;Oops.&lt;/p&gt;
+&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=1pMNbwnQ_Qk:cZwNL4FgW1A:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/1pMNbwnQ_Qk" height="1" width="1"/&gt;</description> 
+			<slash:comments>95</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Desert-Packet-Storm.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Bruce Johnson</author> 
+			<title>CodeSOD: You Can't Handle the True!</title> 
+			<link>http://thedailywtf.com/Articles/You-Cant-Handle-the-True!.aspx</link> 
+			<category>CodeSOD</category>
+			<pubDate>Mon, 21 Apr 2014 10:00:00 GMT</pubDate> 
+			<guid isPermaLink="false">7815</guid> 
+			<description>&lt;p&gt;We've all had that feeling before. We see something happening in front of us, yet because the sight doesn't conform to the worldview held within our brain, we just can't believe our own eyes. Dogs playing poker. Cats wearing panty hose. Politicians telling the truth. You get the idea. And depending on your personal threshold for incredulity, you might experience this feeling as a double take, a spit take or a psychotic break. If you happen to be prone to psychotic episodes, then I'm going to have to ask you to move on. Wait for tomorrow's WTF. Or maybe pet some kittens. Here's a picture to help you get started.&lt;/p&gt;
+&lt;img src='http://img.thedailywtf.com/images/14/cute-kitten-501.jpg' alt='Incredibly cute kitten...sorry you can't see it'/&gt;
+&lt;p&gt;Feeling calm and relaxed? Good. Now let me tell you a story about Steve. Steve is what you call a 'skeptic' (which is scarily close to septic, but I digress). He questions absolutely everything he encounters. He walks with overly firm footfalls to make sure that the ground won't open up under him. He carries two watches to act as verification for the clock on his smartphone. He even checks his own pulse to make sure he's alive.&lt;/p&gt;
+&lt;p&gt;What's worse is that Steve carries this tendency into his job as a developer. He writes if statements with a true block, a false block and an else block. And when comparing strings? The equality operator just won't cut it. Consider the following code.&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre&gt;&lt;code&gt;public static void setDelay(String delay) {
+   String yes = "YES";
+   if ((delay.hashCode()) == yes.hashCode()) Scenario.delay= 10000; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Passing a string as a parameter instead of a Boolean is something that, possibly, could be forgiven. But when it comes to checking for the value of the string, Steve is way too skeptical to just use an equal sign (or two). Instead, the hash code for both incoming value and the test value are generated and compared. Because, as everybody knows, the equality operator is not trustworthy for strings, but has no problem when comparing long integers.&lt;/p&gt;
+&lt;p&gt;Ironically (and not in the Alanis Morisette sense), by using the hashCode method, Steve has actually changed a simple comparison that was pretty certain to be accurate into one that actually could fail. After all, hashCode is not guaranteed to be unique for each string (that is, a &lt;italic&gt;perfect hash&lt;/italic&gt;). So out there, somewhere, may be another string whose hashCode value actually matches the hashCode for "YES". And there are hackers working hard to find unanticipated ways to delay the scenario.&lt;/p&gt;
+
+&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css"&gt;
+&lt;script src="http://img.thedailywtf.com/images/remy/highlight.js/highlight.pack.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=4arUL4kmsUY:CmZHj84GBiQ:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/4arUL4kmsUY" height="1" width="1"/&gt;</description> 
+			<slash:comments>96</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/You-Cant-Handle-the-True!.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Mark Bowytz</author> 
+			<title>Error'd: Social Insecurity Number</title> 
+			<link>http://thedailywtf.com/Articles/Social-Insecurity-Number.aspx</link> 
+			<category>Error'd</category>
+			<pubDate>Fri, 18 Apr 2014 09:45:00 GMT</pubDate> 
+			<guid isPermaLink="false">7828</guid> 
+			<description>&lt;p&gt;"Adding an account on Mint.com, it asks for the last 4 digits of my SSN and for the first 3 digits," &lt;strong&gt;John A.&lt;/strong&gt; wrote, "Seriously? There are only 100 combinations left to guess the full SSN!" 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-1"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e110/Pic-1.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"I was messing around with Nvidia's Linux Settings program when I came across this less than helpful tool-tip," &lt;strong&gt;Brendan&lt;/strong&gt; writes.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-2"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e110/Pic-2.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+ 
+&lt;p&gt;"So much for my goal of answering 8 out of 10 questions correctly," writes &lt;strong&gt;Jan B.&lt;/strong&gt;.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-3"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e110/Pic-3.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+ 
+&lt;p&gt;&lt;strong&gt;Kyle&lt;/strong&gt; wrote, "Visual Studio 2013 is self aware? Yeah, I'd call that a problem too."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-4"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e110/Pic-4.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Tink&lt;/strong&gt; writes, "Apple created iBooks to help people enjoy reading, but I think I'd get bored with this line-up pretty quickly!" 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-5"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e110/Pic-5.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"I don't understand how my license can have expired over 40 years ago, and yet I still have é( days to renew," &lt;strong&gt;Menno&lt;/strong&gt; wrote. 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-6"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e110/Pic-6.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;David G.&lt;/strong&gt; writes, "I guess CareerBuilder and I will just have to agree to disagree as to what constitutes a valid date or not."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-7"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e110/Pic-7.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt; 
+&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=3Q-oYE4nDt8:n6a4N7O9j2Y:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/3Q-oYE4nDt8" height="1" width="1"/&gt;</description> 
+			<slash:comments>64</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Social-Insecurity-Number.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Remy Porter</author> 
+			<title>Coded Smorgasbord: Sweet Mysteries of Life</title> 
+			<link>http://thedailywtf.com/Articles/Sweet-Mysteries-of-Life.aspx</link> 
+			<category>Coded Smorgasbord</category>
+			<pubDate>Thu, 17 Apr 2014 10:00:00 GMT</pubDate> 
+			<guid isPermaLink="false">7795</guid> 
+			<description>&lt;p&gt;When you read a lot of bad code, you start to get a sense of &lt;em&gt;why&lt;/em&gt; the code exists. Often, it&amp;#8217;s ignorance- of the language, of the functional requirements, of basic logic. Sometimes, it&amp;#8217;s management interference, and the slavish adherence to policy over practicality. Other times, it&amp;#8217;s just lazy or sloppy work. &lt;/p&gt;
+
+&lt;p&gt;And sometimes, the mysterious logic that gave birth to a WTF is just that- a mystery. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Timo&lt;/strong&gt; can&amp;#8217;t help but wonder why this method exists: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public DataModel getEditionModel() {
+   if ( true )
+       throw new IllegalArgumentException( &amp;quot;You shouldn&amp;apos;t be here&amp;quot; );
+   return editionModel;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- Okay, my blurb at the top lies a little bit- this one is fairly obvious. They wanted to deprecate an old API method without breaking any downstream dependencies. I mean, this still *does* break downstream dependencies, but at runtime, not compile time. It's like your client code will never even notice.  --&gt;
+
+&lt;p&gt;&lt;strong&gt;Angela&lt;/strong&gt; is still puzzling over this one: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;String timeStampLength = &amp;quot;                          &amp;quot;;
+int lengthOfTimeStamp = timeStampLength.length();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Can you imagine a clearer way to express a numeric length? &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dennis&lt;/strong&gt; found some code that needs to check the length of an array, so it does this: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function countDocuments() {
+    var count = 0;
+
+    for ( var i = 0; i &amp;lt; user.documents.length; i++) {
+        count++;
+    }
+
+    return count;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If only there were a built-in method that could tell us the length of an array...&lt;/p&gt;
+
+&lt;p&gt;And finally, &lt;strong&gt;Andrew&lt;/strong&gt; sends us this example of defensive programming, that&amp;#8217;s about as safe as we can make it: &lt;/p&gt;
+
+&lt;pre class="vb vbscript"&gt;&lt;code&gt;Private Sub ImageList_DataBound(ByVal sender As Object, ByVal e As System.EventArgs) Handles ImageList.DataBound
+    Try
+
+    Catch ex As Exception
+        If TypeOf ex Is ArgumentOutOfRangeException Then
+            Throw New Exception(&amp;quot;item not found in the list...&amp;quot;)
+        End If
+    End Try
+End Sub&lt;/code&gt;&lt;/pre&gt;
+
+&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css"&gt;
+&lt;script src="http://img.thedailywtf.com/images/remy/highlight.js/highlight.pack.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=eSgpJUstRjQ:e10Wf5khl2M:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/eSgpJUstRjQ" height="1" width="1"/&gt;</description> 
+			<slash:comments>90</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Sweet-Mysteries-of-Life.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Ellis Morning</author> 
+			<title>Secure Development</title> 
+			<link>http://thedailywtf.com/Articles/Secure-Development.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Wed, 16 Apr 2014 10:30:00 GMT</pubDate> 
+			<guid isPermaLink="false">7823</guid> 
+			<description>&lt;p&gt;&lt;b&gt;Steven's&lt;/b&gt; multi-billion dollar tech firm spared no expense in providing him &lt;i&gt;two&lt;/i&gt; computers.  One was stuffed in a broom closet down the hall; he used it for email, Internet access, and other administrative items.  At his cubicle sat the computer on which he did all his programming, connected to the company's separated development environment (SDE).  
+&lt;/p&gt;&lt;p&gt;
+The SDE was a company-wide network that existed in parallel to the normal network.  No Internet connectivity, and login was only possible with an RSA SecurID dongle.  The stated purpose was to provide a secure environment for software development.  The other devs on Steven's team had their own SDE boxes for the same purpose.
+&lt;/p&gt;
+&lt;a title="By John McGehjee (Own work) [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ABank_of_the_West_Los_Altos_branch_vault.jpg"&gt;&lt;img width="256" alt="Bank of the West Los Altos branch vault" style="float: right; margin: 8pt" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Bank_of_the_West_Los_Altos_branch_vault.jpg/256px-Bank_of_the_West_Los_Altos_branch_vault.jpg"/&gt;&lt;/a&gt;
+&lt;p&gt;
+One day, the Java install on Steven's SDE machine took a core dump and rolled around in it.  Unfortunately, he couldn't troubleshoot the machine himself.  Only SDE administrators could install or alter configurations on those boxes.
+&lt;/p&gt;&lt;p&gt;
+Steven logged a ticket.  Within an hour, he was watching an SDE admin reinstall Java for him.  Once the admin had unchecked all the predatory toolbar options and got the install going, he frowned at some files sitting in Steven's current working folder.
+&lt;/p&gt;&lt;p&gt;
+"Are these .exe files?" he asked.
+&lt;/p&gt;&lt;p&gt;
+Steven mirrored the frown with confusion.  "Those are my team's development tools and deliverables."
+&lt;/p&gt;&lt;p&gt;
+"Is this approved software?  Did we install these for you?"
+&lt;/p&gt;&lt;p&gt;
+"No.  We wrote the code for those and built them."
+&lt;/p&gt;&lt;p&gt;
+"You can't install files on this machine!" the admin exclaimed.
+&lt;/p&gt;&lt;p&gt;
+"I &lt;i&gt;didn't&lt;/i&gt; install them," Steven returned.  "I compiled our first-party source code, developed entirely within the SDE, and &lt;i&gt;created&lt;/i&gt; those .exe files.  That's my job!"
+&lt;/p&gt;&lt;p&gt;
+"So you &lt;i&gt;did&lt;/i&gt; install them!" the admin cried with &lt;i&gt;gotcha&lt;/i&gt; flair.
+&lt;/p&gt;&lt;p&gt;
+Steven gaped. "That's not what the word 'install' means!"
+&lt;/p&gt;&lt;p&gt;
+Java had finished (actually) installing.  The SDE admin left with a righteous gleam in his eye, which Steven shook off.  Surely this wasn't going anywhere.  If the admin tried to report anything, someone would fetch a dictionary, and everything would be fine.
+&lt;/p&gt;&lt;p&gt;
+Well, no.  A few days later, Steven's entire team received an email stating they were in violation of Cyber Security policy for installing "malicious, unapproved" software on their SDE machines.  The message ended with a sinister promise: &lt;i&gt;Disciplinary actions are forthcoming.&lt;/i&gt;
+&lt;/p&gt;&lt;p&gt;
+Their immediate boss was powerless to defuse it.  The case automatically escalated to Human Resources.  The whole developer team was forced into numerous interviews with the sort of drones who couldn't hack Accounting or Finance in business school.  &lt;!-- Mere addition and subtraction, with calculators that performed all the work for them... and still did the business students whine louder than the whiniest whiners of Whinedom. --&gt; 
+&lt;/p&gt;&lt;p&gt;
+"All we did was develop software in the environment we were provided to develop our software in!" they explained for the umpteenth time.
+&lt;/p&gt;&lt;p&gt;
+Unblinking incomprehension.  "Why did you install this software on your machines?"
+&lt;/p&gt;&lt;p&gt;
+"We didn't install anything!  We compiled source code- the source code this company pays us to develop!"
+&lt;/p&gt;&lt;p&gt;
+"Well, is it malicious?"
+&lt;/p&gt;&lt;p&gt;
+"Of course it's not malicious!  Some of this stuff is customer deliverables!  We also have myriad scripts and some Java code. We've been doing this in the SDE per company policy for well over a year!"
+&lt;/p&gt;&lt;p&gt;
+"What's a Java?"  &lt;!-- Steven swears he was asked this verbatim! --&gt;
+&lt;/p&gt;&lt;p&gt;
+At the end of these interrogations, Steven's team was ordered to keep working, but immediately cease generating any "prohibited files."  If they dared create one more project deliverables, they faced termination.
+&lt;/p&gt;&lt;p&gt;
+&lt;i&gt;How are we supposed to meet our deadlines?&lt;/i&gt; Steven clicked Send on the email copied to numerous managers.
+&lt;/p&gt;&lt;p&gt;
+He and his team sat on their thumbs for a day.  Finally, someone shed light on the real problem: the SDE team's definition of the word "install" was so ambiguous, it covered everything from putting down an SDK to setting an adorable kitten picture as one's desktop background.
+&lt;/p&gt;&lt;p&gt;
+The head of Cyber Security issued a development exception for Steven's team.  They were allowed to develop software on the SDE, as long as all .exe's, .lib's, and other generated files were manually tracked within a shared drive Excel spreadsheet that locked up whenever someone forgot to close it.  In the meantime, the SDE admins were to set up a special "development system" for Steven's team, where they'd officially be allowed to develop code.  A high-level issue was raised against Cyber Security and the SDE admins to properly define the term "install" and adjust their policies accordingly.
+&lt;/p&gt;&lt;p&gt;
+Steven's team was assured they'd get their special dev system well before their development exception expired.  Their skepticism toward this promise was entirely merited.&lt;/p&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=ozcURqDMwzU:hLAVlBxNyyM:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/ozcURqDMwzU" height="1" width="1"/&gt;</description> 
+			<slash:comments>150</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Secure-Development.aspx</comments>
+		</item>
+	
+		<item>
+			<author>snoofle</author> 
+			<title>CodeSOD: I Had My Reasons</title> 
+			<link>http://thedailywtf.com/Articles/I-Had-My-Reasons.aspx</link> 
+			<category>CodeSOD</category>
+			<pubDate>Tue, 15 Apr 2014 10:00:00 GMT</pubDate> 
+			<guid isPermaLink="false">7826</guid> 
+			<description>&lt;p&gt;Trevor spent a huge amount of time writing a 2,000,000+ PHP/JavaScript/HTML system for an e-commerce company. Like a few other &lt;i&gt;I'm-Special&lt;/i&gt; geniuses in our field, he believed that he could do it better than everyone else. For this reason, he came up with his own way of doing things. Database queries. Date-time logic. You name it.&lt;p&gt;
+
+&lt;p&gt;Some time back, &lt;b&gt;Kenzal&lt;/b&gt; was brought on as a senior developer to work on the e-commerce system. As he spelunked his way through the system, Kenzal would find some piece of puzzling code and ask Trevor what he was going for, or why he did it that way. Trevor would invariably respond: &lt;i&gt;I had my reasons&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kenzal encounterd this particular snippet in the "critical logic" in the batch creation process, around 7,500 lines into in the 10K+ LOC invoice manger file, somewhere after running the query and checking for results:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;
+&lt;span style='color:#5f5035; background:#ffffe8; '&gt;&amp;lt;?php&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$m&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$SYSTEM&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;-&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;&gt;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;getValue&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#0000e6; background:#ffffe8; '&gt;'FULFILLMENT_CART_CONFIG'&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;if&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$m&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#0000e6; background:#ffffe8; '&gt;''&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$m&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#0000e6; background:#ffffe8; '&gt;'LLLLSSSSSSSSLLLLLLLL'&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$m&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;  &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#400000; background:#ffffe8; '&gt;strtoupper&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$m&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$t&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;  &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;this&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;-&gt;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;db&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;-&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;&gt;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;getDataset&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$n&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;  &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#400000; background:#ffffe8; '&gt;sizeof&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$t&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$sp&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#008c00; background:#ffffe8; '&gt;0&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$lp&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$n&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;-&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#008c00; background:#ffffe8; '&gt;1&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$info&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;array&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;for&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#008c00; background:#ffffe8; '&gt;0&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;&amp;lt;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$n&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;+&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;+&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;{&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$info&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;array&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;if&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#400000; background:#ffffe8; '&gt;substr&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$m&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;,&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;,&lt;/span&gt;&lt;span style='color:#008c00; background:#ffffe8; '&gt;1&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#0000e6; background:#ffffe8; '&gt;'L'&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;{&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;foreach&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$t&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$lp&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;as&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$k&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;&gt;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$v&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$info&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$k&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$v&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;-&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;-&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$lp&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;}&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;else&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;{&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;foreach&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$t&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$sp&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;as&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$k&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;&gt;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$v&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$info&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$i&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;[&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$k&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;]&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;=&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$v&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;+&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;+&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$sp&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;}&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;}&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#000000; background:#ffffe8; '&gt;&amp;#xa0;&amp;#xa0;&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;return&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt; &lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#800000; background:#ffffe8; font-weight:bold; '&gt;array&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;(&lt;/span&gt;&lt;span style='color:#008c00; background:#ffffe8; '&gt;0&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;,&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$info&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#808030; background:#ffffe8; '&gt;)&lt;/span&gt;&lt;span style='color:#800080; background:#ffffe8; '&gt;;&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#5f5035; background:#ffffe8; '&gt;?&gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Rather than just simply returning the result set, Trevor decided that the results needed to be reordered according to the value of some random string, manually popping and de-queuing the values in the array. When queried as to why he would write something like that, Trevor replied with his usual: &lt;i&gt;I had my reasons&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Both Trevor and his code have since been replaced. When Trevor was asked to leave, he was told (among other things) that &lt;i&gt;they had their reasons&lt;/i&gt;. All of the above code has since been
+replaced with:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;
+&lt;span style='color:#5f5035; background:#ffffe8; '&gt;&amp;lt;?php&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#0000e6; background:#ffffe8; '&gt;`&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;return (array(0,&lt;/span&gt;&lt;span style='color:#797997; background:#ffffe8; '&gt;$this&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;-&gt;db-&gt;getDataset()));&lt;/span&gt;&lt;span style='color:#0000e6; background:#ffffe8; '&gt;`&lt;/span&gt;&lt;span style='color:#000000; background:#ffffe8; '&gt;&lt;/span&gt;
+&lt;span style='color:#5f5035; background:#ffffe8; '&gt;?&gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=sZNZzXYsAvU:0LJEqu2oBRg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/sZNZzXYsAvU" height="1" width="1"/&gt;</description> 
+			<slash:comments>74</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/I-Had-My-Reasons.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Bruce Johnson</author> 
+			<title>All Your RAM Are Belong to Us</title> 
+			<link>http://thedailywtf.com/Articles/All-Your-RAM-Are-Belong-to-Us.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Mon, 14 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7818</guid> 
+			<description>&lt;p&gt;Back around the turn of the century, governments were a different place to work at. The public trough, while not as fat as it had been, was still capable of providing funding for boondoggles handed out to friends and family. This was before  deficit hawks made a sport of picking off small cost overruns that scurried around the fields of government largesse. Before billions was spent on wars of questionable necessity. Before mayors broke down the stereotype that all crack addicts were skinny.&lt;/p&gt;
+&lt;p&gt;In this heyday, &lt;strong&gt;Ray&lt;/strong&gt; worked for a government department that contracted, managed and passed-through telecommunications services from external providers to other government departments. The department's central billing and administration system was built and run on the Ingres ABF framework and it's origin dated back to the early 90's. What's more, as soon as the application could be put into minimal funding status, it was. Even in the heady Internet bubble days, no money was spent beyond what was needed to keep the application running.&lt;/p&gt;
+&lt;p&gt;For developers, this meant a heavy reliance on shell scripts and other such tools to support the main application. And, considering the critical nature of the application (it did generate revenue...or at least caused numbers to be moved from one ledger to another within the government), any change went through enough manual testing to defoliated a acre of the Amazon rain forest generating the testing outputs.&lt;/p&gt;
+&lt;p&gt;So when Ray needed to make a bulk data change to the central database, he followed the prescribed steps. The appropriate shell script was created, followed by multiple runs on the test server to create the 3 type-set, calf leather bound volumes of input-output testing printouts. Once done, 5 levels of sign-off were collected. While there's no question that this was an extreme process (XP, but not in the productive way), by the time Ray ran the procedural gauntlet, he was confident that the script would do what it was advertised to do.&lt;/p&gt;
+&lt;p&gt;To run these scripts, the developers used one-off AT scripts on the server to schedule it to start after hours on the server in question. This mechanism, along with servers that had a good SMS notification system for failed AT jobs, meant that developers could schedule a script to run and then go home with confidence.&lt;/p&gt;
+&lt;p&gt;Ray set up him job to run at 6:30pm and with no notification of a failure, it was a sleep-filled evening. And he came in the next morning confident of it being a normal day. The sight of the wide-eyed, slightly perspiring system administrator combined with his opening statement of "Thank god you're here!" extinguished that.&lt;/p&gt;
+&lt;p&gt;"Fezzik's down!", he said. The servers were named after movie characters and Fezzik was the production server that Ray had scheduled the script on the night before.&lt;/p&gt;
+&lt;p&gt;"Um...define 'down'." Ray said, stalling while desperately trying to think of what weird permutation in the script could have caused this.&lt;/p&gt;
+&lt;p&gt;"It's not responding. The network controller says Fezzik's there. We can ping it. But terminal sessions are immediately frozen on connect and the applications running on that server are unreachable."&lt;/p&gt;
+&lt;p&gt;"So, it's not DOWN down then?" Ray asked as he reversed course and headed to the server room.&lt;/p&gt;
+&lt;p&gt;"It's down enough", came the reply.&lt;/p&gt;
+&lt;p&gt;At the server console, the user login shell was visible. The sys admin pushed a key. The server replied with an annoyingly cheerful beep. One key press, no characters, just a beep. The keyboard buffer was full. Ray felt queasy.&lt;/p&gt;
+&lt;p&gt;"Inconceivable. I have no idea what caused that." Ray said with an honesty that was quickly turning to desperation. &lt;/p&gt;
+&lt;p&gt;"Well", said the admin, "we did get some e-mails from the system this morning before it stopped responding. What the hell is rous_at_job.sh?"&lt;/p&gt;
+&lt;p&gt;Ray paused. "Why?"&lt;/p&gt;
+&lt;p&gt;"There's so many instances of it that we don't KNOW how many instances there are of it!"&lt;/p&gt;
+&lt;p&gt;Realization and dread in equal measures dawned on Ray. Instead of &lt;code&gt;rous_at_job.sh&lt;/code&gt; running &lt;code&gt;rous.sh param1 param2&lt;/code&gt;, Ray had instead set &lt;code&gt;rous_at_job.sh&lt;/code&gt; to run &lt;code&gt;rous_at_job.sh param1 param2&lt;/code&gt;! The script simply invoked itself, recursively, forever. So, for a little over 12 hours, like Agent Smith in the Matrix, rous_at_job.sh had patiently, one Kb at a time, taken over the memory and run-time capabilities of the server. By the time the system administrators had got in in the morning, rous_at_job.sh had successfully completed its quest for electronic domination and had physically run out of space to spawn another process.&lt;/p&gt;
+&lt;p&gt;The only option was to literally unplug the machine. The only saving grace was the fact that, given the current state of the processes, Ray was pretty certain that the server wasn't actually doing anything. Other than running rous_at_job.sh, that is.&lt;/p&gt;
+&lt;p&gt;The server came back no worse for wear. Going forward, developers were banned from running ANY job on the production server. Like magic, budget was found for a new data change management and scheduling system. And Ray spent a large percentage of his paycheck at the pub that Friday buying the system administrators beers.&lt;/p&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=MEMfnQM8dcg:Rk1kV_Wj_zY:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/MEMfnQM8dcg" height="1" width="1"/&gt;</description> 
+			<slash:comments>120</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/All-Your-RAM-Are-Belong-to-Us.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Mark Bowytz</author> 
+			<title>Error'd: Visit Scenic NON-STATIC METHOD</title> 
+			<link>http://thedailywtf.com/Articles/Visit-Scenic-NONSTATIC-METHOD.aspx</link> 
+			<category>Error'd</category>
+			<pubDate>Fri, 11 Apr 2014 09:45:00 GMT</pubDate> 
+			<guid isPermaLink="false">7822</guid> 
+			<description>&lt;p&gt;"I was hoping to take a trip to Hong Kong, but NON-STATIC METHOD seems to be a good value," writes &lt;strong&gt;Ryan&lt;/strong&gt;.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-3"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e109/Pic-3.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"I had a feeling that this new laptop might run hot," &lt;strong&gt;Kelly L.&lt;/strong&gt; wrote, "but I wasn't expecting it to be quite &lt;u&gt;this&lt;/u&gt; hot!" 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-1"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e109/Pic-1.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"Wow! My build went so fast that it's running in the 19th century!" &lt;strong&gt;Eric&lt;/strong&gt; writes.
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-2"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e109/Pic-2.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+ 
+&lt;p&gt;"Lorem ipsum dolar sit amet,"&lt;strong&gt;Casey&lt;/strong&gt; writes, "consectetur adipiscing elit. Pellentesque pharetra ligula sit: &lt;a href="http://www.samsclub.com/sams/shoppingtools/invitation/invitationToJoin.jsp"&gt;http://www.samsclub.com/sams/shoppingtools/invitation/invitationToJoin.jsp&lt;/a&gt;."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-4"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e109/Pic-4.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Rich&lt;/strong&gt; writes, "It seems Skype couldn't handle the future and reverted to Win3.1-style erroring (in Windows 7)." 
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-5"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e109/Pic-5.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;"It seems that Bugzilla is &lt;u&gt;very&lt;/u&gt; picky about the max size of an upload," &lt;strong&gt;Chris D.&lt;/strong&gt; writes. &lt;!-- http://convert-units.info/data-storage/megabyte/7.62939453125 TIL about Mebibytes --&gt;
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-6"&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q2/e109/Pic-6.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Denise&lt;/strong&gt; writes, "Though my password passes their requirements and is rated 'very strong', it's still too simple for National Geographic's unwritten high standards."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-7"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e109/Pic-7.png" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt; 
+
+&lt;p&gt;"One of my favorite video blogs, Table Top, hosted by Wil Wheaton uploads a new episode every Thursday," &lt;strong&gt;Andy G.&lt;/strong&gt; writes, "I might skip this one though. This week's game and guests seem to be a little...boring."
+&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href="#Pic-8"&gt;&lt;img border="0" alt="" src=
+"http://img.thedailywtf.com/images/14/q2/e109/Pic-8.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt; &lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=3QfDoIS00_k:4I9qbP2q5lc:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/3QfDoIS00_k" height="1" width="1"/&gt;</description> 
+			<slash:comments>60</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Visit-Scenic-NONSTATIC-METHOD.aspx</comments>
+		</item>
+	
+		<item>
+			<author>Mark Bowytz</author> 
+			<title>Best of Email: (Un)Helpful Support, An Epic Opportunity, and more!</title> 
+			<link>http://thedailywtf.com/Articles/Best-of-Email-(Un)Helpful-Support,-An-Epic-Opportunity,-and-more!.aspx</link> 
+			<category>Feature Articles</category>
+			<pubDate>Thu, 10 Apr 2014 10:15:00 GMT</pubDate> 
+			<guid isPermaLink="false">7821</guid> 
+			<description>&lt;p&gt;Don't forget, The Daily WTF loves terrible emails. If you have some to share, &lt;a href="http://thedailywtf.com/contact.aspx"&gt;mail in&lt;/a&gt; your mail!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Perfectly Safe to Open This&lt;/u&gt;&lt;/strong&gt; (from Alex)&lt;/p&gt;
+&lt;p&gt;"I mean, to some extent I'm happy to receive offers, but I'm happy with where I am. &lt;!--I particularly don't want to move to California. Then too, clearly these people CAN format a message.--&gt; Ah, whatever."&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q1/em5/Pic-1.png" /&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;"Helpful" Support&lt;/u&gt;&lt;/strong&gt; (from Oscar)&lt;/p&gt;
+&lt;p&gt;"I was on a business trip, and the wireless connection at the hotel was acting weird. SSL connections would fail sporadically, which with the help of Wireshark turned out to be their servers sending HTML error messages instead of a TLS handshake reply (one article I found pointed fingers at Microsoft Forefront, but I didn't dig any further). Since we use OpenVPN at work, it failed the same way and I thought I'd give their support a try. Couple of weeks later, I got the following very 'helpful' reply."
+&lt;/p&gt;
+&lt;p&gt;
+&lt;blockquote&gt;&lt;pre&gt;
+________________________________________________________
+From: support@thecloud.com
+To: oscar@initech.se
+Subject: RE: Connect Issues
+
+Thank you for contacting The Cloud.  While The Cloud is a public-access 
+network, we cannot guarantee that all VPN connections used during any 
+given session will work as intended.  Further to that point, if your VPN 
+connection fails whilst connected to The Cloud, we are unable to support 
+your VPN.  We apologise for the inconvenience this presents.
+
+If you have any other questions, please don't hesitate to contact us again.
+
+Kind regards,
+
+Joseph G
+The Cloud Support Team
+&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;iloveu&lt;/u&gt;&lt;/strong&gt; (from Anon)&lt;/p&gt;
+&lt;p&gt;We received the below here at TDWTF. Yeah...
+&lt;/p&gt;
+&lt;p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;
+________________________________________________________
+From: an anonymous lover [mailto:somebody@somewhere.net] 
+To: Alex Papadimoulis
+Subject: [AP] iloveu
+
+dude wtf man u wer hittin on my GF amy? dude ill kick ur 
+as if you ever hit on my girl again il hit u with my fist 
+for seriously. do you even lift? bro i can benchp ress 
+400 of youre little pipsqueak friends in one setting if 
+u had that many but i bet you dont
+
+but serioulsy brah stay away from my gf before i have to 
+come show you why they called me the real wtf
+&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q1/em5/Pic-2.jpg" /&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;The Origins of a WTF&lt;/u&gt;&lt;/strong&gt; (from Mark M.)&lt;/p&gt;
+It's not often that one gets to witness the formation of the universe, a star, or even a nebula. This week, however, I was gifted with a glimpse of what can only become a WTF. I will, of course, pass on this great opportunity.
+&lt;/p&gt;&lt;p&gt;
+Sounds like fun!
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre&gt;
+________________________________________________________
+From: contact@initechrecruiting.com 
+To: markm@initrode.com
+Subject: A Terrific Opportunity!
+
+Good morning!
+ 
+I apologize if this email does not apply to your skillset!
+
+My name is ..... ..... and I am a Microsoft/Java recruiter 
+for .... Systems Inc. One of my large telecommunications 
+clients in Monroe, Lousiana has an opening for an asp.net 
+developer. This is a 6 month contract and contractors must 
+work onsite in Monroe. Please review the job outline below 
+and let me know if you'd like to discuss this in further 
+detail. Pay is flexible at this point and we can negotiate
+when discussing further. 
+
+I hope to hear from you soon! Have a great remainder of your day!
+
+Project Information: 
+    Web Application for collaboration of multiple groups.
+    5000 hours worth of work in a 6 month time frame
+    40% front, 40% middle, 20% backend
+    Virtual Server with VS 2010
+    
+Technologies &amp; Tools: 
+    C#
+    ASP.NET
+    JavaScript
+    Entity Framework
+    MySQL database
+    MySQL workbench
+    Oracle
+    Visual Studio Express 
+ 
+Development Methodology: 
+    Spiral
+    No real design patterns
+ 
+Team Dynamics: 
+    Lead Developer
+    1 other developer
+    
+Skills Needed: 
+    Mid - range work horse
+    Collaborative environment
+    Lots of discovery still going on.
+    Full SDLC skills
+ 
+Notes: 
+    Not able to do remote workers
+&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Crazy ol' Sears&lt;/u&gt;&lt;/strong&gt; (from Jason B. )&lt;/p&gt;
+&lt;p&gt;Agent Name from Sears sent me this e-mail today about a recent order we placed, but I don't feel compelled to add the "accessories" to my order...&lt;/p&gt;
+&lt;p&gt;
+Sounds like fun!
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;img border="0" alt="" src="
+http://img.thedailywtf.com/images/14/q1/em5/Pic-3.png" /&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Just plain wrong...&lt;/u&gt;&lt;/strong&gt; (from Henrik)&lt;/p&gt;
+Google contest run from a Live.com email address. Yep, seems legit!
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre&gt;
+________________________________________________________
+From: a39Aef@gmail.com 
+To: henrikrkm@initech.com
+Subject: A Terrific Opportunity!
+
+Congratulations !!! Dear Google winner,
+
+You have been awarded the sum of 750,000.00 Great British Pounds for 
+the on going Google Promo, contact us via this 
+email ( googlemanagement.team@live.com ) for more 
+details regarding your winning.
+
+Best Regards.
+Google Management Team. 
+
+&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;An Epic Opportunity&lt;/u&gt;&lt;/strong&gt; (from Tim D.)&lt;/p&gt;
+Seriously - if recruiters put as much time and effort into emails like this one, they'd probably fill their positions much faster.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;
+________________________________________________________
+From: Jwills@foo-recruiting.com
+Subject: Formidable and rare PHP Zend role in London
+To: timd@someemail.com
+
+Hi Tim,
+
+It was a cold day, Gustav arrived for his first day at work 
+clutching his laptop and some books on the Zend framework. 
+His past nights had been disturbed by the 'Tetris effect', 
+lines of pure code produced by his unconscious mind in his 
+sleep, dropping down, one atop the other, leaving him in 
+somewhat of a half awake, half asleep state throughout the 
+nights. His world view was formed through code, indeed 
+giving him great insight, yet leaving him somewhat distant 
+from those around him.
+
+He was starting to question his sanity. A formidable PHP Zend 
+coder, instead of taking rest in its conventional sense, his 
+mind would be occupied with thoughts on RESTful services, 
+instead of using soap in the bath, he would be comparing SOAP 
+with RESTful services. He took a single bite on a pear, the 
+only food he had eaten in two weeks, and instantly started 
+thinkng of PEAR and PECL extensions. Instead of eating, he 
+would usually be coding, his natural hunger instinct shut 
+off from the deep levels of focus that he sustained during 
+coding sessions. Am I human? he asked himself one day, clearly 
+feeling that his very existence had merged with the technology 
+with which he was engaged on a day to day basis.
+
+His family life remained intact, a bright wife who understood 
+his predicament serving as a buffer between his internal world 
+and the world around him. Even when talking with her, his mind 
+would drift onto coding, sometimes so much so, that he lost 
+awareness of her very presence.
+
+As he calmly, as if programmed, walked through the porte-cochère 
+leading to the entrance of the office, he felt totally in control, 
+as if on a mission to take charge of his young colleagues and guide 
+them in the right direction on the greenfield LAMP platform-build 
+that he was to be in charge of. He knew that this would be no easy 
+feat, but felt reassured that he would be able to get on with producing 
+a large amount of the purest code himself, whilst overseeing the 4 
+strong team of fastidious developers that already worked at the company, 
+rather than being a mere hands off development manager.
+
+As he arrived at his desk, he was astounded by the office environment, 
+a wondrous place, void of unnecessary ornementation, fine desks 
+sculpted from burr walnut. A minimalistic, clutter free environment 
+seemed exactly what young Gustav needed to allow his coding to 
+flourish. The air was as clean, a distant memory pervaded his mind, 
+reminding him of the clean childhod air of the Matterhorn foothills 
+in which he was raised. He mused on the brilliance of the architecture 
+holding him, a hybrid blend of Le Corbusier and Ahrends Burton Koralek 
+he decided..... indeed he had many other interests in addition to his 
+coding.......
+
+I am looking for candidates like young Gustav, to fill a technical 
+lead role in a London based agency. I would really like to speak with 
+you about the opportunity as it is a good one. They really want 
+fastidious PHP Zend coders, who have experience in RESTful services, 
+to work on their new platform, and migration to the LAMP stack.
+
+You will be coding every day as well as overseeing other developers 
+in a relaxed environment where you start work at 9 and finish at 5.
+
+Please do get back to me if you are very good at PHP Zend and are looking 
+for a new opportunity. I will be able to provide you with plenty of 
+information. The salary on offer is £55K-£60K per annum
+
+Best Regards
+&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;It's not a big deal until you're fired.&lt;/u&gt;&lt;/strong&gt; (from Ian)&lt;/p&gt;
+&lt;p&gt;
+"For a while we ran Outlook 2002. Better known to most as Outlook XP. The back end at the time was Exchange 5.5 . We found an issues were one could show the 'From' field when composing an email. The real problem came in the form of being able to fill in ANY name and being able to send the email. Our exchange administrator didn't think this was much of a problem as only a few knew about it, and they were limit to the system admins group."
+&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;
+________________________________________________________
+From: IT Director
+Sent: Tue 2/24/2004 9:10 AM
+To: ExchangeAdmin
+Subject: Your negligence...
+
+Has cost you your job. Pack you things and get out.
+
+
+You're FIRED!!
+&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Once he calmed down and I admitted I had sent him the message he got the point.&lt;/p&gt;&lt;div style="margin:10px;padding:5px;background-color:#eee;"&gt;&lt;div style="min-height:45px"&gt;&lt;img src="http://thedailywtf.com/tizes/ads/inedo40x40.png" style="display:block;float:left;margin-right:4px;"&gt; [Advertisement] &lt;b&gt;BuildMaster 4.1 has arrived!&lt;/b&gt; &lt;a href="http://inedo.com/buildmaster/4.1?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;Check out&lt;/a&gt; the new &lt;em&gt;Script Repository&lt;/em&gt; feature and see how you can &lt;a href="http://inedo.com/buildmaster/extensions/tfs2012?utm_source=TDWTF&amp;amp;utm_medium=wtffooter&amp;amp;utm_campaign=TdwtfBuildMaster14"&gt;deploy builds from TFS&lt;/a&gt; (and other CI) to your own servers, the cloud, and more.&lt;/div&gt;&lt;/div&gt;&lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://syndication.thedailywtf.com/~ff/TheDailyWtf?a=KP6js5KT0HQ:HNzm_xxqQMM:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/TheDailyWtf?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/TheDailyWtf/~4/KP6js5KT0HQ" height="1" width="1"/&gt;</description> 
+			<slash:comments>84</slash:comments> 
+			<comments>http://thedailywtf.com/Comments/Best-of-Email-(Un)Helpful-Support,-An-Epic-Opportunity,-and-more!.aspx</comments>
+		</item>
+		
+	</channel>
+</rss>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+ <channel>
+	<title>Phoronix</title>
+	<link>http://www.phoronix.com/</link>
+	<description>GNU/Linux &amp; Solaris Hardware Reviews</description>
+	<language>en-us</language>
+  <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/Phoronix" /><feedburner:info uri="phoronix" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+   <title>SystemTap 2.5 Supports UEFI/SecureBoot &amp; Other Features</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/kzehfhb9RVU/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NzE</guid>
+   <description>SystemTap 2.5 is now available as the latest version of this open-source Linux software for being like DTrace in being able to dynamically trace and diagnose system issues...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/kzehfhb9RVU" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 14:52:01 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NzE</feedburner:origLink></item>
+  <item>
+   <title>BerkeleyDB 6 Is Being Added For Fedora 21</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/OsFJsauOrm8/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NzA</guid>
+   <description>Another Wednesday brings another Fedora Engineering and Steering Committee meeting where new features for Fedora 21 were approved...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/OsFJsauOrm8" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 14:42:28 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NzA</feedburner:origLink></item>
+  <item>
+   <title>Trying Out The Jetson TK1, NVIDIA's High-End Tegra K1 Board</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/Bhm_4uh25t8/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=20324</guid>
+   <description>While it looks like most NVIDIA Jetson TK1 shipments were delayed (I've heard in Europe that they're not coming out as well until mid-May, matching what NewEgg and Micro-Center are now advertising), to much excitement I found out last night my Jetson TK1 ARM board shipped out and it's already arrived this morning. Here's my unboxing and first look at this new high-end ARM board featuring the Tegra K1 SoC that sports Kepler graphics.&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/Bhm_4uh25t8" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 12:50:00 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=20324</feedburner:origLink></item>
+  <item>
+   <title>Oracle Solaris 11.2 Now Available In Beta Form</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/yy1D3rCbnyw/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3Njk</guid>
+   <description>Oracle has put out the first public beta of the forthcoming Solaris 11.2 operating system release. The big focus of Solaris 11.2 is on embracing support for cloud computing...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/yy1D3rCbnyw" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 11:22:24 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3Njk</feedburner:origLink></item>
+  <item>
+   <title>Firefox 30 Beta Finally Supports GStreamer 1.0</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/PZt9Knm4v_g/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3Njg</guid>
+   <description>Following the Firefox 29.0 release, Firefox 30.0 is now in Mozilla's beta channel. One of the changes for Linux users with this next major web-browser update is finally support for the GStreamer 1.0 API...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/PZt9Knm4v_g" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 11:06:47 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3Njg</feedburner:origLink></item>
+  <item>
+   <title>Red Hat Buys Out Inktank For $175 Million</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/0WosdJg9oNA/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3Njc</guid>
+   <description>Red Hat's latest major acquisition is that of Inktank, the company behind the Ceph file-system...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/0WosdJg9oNA" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 10:34:06 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3Njc</feedburner:origLink></item>
+  <item>
+   <title>Qt 5.3 Release Candidate Planned For End Of Week</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/mbJTVvCySKQ/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjY</guid>
+   <description>The official release candidate for the upcoming Qt 5.3 toolkit should be released before the weekend. For those interested in testing out the latest Qt 5.3 release right now, there's a new development candidate...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/mbJTVvCySKQ" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 10:25:28 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjY</feedburner:origLink></item>
+  <item>
+   <title>KDE 4.12.5 Has Almost 10 Recorded Bug-Fixes</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/nJPFnHc7laU/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjU</guid>
+   <description>KDE 4.12.5 for its Application and Development Platform are now available and it also comes along with KDE Plasma Workspaces 4.11.9...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/nJPFnHc7laU" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 10:08:35 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjU</feedburner:origLink></item>
+  <item>
+   <title>Ubuntu 14.10 Release Schedule Now Online</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/3H6gH16Kirw/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjQ</guid>
+   <description>The release date for Ubuntu 14.10 has now been firmed up as are the other development milestones leading up to the mid-October debut of this post-LTS release...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/3H6gH16Kirw" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 09:59:00 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjQ</feedburner:origLink></item>
+  <item>
+   <title>Intel Ultrabook Benchmarks On The Linux 3.15 Kernel</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/O_6rwYp_IZY/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=20320</guid>
+   <description>Now that things are settling down with Linux 3.15, here's some fresh benchmarks of the Linux 3.15 kernel off an ASUS Zenbook Prime.&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/O_6rwYp_IZY" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 02:18:12 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=20320</feedburner:origLink></item>
+  <item>
+   <title>New X.Org Synaptics Driver Improves Touchpad Support</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/wroBPOGoNPM/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjM</guid>
+   <description>A second development snapshot of the xf86-input-synaptics DDX driver is now available with some changes to improve its touchpad support for modern laptops and ultrabooks...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/wroBPOGoNPM" height="1" width="1"/&gt;</description>
+   <pubDate>Wed, 30 Apr 2014 00:08:06 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjM</feedburner:origLink></item>
+  <item>
+   <title>Red Hat Developers Propose Wayland For Fedora 21</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/emLb4pH8_kg/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjI</guid>
+   <description>After being an optional, experimental feature in Fedora 20, Wayland with GNOME 3.14 might be getting ready to take on the default Fedora 21 desktop...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/emLb4pH8_kg" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 22:05:13 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjI</feedburner:origLink></item>
+  <item>
+   <title>OpenSUSE Conference 2014 Videos Posted</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/9XSxaXRVTFg/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjE</guid>
+   <description>Running the past few days in Croatia was the annual openSUSE Conference...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/9XSxaXRVTFg" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 21:52:54 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjE</feedburner:origLink></item>
+  <item>
+   <title>NVIDIA's Tegra TK1 Jetson Board Is Now Shipping</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/kfAVpe2q0zc/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NjA</guid>
+   <description>NVIDIA's very interesting Jetson TK1 ARM development board is now shipping! This is the interesting ARM development board that's priced sub-$200 and powered by the Tegra K1 that has a Kepler GPU...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/kfAVpe2q0zc" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 21:21:57 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NjA</feedburner:origLink></item>
+  <item>
+   <title>New X.Org Being Added To Rawhide For Fedora 21</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/zVh2pse9P1w/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTk</guid>
+   <description>For users of Fedora "Rawhide", the latest X.Org code is soon to land well in time for Fedora 21...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/zVh2pse9P1w" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 13:01:39 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTk</feedburner:origLink></item>
+  <item>
+   <title>Intel Cherryview PCI IDs Get Added To Mesa DRM</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/Mnr3vne6Jiw/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTg</guid>
+   <description>Going back to last month has been initial open-source Linux graphics driver support for Cherryview, the next-generation Atom SoCs, and now the PCI IDs have been added to Mesa's DRM library code...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/Mnr3vne6Jiw" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 12:45:18 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTg</feedburner:origLink></item>
+  <item>
+   <title>Debian Drops Support For SPARC</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/pl35C_LK_1o/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTc</guid>
+   <description>Debian has removed their SPARC CPU architecture support from Debian 8.0 "Jessie" testing and it might also be removed from Debian unstable as well...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/pl35C_LK_1o" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 12:10:02 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTc</feedburner:origLink></item>
+  <item>
+   <title>GNU Mailman 3.0 Now In Beta</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/if3jQGB7pq4/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTY</guid>
+   <description>The GNU Mailman 3.0 open-source mailing list software is finally in beta after a major rewrite...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/if3jQGB7pq4" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 11:58:51 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTY</feedburner:origLink></item>
+  <item>
+   <title>Debian 7.5 GNU/Linux Released</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/NdvXYZ5DKpU/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTQ</guid>
+   <description>The fifth update to Debian 7 "Wheezy" is now available...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/NdvXYZ5DKpU" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 02:29:53 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTQ</feedburner:origLink></item>
+  <item>
+   <title>Zenwalk Is Likely Doing Away With 32-Bit Support</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/VSvkbtJOVXU/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTM</guid>
+   <description>The Live edition of Zenwalk Linux 7.4 has been announced and it does away with  the OpenSSL Heartbleed issue and other problems. This Zenwalk Linux release also does away with the AuFS-enabled kernel...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/VSvkbtJOVXU" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 02:24:54 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTM</feedburner:origLink></item>
+  <item>
+   <title>X.Org Server 1.16 ABI Breakage Causes Concern</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/6-rixlHhWDQ/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTI</guid>
+   <description>A late breakage to the X.Org Server 1.16 ABI is resulting in (arguably rightful) concern by the proprietary driver developers at NVIDIA...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/6-rixlHhWDQ" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 00:59:30 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTI</feedburner:origLink></item>
+  <item>
+   <title>AMD Shows Off Beema &amp; Mullins But Its Linux Fate Is Unclear</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/au-CRZ8yYxQ/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTU</guid>
+   <description>AMD has now revealed their newest APUs, codenamed "Beema" and "Mullins" while their Linux fate remains unclear...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/au-CRZ8yYxQ" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 00:49:24 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTU</feedburner:origLink></item>
+  <item>
+   <title>X.Org's Evdev Driver Shows Off Improvements</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/8KFuLlXSAxo/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTE</guid>
+   <description>Peter Hutterer of Red Hat released an updated xf86-input-evdev driver on Monday for improving this common X.Org input driver...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/8KFuLlXSAxo" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 00:29:22 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTE</feedburner:origLink></item>
+  <item>
+   <title>Xamarin Studio Working On New Debugging Support</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/AG8k7c254C8/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NTA</guid>
+   <description>For those using Xamarin Studio for their Mono app development, the integrated development environment will soon be featuring some enhancements for an improved debugging experience...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/AG8k7c254C8" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 00:22:21 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NTA</feedburner:origLink></item>
+  <item>
+   <title>GCC Ada Now Supports 64-bit ARM</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/geY0DqUW9Wc/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDk</guid>
+   <description>The Ada programming language as compiled by GCC now has support for 64-bit ARM (AArch64) architectures...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/geY0DqUW9Wc" height="1" width="1"/&gt;</description>
+   <pubDate>Tue, 29 Apr 2014 00:14:46 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDk</feedburner:origLink></item>
+  <item>
+   <title>Yocto Is Hooking Up With AMD &amp; Mentor Graphics</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/y6Vn_fb757Q/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDg</guid>
+   <description>The Linux Foundation will be announcing tomorrow that AMD and Mentor Graphics are partnering up with the embedded Yocto Linux project as advisory members...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/y6Vn_fb757Q" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 21:04:55 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDg</feedburner:origLink></item>
+  <item>
+   <title>Testing NVIDIA Optimus / DRI PRIME On Ubuntu 14.04</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/SZxRtJVhRZk/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=20315</guid>
+   <description>With Ubuntu 14.04 LTS there is improved support for multi-GPU laptops (commonly what's branded as NVIDIA Optimus configurations) where there is a discrete NVIDIA GPU used for high performance workloads to complement the low-power Intel integrated graphics. Ubuntu 14.04 LTS features better support for these Optimus / DRI PRIME configurations on both the open and closed-source graphics drivers. Here's the Ubuntu 14.04 multi-GPU experience along with some OpenGL benchmarks and power consumption numbers between the different configurations.&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/SZxRtJVhRZk" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 15:30:00 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=20315</feedburner:origLink></item>
+  <item>
+   <title>Firefox 29.0 For Linux Is Now Available For Download</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/XFHVnOvOLi0/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDc</guid>
+   <description>While we're still waiting on the official release announcement, Mozilla Firefox 29.0 is now available for download...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/XFHVnOvOLi0" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 14:46:33 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDc</feedburner:origLink></item>
+  <item>
+   <title>Ubuntu 14.10 Utopic Can Now Boot With Systemd</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/4kvANJxJmWA/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDY</guid>
+   <description>Just days after Ubuntu 14.10 opened for development, a systemd package has landed within the "Utopic Unicorn" package archive that allows the Ubuntu desktop to be booted via systemd rather than Upstart...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/4kvANJxJmWA" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 14:25:31 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDY</feedburner:origLink></item>
+  <item>
+   <title>Rolling Out A New Phoronix Test Suite Site</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/3X3ZYlLoN-Y/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDU</guid>
+   <description>Over the weekend an incrementally new Phoronix Test Suite web-design was rolled out...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/3X3ZYlLoN-Y" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 14:15:37 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDU</feedburner:origLink></item>
+  <item>
+   <title>Inkscape 0.91 Is Still Working Towards Its Major Feature Release</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/yEsLELNakd8/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDQ</guid>
+   <description>It's been a long time since the last major release of the Inkscape open-source vector graphics editor software, but the 0.91 release (formerly known as Inkscape 0.49) is still brewing and will be a very exciting release with a ton of new functionality...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/yEsLELNakd8" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 12:04:00 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDQ</feedburner:origLink></item>
+  <item>
+   <title>64-bit MenuetOS M64 0.99.57 Released</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/4CorBeCCzRk/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDM</guid>
+   <description>The Menuet operating system that's lightweight, cleanly written in Assembly x86, and not based upon another OS platform, had a new version release last week of its 64-bit "M64" platform...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/4CorBeCCzRk" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 11:37:19 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDM</feedburner:origLink></item>
+  <item>
+   <title>Intel Begins Lining Up Their Graphics Changes For Linux 3.16</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/3p9EileqEQs/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDI</guid>
+   <description>Intel has submitted their first drm-next pull request of the Intel Linux graphics driver changes aimed for the Linux 3.16 kernel...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/3p9EileqEQs" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 11:21:57 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDI</feedburner:origLink></item>
+  <item>
+   <title>HGST Travelstar 7K1000 2.5-Inch 1TB SATA 3.0 HDD</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/j1Y2toxCqYs/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=20307</guid>
+   <description>Being benchmarked today at Phoronix under Linux is the HGST Travelstar 7K1000 1000GB 7200RPM Serial ATA 3.0 2.5-inch internal HDD.&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/j1Y2toxCqYs" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 11:10:00 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=20307</feedburner:origLink></item>
+  <item>
+   <title>Clpeak: OpenCL Device Profiling On Linux</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/6rCHqYHsG-0/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDE</guid>
+   <description>Clpeak is a relatively new open-source tool for querying the peak capabilities of OpenCL devices under Linux...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/6rCHqYHsG-0" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 09:26:57 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDE</feedburner:origLink></item>
+  <item>
+   <title>xf86-video-modesetting Now Supports Server-Managed FDs</title>
+   <link>http://feedproxy.google.com/~r/Phoronix/~3/XIoxltdNp0o/vr.php</link>
+   <guid isPermaLink="false">http://www.phoronix.com/vr.php?view=MTY3NDA</guid>
+   <description>The generic xf86-video-modesetting DDX driver that's designed to work universally across Linux KMS drivers now has support for sever-managed file-descriptors, which will help this driver work on non-root X Servers...&lt;img src="http://feeds.feedburner.com/~r/Phoronix/~4/XIoxltdNp0o" height="1" width="1"/&gt;</description>
+   <pubDate>Mon, 28 Apr 2014 09:20:02 EDT</pubDate>
+  <feedburner:origLink>http://www.phoronix.com/vr.php?view=MTY3NDA</feedburner:origLink></item>
+ </channel>
+</rss>

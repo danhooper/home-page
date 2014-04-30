@@ -1,3 +1,4 @@
+import os
 import unittest
 from django.contrib.auth.models import User
 from django.test import Client
@@ -18,12 +19,18 @@ class TestRSSReader(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_feed(self):
-        feed = models.RSSFeed(user = self.user,
-                              url='http://example.com',
-                              name= 'arstechnica')
-        feed.save()
-        response = self.client.get('/home_page/rss_reader/feed/%d/' % feed.id)
-        self.assertEqual(response.status_code, 200)
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                            'rss_samples')
+        files = os.listdir(path)
+        for feed_file in files:
+            feed_name = feed_file.split('.xml')[0]
+            feed = models.RSSFeed(user = self.user,
+                                  url='http://example.com',
+                                  name= feed_name)
+            feed.save()
+            response = self.client.get(
+                '/home_page/rss_reader/feed/%d/' % feed.id)
+            self.assertEqual(response.status_code, 200)
 
     def tearDown(self):
         self.user.delete()
