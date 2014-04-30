@@ -4,4 +4,4 @@ python:
 install: "pip install -r requirements.txt"
 script: cd src/home_page/ && coverage run --source="." manage.py test
 after_success:
-    coveralls
+    coveralls --data_file src/home_page/.coverage
