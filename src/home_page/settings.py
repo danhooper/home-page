@@ -163,10 +163,10 @@ INSTALLED_APPS = [
     # external
     "compressor",
     "south",
-    #'account',
+    'account',
+    'social.apps.django_app.default',
     'stronghold',
     'debug_toolbar',
-    'social.apps.django_app.default',
 
     # Pinax
 
@@ -177,6 +177,7 @@ INSTALLED_APPS = [
 ]
 
 AUTHENTICATION_BACKENDS = (
+    'social.backends.google.GoogleOAuth',
     'social.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
@@ -192,6 +193,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STRONGHOLD_PUBLIC_URLS = (
     r'^%s/%s.+$' % (SITE_ROOT, STATIC_URL),
     r'^%s/%s.+$' % (SITE_ROOT, MEDIA_URL),
+    r'^/%s/social/login/google-oauth/$' % SITE_ROOT,
+    r'^/%s/social/.+/.+/$' % SITE_ROOT,
+
 )
 STRONGHOLD_PUBLIC_NAMED_URLS = (
     'account_login',
