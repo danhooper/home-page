@@ -75,6 +75,7 @@ STATIC_URL = "/%s/static/" % SITE_ROOT
 LOGIN_URL = '/%s/accounts/login' % SITE_ROOT
 LOGOUT_URL = '/%s/accounts/logout' % SITE_ROOT
 ACCOUNT_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
 
 # Additional directories which hold static files
 STATICFILES_DIRS = [
@@ -138,6 +139,8 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
     "pinax.core.context_processors.pinax_settings",
     "account.context_processors.account",
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
 ]
 
 INSTALLED_APPS = [
@@ -160,9 +163,10 @@ INSTALLED_APPS = [
     # external
     "compressor",
     "south",
-    'account',
+    #'account',
     'stronghold',
     'debug_toolbar',
+    'social.apps.django_app.default',
 
     # Pinax
 
@@ -171,6 +175,11 @@ INSTALLED_APPS = [
    'apps.rss_reader',
    'apps.website_health',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 FIXTURE_DIRS = [
 ]

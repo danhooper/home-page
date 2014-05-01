@@ -1,6 +1,7 @@
 {% extends "site_base.html" %}
 
 {% block body %}
+<a href="{% url 'social:begin' 'google-oauth2' %}">Google OAuth2</a> <br />
 <div id="rss_feeds"></div>
 <div id="website_health"></div>
 {% endblock %}
