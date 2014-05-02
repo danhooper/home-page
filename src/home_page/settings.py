@@ -77,6 +77,8 @@ LOGOUT_URL = '/%s/accounts/logout' % SITE_ROOT
 ACCOUNT_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # Additional directories which hold static files
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'apps', 'website_health', 'static'),
@@ -182,6 +184,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+
 FIXTURE_DIRS = [
 ]
 
@@ -193,7 +196,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STRONGHOLD_PUBLIC_URLS = (
     r'^%s/%s.+$' % (SITE_ROOT, STATIC_URL),
     r'^%s/%s.+$' % (SITE_ROOT, MEDIA_URL),
-    r'^/%s/social/login/google-oauth/$' % SITE_ROOT,
     r'^/%s/social/.+/.+/$' % SITE_ROOT,
 
 )
@@ -211,5 +213,9 @@ TESTING = 'test' in sys.argv
 # like database and email that differ between development and production.
 try:
     from local_settings import *
+except ImportError:
+    pass
+try:
+    from secret_settings import *
 except ImportError:
     pass

@@ -40,3 +40,4 @@ nosetests.xml
 
 src/home_page/dev.db
 src/home_page/static
+src/home_page/secret_settings.py
