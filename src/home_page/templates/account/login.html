@@ -24,10 +24,6 @@
             {% include "account/_login_sidebar.html" %}
         </div>
     </div>
-    <div class="row">
-        <a href="{% url 'social:begin' 'google-oauth' %}">Google OAuth1</a> <br />
-        <a href="{% url 'social:begin' 'google-oauth2' %}">Google OAuth2</a> <br />
-    </div>
 {% endblock %}
 
 {% block extra_script %}
