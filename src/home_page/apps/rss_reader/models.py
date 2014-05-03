@@ -8,6 +8,7 @@ import feedparser
 
 
 class Entry(object):
+
     def __init__(self, entry):
         self.entry = entry
 
@@ -46,9 +47,3 @@ class RSSFeed(models.Model):
 
     class Meta:
         ordering = ['rank']
-
-
-class RSSFeedForm(forms.ModelForm):
-
-    class Meta:
-        model = RSSFeed
