@@ -201,7 +201,7 @@ STRONGHOLD_PUBLIC_URLS = (
     r'^%s/%s.+$' % (SITE_ROOT, STATIC_URL),
     r'^%s/%s.+$' % (SITE_ROOT, MEDIA_URL),
     r'^/%s/social/.+/.+/$' % SITE_ROOT,
-
+    r'^/%s/rss_reader/sample/.+/$' % SITE_ROOT,
 )
 STRONGHOLD_PUBLIC_NAMED_URLS = (
     'account_login',

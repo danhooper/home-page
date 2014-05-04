@@ -4,6 +4,7 @@ RSS Reader unit tests.
 import os
 import unittest
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.test import Client
 from .models import RSSFeed
 
@@ -23,14 +24,14 @@ class TestRSSReader(unittest.TestCase):
         files = os.listdir(path)
         return files
 
-    def test_feeds(self):
-        response = self.client.get('/home_page/rss_reader/')
+    def test_main(self):
+        response = self.client.get(reverse('show_feeds'))
         self.assertEqual(response.status_code, 200)
 
     def _add_feed(self, feed_dict):
         feeds = RSSFeed.objects.all()
         num_feeds = len(feeds)
-        resp = self.client.post('/home_page/rss_reader/feed/add/', feed_dict)
+        resp = self.client.post(reverse('add_feed'), feed_dict)
         self.assertEqual(302, resp.status_code)
         feeds = RSSFeed.objects.order_by('-pk')
         new_num_feeds = len(feeds)
@@ -40,8 +41,9 @@ class TestRSSReader(unittest.TestCase):
     def _edit_feed(self, feed_id, feed_dict):
         feeds = RSSFeed.objects.all()
         num_feeds = len(feeds)
-        resp = self.client.post(
-            '/home_page/rss_reader/feed/edit/%d/' % feed_id, feed_dict)
+        resp = self.client.post(reverse('edit_feed',
+                                        kwargs={'feed_id': feed_id}),
+                                feed_dict)
         self.assertEqual(302, resp.status_code)
         feeds = RSSFeed.objects.all()
         new_num_feeds = len(feeds)
@@ -59,8 +61,8 @@ class TestRSSReader(unittest.TestCase):
             feed = self._add_feed({'url': 'http://example.com',
                                    'name': feed_name,
                                    'rank': 1})
-            response = self.client.get(
-                '/home_page/rss_reader/feed/%d/' % feed.id)
+            response = self.client.get(reverse('show_feed',
+                                               args=(feed.id,)))
             self.assertEqual(response.status_code, 200)
         resp = self.client.get('/home_page/rss_reader/feed/add/')
         self.assertEqual(resp.status_code, 200)

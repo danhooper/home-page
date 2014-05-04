@@ -49,7 +49,8 @@ def edit_feed(request, feed_id=None):
         else:
             form = forms.RSSFeedForm()
     return render_to_response('rss_reader/templates/edit_feed.html',
-                              {'feed_form': form},
+                              {'feed_form': form,
+                               'feed_id': feed_id},
                               context_instance=RequestContext(request))
 
 

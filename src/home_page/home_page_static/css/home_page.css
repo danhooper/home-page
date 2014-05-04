@@ -12,3 +12,9 @@
 .feed-container {
     min-height: 200px;
 }
+.pane-header-left {
+    float: left;
+}
+.pane-header-right {
+    float: right;
+}
