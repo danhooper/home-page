@@ -68,6 +68,14 @@ class TestRSSReader(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         resp = self.client.get('/home_page/rss_reader/')
         self.assertEqual(resp.status_code, 200)
+        feeds = RSSFeed.objects.all()
+        for feed in feeds:
+            resp = self.client.get(reverse('delete_feed', args=(feed.id,)))
+            self.assertEqual(200, resp.status_code)
+            resp = self.client.post(reverse('delete_feed', args=(feed.id,)))
+            self.assertEqual(302, resp.status_code)
+        feeds = RSSFeed.objects.all()
+        self.assertEqual(0, len(feeds))
 
     def test_edit_feed(self):
         sample_file = self._get_sample_files()[0]

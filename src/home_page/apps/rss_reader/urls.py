@@ -13,5 +13,7 @@ urlpatterns = patterns(
     url(r"^feed/(\d+)/$", views.show_feed, name='show_feed'),
     url(r"^feed/add/$", views.edit_feed, name='add_feed'),
     url(r"^feed/edit/(?P<feed_id>\d+)/$", views.edit_feed, name='edit_feed'),
+    url(r"^feed/delete/(?P<feed_id>\d+)/$", views.delete_feed,
+        name='delete_feed'),
     url(r"^sample/(\w+)/$", views.sample, name='sample'),
 )

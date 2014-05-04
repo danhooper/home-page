@@ -3,13 +3,18 @@
 <div class="pane-header-left">
     <h2>
         <a href="{{rss_feed.website_url}}">{{rss_feed}}</a>
+    </h2>
+    <div class="header-controls">
         <a class="btn btn-default btn-sm feed-refresh" href="#" title="Refresh">
-            <span class="glyphicon glyphicon-refresh"></span>
+            <span class="glyphicon glyphicon-refresh"></span> Refresh
         </a>
         <a class="btn btn-default btn-sm feed-edit" href="{% url "edit_feed" feed_id=rss_feed.id %}" title="Edit Feed">
-            <span class="glyphicon glyphicon-edit"></span>
+            <span class="glyphicon glyphicon-edit"></span> Edit
         </a>
-    </h2>
+        <a class="btn btn-default btn-sm feed-delete" href="{% url "delete_feed" feed_id=rss_feed.id %}" title="Delete Feed">
+            <span class="glyphicon glyphicon-remove"></span> Delete
+        </a>
+    </div>
 </div>
 <div class="pane-header-right">
     <small>Last updated: {{last_updated}}</small>

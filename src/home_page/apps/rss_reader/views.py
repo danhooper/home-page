@@ -53,6 +53,17 @@ def edit_feed(request, feed_id=None):
                                'feed_id': feed_id},
                               context_instance=RequestContext(request))
 
+def delete_feed(request, feed_id):
+    feed = models.RSSFeed.objects.filter(user=request.user).get(pk=feed_id)
+    if request.method == 'POST':
+        feed.delete()
+        return HttpResponseRedirect(reverse('home'))
+    form = forms.DeleteRSSFeedForm()
+    return render_to_response('rss_reader/templates/delete_feed.html',
+                              {'feed': feed,
+                               'form': form},
+                              context_instance=RequestContext(request))
+
 
 def sample(request, sample_name):
     path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
