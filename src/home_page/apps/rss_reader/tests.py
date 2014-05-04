@@ -24,9 +24,6 @@ class TestRSSReader(unittest.TestCase):
     def _add_feed(self, feed_dict):
         feeds = RSSFeed.objects.all()
         num_feeds = len(feeds)
-        resp = self.client.get('/home_page/rss_reader/feed/add/')
-        csrf_token = resp.context['csrf_token']
-        feed_dict['csrfmiddlewaretoken'] = csrf_token
         resp = self.client.post('/home_page/rss_reader/feed/add/', feed_dict)
         self.assertEqual(302, resp.status_code)
         feeds = RSSFeed.objects.order_by('-pk')
