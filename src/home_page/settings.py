@@ -29,12 +29,16 @@ MANAGERS = ADMINS
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3", # Add "postgresql_psycopg2", "postgresql", "mysql", "sqlite3" or "oracle".
-        "NAME": os.path.join(PROJECT_ROOT, "dev.db"), # Or path to database file if using sqlite3.
-        "USER": "", # Not used with sqlite3.
-        "PASSWORD": "", # Not used with sqlite3.
-        "HOST": "", # Set to empty string for localhost. Not used with sqlite3.
-        "PORT": "", # Set to empty string for default. Not used with sqlite3.
+        # Add "postgresql_psycopg2", "postgresql", "mysql", "sqlite3" or
+        # "oracle".
+        "ENGINE": "django.db.backends.sqlite3",
+        # Or path to database file if using sqlite3.
+        "NAME": os.path.join(PROJECT_ROOT, "dev.db"),
+        "USER": "",  # Not used with sqlite3.
+        "PASSWORD": "",  # Not used with sqlite3.
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "",
+        "PORT": "",  # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -75,6 +79,9 @@ STATIC_URL = "/%s/static/" % SITE_ROOT
 LOGIN_URL = '/%s/accounts/login' % SITE_ROOT
 LOGOUT_URL = '/%s/accounts/logout' % SITE_ROOT
 ACCOUNT_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/" % SITE_ROOT
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Additional directories which hold static files
 STATICFILES_DIRS = [
@@ -138,6 +145,8 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
     "pinax.core.context_processors.pinax_settings",
     "account.context_processors.account",
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
 ]
 
 INSTALLED_APPS = [
@@ -161,16 +170,24 @@ INSTALLED_APPS = [
     "compressor",
     "south",
     'account',
+    'social.apps.django_app.default',
     'stronghold',
     'debug_toolbar',
 
     # Pinax
 
     # project
-   'apps.home_page_base',
-   'apps.rss_reader',
-   'apps.website_health',
+    'apps.home_page_base',
+    'apps.rss_reader',
+    'apps.website_health',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.google.GoogleOAuth',
+    'social.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 
 FIXTURE_DIRS = [
 ]
@@ -183,6 +200,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STRONGHOLD_PUBLIC_URLS = (
     r'^%s/%s.+$' % (SITE_ROOT, STATIC_URL),
     r'^%s/%s.+$' % (SITE_ROOT, MEDIA_URL),
+    r'^/%s/social/.+/.+/$' % SITE_ROOT,
+    r'^/%s/rss_reader/sample/.+/$' % SITE_ROOT,
 )
 STRONGHOLD_PUBLIC_NAMED_URLS = (
     'account_login',
@@ -191,6 +210,25 @@ STRONGHOLD_PUBLIC_NAMED_URLS = (
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
 
 TESTING = 'test' in sys.argv
 
@@ -198,5 +236,9 @@ TESTING = 'test' in sys.argv
 # like database and email that differ between development and production.
 try:
     from local_settings import *
+except ImportError:
+    pass
+try:
+    from secret_settings import *
 except ImportError:
     pass
