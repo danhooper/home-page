@@ -17,6 +17,12 @@ class TestRSSReader(unittest.TestCase):
         self.user.save()
         self.client.login(username='test', password='password')
 
+    def _get_sample_files(self):
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                            'rss_samples')
+        files = os.listdir(path)
+        return files
+
     def test_feeds(self):
         response = self.client.get('/home_page/rss_reader/')
         self.assertEqual(response.status_code, 200)
@@ -31,10 +37,23 @@ class TestRSSReader(unittest.TestCase):
         self.assertEqual(num_feeds + 1, new_num_feeds)
         return feeds[0]
 
-    def test_feed(self):
-        path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                            'rss_samples')
-        files = os.listdir(path)
+    def _edit_feed(self, feed_id, feed_dict):
+        feeds = RSSFeed.objects.all()
+        num_feeds = len(feeds)
+        resp = self.client.post(
+            '/home_page/rss_reader/feed/edit/%d/' % feed_id, feed_dict)
+        self.assertEqual(302, resp.status_code)
+        feeds = RSSFeed.objects.all()
+        new_num_feeds = len(feeds)
+        self.assertEqual(num_feeds, new_num_feeds)
+        feed = RSSFeed.objects.get(pk=feed_id)
+        return feed
+
+    def test_feeds(self):
+        '''
+        Fairly comprehensive test adding feeds and testing various views.
+        '''
+        files = self._get_sample_files()
         for feed_file in files:
             feed_name = feed_file.split('.xml')[0]
             feed = self._add_feed({'url': 'http://example.com',
@@ -43,6 +62,26 @@ class TestRSSReader(unittest.TestCase):
             response = self.client.get(
                 '/home_page/rss_reader/feed/%d/' % feed.id)
             self.assertEqual(response.status_code, 200)
+        resp = self.client.get('/home_page/rss_reader/feed/add/')
+        self.assertEqual(resp.status_code, 200)
+        resp = self.client.get('/home_page/rss_reader/')
+        self.assertEqual(resp.status_code, 200)
+
+    def test_edit_feed(self):
+        sample_file = self._get_sample_files()[0]
+        feed_name = sample_file.split('.xml')[0]
+        feed = self._add_feed({'url': 'http://example.com',
+                               'name': feed_name,
+                               'rank': 1})
+        self.assertEqual(feed.rank, 1)
+        feed = self._edit_feed(feed.id,
+                               {'url': 'http://example.com',
+                                'name': feed_name,
+                                'rank': 2})
+        self.assertEqual(feed.rank, 2)
+        resp = self.client.get('/home_page/rss_reader/feed/edit/%d/' % feed.id)
+        self.assertEqual(resp.status_code, 200)
+
 
     def test_sample(self):
         path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
