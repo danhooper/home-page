@@ -23,6 +23,7 @@ class TestWebsiteHealth(unittest.TestCase):
             sitemap_url = 'https://example.com/sitemap.xml',
             name = 'sample_website')
         website.save()
+        self.assertTrue(website.get_absolute_url())
         response = self.client.get('/home_page/website_health/website/1/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(50, len(website.get_links()))
