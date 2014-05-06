@@ -79,9 +79,3 @@ class WebsiteHealthChecker(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.name
-
-
-class WebsiteHealthCheckerForm(forms.ModelForm):
-
-    class Meta:
-        model = WebsiteHealthChecker
