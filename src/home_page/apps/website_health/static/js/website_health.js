@@ -2,13 +2,14 @@ var WebsiteHealth = {
     init: function() {
         $(document).on('click', '.result-expand',
         		WebsiteHealth.resultExpand);
+        $(document).on('click', '.website-refresh', WebsiteHealth.refreshWebsite);
     },
     healthCheck: function() {
         var numGood = 0;
         var numBad = 0;
         $('.website_health_link').each(function(index, elem) {
             postData = {link_url: $(this).data('link-url')};
-            $.post('website_health/health/', postData, function(data) {
+            $.post('website_health/website/health/', postData, function(data) {
                 try{
                     if ( data['health']) {
                         numGood += 1
@@ -48,5 +49,11 @@ var WebsiteHealth = {
             $(target_a).children('.glyphicon-minus').removeClass('glyphicon-minus');
         }
 
+    },
+    refreshWebsite: function(event) {
+        event.preventDefault();
+        website = $(event.target).parents('.website');
+        url = website.data('url');
+        website.load(url);
     }
 };
