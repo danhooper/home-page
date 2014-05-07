@@ -10,6 +10,6 @@ class WebsiteHealthCheckerForm(ModelForm):
         exclude = ['user']
 
 
-class DeleteRSSFeedForm(Form):
+class DeleteWebsiteHealthCheckerForm(Form):
 
     pass
