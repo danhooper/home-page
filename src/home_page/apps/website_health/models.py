@@ -63,7 +63,7 @@ class WebsiteHealthChecker(models.Model):
     name = models.CharField(max_length=200)
 
     def get_absolute_url(self):
-        return reverse('website', args=(self.id,))
+        return reverse('website_show', args=(self.id,))
 
     def get_links(self):
         sitemap_parser = SitemapParser()
@@ -79,9 +79,3 @@ class WebsiteHealthChecker(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.name
-
-
-class WebsiteHealthCheckerForm(forms.ModelForm):
-
-    class Meta:
-        model = WebsiteHealthChecker

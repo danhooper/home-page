@@ -1,5 +1,18 @@
 {% extends "home_page_base_header.html" %}
 {% block pane_header %}
-<H2>{{website.name}}</H2>
+<h2>
+    <a href="{{website.url}}">{{website}}</a>
+</h2>
+<div class="header-controls">
+    <a class="btn btn-default btn-sm website-refresh" href="#" title="Refresh">
+        <span class="glyphicon glyphicon-refresh"></span> Refresh
+    </a>
+    <a class="btn btn-default btn-sm website-edit" href="{% url "edit_website" website_id=website.id %}" title="Edit Website">
+        <span class="glyphicon glyphicon-edit"></span> Edit
+    </a>
+    <a class="btn btn-default btn-sm website-delete" href="{% url "delete_website" website_id=website.id %}" title="Delete Website">
+        <span class="glyphicon glyphicon-remove"></span> Delete
+    </a>
+</div>
 {% endblock %}
 
