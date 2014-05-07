@@ -1,0 +1,13 @@
+{% extends "site_base.html" %}
+{% load bootstrap %}
+
+{% block body %}
+<h2>Are you sure you want to delete {{website}}?</h2>
+<form action="{% url "delete_website" website.id %}" method="post">
+    {% csrf_token %}
+    <div class="form-actions">
+        <a href="#back" class="btn">Go back</a>
+        <button type="submit" class="btn btn-danger">Delete<?button>
+    </div>
+</form>
+{% endblock %}
