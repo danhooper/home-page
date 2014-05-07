@@ -7,6 +7,7 @@ class WebsiteHealthCheckerForm(ModelForm):
 
     class Meta:
         model = models.WebsiteHealthChecker
+        exclude = ['user']
 
 
 class DeleteRSSFeedForm(Form):
