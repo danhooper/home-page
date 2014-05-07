@@ -16,20 +16,16 @@ class TestWebsiteHealth(unittest.TestCase):
         self.client.login(username='test', password='password')
         self.example_website_dict = {
             'url': 'http://example.com/',
-            'name': 'test',
+            'name': 'sample_website',
             'sitemap_url': 'http://example.com/sitemap.xml'}
 
     def test_main(self):
-        response = self.client.get('/home_page/website_health/')
+        response = self.client.get(reverse('show_websites'))
         self.assertEqual(response.status_code, 200)
 
     def test_website(self):
-        website = models.WebsiteHealthChecker(
-            user=self.user, url='http://example.com',
-            sitemap_url='https://example.com/sitemap.xml',
-            name='sample_website')
+        website = self.__add_website(self.example_website_dict)
         website.save()
-        self.assertTrue(website.get_absolute_url())
         response = self.client.get(website.get_absolute_url())
         self.assertEqual(response.status_code, 200)
         self.assertEqual(50, len(website.get_links()))
@@ -45,6 +41,9 @@ class TestWebsiteHealth(unittest.TestCase):
         return websites[0]
 
     def _edit_website(self, website_id, website_dict):
+        resp = self.client.get(reverse('edit_website',
+                                       kwargs={'website_id': website_id}))
+        self.assertEqual(resp.status_code, 200)
         websites = models.WebsiteHealthChecker.objects.all()
         num_websites = len(websites)
         resp = self.client.post(reverse('edit_website',
@@ -75,11 +74,7 @@ class TestWebsiteHealth(unittest.TestCase):
         '''
         Tests the health view.
         '''
-        website = models.WebsiteHealthChecker(
-            user=self.user, url='http://example.com',
-            sitemap_url='https://example.com/sitemap.xml',
-            name='sample_website')
-        website.save()
+        website = self.__add_website(self.example_website_dict)
         for link in website.get_links():
             resp = self.client.post(reverse('website_health'),
                                     {'link_url': link.link})
