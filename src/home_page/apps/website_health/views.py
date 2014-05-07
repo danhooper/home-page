@@ -1,7 +1,11 @@
 import json
-from django.shortcuts import render_to_response
+from django.core.urlresolvers import reverse
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
+import forms
 import models
 
 
@@ -29,6 +33,7 @@ def health(request):
         return HttpResponse(json.dumps(response_data),
                             mimetype="application/json")
 
+
 def edit_website(request, website_id=None):
     form = None
     if request.method == 'POST':
@@ -36,10 +41,10 @@ def edit_website(request, website_id=None):
             website_id = int(website_id)
             website = models.WebsiteHealthChecker.objects.filter(
                 user=request.user).get(pk=website_id)
-            form = models.WebsiteHealthCheckerForm(request.POST,
+            form = forms.WebsiteHealthCheckerForm(request.POST,
                                                    instance=website)
         else:
-            form = models.WebsiteHealthCheckerForm(
+            form = forms.WebsiteHealthCheckerForm(
                 request.POST, initial={'user': request.user})
         if form.is_valid():
             feed = form.save(commit=False)
@@ -51,9 +56,9 @@ def edit_website(request, website_id=None):
             website_id = int(website_id)
             website = models.WebsiteHealthChecker.objects.filter(
                 user=request.user).get(pk=website_id)
-            form = models.WebsiteHealthCheckerForm(instance=website)
+            form = forms.WebsiteHealthCheckerForm(instance=website)
         else:
-            form = models.WebsiteHealthCheckerForm()
+            form = forms.WebsiteHealthCheckerForm()
     return render_to_response('website_health/templates/edit_website.html',
                               {'website_form': form,
                                'website_id': website_id},
@@ -71,4 +76,3 @@ def delete_website(request, website_id):
                               {'website': website,
                                'form': form},
                               context_instance=RequestContext(request))
-
