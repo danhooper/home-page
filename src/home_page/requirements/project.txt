@@ -11,3 +11,4 @@ lxml==3.3.5
 gunicorn==18.0
 coverage==3.7.1
 coveralls==0.4.2
+mock==1.0.1

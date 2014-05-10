@@ -1,8 +1,15 @@
+'''
+Website Health Unit Tests.
+'''
 import copy
+import os
 import unittest
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.test import Client
+from lxml import etree
+from mock import Mock
+from mock import patch
 import models
 
 
@@ -14,10 +21,22 @@ class TestWebsiteHealth(unittest.TestCase):
             username='test', email='test@example.com', password='password')
         self.user.save()
         self.client.login(username='test', password='password')
+        self.website_name = 'sample_website'
         self.example_website_dict = {
             'url': 'http://example.com/',
-            'name': 'sample_website',
+            'name': self.website_name,
             'sitemap_url': 'http://example.com/sitemap.xml'}
+        self.etree_parse_mock_patch = patch('lxml.etree.parse')
+        self.etree_parse_mock = self.etree_parse_mock_patch.start()
+        self.etree_parse_mock.side_effect = self.__mock_etree_parse
+
+    def __mock_etree_parse(self, url, parser):
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                            'samples/%s.xml' % self.website_name)
+        self.etree_parse_mock_patch.stop()
+        etree.parse(path, parser)
+        self.etree_parse_mock = self.etree_parse_mock_patch.start()
+        self.etree_parse_mock.side_effect = self.__mock_etree_parse
 
     def test_main(self):
         response = self.client.get(reverse('show_websites'))
@@ -30,11 +49,11 @@ class TestWebsiteHealth(unittest.TestCase):
         self.assertEqual(50, len(website.get_links()))
         resp = self.client.get(reverse(
             'delete_website',
-            kwargs = {'website_id': website.id}))
+            kwargs={'website_id': website.id}))
         self.assertEqual(resp.status_code, 200)
         resp = self.client.post(reverse(
             'delete_website',
-            kwargs = {'website_id': website.id}))
+            kwargs={'website_id': website.id}))
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(len(models.WebsiteHealthChecker.objects.all()), 0)
 
@@ -72,12 +91,16 @@ class TestWebsiteHealth(unittest.TestCase):
         website = self._edit_website(website.id, new_website_dict)
         self.assertEqual(website.url, 'http://example1.com/')
 
-
-    def test_health(self):
+    @patch('urllib2.urlopen')
+    def test_health(self, mock_urlopen):
         '''
         Tests the health view.
         '''
+        mock_response = Mock()
+        mock_response.getcode.return_value = 200
+        mock_urlopen.return_value = mock_response
         website = self.__add_website(self.example_website_dict)
+        self.assertEqual(50, len(website.get_links()))
         for link in website.get_links():
             resp = self.client.post(reverse('website_health'),
                                     {'link_url': link.link})
@@ -86,3 +109,4 @@ class TestWebsiteHealth(unittest.TestCase):
 
     def tearDown(self):
         self.user.delete()
+        self.etree_parse_mock_patch.stop()
