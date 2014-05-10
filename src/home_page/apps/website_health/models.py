@@ -1,7 +1,7 @@
-import os
+'''
+Website Health Models.
+'''
 import urllib2
-from django import forms
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -43,14 +43,11 @@ class WebsitePage(object):
         self.link = link
 
     def get_health(self):
-        if settings.TESTING:
-            return True
-        else:
-            try:
-                resp = urllib2.urlopen(self.link)
-                return resp.getcode() == 200
-            except Exception:
-                return False
+        try:
+            resp = urllib2.urlopen(self.link)
+            return resp.getcode() == 200
+        except Exception:
+            return False
 
     def __unicode__(self):
         return self.link
@@ -68,13 +65,7 @@ class WebsiteHealthChecker(models.Model):
     def get_links(self):
         sitemap_parser = SitemapParser()
         parser = etree.XMLParser(target=sitemap_parser)
-        if settings.TESTING:
-            path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                'samples/%s.xml' % self.name)
-            etree.parse(path, parser)
-        else:
-           etree.parse(self.sitemap_url, parser)
-
+        etree.parse(self.sitemap_url, parser)
         return sitemap_parser.pages
 
     def __unicode__(self):

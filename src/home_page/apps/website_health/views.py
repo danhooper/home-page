@@ -31,7 +31,7 @@ def health(request):
         link = models.WebsitePage(link_url)
         response_data = {'health': link.get_health()}
         return HttpResponse(json.dumps(response_data),
-                            mimetype="application/json")
+                            content_type="application/json")
 
 
 def edit_website(request, website_id=None):
