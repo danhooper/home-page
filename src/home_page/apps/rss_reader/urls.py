@@ -9,11 +9,12 @@ from home_page.apps.rss_reader import views
 
 urlpatterns = patterns(
     "",
-    url(r"^$", views.show_feeds, name="show_feeds"),
-    url(r"^feed/(\d+)/$", views.show_feed, name='show_feed'),
-    url(r"^feed/add/$", views.edit_feed, name='add_feed'),
-    url(r"^feed/edit/(?P<feed_id>\d+)/$", views.edit_feed, name='edit_feed'),
-    url(r"^feed/delete/(?P<feed_id>\d+)/$", views.delete_feed,
+    url(r"^$", views.FeedsView.as_view(), name="show_feeds"),
+    url(r"^feed/(\d+)/$", views.FeedView.as_view(), name='show_feed'),
+    url(r"^feed/add/$", views.FeedEdit.as_view(), name='add_feed'),
+    url(r"^feed/edit/(?P<feed_id>\d+)/$", views.FeedEdit.as_view(),
+        name='edit_feed'),
+    url(r"^feed/delete/(?P<feed_id>\d+)/$", views.DeleteFeed.as_view(),
         name='delete_feed'),
-    url(r"^sample/(\w+)/$", views.sample, name='sample'),
+    url(r"^sample/(\w+)/$", views.Sample.as_view(), name='sample'),
 )
