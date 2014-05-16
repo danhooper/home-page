@@ -69,12 +69,12 @@ class TestWebsiteHealth(unittest.TestCase):
 
     def _edit_website(self, website_id, website_dict):
         resp = self.client.get(reverse('edit_website',
-                                       kwargs={'website_id': website_id}))
+                                       args=(website_id,)))
         self.assertEqual(resp.status_code, 200)
         websites = models.WebsiteHealthChecker.objects.all()
         num_websites = len(websites)
         resp = self.client.post(reverse('edit_website',
-                                        kwargs={'website_id': website_id}),
+                                        args=(website_id,)),
                                 website_dict)
         self.assertEqual(302, resp.status_code)
         websites = models.WebsiteHealthChecker.objects.all()
