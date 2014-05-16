@@ -5,28 +5,34 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import View
 import forms
 import models
 
 
-def show_websites(request):
-    websites = models.WebsiteHealthChecker.objects.filter(
-        user=request.user).all()
-    return render_to_response('website_health/templates/main.html',
-                              {'websites': websites})
+class WebsitesView(View):
+
+    def get(self, request):
+        websites = models.WebsiteHealthChecker.objects.filter(
+            user=request.user).all()
+        return render_to_response('website_health/templates/main.html',
+                                  {'websites': websites})
 
 
-def show_website(request, website_id):
-    website_id = int(website_id)
-    website = models.WebsiteHealthChecker.objects.filter(
-        user=request.user).get(pk=website_id)
-    return render_to_response('website_health/templates/website.html',
-                              {'website': website})
+class WebsiteView(View):
+
+    def get(self, request, website_id):
+        website_id = int(website_id)
+        website = models.WebsiteHealthChecker.objects.filter(
+            user=request.user).get(pk=website_id)
+        return render_to_response('website_health/templates/website.html',
+                                  {'website': website})
 
 
-@csrf_exempt
-def health(request):
-    if request.POST:
+class HealthView(View):
+
+    @csrf_exempt
+    def post(self, request):
         link_url = request.POST['link_url']
         link = models.WebsitePage(link_url)
         response_data = {'health': link.get_health()}
@@ -34,45 +40,56 @@ def health(request):
                             content_type="application/json")
 
 
-def edit_website(request, website_id=None):
+class WebsiteEdit(View):
     form = None
-    if request.method == 'POST':
+
+    def post(self, request, website_id=None):
         if website_id:
             website_id = int(website_id)
             website = models.WebsiteHealthChecker.objects.filter(
                 user=request.user).get(pk=website_id)
-            form = forms.WebsiteHealthCheckerForm(request.POST,
-                                                   instance=website)
+            self.form = forms.WebsiteHealthCheckerForm(request.POST,
+                                                       instance=website)
         else:
-            form = forms.WebsiteHealthCheckerForm(
+            self.form = forms.WebsiteHealthCheckerForm(
                 request.POST, initial={'user': request.user})
-        if form.is_valid():
-            feed = form.save(commit=False)
+        if self.form.is_valid():
+            feed = self.form.save(commit=False)
             feed.user = request.user
             feed.save()
             return HttpResponseRedirect(reverse('home'))
-    if not form:
-        if website_id:
-            website_id = int(website_id)
-            website = models.WebsiteHealthChecker.objects.filter(
-                user=request.user).get(pk=website_id)
-            form = forms.WebsiteHealthCheckerForm(instance=website)
-        else:
-            form = forms.WebsiteHealthCheckerForm()
-    return render_to_response('website_health/templates/edit_website.html',
-                              {'website_form': form,
-                               'website_id': website_id},
-                              context_instance=RequestContext(request))
+        return self.get(request, website_id)
+
+    def get(self, request, website_id=None):
+        if not self.form:
+            if website_id:
+                website_id = int(website_id)
+                website = models.WebsiteHealthChecker.objects.filter(
+                    user=request.user).get(pk=website_id)
+                self.form = forms.WebsiteHealthCheckerForm(
+                    instance=website)
+            else:
+                self.form = forms.WebsiteHealthCheckerForm()
+        return render_to_response('website_health/templates/edit_website.html',
+                                  {'website_form': self.form,
+                                   'website_id': website_id},
+                                  context_instance=RequestContext(request))
 
 
-def delete_website(request, website_id):
-    website = models.WebsiteHealthChecker.objects.filter(
-        user=request.user).get(pk=website_id)
-    if request.method == 'POST':
+class DeleteWebsite(View):
+
+    def post(self, request, website_id):
+        website = models.WebsiteHealthChecker.objects.filter(
+            user=request.user).get(pk=website_id)
         website.delete()
         return HttpResponseRedirect(reverse('home'))
-    form = forms.DeleteWebsiteHealthCheckerForm()
-    return render_to_response('website_health/templates/delete_website.html',
-                              {'website': website,
-                               'form': form},
-                              context_instance=RequestContext(request))
+
+    def get(self, request, website_id):
+        website = models.WebsiteHealthChecker.objects.filter(
+            user=request.user).get(pk=website_id)
+        form = forms.DeleteWebsiteHealthCheckerForm()
+        return render_to_response(
+            'website_health/templates/delete_website.html',
+            {'website': website,
+             'form': form},
+            context_instance=RequestContext(request))
