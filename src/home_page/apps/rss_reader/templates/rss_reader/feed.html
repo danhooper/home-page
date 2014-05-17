@@ -1,4 +1,4 @@
-{% include "feed_header.html"%}
+{% include "rss_reader/feed_header.html"%}
 <div class="panel-body">
 {% for entry in rss_feed.get_entries|slice:":10" %}
 <div class="entry">

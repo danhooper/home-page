@@ -16,7 +16,7 @@ import models
 class FeedsView(View):
     def get(self, request):
         rss_feeds = models.RSSFeed.objects.filter(user=request.user).all()
-        return render_to_response('rss_reader/templates/main.html',
+        return render_to_response('rss_reader/main.html',
                                   {'rss_feeds': rss_feeds})
 
 class FeedView(View):
@@ -25,7 +25,7 @@ class FeedView(View):
         rss_feed = models.RSSFeed.objects.filter(user=request.user).get(
             pk=feed_id)
         last_updated = datetime.datetime.now()
-        return render_to_response('rss_reader/templates/feed.html',
+        return render_to_response('rss_reader/feed.html',
                                   {'rss_feed': rss_feed,
                                    'last_updated': last_updated})
 
@@ -34,29 +34,17 @@ class FeedCreate(UserCreateView):
     model = models.RSSFeed
     form_class = forms.RSSFeedForm
     success_url = reverse_lazy('home')
-    template_name = 'rss_reader/templates/edit_feed.html'
 
 
 class FeedUpdate(UserUpdateView):
     model = models.RSSFeed
     form_class = forms.RSSFeedForm
     success_url = reverse_lazy('home')
-    template_name = 'rss_reader/templates/edit_feed.html'
 
 
-class DeleteFeed(View):
-    def post(self, request, feed_id=None):
-        feed = models.RSSFeed.objects.filter(user=request.user).get(pk=feed_id)
-        feed.delete()
-        return HttpResponseRedirect(reverse('home'))
-
-    def get(self, request, feed_id=None):
-        feed = models.RSSFeed.objects.filter(user=request.user).get(pk=feed_id)
-        form = forms.DeleteRSSFeedForm()
-        return render_to_response('rss_reader/templates/delete_feed.html',
-                                  {'feed': feed,
-                                   'form': form},
-                                  context_instance=RequestContext(request))
+class DeleteFeed(UserDeleteView):
+    model = models.RSSFeed
+    success_url = reverse_lazy('home')
 
 class Sample(View):
     def get(self, request, sample_name):
