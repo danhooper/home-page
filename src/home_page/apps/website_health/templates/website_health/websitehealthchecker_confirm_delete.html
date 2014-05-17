@@ -2,8 +2,8 @@
 {% load bootstrap %}
 
 {% block body %}
-<h2>Are you sure you want to delete {{feed}}?</h2>
-<form action="{% url "delete_feed" feed.id %}" method="post">
+<h2>Are you sure you want to delete {{object}}?</h2>
+<form action="" method="post">
     {% csrf_token %}
     <div class="form-actions">
         <a href="#back" class="btn">Go back</a>
@@ -11,5 +11,4 @@
     </div>
 </form>
 {% endblock %}
-
 

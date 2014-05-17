@@ -11,10 +11,10 @@ urlpatterns = patterns(
     "",
     url(r"^$", views.FeedsView.as_view(), name="show_feeds"),
     url(r"^feed/(\d+)/$", views.FeedView.as_view(), name='show_feed'),
-    url(r"^feed/add/$", views.FeedEdit.as_view(), name='add_feed'),
-    url(r"^feed/edit/(?P<feed_id>\d+)/$", views.FeedEdit.as_view(),
+    url(r"^feed/add/$", views.FeedCreate.as_view(), name='add_feed'),
+    url(r"^feed/edit/(?P<pk>\d+)/$", views.FeedUpdate.as_view(),
         name='edit_feed'),
-    url(r"^feed/delete/(?P<feed_id>\d+)/$", views.DeleteFeed.as_view(),
+    url(r"^feed/delete/(?P<pk>\d+)/$", views.DeleteFeed.as_view(),
         name='delete_feed'),
     url(r"^sample/(\w+)/$", views.Sample.as_view(), name='sample'),
 )

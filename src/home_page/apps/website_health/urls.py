@@ -13,9 +13,9 @@ urlpatterns = patterns(
     url(r"^website/(\d+)/$", views.WebsiteView.as_view(), name='website_show'),
     url(r'^website/health/$', views.HealthView.as_view(),
         name='website_health'),
-    url(r"^website/add/$", views.WebsiteEdit.as_view(), name='add_website'),
-    url(r"^website/edit/(?P<website_id>\d+)/$", views.WebsiteEdit.as_view(),
+    url(r"^website/add/$", views.WebsiteCreate.as_view(), name='add_website'),
+    url(r"^website/edit/(?P<pk>\d+)/$", views.WebsiteUpdate.as_view(),
         name='edit_website'),
-    url(r"^website/delete/(?P<website_id>\d+)/$",
+    url(r"^website/delete/(?P<pk>\d+)/$",
         views.DeleteWebsite.as_view(), name='delete_website'),
 )

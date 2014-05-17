@@ -8,10 +8,10 @@
         <a class="btn btn-default btn-sm feed-refresh" href="#" title="Refresh">
             <span class="glyphicon glyphicon-refresh"></span> Refresh
         </a>
-        <a class="btn btn-default btn-sm feed-edit" href="{% url "edit_feed" feed_id=rss_feed.id %}" title="Edit Feed">
+        <a class="btn btn-default btn-sm feed-edit" href="{% url "edit_feed" pk=rss_feed.id %}" title="Edit Feed">
             <span class="glyphicon glyphicon-edit"></span> Edit
         </a>
-        <a class="btn btn-default btn-sm feed-delete" href="{% url "delete_feed" feed_id=rss_feed.id %}" title="Delete Feed">
+        <a class="btn btn-default btn-sm feed-delete" href="{% url "delete_feed" pk=rss_feed.id %}" title="Delete Feed">
             <span class="glyphicon glyphicon-remove"></span> Delete
         </a>
     </div>
