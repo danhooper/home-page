@@ -10,7 +10,8 @@ from home_page.apps.website_health import views
 urlpatterns = patterns(
     "",
     url(r"^$", views.WebsitesView.as_view(), name='show_websites'),
-    url(r"^website/(\d+)/$", views.WebsiteView.as_view(), name='website_show'),
+    url(r"^website/(?P<pk>\d+)/$", views.WebsiteView.as_view(),
+        name='website_show'),
     url(r'^website/health/$', views.HealthView.as_view(),
         name='website_health'),
     url(r"^website/add/$", views.WebsiteCreate.as_view(), name='add_website'),

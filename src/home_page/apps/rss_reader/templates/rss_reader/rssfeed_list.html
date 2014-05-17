@@ -5,7 +5,7 @@
     {% endif %}
         <div class="col-md-4">
             <div class="panel panel-info feed-container feed" id="{{feed.name}}" data-url="{{feed.get_absolute_url}}">
-                {% include "rss_reader/feed_header.html" with rss_feed=feed %}
+                {% include "rss_reader/feed_header.html" with object=feed %}
                 Loading...
              </div>
 	 </div>
