@@ -16,6 +16,6 @@ urlpatterns = patterns(
     url(r"^website/add/$", views.WebsiteCreate.as_view(), name='add_website'),
     url(r"^website/edit/(?P<pk>\d+)/$", views.WebsiteUpdate.as_view(),
         name='edit_website'),
-    url(r"^website/delete/(?P<website_id>\d+)/$",
+    url(r"^website/delete/(?P<pk>\d+)/$",
         views.DeleteWebsite.as_view(), name='delete_website'),
 )

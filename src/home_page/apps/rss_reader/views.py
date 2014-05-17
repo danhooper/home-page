@@ -7,8 +7,9 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from reusable_django.views import FilterUserUpdateView
 from reusable_django.views import UserCreateView
+from reusable_django.views import UserDeleteView
+from reusable_django.views import UserUpdateView
 import forms
 import models
 
@@ -36,7 +37,7 @@ class FeedCreate(UserCreateView):
     template_name = 'rss_reader/templates/edit_feed.html'
 
 
-class FeedUpdate(FilterUserUpdateView):
+class FeedUpdate(UserUpdateView):
     model = models.RSSFeed
     form_class = forms.RSSFeedForm
     success_url = reverse_lazy('home')

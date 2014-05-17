@@ -9,8 +9,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
 from django.views.generic.edit import CreateView
 from django.views.generic.edit import FormView
-from reusable_django.views import FilterUserUpdateView
 from reusable_django.views import UserCreateView
+from reusable_django.views import UserDeleteView
+from reusable_django.views import UserUpdateView
 import forms
 import models
 
@@ -20,7 +21,7 @@ class WebsitesView(View):
     def get(self, request):
         websites = models.WebsiteHealthChecker.objects.filter(
             user=request.user).all()
-        return render_to_response('website_health/templates/main.html',
+        return render_to_response('website_health/main.html',
                                   {'websites': websites})
 
 
@@ -30,7 +31,7 @@ class WebsiteView(View):
         website_id = int(website_id)
         website = models.WebsiteHealthChecker.objects.filter(
             user=request.user).get(pk=website_id)
-        return render_to_response('website_health/templates/website.html',
+        return render_to_response('website_health/website.html',
                                   {'website': website})
 
 
@@ -49,30 +50,14 @@ class WebsiteCreate(UserCreateView):
     model = models.WebsiteHealthChecker
     form_class = forms.WebsiteHealthCheckerForm
     success_url = reverse_lazy('home')
-    template_name = 'website_health/templates/edit_website.html'
 
 
-class WebsiteUpdate(FilterUserUpdateView):
+class WebsiteUpdate(UserUpdateView):
     model = models.WebsiteHealthChecker
     form_class = forms.WebsiteHealthCheckerForm
     success_url = reverse_lazy('home')
-    template_name = 'website_health/templates/edit_website.html'
 
 
-class DeleteWebsite(View):
-
-    def post(self, request, website_id):
-        website = models.WebsiteHealthChecker.objects.filter(
-            user=request.user).get(pk=website_id)
-        website.delete()
-        return HttpResponseRedirect(reverse('home'))
-
-    def get(self, request, website_id):
-        website = models.WebsiteHealthChecker.objects.filter(
-            user=request.user).get(pk=website_id)
-        form = forms.DeleteWebsiteHealthCheckerForm()
-        return render_to_response(
-            'website_health/templates/delete_website.html',
-            {'website': website,
-             'form': form},
-            context_instance=RequestContext(request))
+class DeleteWebsite(UserDeleteView):
+    model = models.WebsiteHealthChecker
+    success_url = reverse_lazy('home')

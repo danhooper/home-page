@@ -49,11 +49,11 @@ class TestWebsiteHealth(unittest.TestCase):
         self.assertEqual(50, len(website.get_links()))
         resp = self.client.get(reverse(
             'delete_website',
-            kwargs={'website_id': website.id}))
+            kwargs={'pk': website.id}))
         self.assertEqual(resp.status_code, 200)
         resp = self.client.post(reverse(
             'delete_website',
-            kwargs={'website_id': website.id}))
+            kwargs={'pk': website.id}))
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(len(models.WebsiteHealthChecker.objects.all()), 0)
 
