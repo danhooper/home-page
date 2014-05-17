@@ -2,15 +2,15 @@
 {% load bootstrap %}
 
 {% block body %}
-{% if feed_id %}
-<form action="{% url "edit_feed" feed_id=feed_id %}" method="post">
+{% if object %}
+<form action="{% url "edit_feed" object.id %}" method="post">
 {% else %}
 <form action="{% url "add_feed" %}" method="post">
 {% endif %}
     <legend>RSS Feed</legend>
     {% csrf_token %}
-    {{feed_form.errors }}
-    {{ feed_form|bootstrap }}
+    {{ form.errors }}
+    {{ form|bootstrap }}
     <div class="form-actions">
         <a href="#back" class="btn">Go back</a>
         <button type="submit" class="btn btn-primary">Save changes</button>

@@ -31,5 +31,25 @@ var RssReader = {
         feed = $(event.target).parents('.feed');
         url = feed.data('url');
         feed.load(url);
+    },
+    resizeFeeds: function() {
+        if ($(window).width() < 992) {
+            return;
+        }
+        $('.feed-row', '#rss_feeds').each(function(index, element) {
+            var maxHeight = 0;
+            $('.feed-container', element).each(function(index, element) {
+                $(this).height('auto');
+                var height = $(this).height();
+                console.log('panel height ' + height);
+                if( height > maxHeight) {
+                    maxHeight = height;
+                }
+            });
+            $('.feed-container', element).each(function(index, element) {
+                $(this).css('min-height', maxHeight);
+            });
+            console.log('maxHeight ' + maxHeight);
+        });
     }
 };
