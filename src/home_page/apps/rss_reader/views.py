@@ -1,11 +1,14 @@
 import datetime
 import os
 from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse_lazy
 from django.views.generic import View
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from reusable_django.views import FilterUserUpdateView
+from reusable_django.views import UserCreateView
 import forms
 import models
 
@@ -25,38 +28,20 @@ class FeedView(View):
                                   {'rss_feed': rss_feed,
                                    'last_updated': last_updated})
 
-class FeedEdit(View):
-    form = None
 
-    def post(self, request, feed_id=None):
-        if feed_id:
-            feed_id = int(feed_id)
-            rss_feed = models.RSSFeed.objects.filter(
-                user=request.user).get(pk=feed_id)
-            self.form = forms.RSSFeedForm(request.POST, instance=rss_feed)
-        else:
-            self.form = forms.RSSFeedForm(
-                request.POST, initial={'user': request.user})
-        if self.form.is_valid():
-            feed = self.form.save(commit=False)
-            feed.user = request.user
-            feed.save()
-            return HttpResponseRedirect(reverse('home'))
-        return self.get(request, feed_id)
+class FeedCreate(UserCreateView):
+    model = models.RSSFeed
+    form_class = forms.RSSFeedForm
+    success_url = reverse_lazy('home')
+    template_name = 'rss_reader/templates/edit_feed.html'
 
-    def get(self, request, feed_id=None):
-        if not self.form:
-            if feed_id:
-                feed_id = int(feed_id)
-                rss_feed = models.RSSFeed.objects.filter(
-                    user=request.user).get(pk=feed_id)
-                self.form = forms.RSSFeedForm(instance=rss_feed)
-            else:
-                self.form = forms.RSSFeedForm()
-        return render_to_response('rss_reader/templates/edit_feed.html',
-                                  {'feed_form': self.form,
-                                   'feed_id': feed_id},
-                                  context_instance=RequestContext(request))
+
+class FeedUpdate(FilterUserUpdateView):
+    model = models.RSSFeed
+    form_class = forms.RSSFeedForm
+    success_url = reverse_lazy('home')
+    template_name = 'rss_reader/templates/edit_feed.html'
+
 
 class DeleteFeed(View):
     def post(self, request, feed_id=None):
@@ -64,7 +49,7 @@ class DeleteFeed(View):
         feed.delete()
         return HttpResponseRedirect(reverse('home'))
 
-    def get(self, request, feed_id = None):
+    def get(self, request, feed_id=None):
         feed = models.RSSFeed.objects.filter(user=request.user).get(pk=feed_id)
         form = forms.DeleteRSSFeedForm()
         return render_to_response('rss_reader/templates/delete_feed.html',

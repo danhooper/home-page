@@ -10,6 +10,7 @@ from django.views.generic import View
 from django.views.generic.edit import CreateView
 from django.views.generic.edit import FormView
 from reusable_django.views import FilterUserUpdateView
+from reusable_django.views import UserCreateView
 import forms
 import models
 
@@ -44,15 +45,11 @@ class HealthView(View):
                             content_type="application/json")
 
 
-class WebsiteCreate(CreateView):
+class WebsiteCreate(UserCreateView):
     model = models.WebsiteHealthChecker
     form_class = forms.WebsiteHealthCheckerForm
     success_url = reverse_lazy('home')
     template_name = 'website_health/templates/edit_website.html'
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(WebsiteCreate, self).form_valid(form)
 
 
 class WebsiteUpdate(FilterUserUpdateView):
@@ -60,10 +57,6 @@ class WebsiteUpdate(FilterUserUpdateView):
     form_class = forms.WebsiteHealthCheckerForm
     success_url = reverse_lazy('home')
     template_name = 'website_health/templates/edit_website.html'
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(WebsiteUpdate, self).form_valid(form)
 
 
 class DeleteWebsite(View):

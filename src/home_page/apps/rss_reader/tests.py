@@ -42,7 +42,7 @@ class TestRSSReader(unittest.TestCase):
         feeds = RSSFeed.objects.all()
         num_feeds = len(feeds)
         resp = self.client.post(reverse('edit_feed',
-                                        kwargs={'feed_id': feed_id}),
+                                        kwargs={'pk': feed_id}),
                                 feed_dict)
         self.assertEqual(302, resp.status_code)
         feeds = RSSFeed.objects.all()

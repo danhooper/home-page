@@ -9,3 +9,6 @@ coverage:
 
 collectstatic:
 	cd src/home_page; ./manage.py collectstatic
+
+install_reusable_django:
+	python reusable_django/setup.py install
