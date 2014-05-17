@@ -14,8 +14,5 @@ class FilterUserUpdateView(UpdateView):
 
 class UserCreateView(CreateView):
     def form_valid(self, form):
-        print('-' * 80)
-        print('In UserCreateView')
-        print('-' * 80)
         form.instance.user = self.request.user
         return super(UserCreateView, self).form_valid(form)
