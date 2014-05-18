@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load account_tags %}
 {% block site_brand %}
-<a class="navbar-brand" href="#">Home Page</a>
+<a class="navbar-brand" href="{% url "home" %}">Home Page</a>
 {% endblock %}
 {% block nav %}
 <ul class="nav navbar-nav">
