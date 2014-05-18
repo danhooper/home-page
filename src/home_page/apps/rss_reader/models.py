@@ -17,7 +17,6 @@ class Entry(object):
             return self.entry.get('content')[0].get('value')
         if self.entry.get('summary'):
             return self.entry.get('summary')
-        return str(self.entry)
 
     def __getattr__(self, name):
         return self.entry.get(name)
@@ -34,12 +33,7 @@ class RSSFeed(models.Model):
         return reverse('show_feed', args=(self.id,))
 
     def get_entries(self):
-        if settings.TESTING:
-            path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                'rss_samples/%s.xml' % self.name)
-            feed = feedparser.parse(path)
-        else:
-            feed = feedparser.parse(self.url)
+        feed = feedparser.parse(self.url)
         return [Entry(entry) for entry in feed.get('entries')]
 
     def __unicode__(self):

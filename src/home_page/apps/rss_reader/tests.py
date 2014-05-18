@@ -6,6 +6,8 @@ import unittest
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.test import Client
+import feedparser
+from mock import patch
 from .models import RSSFeed
 
 
@@ -23,6 +25,19 @@ class TestRSSReader(unittest.TestCase):
         self.example_feed_dict = {'url': 'http://example.com',
                                   'name': 'test',
                                   'rank': 1}
+        self.feedparser_parse_patch = patch('feedparser.parse')
+        self.feed_parser_parse_mock = self.feedparser_parse_patch.start()
+        self.feed_parser_parse_mock.side_effect = self.__mock_feedparser_parse
+
+    def __mock_feedparser_parse(self, fake_url):
+        self.feedparser_parse_patch.stop()
+        name = fake_url[len('http://'):-(len('.com') + 1)]
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                            'rss_samples/%s.xml' % name)
+        feed = feedparser.parse(path)
+        self.feed_parser_parse_mock = self.feedparser_parse_patch.start()
+        self.feed_parser_parse_mock.side_effect = self.__mock_feedparser_parse
+        return feed
 
     def _login_user2(self):
         self.client.login(username='test2', password='password')
@@ -67,10 +82,14 @@ class TestRSSReader(unittest.TestCase):
         files = self._get_sample_files()
         for feed_file in files:
             feed_name = feed_file.split('.xml')[0]
-            feed = self._add_feed(self.example_feed_dict)
+            feed = self._add_feed({'url': 'http://%s.com' % feed_name,
+                                   'name': feed_name,
+                                   'rank': 1})
             response = self.client.get(reverse('show_feed',
                                                args=(feed.id,)))
             self.assertEqual(response.status_code, 200)
+            self.assertGreater(len(response.context['object'].get_entries()),
+                               0)
         resp = self.client.get('/home_page/rss_reader/feed/add/')
         self.assertEqual(resp.status_code, 200)
         resp = self.client.get('/home_page/rss_reader/')
@@ -120,3 +139,4 @@ class TestRSSReader(unittest.TestCase):
     def tearDown(self):
         self.user1.delete()
         self.user2.delete()
+        self.feedparser_parse_patch.stop()
