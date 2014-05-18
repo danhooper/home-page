@@ -15,20 +15,14 @@ class SitemapParser(object):
         self.pages = []
 
     def start(self, tag, attrib):
-        try:
-            if tag[-3:] == 'loc':
-                self.start_loc = True
-        except IndexError:
-            print('did not find loc')
+        if tag[-3:] == 'loc':
+            self.start_loc = True
 
     def end(self, tag):
-        try:
-            if tag[-3:] == 'loc' and self.start_loc:
-                self.pages.append(WebsitePage(self.data_loc))
-                self.start_loc = False
-                self.data_loc = None
-        except IndexError:
-            print('did not find loc')
+        if tag[-3:] == 'loc' and self.start_loc:
+            self.pages.append(WebsitePage(self.data_loc))
+            self.start_loc = False
+            self.data_loc = None
 
     def data(self, data):
         if self.start_loc:
@@ -46,7 +40,7 @@ class WebsitePage(object):
         try:
             resp = urllib2.urlopen(self.link)
             return resp.getcode() == 200
-        except Exception:
+        except urllib2.URLError:
             return False
 
     def __unicode__(self):
