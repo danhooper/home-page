@@ -1,10 +1,10 @@
 <div class="container-fluid">
-{% for website in websites %}
+{% for object in object_list %}
     {% if forloop.counter0|divisibleby:"3" %}
     <div class="row">
     {% endif %}
     <div class="col-md-4">
-        <div class="panel panel-info website" id="{{websitename}}" data-url="{{website.get_absolute_url}}">
+        <div class="panel panel-info website" id="{{websitename}}" data-url="{{object.get_absolute_url}}">
         {% include "website_health/website_header.html" %}
         </div>
     </div>

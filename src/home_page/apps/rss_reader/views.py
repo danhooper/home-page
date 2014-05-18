@@ -9,25 +9,24 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from reusable_django.views import UserCreateView
 from reusable_django.views import UserDeleteView
+from reusable_django.views import UserDetailView
+from reusable_django.views import UserListView
 from reusable_django.views import UserUpdateView
 import forms
 import models
 
-class FeedsView(View):
-    def get(self, request):
-        rss_feeds = models.RSSFeed.objects.filter(user=request.user).all()
-        return render_to_response('rss_reader/main.html',
-                                  {'rss_feeds': rss_feeds})
 
-class FeedView(View):
-    def get(self, request, feed_id):
-        feed_id = int(feed_id)
-        rss_feed = models.RSSFeed.objects.filter(user=request.user).get(
-            pk=feed_id)
-        last_updated = datetime.datetime.now()
-        return render_to_response('rss_reader/feed.html',
-                                  {'rss_feed': rss_feed,
-                                   'last_updated': last_updated})
+class FeedsView(UserListView):
+    model = models.RSSFeed
+
+
+class FeedView(UserDetailView):
+    model = models.RSSFeed
+
+    def get_context_data(self, **kwargs):
+        context = super(FeedView, self).get_context_data(**kwargs)
+        context['last_updated'] = datetime.datetime.now()
+        return context
 
 
 class FeedCreate(UserCreateView):
@@ -45,6 +44,7 @@ class FeedUpdate(UserUpdateView):
 class DeleteFeed(UserDeleteView):
     model = models.RSSFeed
     success_url = reverse_lazy('home')
+
 
 class Sample(View):
     def get(self, request, sample_name):
