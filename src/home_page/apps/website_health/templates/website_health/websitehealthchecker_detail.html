@@ -9,9 +9,9 @@
         <a href="#" class="btn btn-default btn-sm result-expand"><span class="glyphicon glyphicon-plus"></span> Checking</a><br/>
         <div class="result hidden"  id="website_checking_pages">
         {% for link in website.get_links%}
-            <div class="website_health_link" data-link-url="{{link.link}}">{{ link }}
-                <div class="result">Checking...</div>
-            </div>
+        <div class="website_health_link" data-link-url="{{link.link}}">
+            <a href="{{ link }}">{{ link }}</a>
+        </div>
         {% endfor %}
     </div>
 </div>

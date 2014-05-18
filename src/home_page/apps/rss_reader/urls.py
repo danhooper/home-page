@@ -10,7 +10,7 @@ from home_page.apps.rss_reader import views
 urlpatterns = patterns(
     "",
     url(r"^$", views.FeedsView.as_view(), name="show_feeds"),
-    url(r"^feed/(\d+)/$", views.FeedView.as_view(), name='show_feed'),
+    url(r"^feed/(?P<pk>\d+)/$", views.FeedView.as_view(), name='show_feed'),
     url(r"^feed/add/$", views.FeedCreate.as_view(), name='add_feed'),
     url(r"^feed/edit/(?P<pk>\d+)/$", views.FeedUpdate.as_view(),
         name='edit_feed'),

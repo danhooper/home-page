@@ -1,11 +1,11 @@
 <div class="container-fluid">
-{% for feed in rss_feeds %}
+{% for feed in object_list %}
     {% if forloop.counter0|divisibleby:"3" %}
     <div class="row feed-row">
     {% endif %}
         <div class="col-md-4">
             <div class="panel panel-info feed-container feed" id="{{feed.name}}" data-url="{{feed.get_absolute_url}}">
-                {% include "rss_reader/feed_header.html" with rss_feed=feed %}
+                {% include "rss_reader/feed_header.html" with object=feed %}
                 Loading...
              </div>
 	 </div>

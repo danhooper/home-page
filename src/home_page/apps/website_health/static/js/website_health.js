@@ -18,11 +18,9 @@ var WebsiteHealth = {
                         $(elem).appendTo('#website_bad_pages');
                         numBad += 1;
                     }
-                    $(elem).children('.result').text(data['health']);
                 } catch(err) {
                     console.log('[.website_health_link] ' + err)
                     numBad += 1;
-                    $(elem).children('.result').text('Error');
                 }
                 $('#website_health_report').html('Good ' + numGood + '<br/>Bad: ' + numBad)
             })

@@ -42,3 +42,4 @@ src/home_page/dev.db
 src/home_page/static
 src/home_page/secret_settings.py
 src/home_page/debug.log
+src/home_page/local_settings.py

@@ -13,10 +13,19 @@ class TestRSSReader(unittest.TestCase):
 
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user(
+        self.user1 = User.objects.create_user(
             username='test', email='test@example.com', password='password')
-        self.user.save()
+        self.user1.save()
+        self.user2 = User.objects.create_user(
+            username='test2', email='test2@example.com', password='password')
+        self.user2.save()
         self.client.login(username='test', password='password')
+        self.example_feed_dict = {'url': 'http://example.com',
+                                  'name': 'test',
+                                  'rank': 1}
+
+    def _login_user2(self):
+        self.client.login(username='test2', password='password')
 
     def _get_sample_files(self):
         path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
@@ -58,9 +67,7 @@ class TestRSSReader(unittest.TestCase):
         files = self._get_sample_files()
         for feed_file in files:
             feed_name = feed_file.split('.xml')[0]
-            feed = self._add_feed({'url': 'http://example.com',
-                                   'name': feed_name,
-                                   'rank': 1})
+            feed = self._add_feed(self.example_feed_dict)
             response = self.client.get(reverse('show_feed',
                                                args=(feed.id,)))
             self.assertEqual(response.status_code, 200)
@@ -82,9 +89,7 @@ class TestRSSReader(unittest.TestCase):
     def test_edit_feed(self):
         sample_file = self._get_sample_files()[0]
         feed_name = sample_file.split('.xml')[0]
-        feed = self._add_feed({'url': 'http://example.com',
-                               'name': feed_name,
-                               'rank': 1})
+        feed = self._add_feed(self.example_feed_dict)
         self.assertEqual(feed.rank, 1)
         feed = self._edit_feed(feed.id,
                                {'url': 'http://example.com',
@@ -93,7 +98,6 @@ class TestRSSReader(unittest.TestCase):
         self.assertEqual(feed.rank, 2)
         resp = self.client.get('/home_page/rss_reader/feed/edit/%d/' % feed.id)
         self.assertEqual(resp.status_code, 200)
-
 
     def test_sample(self):
         path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
@@ -105,5 +109,14 @@ class TestRSSReader(unittest.TestCase):
                 '/home_page/rss_reader/sample/%s/' % feed_name)
             self.assertEqual(response.status_code, 200)
 
+    def test_user_permissions(self):
+        feed = self._add_feed(self.example_feed_dict)
+        self._login_user2()
+        resp = self.client.get(reverse('show_feed', args=(feed.id,)))
+        self.assertEqual(404, resp.status_code)
+        resp = self.client.get(reverse('edit_feed', args=(feed.id,)))
+        self.assertEqual(404, resp.status_code)
+
     def tearDown(self):
-        self.user.delete()
+        self.user1.delete()
+        self.user2.delete()

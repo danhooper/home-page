@@ -11,28 +11,19 @@ from django.views.generic.edit import CreateView
 from django.views.generic.edit import FormView
 from reusable_django.views import UserCreateView
 from reusable_django.views import UserDeleteView
+from reusable_django.views import UserDetailView
+from reusable_django.views import UserListView
 from reusable_django.views import UserUpdateView
 import forms
 import models
 
 
-class WebsitesView(View):
-
-    def get(self, request):
-        websites = models.WebsiteHealthChecker.objects.filter(
-            user=request.user).all()
-        return render_to_response('website_health/main.html',
-                                  {'websites': websites})
+class WebsitesView(UserListView):
+    model = models.WebsiteHealthChecker
 
 
-class WebsiteView(View):
-
-    def get(self, request, website_id):
-        website_id = int(website_id)
-        website = models.WebsiteHealthChecker.objects.filter(
-            user=request.user).get(pk=website_id)
-        return render_to_response('website_health/website.html',
-                                  {'website': website})
+class WebsiteView(UserDetailView):
+    model = models.WebsiteHealthChecker
 
 
 class HealthView(View):

@@ -4,6 +4,7 @@ Website Health Unit Tests.
 import copy
 import os
 import unittest
+import urllib2
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.test import Client
@@ -57,6 +58,23 @@ class TestWebsiteHealth(unittest.TestCase):
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(len(models.WebsiteHealthChecker.objects.all()), 0)
 
+    def test_website2(self):
+        example_website = copy.deepcopy(self.example_website_dict)
+        example_website['name'] = 'sample_website2'
+        website = self.__add_website(example_website)
+        response = self.client.get(website.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(50, len(website.get_links()))
+        resp = self.client.get(reverse(
+            'delete_website',
+            kwargs={'pk': website.id}))
+        self.assertEqual(resp.status_code, 200)
+        resp = self.client.post(reverse(
+            'delete_website',
+            kwargs={'pk': website.id}))
+        self.assertEqual(resp.status_code, 302)
+        self.assertEqual(len(models.WebsiteHealthChecker.objects.all()), 0)
+
     def __add_website(self, website_dict):
         websites = models.WebsiteHealthChecker.objects.all()
         num_websites = len(websites)
@@ -96,11 +114,28 @@ class TestWebsiteHealth(unittest.TestCase):
         '''
         Tests the health view.
         '''
+        # Test 200 response
         mock_response = Mock()
         mock_response.getcode.return_value = 200
         mock_urlopen.return_value = mock_response
         website = self.__add_website(self.example_website_dict)
         self.assertEqual(50, len(website.get_links()))
+        for link in website.get_links():
+            resp = self.client.post(reverse('website_health'),
+                                    {'link_url': link.link})
+            self.assertEqual(resp.status_code, 200)
+            self.assertTrue(resp)
+        # Test 400 errors
+        mock_response = Mock()
+        mock_response.getcode.return_value = 404
+        mock_urlopen.return_value = mock_response
+        for link in website.get_links():
+            resp = self.client.post(reverse('website_health'),
+                                    {'link_url': link.link})
+            self.assertEqual(resp.status_code, 200)
+            self.assertTrue(resp)
+        # Test urllib exception
+        mock_urlopen.side_effect = urllib2.URLError('Uh oh')
         for link in website.get_links():
             resp = self.client.post(reverse('website_health'),
                                     {'link_url': link.link})

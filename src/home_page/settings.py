@@ -7,7 +7,7 @@ import sys
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 # tells Pinax to serve media through the staticfiles app.
@@ -207,6 +207,7 @@ STRONGHOLD_PUBLIC_NAMED_URLS = (
     'account_login',
     'account_signup',
 )
+
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 
