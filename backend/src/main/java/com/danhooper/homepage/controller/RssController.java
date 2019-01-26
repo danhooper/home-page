@@ -16,7 +16,7 @@ public class RssController {
     public List<RssFeed> getFeeds() {
         ArrayList<RssFeed> feeds = new ArrayList<>();
         try {
-            feeds.add(new RssFeed("ArsTechnica", new URL("http://feeds.arstechnica.com/arstechnica/index?format=xml")));
+            feeds.add(new RssFeed(0,"ArsTechnica", new URL("http://feeds.arstechnica.com/arstechnica/index?format=xml")));
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RssFeed } from '../model/RssFeed';
+import { RssService } from '../rss.service';
+import { RssArticle } from '../model/RssArticle';
 
 @Component({
   selector: 'dh-rss-feed-detail',
@@ -8,10 +10,14 @@ import { RssFeed } from '../model/RssFeed';
 })
 export class RssFeedDetailComponent implements OnInit {
   @Input() feed: RssFeed;
+  articles: RssArticle[] = [];
 
-  constructor() { }
+  constructor(private rssService: RssService) { }
 
   ngOnInit() {
+    this.rssService.getArticles(this.feed).subscribe((articles) => {
+      this.articles = articles;
+    });
   }
 
 }

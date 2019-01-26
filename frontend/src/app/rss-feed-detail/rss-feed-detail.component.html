@@ -1,2 +1,8 @@
-{{feed.title}}
-{{feed.url}}
+<div>
+  <h3>{{feed.title}}</h3>
+
+  <div *ngFor="let article of articles">
+    <strong>{{article.title}}</strong>
+    {{article.description}}
+  </div>
+</div>

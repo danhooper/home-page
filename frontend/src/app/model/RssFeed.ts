@@ -1,10 +1,11 @@
 export interface IRssFeed {
+    id: number;
     title: string;
     url: string;
-
 }
 
 export class RssFeed implements IRssFeed {
+    id: number;
     title: string;
     url: string;
 

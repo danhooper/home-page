@@ -17,7 +17,7 @@ public class RssArticleController {
     public List<RssArticle> getArticles(@PathVariable("id") String id) {
         RssArticleFetcher fetcher = new RssArticleFetcher();
         try {
-            return fetcher.getArticles(new RssFeed("ArsTechnica", new URL("http://feeds.arstechnica.com/arstechnica/index?format=xml")));
+            return fetcher.getArticles(new RssFeed(0, "ArsTechnica", new URL("http://feeds.arstechnica.com/arstechnica/index?format=xml")));
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
