@@ -1,0 +1,9 @@
+feed:
+    foo: bar
+    feeds:
+        - title: ArsTechnica
+          url: http://feeds.arstechnica.com/arstechnica/index?format=xml
+          id: 0
+        - title: BBC News
+          url: http://feeds.bbci.co.uk/news/rss.xml?edition=int
+          id: 1

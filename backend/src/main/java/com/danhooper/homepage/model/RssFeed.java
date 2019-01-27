@@ -3,9 +3,12 @@ package com.danhooper.homepage.model;
 import java.net.URL;
 
 public class RssFeed {
-    private final int id;
-    private final String title;
-    private final URL url;
+    private int id;
+    private String title;
+    private URL url;
+
+    public RssFeed() {
+    }
 
     public RssFeed(int id, String title, URL url) {
         this.id = id;
@@ -23,5 +26,17 @@ public class RssFeed {
 
     public URL getUrl() {
         return url;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setUrl(URL url) {
+        this.url = url;
     }
 }
