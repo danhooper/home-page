@@ -1,8 +1,9 @@
 <div>
-  <h3>{{feed.title}}</h3>
+    <h3><a target="_blank" rel="noopener" [href]="feed.websiteUrl">{{feed.title}}</a></h3>
+    <mat-card *ngFor="let article of articles">
+        <mat-card-title>{{article.title}}</mat-card-title>
+        <mat-card-content [innerHtml]="article.description">
+        </mat-card-content>
+    </mat-card>
 
-  <div *ngFor="let article of articles">
-    <strong>{{article.title}}</strong>
-    {{article.description}}
-  </div>
 </div>

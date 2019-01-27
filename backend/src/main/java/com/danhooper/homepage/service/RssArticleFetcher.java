@@ -16,7 +16,7 @@ public class RssArticleFetcher {
     public List<RssArticle> getArticles(RssFeed rssFeed) {
         SyndFeedInput input = new SyndFeedInput();
         try {
-            SyndFeed feed = input.build(new XmlReader(rssFeed.getUrl()));
+            SyndFeed feed = input.build(new XmlReader(rssFeed.getFeedUrl()));
             return feed.getEntries().stream().map(syndEntry -> {
                 return new RssArticle(syndEntry.getTitle(), syndEntry.getDescription().getValue());
             }).collect(Collectors.toList());

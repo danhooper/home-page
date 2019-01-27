@@ -1,16 +1,20 @@
 export interface IRssFeed {
     id: number;
     title: string;
-    url: string;
+    feedUrl: string;
+    websiteUrl: string;
 }
 
 export class RssFeed implements IRssFeed {
     id: number;
     title: string;
-    url: string;
+    feedUrl: string;
+    websiteUrl: string;
 
     constructor(feed: IRssFeed) {
         this.title = feed.title;
-        this.url = feed.url;
+        this.feedUrl = feed.feedUrl;
+        this.id = feed.id;
+        this.websiteUrl = feed.websiteUrl;
     }
 }

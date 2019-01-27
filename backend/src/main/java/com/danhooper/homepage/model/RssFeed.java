@@ -5,15 +5,17 @@ import java.net.URL;
 public class RssFeed {
     private int id;
     private String title;
-    private URL url;
+    private URL feedUrl;
+    private URL websiteUrl;
 
     public RssFeed() {
     }
 
-    public RssFeed(int id, String title, URL url) {
+    public RssFeed(int id, String title, URL feedUrl, URL websiteUrl) {
         this.id = id;
         this.title = title;
-        this.url = url;
+        this.feedUrl = feedUrl;
+        this.websiteUrl = websiteUrl;
     }
 
     public int getId() {
@@ -24,8 +26,8 @@ public class RssFeed {
         return title;
     }
 
-    public URL getUrl() {
-        return url;
+    public URL getFeedUrl() {
+        return feedUrl;
     }
 
     public void setId(int id) {
@@ -36,7 +38,15 @@ public class RssFeed {
         this.title = title;
     }
 
-    public void setUrl(URL url) {
-        this.url = url;
+    public void setFeedUrl(URL feedUrl) {
+        this.feedUrl = feedUrl;
+    }
+
+    public URL getWebsiteUrl() {
+        return this.websiteUrl;
+    }
+
+    public void setWebsiteUrl(URL websiteUrl) {
+        this.websiteUrl = websiteUrl;
     }
 }
