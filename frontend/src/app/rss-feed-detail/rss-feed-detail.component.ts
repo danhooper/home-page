@@ -16,7 +16,7 @@ export class RssFeedDetailComponent implements OnInit {
 
   ngOnInit() {
     this.rssService.getArticles(this.feed).subscribe((articles) => {
-      this.articles = articles;
+      this.articles = articles.slice(0, 10);
     });
   }
 

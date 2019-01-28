@@ -1,3 +1,22 @@
-mat-card {
+:host > div {
+    width: 400px;
+    max-width: 95vw;
+    padding: 10px;
+    background-color:#d9edf7;
+    margin: 10px;
+}
+
+.feed-title {
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 5px;
+    text-align: center;
+}
+
+.article-title {
+    max-height: 36px;
+}
+
+:host ::ng-deep img {
+    max-width: 100%;
 }
