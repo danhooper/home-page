@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    frontend:
+        build:
+            context: ./
+            dockerfile: docker/frontend/Dockerfile
+        depends_on:
+            - backend
+        image: home-page-frontend
+        ports:
+            - 8081:80
+        restart: always
+
+    backend:
+        build:
+            context: ./
+            dockerfile:  docker/backend/Dockerfile
+        image: home-page-backend
+        restart: always
