@@ -6,7 +6,6 @@ COPY ./gradlew /var/build/
 COPY build.gradle /var/build/
 COPY settings.gradle /var/build/
 COPY backend/ /var/build/backend/
-RUN ls -R /var/build/
 RUN gradle build
 
 FROM java:8
