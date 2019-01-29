@@ -13,13 +13,13 @@ export class RssService {
   constructor(private http: HttpClient) {}
 
   getRssFeeds(): Observable<RssFeed[]> {
-      return this.http.get<IRssFeed[]>('http://localhost:8080/rss').pipe(map(result => {
+      return this.http.get<IRssFeed[]>('backend/rss').pipe(map(result => {
           return result.map(feed => new RssFeed(feed));
       }));
   }
 
   getArticles(feed: RssFeed): Observable<RssArticle[]> {
-      return this.http.get<IRssArticle[]>(`http://localhost:8080/rss/${feed.id}/article`).pipe(map(result => {
+      return this.http.get<IRssArticle[]>(`backend/rss/${feed.id}/article`).pipe(map(result => {
           return result.map(article => new RssArticle(article));
       }));
   }
