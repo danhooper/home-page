@@ -1,7 +1,7 @@
 FROM java:8
-WORKDIR /
-COPY libs/*  /
-COPY config/* /config/
+COPY config/* /var/backend/config/
+WORKDIR /var/backend
+COPY libs/*  /var/backend
 EXPOSE 8080
 CMD java -jar *.jar
 
