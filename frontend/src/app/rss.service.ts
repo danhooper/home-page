@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import {RssArticle, IRssArticle} from './model/RssArticle';
 import {RssFeed, IRssFeed} from './model/RssFeed';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators'
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

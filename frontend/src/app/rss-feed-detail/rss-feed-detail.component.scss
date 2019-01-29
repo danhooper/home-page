@@ -4,16 +4,18 @@ $break-large: 1200px;
     padding: 10px;
     background-color:#d9edf7;
     margin: 10px;
+
     @media screen and (max-width: $break-small) {
         width: calc(100vw - 40px - 16px);
     }
+
     @media screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
         width: calc(50vw - 40px - 8px);
     }
+
     @media screen and (min-width: $break-large) {
         width: calc(33vw - 40px - 6px);
     }
-
 }
 
 .feed-title {
