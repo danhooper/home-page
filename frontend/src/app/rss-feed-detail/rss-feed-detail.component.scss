@@ -1,8 +1,10 @@
+@import "../../variables.scss";
+
 $break-small: 800px;
 $break-large: 1200px;
 :host > div {
     padding: 10px;
-    background-color:#d9edf7;
+    background-color: mat-color($primary, darker);
     margin: 10px;
 
     @media screen and (max-width: $break-small) {
@@ -23,10 +25,12 @@ $break-large: 1200px;
     font-weight: bold;
     margin-bottom: 5px;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .article-title {
     max-height: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 :host ::ng-deep img {
