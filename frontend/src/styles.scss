@@ -3,6 +3,7 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
+
 @include mat-core();
 @import "variables.scss";
 // Create the theme object (a Sass map containing all of the palettes).
@@ -14,21 +15,9 @@ $home-page-theme: mat-dark-theme($primary, $accent);
 @include angular-material-theme($home-page-theme);
 
 body {
-    background-color: mat-color($primary, lighter);
+    background-color: mat-color($primary);
 }
 
 a {
     color: mat-color($accent, lighter);
 }
-
-// <!--?xml version="1.0" encoding="UTF-8"?-->
-// <resources>
-//   <color name="primaryColor">#424242</color>
-//   <color name="primaryLightColor">#6d6d6d</color>
-//   <color name="primaryDarkColor">#1b1b1b</color>
-//   <color name="secondaryColor">#ff5722</color>
-//   <color name="secondaryLightColor">#ff8a50</color>
-//   <color name="secondaryDarkColor">#c41c00</color>
-//   <color name="primaryTextColor">#ffffff</color>
-//   <color name="secondaryTextColor">#000000</color>
-// </resources>

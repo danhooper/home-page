@@ -1,7 +1,7 @@
 <div>
     <div class="feed-title"><a target="_blank" rel="noopener" [href]="feed.websiteUrl">{{feed.title}}</a></div>
     <mat-accordion>
-        <mat-expansion-panel *ngFor="let article of articles" class="art">
+        <mat-expansion-panel *ngFor="let article of articles" class="art mat-elevation-z0">
             <mat-expansion-panel-header class="art-title">
                 <mat-panel-title class="article-title">
                     {{article.title}}

@@ -36,3 +36,7 @@ $break-large: 1200px;
 :host ::ng-deep img {
     max-width: 100%;
 }
+
+.art:not(:last-of-type) {
+    border-bottom: 1px solid mat-color($accent, lighter);
+}
