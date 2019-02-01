@@ -1,0 +1,19 @@
+<div>
+    <div class="feed-title"><a target="_blank" rel="noopener" [href]="feed.websiteUrl">{{feed.title}}</a></div>
+    <mat-accordion [displayMode]="'flat'">
+        <mat-expansion-panel *ngFor="let article of articles" class="art mat-elevation-z0">
+            <mat-expansion-panel-header class="art-title">
+                <mat-panel-title class="article-title">
+                    {{article.title}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <p class="art-description" [innerHtml]="article.longDescription">
+                </p>
+            </ng-template>
+            <mat-action-row>
+                <a [href]="article.url" target="_blank" rel="noopener">View Article</a>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

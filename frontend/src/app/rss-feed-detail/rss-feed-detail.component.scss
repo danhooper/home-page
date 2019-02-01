@@ -1,0 +1,58 @@
+@import "../../variables.scss";
+
+$break-small: 800px;
+$break-large: 1200px;
+:host > div {
+    padding: 10px;
+    border: 1px solid mat-color($primary, darker);
+    border-radius: 4px;
+    margin: 10px;
+
+    @media screen and (max-width: $break-small) {
+        width: calc(100vw - 40px - 16px);
+    }
+
+    @media screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+        width: calc(50vw - 40px - 8px);
+    }
+
+    @media screen and (min-width: $break-large) {
+        width: calc(33vw - 40px - 6px);
+    }
+}
+
+.feed-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article-title {
+    max-height: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:host ::ng-deep img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+:host ::ng-deep .feedflare {
+    height: 0;
+    display: none;
+}
+
+:host ::ng-deep figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+:host ::ng-deep .mat-expanded {
+    background-color: mat-color($primary, darker);
+}
+
+.art:not(:last-of-type) {
+    border-bottom: 1px solid mat-color($accent, lighter);
+}

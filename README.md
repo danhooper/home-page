@@ -1,5 +1,23 @@
-home_page
-=========
+# Home Page
+## Configuring
+Create a file named `application.yml` in the `config/` directory.
 
-[![Build Status](https://travis-ci.org/danhooper/home_page.svg?branch=master)](http://travis-ci.org/danhooper/home_page/)
-[![Coverage Status](https://coveralls.io/repos/danhooper/home_page/badge.png)](https://coveralls.io/r/danhooper/home_page)
+A sample configuration file is in `config/sample-application.yml`. For now the ID must be unique.
+
+## Running
+`docker-compose up -d`
+
+## Developing
+
+### Frontend
+`ng serve`
+
+### Backend
+`./gradlew build && java -jar backend/build/libs/homepage-0.1.0.jar`
+
+## TODOs
+
+- Generate feed IDs
+- Hook up to DB
+- CRUD for RSS feeds
+- Versioning

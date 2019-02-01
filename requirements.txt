@@ -1,2 +1,0 @@
---requirement=src/home_page/requirements/project.txt
-
