@@ -26,7 +26,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/variables.scss",
               "src/styles.scss"
             ],
             "scripts": []
