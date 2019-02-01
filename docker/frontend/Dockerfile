@@ -24,7 +24,7 @@ RUN npm install -g @angular/cli@7.2.3 --unsafe
 COPY frontend/ /var/opt/frontend/src/app/
 
 # generate build
-RUN npm run build
+RUN npm run build:prod
 
 #########################
 ### NGINX             ###

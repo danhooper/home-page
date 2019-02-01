@@ -4,7 +4,8 @@ $break-small: 800px;
 $break-large: 1200px;
 :host > div {
     padding: 10px;
-    background-color: mat-color($primary, darker);
+    border: 1px solid mat-color($primary, darker);
+    border-radius: 4px;
     margin: 10px;
 
     @media screen and (max-width: $break-small) {
@@ -21,9 +22,9 @@ $break-large: 1200px;
 }
 
 .feed-title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
