@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class RssArticleController {
@@ -21,6 +22,7 @@ public class RssArticleController {
     @RequestMapping("/rss/{id}/article")
     public List<RssArticle> getArticles(@PathVariable("id") int id) {
         RssArticleFetcher fetcher = new RssArticleFetcher();
-        return fetcher.getArticles(feedConfig.getFeeds().get(id));
+        Optional<RssFeed> feedOptional = feedConfig.getFeeds().stream().filter(feed -> feed.getId() == id).findFirst();
+        return feedOptional.isPresent() ? fetcher.getArticles(feedOptional.get()) : null;
     }
 }

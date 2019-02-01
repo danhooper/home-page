@@ -20,3 +20,5 @@ services:
         container_name: home_page_backend
         image: home-page-backend
         restart: always
+        volumes:
+            - ./config:/var/backend/config

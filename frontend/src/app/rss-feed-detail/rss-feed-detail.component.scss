@@ -36,6 +36,21 @@ $break-large: 1200px;
 
 :host ::ng-deep img {
     max-width: 100%;
+    object-fit: contain;
+}
+
+:host ::ng-deep .feedflare {
+    height: 0;
+    display: none;
+}
+
+:host ::ng-deep figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+:host ::ng-deep .mat-expanded {
+    background-color: mat-color($primary, darker);
 }
 
 .art:not(:last-of-type) {
