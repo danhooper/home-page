@@ -15,11 +15,8 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./prettier.webpack.conf.js"
-            },
             "outputPath": "dist/home-page",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -61,7 +58,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/dev-server:generic",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "home-page:build",
             "proxyConfig": "src/proxy.conf.json"
