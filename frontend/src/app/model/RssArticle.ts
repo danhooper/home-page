@@ -23,7 +23,11 @@ export class RssArticle implements IRssArticle {
         this.url = article.url;
         this.content = article.content;
 
-        const htmlContent = this.content.find((content) => content.type === 'html');
-        this.longDescription = htmlContent ? htmlContent.value : this.description;
+        const htmlContent = this.content.find(
+            content => content.type === 'html',
+        );
+        this.longDescription = htmlContent
+            ? htmlContent.value
+            : this.description;
     }
 }

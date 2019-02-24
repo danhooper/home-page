@@ -10,6 +10,7 @@ export class RssFeed implements IRssFeed {
     title: string;
     feedUrl: string;
     websiteUrl: string;
+    lastUpdatedAt: Date;
 
     constructor(feed: IRssFeed) {
         this.title = feed.title;
