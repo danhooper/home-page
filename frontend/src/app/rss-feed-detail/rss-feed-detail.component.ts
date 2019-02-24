@@ -1,15 +1,9 @@
-import {
-    Component,
-    ElementRef,
-    OnInit,
-    Input,
-    OnDestroy,
-    ReplaySubject,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, Input, OnDestroy } from '@angular/core';
 import { RssFeed } from '../model/RssFeed';
 import { RssService } from '../rss.service';
 import { RssArticle } from '../model/RssArticle';
 import { takeUntil } from 'rxjs/operators';
+import { ReplaySubject } from 'rxjs';
 
 @Component({
     selector: 'dh-rss-feed-detail',
@@ -19,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 export class RssFeedDetailComponent implements OnInit, OnDestroy {
     @Input() feed: RssFeed;
     articles: RssArticle[] = [];
-    destroy = new new ReplaySubject(1)();
+    destroy = new ReplaySubject(1);
 
     constructor(private rssService: RssService, private el: ElementRef) {}
 
