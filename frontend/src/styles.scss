@@ -12,7 +12,8 @@ $home-page-theme: mat-dark-theme($primary, $accent);
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($home-page-theme);
+@include mat-core-theme($home-page-theme);
+@include mat-expansion-panel-theme($home-page-theme);
 
 body {
     background-color: mat-color($primary);
