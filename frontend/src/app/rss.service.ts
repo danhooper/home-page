@@ -20,7 +20,7 @@ export class RssService {
     }
 
     getArticles(feed: RssFeed): Observable<RssArticle[]> {
-        let articleSubject = new ReplaySubject<RssArticle[]>(1);
+        const articleSubject = new ReplaySubject<RssArticle[]>(1);
         this.fetchArticles(feed, articleSubject);
         return articleSubject.asObservable();
     }
