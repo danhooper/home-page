@@ -5,7 +5,7 @@
 // Be sure that you only ever include this mixin once!
 
 @include mat-core();
-@import "variables.scss";
+@import 'variables.scss';
 // Create the theme object (a Sass map containing all of the palettes).
 $home-page-theme: mat-dark-theme($primary, $accent);
 

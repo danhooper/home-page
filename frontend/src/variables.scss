@@ -4,43 +4,43 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $primary: mat-palette($mat-grey, 800, 700, 900);
-$accent:  mat-palette($mat-deep-orange, 500, 300, 900);
+$accent: mat-palette($mat-deep-orange, 500, 300, 900);
 
 $mat-elevation-opacity: 4;
 
 // Foreground palette for dark themes.
 $mat-dark-theme-foreground: (
-  base:              white,
-  divider:           mat-color($accent, lighter),
-  dividers:          $light-dividers,
-  disabled:          $light-disabled-text,
-  disabled-button:   rgba(white, 0.3),
-  disabled-text:     $light-disabled-text,
-  elevation:         mat-color($accent),
-  hint-text:         $light-disabled-text,
-  secondary-text:    mat-color($accent),
-  icon:              rgb(255, 255, 255),
-  icons:             white,
-  text:              white,
-  slider-min:        white,
-  slider-off:        rgba(white, 0.3),
-  slider-off-active: rgba(white, 0.3),
+    base: white,
+    divider: mat-color($accent, lighter),
+    dividers: $light-dividers,
+    disabled: $light-disabled-text,
+    disabled-button: rgba(white, 0.3),
+    disabled-text: $light-disabled-text,
+    elevation: mat-color($accent),
+    hint-text: $light-disabled-text,
+    secondary-text: mat-color($accent),
+    icon: rgb(255, 255, 255),
+    icons: white,
+    text: white,
+    slider-min: white,
+    slider-off: rgba(white, 0.3),
+    slider-off-active: rgba(white, 0.3),
 );
 
 // Background palette for dark themes.
 $mat-dark-theme-background: (
-  status-bar: black,
-  app-bar:    map_get($mat-grey, 900),
-  background: #303030,
-  hover:      mat-color($primary, lighter, .5),
-  card:       mat-color($primary),
-  dialog:     map_get($mat-grey, 800),
-  disabled-button: rgba(white, 0.12),
-  raised-button: map-get($mat-grey, 800),
-  focused-button: $light-focused,
-  selected-button: map_get($mat-grey, 900),
-  selected-disabled-button: map_get($mat-grey, 800),
-  disabled-button-toggle: black,
-  unselected-chip: map_get($mat-grey, 700),
-  disabled-list-option: black,
+    status-bar: black,
+    app-bar: map_get($mat-grey, 900),
+    background: #303030,
+    hover: mat-color($primary, lighter, 0.5),
+    card: mat-color($primary),
+    dialog: map_get($mat-grey, 800),
+    disabled-button: rgba(white, 0.12),
+    raised-button: map-get($mat-grey, 800),
+    focused-button: $light-focused,
+    selected-button: map_get($mat-grey, 900),
+    selected-disabled-button: map_get($mat-grey, 800),
+    disabled-button-toggle: black,
+    unselected-chip: map_get($mat-grey, 700),
+    disabled-list-option: black,
 );
