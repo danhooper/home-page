@@ -55,6 +55,11 @@ repositories {
     mavenCentral()
 }
 
+
+configurations {
+    dev
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -62,4 +67,12 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile group: 'com.rometools', name: 'rome', version: '1.5.0'
     testCompile("org.springframework.boot:spring-boot-starter-test")
+
+    dev("org.springframework.boot:spring-boot-devtools")
+}
+
+
+bootRun {
+    // Use Spring Boot DevTool only when we run Gradle bootRun task
+    classpath = sourceSets.main.runtimeClasspath + configurations.dev
 }

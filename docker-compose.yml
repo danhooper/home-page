@@ -21,4 +21,4 @@ services:
         image: home-page-backend
         restart: always
         volumes:
-            - ./config:/var/backend/config
+            - ./backend/config:/var/backend/config

@@ -9,7 +9,6 @@ COPY backend/ /var/build/backend/
 RUN gradle build
 
 FROM java:8
-# COPY config/* /var/backend/config/
 WORKDIR /var/backend
 COPY --from=builder /var/build/backend/build/libs/*  /var/backend
 EXPOSE 8080
