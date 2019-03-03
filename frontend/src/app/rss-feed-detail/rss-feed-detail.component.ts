@@ -1,21 +1,34 @@
-import { Component, ElementRef, OnInit, Input, OnDestroy } from '@angular/core';
-import { RssFeed } from '../model/RssFeed';
-import { RssService } from '../rss.service';
-import { RssArticle } from '../model/RssArticle';
-import { takeUntil } from 'rxjs/operators';
-import { ReplaySubject } from 'rxjs';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    ElementRef,
+    OnInit,
+    Input,
+    OnDestroy,
+    ChangeDetectorRef,
+} from '@angular/core';
+import {RssFeed} from '../model/RssFeed';
+import {RssService} from '../rss.service';
+import {RssArticle} from '../model/RssArticle';
+import {takeUntil} from 'rxjs/operators';
+import {ReplaySubject} from 'rxjs';
 
 @Component({
     selector: 'dh-rss-feed-detail',
     templateUrl: './rss-feed-detail.component.html',
     styleUrls: ['./rss-feed-detail.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RssFeedDetailComponent implements OnInit, OnDestroy {
     @Input() feed: RssFeed;
     articles: RssArticle[] = [];
     destroy = new ReplaySubject(1);
 
-    constructor(private rssService: RssService, private el: ElementRef) {}
+    constructor(
+        private rssService: RssService,
+        private el: ElementRef,
+        private cdr: ChangeDetectorRef,
+    ) {}
 
     ngOnInit() {
         this.rssService
@@ -23,6 +36,7 @@ export class RssFeedDetailComponent implements OnInit, OnDestroy {
             .pipe(takeUntil(this.destroy))
             .subscribe(articles => {
                 this.articles = articles.slice(0, 10);
+                this.cdr.detectChanges();
             });
     }
 

@@ -1,4 +1,4 @@
-package com.danhooper.homepage;
+package com.danhooper.homepage.config;
 
 import com.danhooper.homepage.model.RssFeed;
 import org.springframework.boot.context.properties.ConfigurationProperties;

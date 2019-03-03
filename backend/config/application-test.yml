@@ -1,0 +1,6 @@
+feed:
+    feeds:
+        - title: ArsTechnica
+          feedUrl: http://feeds.arstechnica.com/arstechnica/index?format=xml
+          id: 0
+          websiteUrl: http://arstechnica.com

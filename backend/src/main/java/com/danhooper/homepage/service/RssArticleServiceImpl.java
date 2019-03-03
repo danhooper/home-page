@@ -7,13 +7,15 @@ import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class RssArticleFetcher {
+@Service
+public class RssArticleServiceImpl implements RssArticleService {
     public List<RssArticle> getArticles(RssFeed rssFeed) {
         SyndFeedInput input = new SyndFeedInput();
         try {
