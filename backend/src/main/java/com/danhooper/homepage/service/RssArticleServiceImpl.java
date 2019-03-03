@@ -17,19 +17,29 @@ import java.util.stream.Collectors;
 @Service
 public class RssArticleServiceImpl implements RssArticleService {
     public List<RssArticle> getArticles(RssFeed rssFeed) {
+        SyndFeed feed = getSyndFeed(rssFeed);
+        if (feed == null) {
+            return null;
+        }
+
+        return feed.getEntries().stream()
+                .filter(syndEntry -> {
+                    System.out.println("Syndentry is null for " + rssFeed.getFeedUrl().toString());
+                    return syndEntry != null;
+                })
+                .map(syndEntry -> {
+                    SyndContent description = syndEntry.getDescription();
+                    String desc = description == null ? "" : description.getValue();
+                    return new RssArticle(syndEntry.getTitle(), syndEntry.getContents(), desc, syndEntry.getUri());
+                }).collect(Collectors.toList());
+    }
+
+    @Override
+    public SyndFeed getSyndFeed(RssFeed rssFeed) {
         SyndFeedInput input = new SyndFeedInput();
         try {
             SyndFeed feed = input.build(new XmlReader(rssFeed.getFeedUrl()));
-            return feed.getEntries().stream()
-                    .filter(syndEntry -> {
-                        System.out.println("Syndentry is null for " + rssFeed.getFeedUrl().toString());
-                        return syndEntry != null;
-                    })
-                    .map(syndEntry -> {
-                        SyndContent description = syndEntry.getDescription();
-                        String desc = description == null ? "" : description.getValue();
-                        return new RssArticle(syndEntry.getTitle(), syndEntry.getContents(), desc, syndEntry.getUri());
-                    }).collect(Collectors.toList());
+            return feed;
         } catch (FeedException e) {
             e.printStackTrace();
         } catch (IOException e) {

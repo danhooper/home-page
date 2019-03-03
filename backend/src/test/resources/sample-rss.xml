@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.arstechnica.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+
+    <channel>
+        <title>Ars Technica</title>
+
+        <link>https://arstechnica.com</link>
+        <description>Serving the Technologist for more than a decade. IT news, reviews, and analysis.</description>
+        <lastBuildDate>Sun, 03 Mar 2019 16:00:03 +0000</lastBuildDate>
+        <language>en-US</language>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        <generator>https://wordpress.org/?v=4.8.3</generator>
+
+        <image>
+            <url>https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-32x32.png</url>
+            <title>Ars Technica</title>
+            <link>https://arstechnica.com</link>
+            <width>32</width>
+            <height>32</height>
+        </image>
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.arstechnica.com/arstechnica/index" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="arstechnica/index" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+        <title>JPL scientist analyzes pros and cons of the science in dystopian drama IO</title>
+        <link>https://arstechnica.com/?p=1452781</link>
+        <pubDate>Sun, 03 Mar 2019 16:00:03 +0000</pubDate>
+        <dc:creator><![CDATA[Jennifer Ouellette]]></dc:creator>
+        <category><![CDATA[Gaming & Culture]]></category>
+        <category><![CDATA[Science]]></category>
+        <category><![CDATA[climate chage]]></category>
+        <category><![CDATA[dystopia]]></category>
+        <category><![CDATA[entertainment]]></category>
+        <category><![CDATA[film]]></category>
+        <category><![CDATA[Netflix]]></category>
+        <category><![CDATA[Physics]]></category>
+        <category><![CDATA[science]]></category>
+
+        <guid isPermaLink="false">https://arstechnica.com/?p=1452781</guid>
+        <description><![CDATA[Jupiter's moon isn't a great place to colonize, but other aspects are quite plausible.]]></description>
+        <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/io25-800x537.jpg" alt="Micah (Anthony Mackie) and Sam (Margaret Qualley) are two of the last people on a toxic Earth in the Netflix original movie &lt;em&gt;IO&lt;/em&gt;."><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/02/io25.jpg" class="enlarge-link" data-height="805" data-width="1200">Enlarge</a> <span class="sep">/</span> Micah (Anthony Mackie) and Sam (Margaret Qualley) are two of the last people on a toxic Earth in the Netflix original movie <em>IO</em>. (credit: <a rel="nofollow" class="caption-link" href="https://www.netflix.com/">Netflix</a>)</p>  </figure><div><a name="page-1"></a></div>
+<p>Much of the human race has decamped to a distant colony, leaving behind an uninhabitable Earth, in <a href="https://en.wikipedia.org/wiki/Io_(film)"><em>IO</em></a>, Netflix's modest follow-up to its post-apocalyptic thriller, <a href="https://en.wikipedia.org/wiki/Bird_Box_(film)"><em>Bird Box</em></a>. Directed by Jonathan Halpert, it's an ambitious film that doesn't quite work, with glacial pacing, little dramatic tension, and a rather flat tone. But it still has some lovely moments and a thought-provoking premise. It made us wonder how much of the film is based in real science, and we turned to <a href="https://science.jpl.nasa.gov/people/Hand/">Kevin Hand</a>, an astrobiologist and planetary scientist at the Jet Propulsion Laboratory, for answers.</p>
+<p>Hand is <a href="https://news.nationalgeographic.com/2016/10/kevin-hand-explorer-moments-jupiter-moon/">an ideal person</a> to comment on the film's science. His research interests include studying the ocean worlds of the outer solar system, most notably Jupiter's moon Europa, considered to be one promising site for extraterrestrial life. He's attempted to recreate the conditions on Europa in the laboratory—what he dubs "Europa in a can"—to see if any <a href="https://www.theguardian.com/science/audio/2012/may/29/astrobiologist-kevin-hand-extraterrestrial-life-audio">telltale forms of life</a> might form. (It hasn't so far, but who knows when a breakthrough might occur?) And Hand is part of NASA/JPL's <a href="https://www.jpl.nasa.gov/missions/details.php?id=6002">Europa Clipper mission</a> to send a robotic spacecraft to perform repeated close flybys of the distant moon. He even consulted on the <a href="https://en.wikipedia.org/wiki/Europa_Report">2013 sci-fi "found footage" film</a>, <em>Europa Report</em>, which dramatized a fictional crewed mission to Jupiter's moon.</p>
+<p><strong>(Spoilers below for <em>IO</em>.)</strong></p>
+</div><p><a href="https://arstechnica.com/?p=1452781#p3">Read 12 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1452781&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=NzIgQgQo9Gg:fHgfbE-vXiE:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=NzIgQgQo9Gg:fHgfbE-vXiE:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=NzIgQgQo9Gg:fHgfbE-vXiE:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=NzIgQgQo9Gg:fHgfbE-vXiE:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=NzIgQgQo9Gg:fHgfbE-vXiE:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=NzIgQgQo9Gg:fHgfbE-vXiE:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+    </item>
+        <item>
+            <title>Mini-review: 24 hours with Dell’s fanciest Chromebook yet</title>
+            <link>https://arstechnica.com/?p=1463981</link>
+            <pubDate>Sun, 03 Mar 2019 15:30:59 +0000</pubDate>
+            <dc:creator><![CDATA[Valentina Palladino]]></dc:creator>
+            <category><![CDATA[Tech]]></category>
+            <category><![CDATA[ASUS]]></category>
+            <category><![CDATA[Chrome OS]]></category>
+            <category><![CDATA[Chromebook]]></category>
+            <category><![CDATA[convertible]]></category>
+            <category><![CDATA[dell]]></category>
+            <category><![CDATA[dell inspiron chromebook]]></category>
+            <category><![CDATA[Lenovo]]></category>
+            <category><![CDATA[pixelbook]]></category>
+            <category><![CDATA[two-in-one]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1463981</guid>
+            <description><![CDATA[At $599 and 3.9 pounds, this Chrome OS convertible has clear pros and cons.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/inspironchromebook14_10-800x533.jpg" alt="Mini-review: 24 hours with Dell’s fanciest Chromebook yet"><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/02/inspironchromebook14_10.jpg" class="enlarge-link" data-height="1080" data-width="1620">Enlarge</a> (credit: Valentina Palladino)</p>  </figure><div><a name="page-1"></a></div>
+<p>Dell is no stranger to Chromebooks. In fact, the Dell Chromebook 11 is our current <a href="https://arstechnica.com/gadgets/2019/01/guidemaster-how-to-buy-a-chromebook-plus-our-best-picks/" target="_blank" rel="noopener">favorite Chromebook for students</a> with its simple, durable black frame and attractive price tag. Most of Dell's Chrome OS notebooks share those useful traits, so when the company stepped out of the box and debuted its $599 Inspiron Chromebook 14 at the end of last year, my interested was piqued.</p>
+<p>This device isn't the penny-pinching plastic laptop that so many think of when they hear "Chromebook." Instead, it follows the new trend of high-end Chrome OS devices designed to offer alternatives to Google's own $999 Pixelbook. Since Dell already makes numerous Chromebooks that are generally solid, I was curious to see how the company would fare making a premium Chromebook. These are niche devices that have to tick certain boxes to even come within the same range as Google's own Chrome OS devices, so I spent one day with the Inspiron Chromebook 14 to see just how premium the convertible actually is and if it's worth the extra money.</p>
+<h2>Design</h2>
+<p>The heft of the Inspiron Chromebook 14 surprised me when I first heaved it out of the box. It weighs just about four pounds, making it noticeably heavy when compared to other Chromebooks. Even our current favorite premium Chromebook, the Acer Chromebook Spin 13, doesn't weigh that much. Chrome OS is a "light" operating system that's designed to run nimbly on scant hardware, so I question why any Chromebook would be so heavy.</p>
+</div><p><a href="https://arstechnica.com/?p=1463981#p3">Read 17 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1463981&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HYLhTOGAnaA:ZKQexHnsvZg:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=HYLhTOGAnaA:ZKQexHnsvZg:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HYLhTOGAnaA:ZKQexHnsvZg:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=HYLhTOGAnaA:ZKQexHnsvZg:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HYLhTOGAnaA:ZKQexHnsvZg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=HYLhTOGAnaA:ZKQexHnsvZg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Infinite Detail review: The dystopia that awaits when the Internet goes out</title>
+            <link>https://arstechnica.com/?p=1464955</link>
+            <pubDate>Sun, 03 Mar 2019 15:00:13 +0000</pubDate>
+            <dc:creator><![CDATA[Valentina Palladino]]></dc:creator>
+            <category><![CDATA[Gaming & Culture]]></category>
+            <category><![CDATA[book]]></category>
+            <category><![CDATA[book review]]></category>
+            <category><![CDATA[cyberterrorism]]></category>
+            <category><![CDATA[infinite detail]]></category>
+            <category><![CDATA[Internet]]></category>
+            <category><![CDATA[smart glasses]]></category>
+            <category><![CDATA[tim maughan]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1464955</guid>
+            <description><![CDATA[Tim Maughan’s debut novel is full of cyberterrorism, surveillance, and lots of smart glasses.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+      <p><em><b>Warning:</b> Mild spoilers ahead.</em></p>
+
+
+<div><a name="page-1"></a></div>
+<div class="image shortcode-img right medium">
+<a href="https://cdn.arstechnica.net/wp-content/uploads/2019/02/9780374718602_FC.jpg"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/9780374718602_FC-300x450.jpg" srcset="https://cdn.arstechnica.net/wp-content/uploads/2019/02/9780374718602_FC.jpg 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/02/9780374718602_FC.jpg" class="caption-link" rel="nofollow"></a> (credit: <a rel="nofollow" class="caption-link" href="https://us.macmillan.com/books/9780374718602">Macmillan Publishers</a>)</p>
+</div>
+<p>Cranky. Irritable. Anxious. That's how I feel when my home security-camera livestream goes black, when my bank's website goes down and sequesters my money, or when my Twitter feed doesn't refresh automatically. Maybe you feel the same way, maybe you don't. But it's undeniable that most things we interact with today live and die by the Internet and a connection to it. If those connections were to vanish—if the Internet everywhere crashed—life as we know it would come to a standstill. What happens after that is a potentially horrifying mystery that Tim Maughan explores in his new novel <a href="https://amzn.to/2Ek1bo4" target="_blank" rel="noopener"><em>Infinite Detail</em></a>, in which an act of cyberterrorism effectively cancels the Internet.</p>
+<p>Maughan divides the story into "before" and "after chapters, which is a popular structure among recent novels that center on a single significant event."after chapters. In "before," we learn about a futuristic world that's not too far off from our reality. Everything is connected, and big tech companies trade comfort, convenience, and complacency for data. Everything from messages to trash is tracked, and a pair of "spex" is the most popular (arguably necessary) device.</p>
+</div><p><a href="https://arstechnica.com/?p=1464955#p3">Read 8 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1464955&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=vy6LDE7ejxU:SOEM9FN_SQo:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=vy6LDE7ejxU:SOEM9FN_SQo:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=vy6LDE7ejxU:SOEM9FN_SQo:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=vy6LDE7ejxU:SOEM9FN_SQo:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=vy6LDE7ejxU:SOEM9FN_SQo:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=vy6LDE7ejxU:SOEM9FN_SQo:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Why vinyl records survive in the digital age</title>
+            <link>https://arstechnica.com/?p=1467141</link>
+            <pubDate>Sun, 03 Mar 2019 14:00:46 +0000</pubDate>
+            <dc:creator><![CDATA[Ars Staff]]></dc:creator>
+            <category><![CDATA[Gaming & Culture]]></category>
+            <category><![CDATA[brykman]]></category>
+            <category><![CDATA[records]]></category>
+            <category><![CDATA[user interfaces]]></category>
+            <category><![CDATA[UX]]></category>
+            <category><![CDATA[vinyl]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467141</guid>
+            <description><![CDATA[Don't underestimate ritual and tactility.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-6.14.42-PM-800x302.png" alt="Why vinyl records survive in the digital age"><p class="caption" style="font-size:0.8em">(credit: <a rel="nofollow" class="caption-link" href="https://www.sony.com/">Sony</a>)</p>  </figure><div><a name="page-1"></a></div>
+<p>Ask a record-collecting audiophile why vinyl is back and you may hear a common refrain: "Of course vinyl's back! It's a more accurate reproduction of the original! It just sounds better than digital!"</p>
+<p>To this I reply, "Does it really, though? Or is it just EQ'd better? And since when did we start caring so much about the perfect fidelity of our recordings? I grew up—as did many of you—listening to cassette tapes on a boom box. They sounded horrible, and we loved them."</p>
+<p>I think the real reason for vinyl's return goes much deeper than questions of sound quality. As media analyst Marshall McLuhan famously wrote, "The medium is the message." In other words, "the form of a medium embeds itself in any message it would transmit or convey, creating a symbiotic relationship by which the medium influences how the message is perceived." Nowhere does this hold truer than in the world of recorded sound.</p>
+</div><p><a href="https://arstechnica.com/?p=1467141#p3">Read 14 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467141&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_PRvjy4DtqU:830_LBCj1Ro:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_PRvjy4DtqU:830_LBCj1Ro:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_PRvjy4DtqU:830_LBCj1Ro:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_PRvjy4DtqU:830_LBCj1Ro:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_PRvjy4DtqU:830_LBCj1Ro:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_PRvjy4DtqU:830_LBCj1Ro:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Believe it or not, Ripley has made it safely to the space station</title>
+            <link>https://arstechnica.com/?p=1467511</link>
+            <pubDate>Sun, 03 Mar 2019 13:48:40 +0000</pubDate>
+            <dc:creator><![CDATA[Eric Berger]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+            <category><![CDATA[commercial crew]]></category>
+            <category><![CDATA[crew dragon]]></category>
+            <category><![CDATA[dragon]]></category>
+            <category><![CDATA[international space station]]></category>
+            <category><![CDATA[iss]]></category>
+            <category><![CDATA[NASA]]></category>
+            <category><![CDATA[spacex]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467511</guid>
+            <description><![CDATA[Docking required a number of things to go right, and they did.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+      <ul class="gallery shortcode-gallery gallery-wide">
+<li>
+        <div class="gallery-item-content">
+        <div class="gallery-image"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/NASA-Live_-Official-Stream-of-NASA-TV-12-41-3-screenshot-980x551.jpg" alt=""></div>
+        <p>
+          The Dragon spacecraft successfully docked to the International Space Station early Saturday. Here's a recap of how it went.                      [credit:
+                        NASA TV                        ]
+                  </p>
+        </div>
+      </li>
+      </ul>
+<p>Right on schedule, the Crew Dragon spacecraft fired its Draco thrusters early on Sunday morning and docked safely with the International Space Station. A "soft" capture came at 5:51am ET, when the station was 418km above New Zealand. "Hard" capture, when 12 additional latches secured the spacecraft to the station, occurred 10 minutes later.</p>
+<p>This marked the completion of a major milestone for SpaceX and NASA—the autonomous docking of a Dragon spacecraft with neither the assistance of crew on board the station nor the robotic arm used to grab and guide the cargo version of the Dragon spacecraft during supply missions.</p>
+
+<p>Speaking on the space agency's webcast shortly after the capture, NASA astronaut Bob Behnken noted the smoothness of the operation. "It’s one more milestone that gets us ready for flight," he said. Behnken, along with fellow astronaut Doug Hurley, will fly the first crewed mission of the Dragon spacecraft later this year (or early in 2020).</p>
+</div><p><a href="https://arstechnica.com/?p=1467511#p3">Read 8 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467511&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=XKsBvS9e8u8:qwIvfeuLxXs:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=XKsBvS9e8u8:qwIvfeuLxXs:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=XKsBvS9e8u8:qwIvfeuLxXs:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=XKsBvS9e8u8:qwIvfeuLxXs:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=XKsBvS9e8u8:qwIvfeuLxXs:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=XKsBvS9e8u8:qwIvfeuLxXs:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>An “exhilarating” start for Dragon, but the hard tests are still to come</title>
+            <link>https://arstechnica.com/?p=1467339</link>
+            <pubDate>Sat, 02 Mar 2019 18:10:33 +0000</pubDate>
+            <dc:creator><![CDATA[Eric Berger]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467339</guid>
+            <description><![CDATA["To be frank, I'm a little emotionally exhausted."]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+      <ul class="gallery shortcode-gallery gallery-wide">
+<li>
+        <div class="gallery-item-content">
+        <div class="gallery-image"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/IMG_3779-2-980x653.jpg" alt=""></div>
+        <p>
+          A Falcon 9 rocket blasts off from Kennedy Space Center at 2:49am ET Saturday.                  </p>
+        </div>
+      </li>
+      </ul>
+<p>SpaceX's Falcon 9 rocket blasted its brand-new Dragon spacecraft <a href="https://arstechnica.com/science/2019/03/spacex-set-to-launch-critical-dragon-demonstration-mission-tonight/">into orbit for the first time</a> early Saturday morning, and so far everything has gone well. After opening its nose cone for navigational purposes, Dragon is now spending about 24 hours performing a series of phasing maneuvers to bring it toward the International Space Station, where it will dock at around 6am ET Sunday.</p>
+<p>Although SpaceX has been flying a cargo-based version of the Dragon to the station since 2012, the new Dragon has been entirely remade for crew. That includes interior life-support systems, autonomous docking capability, an integrated launch escape system, and solar panels built into the spacecraft itself.</p>
+
+<p>"The Crew Dragon is a fundamental redesign, with hardly a part in common with Dragon," SpaceX founder Elon Musk said early Saturday morning, after the launch, during a news briefing. "The system thus far has passed an exhaustive set of reviews, and then the launch itself went as expected. So far, everything is nominal."</p>
+</div><p><a href="https://arstechnica.com/?p=1467339#p3">Read 6 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467339&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7orpGuA5Zc0:CK5wFvQYvng:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=7orpGuA5Zc0:CK5wFvQYvng:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7orpGuA5Zc0:CK5wFvQYvng:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=7orpGuA5Zc0:CK5wFvQYvng:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7orpGuA5Zc0:CK5wFvQYvng:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=7orpGuA5Zc0:CK5wFvQYvng:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Feds investigate why a Tesla crashed into a truck Friday, killing driver</title>
+            <link>https://arstechnica.com/?p=1467331</link>
+            <pubDate>Sat, 02 Mar 2019 17:30:46 +0000</pubDate>
+            <dc:creator><![CDATA[Timothy B. Lee]]></dc:creator>
+            <category><![CDATA[Cars]]></category>
+            <category><![CDATA[autopilot]]></category>
+            <category><![CDATA[model 3]]></category>
+            <category><![CDATA[nhtsa]]></category>
+            <category><![CDATA[NTSA]]></category>
+            <category><![CDATA[Tesla]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467331</guid>
+            <description><![CDATA[It's not known if Autopilot was active at the time of the crash.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2018/10/Model-3-First-Deliveries-800x391.jpg" alt="Feds investigate why a Tesla crashed into a truck Friday, killing driver"><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2018/10/Model-3-First-Deliveries.jpg" class="enlarge-link" data-height="1000" data-width="2048">Enlarge</a> (credit: <a rel="nofollow" class="caption-link" href="https://www.tesla.com/">Tesla</a>)</p>  </figure><div><a name="page-1"></a></div>
+<p>The National Transportation Safety Board is <a href="https://twitter.com/NTSB_Newsroom/status/1101674505972400129">dispatching a team</a> of investigators to Delray Beach, Fla., to investigate a Friday morning crash that killed the driver of a Tesla Model 3. The National Highway Traffic Safety Administration is also <a href="https://www.reuters.com/article/us-tesla-crash/ntsb-opens-investigation-into-fatal-tesla-crash-in-florida-idUSKCN1QJ031?il=0&amp;utm_source=reddit.com">investigating the crash</a>.</p>
+<p>According to the preliminary report of the Palm Beach County Sheriff's office <a href="https://electrek.co/2019/03/01/tesla-driver-crash-truck-trailer-autopilot/">obtained by Eletrek</a>, a semi truck was making a left turn onto SR 7 when the Model 3 crashed into it from the side. The Model 3 passed under the trailer, shearing off the top of the vehicle. The driver—who was <a href="https://www.nbcnews.com/news/us-news/man-dies-after-tesla-crashes-semitrailer-florida-n978466">identified</a> by NBC News as 50-year-old Jeremy Beren Banner—died at the scene of the crash.</p>
+<div class="image shortcode-img center large">
+<a href="https://cdn.arstechnica.net/wp-content/uploads/2019/03/Screen-Shot-2019-03-02-at-10.46.35-AM.png"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/Screen-Shot-2019-03-02-at-10.46.35-AM-640x585.png" srcset="https://cdn.arstechnica.net/wp-content/uploads/2019/03/Screen-Shot-2019-03-02-at-10.46.35-AM.png 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/03/Screen-Shot-2019-03-02-at-10.46.35-AM.png" class="caption-link" rel="nofollow"></a> (credit: Google Maps)</p>
+</div>
+<p>The sheriff's report indicates that the truck driver stopped at a stop sign before initiating his left-hand turn. The Tesla vehicle traveled for an additional 0.3 miles (around 500 meters) before coming to a stop.</p>
+</div><p><a href="https://arstechnica.com/?p=1467331#p3">Read 6 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467331&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=GVEM24VSu6U:yWnbcaFDnAs:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=GVEM24VSu6U:yWnbcaFDnAs:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=GVEM24VSu6U:yWnbcaFDnAs:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=GVEM24VSu6U:yWnbcaFDnAs:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=GVEM24VSu6U:yWnbcaFDnAs:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=GVEM24VSu6U:yWnbcaFDnAs:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>True Detective’s stellar third season will restore your faith in the series</title>
+            <link>https://arstechnica.com/?p=1466953</link>
+            <pubDate>Sat, 02 Mar 2019 16:25:11 +0000</pubDate>
+            <dc:creator><![CDATA[Jennifer Ouellette]]></dc:creator>
+            <category><![CDATA[Gaming & Culture]]></category>
+            <category><![CDATA[entertainment]]></category>
+            <category><![CDATA[HBO]]></category>
+            <category><![CDATA[reviews]]></category>
+            <category><![CDATA[television]]></category>
+            <category><![CDATA[True Detective]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1466953</guid>
+            <description><![CDATA[Nick Pizzolatto finds his lost mojo with haunting tale of fractured time and memory.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2018/11/true18-800x506.jpg" alt='"Did you think you could just go on and never once have to look back?" An elderly Wayne Hays (Mahershala Ali) has to reckon with his dark past in season 3 of &lt;em&gt;True Detective&lt;/em&gt;.'><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2018/11/true18.jpg" class="enlarge-link" data-height="759" data-width="1200">Enlarge</a> <span class="sep">/</span> "Did you think you could just go on and never once have to look back?" An elderly Wayne Hays (Mahershala Ali) has to reckon with his dark past in season 3 of <em>True Detective</em>. (credit: <a rel="nofollow" class="caption-link" href="https://www.hbo.com/">YouTube/HBO</a>)</p>  </figure><div><a name="page-1"></a></div>
+<p>HBO's <em>True Detective</em> was a pop-culture sensation when it debuted in 2014, but its sophomore outing sadly had none of the original's surreal magic. So we were pleased to discover season 3 had returned to form, mixing elements of <em>noir</em> and procedural drama to weave a haunting tale of fractured time and memory. It's the best installment yet in the anthology series.</p>
+<p><strong>(Mild spoilers below.)</strong></p>
+<p>Created by novelist Nic Pizzolatto, <em>True Detective</em> has always fostered a very literary, philosophical tone, falling very much into the "slow burn" category of prestige TV. <a href="https://arstechnica.com/gaming/2018/11/true-detective-seems-ready-to-return-to-top-form-in-new-s3-trailer/">When it works, it's brilliant</a>. Season 1 was set in the Louisiana Bayou, as Detective Rustin "Rust" Cohle (Matthew McConaughey) and his partner Detective Martin "Marty" Hart (Woody Harrelson) tracked down a twisted serial killer with a fondness for leaving weird twig sculptures in the woods. The spooky setting and strong chemistry between the lead actors pretty much ensured its success with viewers and critics alike.</p>
+</div><p><a href="https://arstechnica.com/?p=1466953#p3">Read 7 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1466953&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=d0r0788pWNg:ooCupYH85Y8:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=d0r0788pWNg:ooCupYH85Y8:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=d0r0788pWNg:ooCupYH85Y8:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=d0r0788pWNg:ooCupYH85Y8:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=d0r0788pWNg:ooCupYH85Y8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=d0r0788pWNg:ooCupYH85Y8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Forget growing weed—make yeast spit out CBD and THC instead</title>
+            <link>https://arstechnica.com/?p=1467251</link>
+            <pubDate>Sat, 02 Mar 2019 15:02:52 +0000</pubDate>
+            <dc:creator><![CDATA[WIRED]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+            <category><![CDATA[cannabis]]></category>
+            <category><![CDATA[cbd]]></category>
+            <category><![CDATA[THC]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467251</guid>
+            <description><![CDATA[Loading brewer’s yeast with cannabis genes turns them into cannabinoid factories]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/cannabis-800x534.jpg" alt="ROME, ITALY - FEBRUARY 15: Vendors at Canapa Mundi, an international hemp fair, on February 15, 2019 in Rome, Italy"><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/03/cannabis.jpg" class="enlarge-link" data-height="683" data-width="1024">Enlarge</a> <span class="sep">/</span> ROME, ITALY - FEBRUARY 15: Vendors at Canapa Mundi, an international hemp fair, on February 15, 2019 in Rome, Italy (credit: Simona Granati - Corbis | Getty Images)</p>  </figure><div><a name="page-1"></a></div>
+<p>We as a species would be miserable without yeast. Baker's yeast has given us leavened bread for thousands of years. And I don’t even want to begin to imagine a world without beer and wine, which rely on yeast to convert sugar into alcohol.</p>
+<p>Now researchers have turned to yeast to do something more improbable: manufacturing the cannabis compounds CBD and THC. By loading brewer’s yeast with genes from the cannabis plant, they’ve turned the miracle microbes into cannabinoid factories. It’s a clever scheme in a larger movement to methodically pick apart and recreate marijuana’s many compounds, to better understand the plant’s true potential.</p>
+<p></p>
+</div><p><a href="https://arstechnica.com/?p=1467251#p3">Read 14 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467251&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_cXUV2nOrUk:Rp1yTsMPNs8:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_cXUV2nOrUk:Rp1yTsMPNs8:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_cXUV2nOrUk:Rp1yTsMPNs8:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_cXUV2nOrUk:Rp1yTsMPNs8:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_cXUV2nOrUk:Rp1yTsMPNs8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_cXUV2nOrUk:Rp1yTsMPNs8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>The poshest SUV of them all: Rolls-Royce Cullinan first drive</title>
+            <link>https://arstechnica.com/?p=1458597</link>
+            <pubDate>Sat, 02 Mar 2019 14:00:28 +0000</pubDate>
+            <dc:creator><![CDATA[Eric Bangeman]]></dc:creator>
+            <category><![CDATA[Cars]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1458597</guid>
+            <description><![CDATA[This very expensive SUV can get down and dirty off-roading.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/cullinan-124-800x600.jpg" alt="Exiting the water"><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/02/cullinan-124.jpg" class="enlarge-link" data-height="1512" data-width="2016">Enlarge</a> <span class="sep">/</span> Exiting the water. (credit: Eric Bangeman)</p>  </figure><p><em>Although we make every effort to cover our own travel costs, in this case BMW flew me to Palm Springs, California, and provided two nights in a hotel in Indian Wells.</em></p>
+
+
+<div><a name="page-1"></a></div>
+<p>Now that SUVs have overtaken sedans as a percentage of all new car sales in the United States, it's no surprise that ultra-luxury carmakers have jumped on the bandwagon. People accustomed to spending something well north of $200,000 on cars now have options like the <a href="https://arstechnica.com/cars/2018/01/if-you-cant-beat-them-lamborghini-joins-the-suv-set/">Lamborghini Urus</a>, Bentley Bentayga, and <a href="https://arstechnica.com/cars/2018/06/got-360k-burning-a-hole-in-your-pocket-check-out-the-range-rover-sv-coupe/">Range Rover SV Coupe</a>. So when presented with an unexpected opportunity to take a Rolls-Royce Cullinan for a spin down desert highways and an off-road course, I leapt at the chance. Especially the off-road bits—one of the most frequent comments in luxury SUV reviews is "no one is ever going to take <em>that</em> off-road."</p>
+<p>That may very well be true for the Cullinan, which debuted in late 2018. But if the road to one of your winter chalets—say, the one in the Sierra Nevadas—is blocked by a mudslide or avalanche, you'll still have a shot of making it home in time for cocktails if you're behind the wheel (or in the backseat) of this elegant beast. Before we get into the ups and downs of driving a Cullinan, let's look at the numbers.</p>
+</div><p><a href="https://arstechnica.com/?p=1458597#p3">Read 13 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1458597&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=tyqxtggxojo:GLEgOMmK3VU:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=tyqxtggxojo:GLEgOMmK3VU:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=tyqxtggxojo:GLEgOMmK3VU:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=tyqxtggxojo:GLEgOMmK3VU:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=tyqxtggxojo:GLEgOMmK3VU:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=tyqxtggxojo:GLEgOMmK3VU:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Craters on Pluto suggest Kuiper Belt ate its smaller bodies</title>
+            <link>https://arstechnica.com/?p=1466831</link>
+            <pubDate>Sat, 02 Mar 2019 13:15:28 +0000</pubDate>
+            <dc:creator><![CDATA[John Timmer]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+            <category><![CDATA[astronomy]]></category>
+            <category><![CDATA[Charon]]></category>
+            <category><![CDATA[craters]]></category>
+            <category><![CDATA[Kuiper belt]]></category>
+            <category><![CDATA[New Horizons]]></category>
+            <category><![CDATA[planetary science]]></category>
+            <category><![CDATA[Pluto]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1466831</guid>
+            <description><![CDATA[Both Pluto and Charon have a dearth of craters made by small objects.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/singer2HR-800x480.jpg" alt="Image of craters on a moon."><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/02/singer2HR.jpg" class="enlarge-link" data-height="768" data-width="1279">Enlarge</a> <span class="sep">/</span> A view of Vulcan Planitia's craters on Charon. (credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute/K. Singer)</p>  </figure><div><a name="page-1"></a></div>
+<p>What did the earliest bodies in our Solar System look like, and what was their fate? It's difficult to tell, because it's not clear that there are any of them left. Lots of the earliest material was swept up into the planets. Many of the smaller bodies that remained are products of multiple collisions and have perhaps formed and re-formed multiple times—some are little more than rubble piles barely held together by gravity.</p>
+<p>Without some knowledge of what these bodies looked like, then, it's difficult to determine whether our models of the physics of the early Solar System are right and whether similar processes are likely to be in play in exosolar systems.</p>
+<p>Now, some researchers have found a way to infer the sizes of objects present in the early Solar System: looking at the craters they left behind when they smashed into Pluto and Charon. The results suggest a shortage of objects smaller than 2km in diameter and suggest that much of the material in the Kuiper Belt was quickly swept up into larger objects, which somehow avoided smashing into each other and liberating a new generation of smaller fragments.</p>
+</div><p><a href="https://arstechnica.com/?p=1466831#p3">Read 11 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1466831&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_Pwk4RMJqh4:jkbUc18VZSc:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_Pwk4RMJqh4:jkbUc18VZSc:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_Pwk4RMJqh4:jkbUc18VZSc:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=_Pwk4RMJqh4:jkbUc18VZSc:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_Pwk4RMJqh4:jkbUc18VZSc:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=_Pwk4RMJqh4:jkbUc18VZSc:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>SpaceX launches Crew Dragon on its way to the space station [Updated]</title>
+            <link>https://arstechnica.com/?p=1466929</link>
+            <pubDate>Sat, 02 Mar 2019 00:30:18 +0000</pubDate>
+            <dc:creator><![CDATA[Eric Berger]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1466929</guid>
+            <description><![CDATA["This vehicle has to work."]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+      <ul class="gallery shortcode-gallery gallery-wide">
+<li>
+        <div class="gallery-item-content">
+        <div class="gallery-image"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/IMG_3115-980x735.jpg" alt=""></div>
+        <p>
+          A pretty day at Kennedy Space Center on Friday, as remote cameras were set up.                      [credit:
+                        Trevor Mahlmann for Ars Technica.                        ]
+                  </p>
+        </div>
+      </li>
+      </ul>
+<p><strong>3:05am ET Saturday Update</strong>: SpaceX's Falcon 9 rocket hit its instantaneous launch window, and the booster blasted off at 2:49am ET Saturday morning from Kennedy Space Center in Florida. The rocket's second stage safely delivered the Crew Dragon into orbit, where it will now spend about 24 hours raising its orbit and catching the International Space Station. The spacecraft will undergo tests during that time, but the next major milestone is docking with the station, set for Sunday morning.</p>
+<p>As for the Falcon 9 rocket's first stage, it returned to Earth in the middle of the night, and landed on a droneship in the Atlantic Ocean. SpaceX has now recovered 35 of 69 Falcon 9 rockets it has launched—more than half of them.</p>
+<p>Ars will have continuing coverage of this historic mission throughout the weekend, and next week.</p>
+</div><p><a href="https://arstechnica.com/?p=1466929#p3">Read 9 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1466929&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=beL3wzNDjg8:DFbrYlGUkDQ:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=beL3wzNDjg8:DFbrYlGUkDQ:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=beL3wzNDjg8:DFbrYlGUkDQ:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=beL3wzNDjg8:DFbrYlGUkDQ:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=beL3wzNDjg8:DFbrYlGUkDQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=beL3wzNDjg8:DFbrYlGUkDQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Hundreds of hospitals punished for lax safety. Here’s how to see if yours is one</title>
+            <link>https://arstechnica.com/?p=1467137</link>
+            <pubDate>Fri, 01 Mar 2019 20:45:22 +0000</pubDate>
+            <dc:creator><![CDATA[Beth Mole]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+            <category><![CDATA[hospitals]]></category>
+            <category><![CDATA[infections]]></category>
+            <category><![CDATA[injuries]]></category>
+            <category><![CDATA[safety]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467137</guid>
+            <description><![CDATA[Hospital group argues the penalties are misguided and calculated unfairly.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/GettyImages-2721656-800x524.jpg" alt="Hundreds of hospitals punished for lax safety. Here’s how to see if yours is one"><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/03/GettyImages-2721656.jpg" class="enlarge-link" data-height="1965" data-width="3000">Enlarge</a> (credit: <a rel="nofollow" class="caption-link" href="https://www.gettyimages.com/detail/news-photo/man-stands-in-a-state-of-the-art-patient-room-in-the-news-photo/2721656">Getty | Mario Tama</a>)</p>  </figure><div><a name="page-1"></a></div>
+<p>Medicare is cutting payments to 800 hospitals around the country for having relatively high rates of infections and injuries among their patients, according to<a href="https://khn.org/news/medicare-trims-payments-to-800-hospitals-citing-patient-safety-incidents/"> an analysis by Kaiser Health News</a>. That’s the highest number of penalties in the five years that the federal government has handed them out.</p>
+<p>Penalized hospitals will see a one-percent cut to payments for Medicare patients discharged between October 2018 and September 2019. The penalties are the result of an annual assessment set up by the <a href="https://www.medicare.gov/hospitalcompare/HAC-reduction-program.html">2014 Hospital-Acquired Condition Reduction Program</a>, which was created under the Affordable Care Act. The program ranks all hospitals based on their <a href="https://www.qualitynet.org/dcs/ContentServer?c=Page&amp;pagename=QnetPublic%2FPage%2FQnetTier3&amp;cid=1228774294977">rates of specific infections and in-hospital injuries</a>. From there, Medicare penalizes the bottom quarter or subsection—the threshold varies from year to year based on the data. So far, 800 is the highest number penalized, seconded by 769 two years ago.</p>
+<p>The infection rates that the program looks at are those linked to urinary tract catheters, colon surgeries, hysterectomies, plus blood infections from central lines. The program also tallies infections from the dreaded Methicillin-resistant <em>Staphylococcus aureus</em> (MRSA) and <em>Clostridium difficile</em>, which causes intractable and sometimes life-threatening diarrhea. The injuries assessed include bedsores, in-hospital falls that cause hip fractures, wounds that burst open after surgery, blood clots, and kidney injuries after surgery.</p>
+</div><p><a href="https://arstechnica.com/?p=1467137#p3">Read 3 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467137&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=nPQMLBsghsE:2ZTcGcvpKAI:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=nPQMLBsghsE:2ZTcGcvpKAI:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=nPQMLBsghsE:2ZTcGcvpKAI:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=nPQMLBsghsE:2ZTcGcvpKAI:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=nPQMLBsghsE:2ZTcGcvpKAI:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=nPQMLBsghsE:2ZTcGcvpKAI:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Fortnite teams with Weezer in attempt to become the next Second Life</title>
+            <link>https://arstechnica.com/?p=1467045</link>
+            <pubDate>Fri, 01 Mar 2019 20:00:57 +0000</pubDate>
+            <dc:creator><![CDATA[Sam Machkovech]]></dc:creator>
+            <category><![CDATA[Gaming & Culture]]></category>
+            <category><![CDATA[Epic Games]]></category>
+            <category><![CDATA[fortnite]]></category>
+            <category><![CDATA[Second Life]]></category>
+            <category><![CDATA[weezer]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467045</guid>
+            <description><![CDATA[Follows record-breaking stream of DJ Marshmello concert inside its battlegrounds.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+      <ul class="gallery shortcode-gallery gallery-wide">
+<li>
+        <div class="gallery-item-content">
+        <div class="gallery-image"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/fortnite-weezer-980x532.png" alt=""></div>
+        <p>
+          Welcome to <em>Fortnite</em>'s Weeeeeezer Island!                  </p>
+        </div>
+      </li>
+      </ul>
+<p><em>Fortnite</em>'s latest "season" of refreshed content launched on Thursday, complete with a litany of patch notes about changes to its gameplay. But the biggest change arguably isn't weapons, terrain, or pirate-themed outfits. The Epic Games title also snuck in a high-profile pop-culture mash-up—and thus it snuck in quite a suggestion for the series' future.</p>
+<p>As of press time, should you boot into the game's "creative" mode, which allows you and online friends to play on a private server without any "battle royale" restrictions, you can choose to fly the game's veritable "battle bus" to Weezer Island. (Yes, the chart-topping rock band whose first album came out nearly 25 years ago.)</p>
+<p>This in-game zone works in any of the game's versions (console, computer, and mobile), and it's full of speakers blaring four songs from the band's newly launched <a href="https://weezer.com/"><em>Black Album</em></a>, out now on Friday, March 1. (Anyone who loaded this zone on Thursday essentially got a one-day sneak preview of the songs, which are not complete versions.)</p>
+</div><p><a href="https://arstechnica.com/?p=1467045#p3">Read 5 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467045&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pqaumsX2fRs:xODSdK14IeA:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=pqaumsX2fRs:xODSdK14IeA:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pqaumsX2fRs:xODSdK14IeA:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=pqaumsX2fRs:xODSdK14IeA:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pqaumsX2fRs:xODSdK14IeA:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=pqaumsX2fRs:xODSdK14IeA:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Comcast set mobile pins to “0000,” helping attackers steal phone numbers</title>
+            <link>https://arstechnica.com/?p=1467053</link>
+            <pubDate>Fri, 01 Mar 2019 19:45:50 +0000</pubDate>
+            <dc:creator><![CDATA[Jon Brodkin]]></dc:creator>
+            <category><![CDATA[Biz & IT]]></category>
+            <category><![CDATA[Comcast]]></category>
+            <category><![CDATA[xfinity mobile]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467053</guid>
+            <description><![CDATA[Xfinity Mobile deploys fix after weak PIN system fueled number-porting attacks.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/xfinity-mobile-800x450.jpg" alt="A smartphone connected to the Xfinity Mobile service."><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/03/xfinity-mobile.jpg" class="enlarge-link" data-height="563" data-width="1000">Enlarge</a> <span class="sep">/</span> A smartphone connected to the Xfinity Mobile service. (credit: Comcast)</p>  </figure><div><a name="page-1"></a></div>
+<p>A bad security decision by Comcast on the company's mobile phone service made it easier for attackers to port victims' cell phone numbers to different carriers.</p>
+<p>Comcast in 2017 <a href="https://arstechnica.com/information-technology/2017/04/comcast-to-sell-unlimited-mobile-plans-that-get-throttled-after-20gb/">launched Xfinity Mobile</a>, a cellular service that uses the Verizon Wireless network and Comcast Wi-Fi hotspots. Comcast has signed up 1.2 million mobile subscribers but took a shortcut in the system that lets users switch from Comcast to other carriers.</p>
+<p>To port a phone line from Comcast to another wireless carrier, a customer needs to know his or her Comcast mobile account number. Carriers generally use PINs to verify that a customer seeking to port a number actually owns the number. But Comcast reportedly set the PIN to 0000 for all its customers, and there was apparently no way for customers to change it. That means that an attacker who acquired a victim's Comcast account number could easily port the victim's phone number to another carrier.</p>
+</div><p><a href="https://arstechnica.com/?p=1467053#p3">Read 15 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467053&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=sJlzhvkQmvU:eF9MNcGvivw:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=sJlzhvkQmvU:eF9MNcGvivw:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=sJlzhvkQmvU:eF9MNcGvivw:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=sJlzhvkQmvU:eF9MNcGvivw:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=sJlzhvkQmvU:eF9MNcGvivw:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=sJlzhvkQmvU:eF9MNcGvivw:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Amazon to open all-new grocery stores separate from Whole Foods</title>
+            <link>https://arstechnica.com/?p=1467009</link>
+            <pubDate>Fri, 01 Mar 2019 18:52:51 +0000</pubDate>
+            <dc:creator><![CDATA[Valentina Palladino]]></dc:creator>
+            <category><![CDATA[Biz & IT]]></category>
+            <category><![CDATA[Tech]]></category>
+            <category><![CDATA[Amazon]]></category>
+            <category><![CDATA[brick and mortar]]></category>
+            <category><![CDATA[grocery store]]></category>
+            <category><![CDATA[online shopping]]></category>
+            <category><![CDATA[retail]]></category>
+            <category><![CDATA[walmart]]></category>
+            <category><![CDATA[whole foods]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1467009</guid>
+            <description><![CDATA[Dozens of new stores are in the works, and the first may open before 2019's end.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2016/11/amazon-prime-box-800x450.jpeg" alt="A package with the name " amazon on the front sitting a wood floor.><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2016/11/amazon-prime-box.jpeg" class="enlarge-link" data-height="456" data-width="810">Enlarge</a> </p>  </figure><div><a name="page-1"></a></div>
+<p>Amazon reportedly feels confident enough in its grocery-store quests to branch out into new ventures. According to a report by <em>The <a href="https://www.wsj.com/articles/amazon-to-launch-new-grocery-store-business-sources-say-11551461887?mod=djemalertNEWS">Wall Street Journal</a></em>, Amazon plans to open dozens of new grocery stores that will be distinctly different from the company's Whole Foods Market stores. The retail giant has reportedly already signed leases for some locations and plans to open the new grocery stores in cities across the country, including San Francisco, Seattle, Chicago, Philadelphia, and Washington DC.</p>
+
+<p>But the first city to get a new Amazon grocery store will be Los Angeles. The report claims that Amazon will open that store by the end of this year. Although Amazon has some leases signed already, it doesn't guarantee that the company will open stores in all of those leased locations.</p>
+<p>It appears Amazon wants to grab a larger sector of the market by offering a wider variety of items in these new grocery stores than it currently offers at Whole Foods locations. Although the grocer has expanded its offerings since Amazon <a href="https://arstechnica.com/information-technology/2017/06/amazon-goes-big-into-brick-and-mortar-with-13-7-whole-foods-purchase/">bought</a> it back in 2017 for $13.7 billion, Whole Foods is generally considered an upper-scale grocery store chain and it continues to have strict food quality standards for the items it carries (no artificial flavor, colors, preservatives, sweeteners, etc).</p>
+</div><p><a href="https://arstechnica.com/?p=1467009#p3">Read 4 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1467009&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FbmkSm0VIeI:UUOw3LoA44Y:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=FbmkSm0VIeI:UUOw3LoA44Y:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FbmkSm0VIeI:UUOw3LoA44Y:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=FbmkSm0VIeI:UUOw3LoA44Y:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FbmkSm0VIeI:UUOw3LoA44Y:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=FbmkSm0VIeI:UUOw3LoA44Y:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>HBO boss quits as owner AT&amp;T seeks more shows and more profit</title>
+            <link>https://arstechnica.com/?p=1466969</link>
+            <pubDate>Fri, 01 Mar 2019 17:00:32 +0000</pubDate>
+            <dc:creator><![CDATA[Jon Brodkin]]></dc:creator>
+            <category><![CDATA[Biz & IT]]></category>
+            <category><![CDATA[AT&T]]></category>
+            <category><![CDATA[HBO]]></category>
+            <category><![CDATA[richard plepler]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1466969</guid>
+            <description><![CDATA[Richard Plepler, 28-year veteran of HBO, was reportedly frustrated by new owner.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/03/getty-richard-plepler-800x534.jpg" alt="HBO CEO Richard Plepler."><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2019/03/getty-richard-plepler.jpg" class="enlarge-link" data-height="683" data-width="1024">Enlarge</a> <span class="sep">/</span> HBO CEO Richard Plepler at the annual Allen &amp; Company Sun Valley Conference, July 11, 2018 in Sun Valley, Idaho. (credit: Getty Images | Drew Angerer)</p>  </figure><div><a name="page-1"></a></div>
+<p>HBO CEO Richard Plepler announced his resignation yesterday, less than a year after AT&amp;T <a href="https://arstechnica.com/information-technology/2018/06/what-to-expect-now-that-att-officially-owns-time-warner/">completed</a> its acquisition of HBO and the rest of Time Warner Inc.</p>
+<p>In a company-wide memo available in <a href="https://www.hollywoodreporter.com/news/richard-plepler-leaving-hbo-27-years-cable-giant-1191494">this<em> Hollywood Reporter</em> story</a>, Plepler told employees that he made the "difficult decision" to leave at "an inflection point in the life of this wonderful company."</p>
+<p>Plepler worked at HBO for nearly 28 years, serving as chairman and CEO since 2013 and as co-president from 2007 to 2013. He struck a positive tone in his memo. "Thanks to all of you, we are today churning on all cylinders both creatively and as a business," he wrote. "Thanks to all of you, I can move on to the next chapter of my life knowing that the best team in the industry remains here to carry on our continued progress and success."</p>
+</div><p><a href="https://arstechnica.com/?p=1466969#p3">Read 8 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1466969&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=EXdsPj_ASV0:TscPsvDNgVQ:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=EXdsPj_ASV0:TscPsvDNgVQ:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=EXdsPj_ASV0:TscPsvDNgVQ:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=EXdsPj_ASV0:TscPsvDNgVQ:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=EXdsPj_ASV0:TscPsvDNgVQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=EXdsPj_ASV0:TscPsvDNgVQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>The rise of tech-worker activism</title>
+            <link>https://arstechnica.com/?p=1464789</link>
+            <pubDate>Fri, 01 Mar 2019 14:00:19 +0000</pubDate>
+            <dc:creator><![CDATA[Annalee Newitz]]></dc:creator>
+            <category><![CDATA[Ars Technica Videos]]></category>
+            <category><![CDATA[Policy]]></category>
+            <category><![CDATA[abuse]]></category>
+            <category><![CDATA[activism]]></category>
+            <category><![CDATA[leigh honeywell]]></category>
+            <category><![CDATA[security]]></category>
+            <category><![CDATA[tall poppy]]></category>
+            <category><![CDATA[tech workers]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1464789</guid>
+            <description><![CDATA[Video: Leigh Honeywell created Never Again pledge and a company devoted to tech-worker safety.]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p><a href="http://player.cnevids.com/embed/5c78131034e7944a519e5876/5511d76261646d5566020000">Video by Chris Schodt, production by Justin Wolfson. (video link)</a></p>
+<p>In this episode of Ars Technica Live, we spoke with Leigh Honeywell, a security engineer who has worked at several large tech companies as well as the ACLU. She's been at the forefront of worker organizing in the tech industry, organizing protests against data-driven profiling and founding Hackerspaces in both Canada and the United States. Recently, she founded the company <a href="https://tallpoppy.io/">Tall Poppy</a> to protect tech workers from abuse online.</p>
+<p>We began by talking about how she created the <a href="http://neveragain.tech/">Never Again pledge</a>, signed by hundreds of tech workers, which was a direct response to President Trump's openness to tracking Muslims in the US using big data. She said it was a turning point when tech workers realized that the systems they built weren't just helping people. These systems could also be weaponized and used for surveillance and racial profiling. People signing the pledge promised to quit their jobs before designing a database for tracking Muslims or any other vulnerable group.</p>
+</div><p><a href="https://arstechnica.com/?p=1464789#p3">Read 6 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1464789&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=1-KO_3EZNIE:m_sVOgRIYog:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=1-KO_3EZNIE:m_sVOgRIYog:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=1-KO_3EZNIE:m_sVOgRIYog:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=1-KO_3EZNIE:m_sVOgRIYog:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=1-KO_3EZNIE:m_sVOgRIYog:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=1-KO_3EZNIE:m_sVOgRIYog:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>The marriage of SpaceX and NASA hasn’t been easy—but it’s been fruitful</title>
+            <link>https://arstechnica.com/?p=1463313</link>
+            <pubDate>Fri, 01 Mar 2019 13:18:34 +0000</pubDate>
+            <dc:creator><![CDATA[Eric Berger]]></dc:creator>
+            <category><![CDATA[Science]]></category>
+            <category><![CDATA[commercial crew]]></category>
+            <category><![CDATA[Commercial space]]></category>
+            <category><![CDATA[human space flight]]></category>
+            <category><![CDATA[NASA]]></category>
+            <category><![CDATA[space]]></category>
+            <category><![CDATA[spacex]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1463313</guid>
+            <description><![CDATA["They’re forcing us to look at things in a new way, and I think that’s really cool."]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+      <ul class="gallery shortcode-gallery gallery-wide">
+<li>
+        <div class="gallery-item-content">
+        <div class="gallery-image"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/33365052958_c8341984e8_k-1-980x653.jpg" alt=""></div>
+        <p>
+          The commercial crew program is about to bear fruit with the first test flight of a Dragon spacecraft.                      [credit:
+                        Joel Kowsky/NASA                        ]
+                  </p>
+        </div>
+      </li>
+      </ul>
+<p>On Saturday morning SpaceX will attempt to launch its Crew Dragon spacecraft for the first time, marking the latest step in a relationship between NASA and the California rocket company that has now spanned 13 years. It has been a fruitful relationship for both.</p>
+<p>For SpaceX, <a href="https://arstechnica.com/science/2016/04/without-nasa-there-would-be-no-spacex-and-its-brilliant-boat-landing/">funding from NASA</a> allowed the company to accelerate development of its world-class Falcon 9 rocket from a single-engine booster. Perhaps more importantly, sustained funding for cargo missions to the station (16 have flown so far) has provided the operational breathing room to continue to improve the Falcon 9 rocket, practice landing it, and make reusable rocketry a reality. Now, with crewed missions nearing, SpaceX may soon become the first private company to ever launch humans into orbit.</p>
+
+<p>NASA, in turn, has gotten a good deal. SpaceX has consistently offered services to the space agency—for cargo, crew, and science experiments—that cost less than competitors and for far less than it would have cost NASA to develop those capabilities independently.</p>
+</div><p><a href="https://arstechnica.com/?p=1463313#p3">Read 15 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1463313&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Kqqg3qoPwNc:0rAHpT_5lbg:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Kqqg3qoPwNc:0rAHpT_5lbg:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Kqqg3qoPwNc:0rAHpT_5lbg:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=Kqqg3qoPwNc:0rAHpT_5lbg:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Kqqg3qoPwNc:0rAHpT_5lbg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=Kqqg3qoPwNc:0rAHpT_5lbg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>Deep space dial-up: How NASA speeds up its interplanetary communications</title>
+            <link>https://arstechnica.com/?p=1463709</link>
+            <pubDate>Fri, 01 Mar 2019 12:45:43 +0000</pubDate>
+            <dc:creator><![CDATA[Ars Staff]]></dc:creator>
+            <category><![CDATA[Features]]></category>
+            <category><![CDATA[Science]]></category>
+
+            <guid isPermaLink="false">https://arstechnica.com/?p=1463709</guid>
+            <description><![CDATA[“Not much room to improve radio frequency tech... We're running out of low-hanging fruit."]]></description>
+            <content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p></p>
+<p><a href="http://player.cnevids.com/embed/5bf373748c1abc6904000027/5511d76261646d5566020000"> (video link)</a></p>
+<br>
+On November 26, 2018 at 2:52:59 ET, <a href="https://arstechnica.com/science/2018/11/nasas-mars-insight-probe-sticks-its-landing-on-the-red-planet/">NASA did it again</a>—the agency’s InSight probe successfully landed on Mars after an entry, descent, and landing maneuver later dubbed "six and a half minutes of terror.” The moniker fits because NASA engineers couldn't know right away whether the spacecraft had made it safely down to the surface because of the current time delay (roughly 8.1 minutes) for communications between Earth and Mars. During that window of time, InSight couldn't rely on its more modern, high-powered antennas—instead, everything depended on old-fashioned <a href="https://en.wikipedia.org/wiki/Ultra_high_frequency">UHF</a> communications (the same method long utilized in everything from TV antennas and walkie-talkies to Bluetooth devices).
+<p>Eventually, critical data concerning InSight's condition was transmitted in 401.586Mhz radio waves to two CubeSats called WALL-E and EVE, which in turn relayed the data at 8Kbps back to huge 70 meter antennas on Earth. The CubeSats had been launched on the same rocket as InSight, and they followed along on the trip to Mars in order to observe the landing event and send back data immediately. Other Mars orbiters like Mars Reconnaissance Orbiter (MRO) were out of position and couldn't initially provide real-time communications with the lander. That’s not to say that the entire landing coverage hinged on two experimental CubeSats (each the size of a briefcase), but the MRO would have relayed InSight's landing data only after further delay.</p>
+</div><p><a href="https://arstechnica.com/?p=1463709#p3">Read 37 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1463709&comments=1">Comments</a></p><div class="feedflare">
+<a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=kCvi-m76SqI:0vODelYm01g:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=kCvi-m76SqI:0vODelYm01g:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=kCvi-m76SqI:0vODelYm01g:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?i=kCvi-m76SqI:0vODelYm01g:F7zBnMyn0Lo" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=kCvi-m76SqI:0vODelYm01g:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.arstechnica.com/~ff/arstechnica/index?a=kCvi-m76SqI:0vODelYm01g:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/arstechnica/index?d=yIl2AUoC8zA" border="0"></img></a>
+</div>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
