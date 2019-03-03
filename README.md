@@ -1,4 +1,6 @@
 # Home Page
+[![Build Status](https://travis-ci.org/danhooper/home_page.svg?branch=master)](https://travis-ci.org/danhooper/home_page)
+
 ## Configuring
 Create a file named `application.yml` in the `config/` directory.
 
@@ -13,7 +15,8 @@ A sample configuration file is in `config/sample-application.yml`. For now the I
 `ng serve`
 
 ### Backend
-`./gradlew build && java -jar backend/build/libs/homepage-0.1.0.jar`
+`./gradle build --continuous`
+`./gradlew bootRun`
 
 ## TODOs
 
