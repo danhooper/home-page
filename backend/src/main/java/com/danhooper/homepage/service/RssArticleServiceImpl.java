@@ -7,6 +7,7 @@ import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -35,6 +36,7 @@ public class RssArticleServiceImpl implements RssArticleService {
     }
 
     @Override
+    @Nullable
     public SyndFeed getSyndFeed(RssFeed rssFeed) {
         SyndFeedInput input = new SyndFeedInput();
         try {
