@@ -1,6 +1,6 @@
-import { RssService } from './../rss.service';
-import { RssFeed } from './../model/RssFeed';
-import { Component, OnInit } from '@angular/core';
+import {RssService} from './../rss.service';
+import {RssFeed} from './../model/RssFeed';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
     selector: 'dh-rss-feed-list',
