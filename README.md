@@ -18,6 +18,9 @@ A sample configuration file is in `config/sample-application.yml`. For now the I
 `./gradle build --continuous`
 `./gradlew bootRun`
 
+#### Swagger JSON
+`/v2/api-docs`
+
 ## TODOs
 
 - Generate feed IDs
