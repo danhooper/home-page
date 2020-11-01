@@ -5,7 +5,7 @@
 #########################
 
 # base image
-FROM node:lts-alpine as builder
+FROM node:12.19.0-alpine3.10 as builder
 
 # set working directory
 RUN mkdir -p /var/opt/frontend/src/app

@@ -13,7 +13,7 @@ export class RssFeedListComponent implements OnInit {
     constructor(private rssService: RssService) {}
 
     ngOnInit() {
-        this.rssService.getRssFeeds().subscribe(feeds => {
+        this.rssService.getRssFeeds().subscribe((feeds) => {
             this.feeds = feeds;
         });
     }

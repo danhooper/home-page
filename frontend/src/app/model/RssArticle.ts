@@ -24,7 +24,7 @@ export class RssArticle implements IRssArticle {
         this.content = article.content;
 
         const htmlContent = this.content.find(
-            content => content.type === 'html',
+            (content) => content.type === 'html',
         );
         this.longDescription = htmlContent
             ? htmlContent.value
