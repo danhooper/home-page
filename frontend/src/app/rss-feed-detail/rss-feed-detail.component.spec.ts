@@ -1,7 +1,7 @@
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {HttpClientModule} from '@angular/common/http';
 import {RssService} from './../rss.service';
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {RssFeedDetailComponent} from './rss-feed-detail.component';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
@@ -12,7 +12,7 @@ describe('RssFeedDetailComponent', () => {
     let component: RssFeedDetailComponent;
     let fixture: ComponentFixture<RssFeedDetailComponent>;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             imports: [HttpClientModule, HttpClientTestingModule],
             declarations: [RssFeedDetailComponent, TimeAgoPipe],
