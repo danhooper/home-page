@@ -18,7 +18,7 @@ ENV PATH /var/opt/frontend/src/app:$PATH
 COPY frontend/package.json /var/opt/frontend/src/app/
 COPY frontend/package-lock.json /var/opt/frontend/src/app/
 RUN npm install
-RUN npm install -g @angular/cli@10.1.4 --unsafe
+RUN npm install -g @angular/cli@11.0.2 --unsafe
 
 # add app
 COPY frontend/ /var/opt/frontend/src/app/
