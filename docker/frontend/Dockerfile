@@ -15,8 +15,7 @@ WORKDIR /var/opt/frontend/src/app
 ENV PATH /var/opt/frontend/src/app:$PATH
 
 # install and cache app dependencies
-COPY frontend/package.json /var/opt/frontend/src/app/
-COPY frontend/package-lock.json /var/opt/frontend/src/app/
+COPY frontend/package*.json /var/opt/frontend/src/app/
 RUN npm install
 RUN npm install -g @angular/cli@10.1.4 --unsafe
 
