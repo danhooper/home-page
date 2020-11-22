@@ -34,7 +34,7 @@ export class RssFeedDetailComponent implements OnInit, OnDestroy {
         this.rssService
             .getArticles(this.feed)
             .pipe(takeUntil(this.destroy))
-            .subscribe(articles => {
+            .subscribe((articles) => {
                 this.articles = articles.slice(0, 10);
                 this.cdr.detectChanges();
             });

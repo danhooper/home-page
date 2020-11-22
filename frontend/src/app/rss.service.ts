@@ -13,8 +13,8 @@ export class RssService {
 
     getRssFeeds(): Observable<RssFeed[]> {
         return this.http.get<IRssFeed[]>('backend/rss').pipe(
-            map(result => {
-                return result.map(feed => new RssFeed(feed));
+            map((result) => {
+                return result.map((feed) => new RssFeed(feed));
             }),
         );
     }
@@ -32,11 +32,11 @@ export class RssService {
         return this.http
             .get<IRssArticle[]>(`backend/rss/${feed.id}/article`)
             .pipe(
-                map(result => {
-                    return result.map(article => new RssArticle(article));
+                map((result) => {
+                    return result.map((article) => new RssArticle(article));
                 }),
             )
-            .subscribe(articles => {
+            .subscribe((articles) => {
                 if (articleSubject.observers.length > 0) {
                     articleSubject.next(articles);
                     feed.lastUpdatedAt = new Date();

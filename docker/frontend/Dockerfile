@@ -5,7 +5,7 @@
 #########################
 
 # base image
-FROM node:lts-alpine as builder
+FROM node:12.19.0-alpine3.10 as builder
 
 # set working directory
 RUN mkdir -p /var/opt/frontend/src/app
@@ -18,7 +18,7 @@ ENV PATH /var/opt/frontend/src/app:$PATH
 COPY frontend/package.json /var/opt/frontend/src/app/
 COPY frontend/package-lock.json /var/opt/frontend/src/app/
 RUN npm install
-RUN npm install -g @angular/cli@7.2.3 --unsafe
+RUN npm install -g @angular/cli@10.1.4 --unsafe
 
 # add app
 COPY frontend/ /var/opt/frontend/src/app/
