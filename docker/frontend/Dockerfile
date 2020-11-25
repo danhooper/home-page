@@ -5,7 +5,7 @@
 #########################
 
 # base image
-FROM node:12.19.0-alpine3.10 as builder
+FROM node:14.15.1-alpine3.12 as builder
 
 # set working directory
 RUN mkdir -p /var/opt/frontend/src/app
@@ -29,7 +29,7 @@ RUN npm run build:prod
 ### NGINX             ###
 #########################
 
-FROM nginx:alpine
+FROM nginx:1.19.5-alpine
 
 COPY --from=builder /var/opt/frontend/src/app/dist/home-page/ /var/www
 COPY docker/frontend/nginx.conf /etc/nginx/nginx.conf
