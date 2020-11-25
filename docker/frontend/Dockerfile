@@ -5,7 +5,7 @@
 #########################
 
 # base image
-FROM node:14.15.1-alpine3.13 as builder
+FROM node:14.15.1-alpine3.12 as builder
 
 # set working directory
 RUN mkdir -p /var/opt/frontend/src/app
