@@ -6,7 +6,7 @@ COPY ./gradlew /var/build/
 COPY build.gradle /var/build/
 COPY settings.gradle /var/build/
 COPY backend/ /var/build/backend/
-RUN gradle build
+RUN gradle build --no-daemon
 
 FROM openjdk:15.0-slim
 WORKDIR /var/backend

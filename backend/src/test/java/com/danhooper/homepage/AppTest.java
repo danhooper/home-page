@@ -3,8 +3,9 @@
  */
 package com.danhooper.homepage;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.springframework.test.util.AssertionErrors.assertNotNull;
 
 public class AppTest {
     @Test public void testAppHasAGreeting() {
