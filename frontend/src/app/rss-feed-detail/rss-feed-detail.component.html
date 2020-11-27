@@ -9,7 +9,7 @@
     </div>
     <mat-accordion [displayMode]="'flat'" [multi]="true">
         <mat-expansion-panel
-            *ngFor="let article of articles"
+            *ngFor="let article of articles$ | async"
             class="art mat-elevation-z0"
             (afterExpand)="onOpenPanel()"
         >
