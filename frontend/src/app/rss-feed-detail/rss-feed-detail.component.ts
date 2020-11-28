@@ -4,14 +4,13 @@ import {
     ElementRef,
     OnInit,
     Input,
-    OnDestroy,
     ChangeDetectorRef,
 } from '@angular/core';
 import {RssFeed} from '../model/RssFeed';
 import {RssService} from '../rss.service';
 import {RssArticle} from '../model/RssArticle';
-import {takeUntil} from 'rxjs/operators';
-import {ReplaySubject} from 'rxjs';
+import {map, tap} from 'rxjs/operators';
+import {of, Observable} from 'rxjs';
 
 @Component({
     selector: 'dh-rss-feed-detail',
@@ -19,10 +18,9 @@ import {ReplaySubject} from 'rxjs';
     styleUrls: ['./rss-feed-detail.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RssFeedDetailComponent implements OnInit, OnDestroy {
+export class RssFeedDetailComponent implements OnInit {
     @Input() feed: RssFeed;
-    articles: RssArticle[] = [];
-    destroy = new ReplaySubject(1);
+    articles$: Observable<RssArticle[]> = of([]);
 
     constructor(
         private rssService: RssService,
@@ -31,18 +29,12 @@ export class RssFeedDetailComponent implements OnInit, OnDestroy {
     ) {}
 
     ngOnInit() {
-        this.rssService
-            .getArticles(this.feed)
-            .pipe(takeUntil(this.destroy))
-            .subscribe((articles) => {
-                this.articles = articles.slice(0, 10);
+        this.articles$ = this.rssService.getArticles(this.feed).pipe(
+            tap(() => {
+                this.feed.lastUpdatedAt = new Date();
                 this.cdr.detectChanges();
-            });
-    }
-
-    ngOnDestroy() {
-        this.destroy.next(true);
-        this.destroy.complete();
+            }),
+            map(articles => articles.slice(0, 10)));
     }
 
     onOpenPanel() {
