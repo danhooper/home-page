@@ -8,11 +8,15 @@ Create a file named `application.yml` in the `config/` directory.
 
 A sample configuration file is in `config/sample-application.yml`. For now the ID must be unique.
 
-## Running
+## Running Production
 
 `docker-compose up -d`
 
 ## Developing
+
+###
+
+`docker-compose -f dev.docker-compose.yml up --build`
 
 ### Frontend
 
@@ -33,4 +37,3 @@ A sample configuration file is in `config/sample-application.yml`. For now the I
 - Hook up to DB
 - CRUD for RSS feeds
 - Versioning
-- Dev mode docker files
