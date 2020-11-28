@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: docker/frontend/dev.Dockerfile
+    container_name: home-page-frontend-dev
+    depends_on:
+      - backend
+    image: home-page-frontend-dev
+    ports:
+      - 4200:4200
+    restart: always
+    volumes:
+      - ./frontend:/var/home_page/frontend
+      - /var/home_page/frontend/node_modules
+
+  backend:
+    build:
+      context: ./
+      dockerfile: docker/backend/dev.Dockerfile
+    container_name: home-page-backend-dev
+    image: home-page-backend-dev
+    ports:
+      - 18080:8080
+    restart: always
+    volumes:
+      - .:/var/home_page
+      - /var/home_page/frontend

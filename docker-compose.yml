@@ -1,26 +1,26 @@
-version: '2'
+version: "2"
 
 services:
-    frontend:
-        build:
-            context: ./
-            dockerfile: docker/frontend/Dockerfile
-        container_name: home_page_frontend
-        depends_on:
-            - backend
-        image: home-page-frontend
-        ports:
-            - 8081:80
-        restart: always
+  frontend:
+    build:
+      context: ./
+      dockerfile: docker/frontend/Dockerfile
+    container_name: home_page_frontend
+    depends_on:
+      - backend
+    image: home-page-frontend
+    ports:
+      - 8081:80
+    restart: always
 
-    backend:
-        build:
-            context: ./
-            dockerfile:  docker/backend/Dockerfile
-        container_name: home_page_backend
-        image: home-page-backend
-        ports:
-            - 18080:8080
-        restart: always
-        volumes:
-            - ./backend/config:/var/backend/config
+  backend:
+    build:
+      context: ./
+      dockerfile: docker/backend/Dockerfile
+    container_name: home_page_backend
+    image: home-page-backend
+    ports:
+      - 18080:8080
+    restart: always
+    volumes:
+      - ./backend/config:/var/backend/config
