@@ -14,7 +14,7 @@ A sample configuration file is in `config/sample-application.yml`. For now the I
 
 ## Developing
 
-###
+### Using Docker
 
 `docker-compose -f dev.docker-compose.yml up --build`
 
