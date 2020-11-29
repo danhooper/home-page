@@ -31,7 +31,6 @@ public class RssArticleServiceImpl implements RssArticleService {
                 .map(syndEntry -> {
                     SyndContent description = syndEntry.getDescription();
                     String desc = description == null ? "" : description.getValue();
-                    System.out.println("getLink" + syndEntry.getLink() + "getUri" + syndEntry.getUri());
                     return new RssArticle(syndEntry.getTitle(), syndEntry.getContents(), desc, syndEntry.getLink().trim());
                 }).collect(Collectors.toList());
     }
