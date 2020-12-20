@@ -34,7 +34,8 @@ const useStyles = makeStyles(() => ({
   },
   feedDetail: {
     border: `1px solid ${theme.palette.primary.dark}`,
-    margin: '5px',
+    borderRadius: '3px',
+    margin: '15px 7px 0 7px',
   },
   feedHeading: {
     fontSize: theme.typography.pxToRem(20),
@@ -54,6 +55,11 @@ const useStyles = makeStyles(() => ({
       maxWidth: '100%',
       objectFit: 'contain',
     }
+  },
+  accordionSummary: {
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.dark,
+    }
   }
 }));
 
@@ -61,7 +67,7 @@ function App() {
   const [feeds, setFeeds] = useState<RssFeed[]>([]);
   const classes = useStyles();
   useEffect(() => {
-    fetch('/rss').then(response => response.json()).then((feeds: IRssFeed[]) => setFeeds(feeds.map(f => new RssFeed(f))));
+    fetch('/rss').then(response => response.json()).then((feeds: IRssFeed[]) => setFeeds(feeds.slice(0, 10).map(f => new RssFeed(f))));
   }, []);
 
   return (
@@ -75,7 +81,7 @@ function App() {
 }
 
 function RssFeedList(props: {feeds: RssFeed[]}) {
-  const feeds = props.feeds.map((feed) => (<Grid item xs={4} key={feed.id}><RssFeedDetail feed={feed} /></Grid>));
+  const feeds = props.feeds.map((feed) => (<Grid item md={4} sm={12} key={feed.id}><RssFeedDetail feed={feed} /></Grid>));
 
   return (
     <Grid container spacing={1}>
@@ -106,6 +112,7 @@ function RssFeedDetail(props: {feed: RssFeed}) {
         <Accordion TransitionProps={{ unmountOnExit: true }} key={article.title + article.url}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon color="secondary" />}
+            className={classes.accordionSummary}
           >
             <Typography className={classes.heading}>{article.title}</Typography>
           </AccordionSummary>
