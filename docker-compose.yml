@@ -10,8 +10,10 @@ services:
       - backend
     image: home-page-frontend
     ports:
-      - 8081:80
+      - 443:443
     restart: always
+    volumes:
+      - ssl:/opt/ssl
 
   backend:
     build:
@@ -24,3 +26,7 @@ services:
     restart: always
     volumes:
       - ./backend/config:/var/backend/config
+
+volumes:
+  ssl:
+    driver: local
