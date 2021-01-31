@@ -9,6 +9,7 @@ RUN gradle build --no-daemon
 FROM openjdk:15.0-slim
 WORKDIR /var/backend
 COPY --from=builder /var/build/backend/build/libs/*  /var/backend
-EXPOSE 8080
-CMD java -jar *.jar
+RUN mkdir -p /var/backend/config
+COPY backend/config/sample-application.yml /var/backend/config/
+CMD java -jar *.jar --server.port="$PORT"
 
