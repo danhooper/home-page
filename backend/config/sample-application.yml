@@ -1,10 +1,13 @@
+cors:
+  origins:
+    - http://localhost:4200
 feed:
-    feeds:
-        - title: ArsTechnica
-          feedUrl: http://feeds.arstechnica.com/arstechnica/index?format=xml
-          id: 0
-          websiteUrl: http://arstechnica.com
-        - title: BBC News
-          feedUrl: http://feeds.bbci.co.uk/news/rss.xml?edition=int
-          id: 6
-          websiteUrl: https://www.bbc.com/
+  feeds:
+    - title: ArsTechnica
+      feedUrl: http://feeds.arstechnica.com/arstechnica/index?format=xml
+      id: 0
+      websiteUrl: http://arstechnica.com
+    - title: BBC News
+      feedUrl: http://feeds.bbci.co.uk/news/rss.xml?edition=int
+      id: 6
+      websiteUrl: https://www.bbc.com/

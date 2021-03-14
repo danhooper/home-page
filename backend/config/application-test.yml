@@ -1,6 +1,9 @@
+cors:
+  origins:
+    - http://localhost:4200
 feed:
-    feeds:
-        - title: ArsTechnica
-          feedUrl: http://feeds.arstechnica.com/arstechnica/index?format=xml
-          id: 0
-          websiteUrl: http://arstechnica.com
+  feeds:
+    - title: ArsTechnica
+      feedUrl: http://feeds.arstechnica.com/arstechnica/index?format=xml
+      id: 0
+      websiteUrl: http://arstechnica.com

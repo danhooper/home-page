@@ -1,5 +1,6 @@
 package com.danhooper.homepage;
 
+import com.danhooper.homepage.config.CorsConfig;
 import com.danhooper.homepage.config.FeedConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 public class Application {
 
+    @Autowired private CorsConfig corsConfig;
     @Autowired private FeedConfig feedConfig;
 
     public static void main(String[] args) {
@@ -32,7 +34,8 @@ public class Application {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:4200");
+                corsConfig.getOrigins().stream()
+                    .forEach(origin -> registry.addMapping("/**").allowedOrigins(origin));
             }
         };
     }
