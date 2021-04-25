@@ -22,7 +22,7 @@ export class RssService {
     getArticles(feed: RssFeed): Observable<RssArticle[]> {
         return timer(0, 600000).pipe(
             switchMap(() => this.configService.getConfig()),
-            switchMap(config => this.http.get<IRssArticle[] | null>(`${config.backendBase}/rss/{feed.id}/article`)),
+            switchMap(config => this.http.get<IRssArticle[] | null>(`${config.backendBase}/rss/${feed.id}/article`)),
             map(result => (result || []).map((article) => new RssArticle(article))),
         );
     }

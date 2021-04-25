@@ -33,5 +33,9 @@ FROM nginx:1.19.5-alpine
 
 COPY --from=builder /var/opt/frontend/src/app/dist/home-page/ /var/www
 COPY docker/frontend/nginx.conf /etc/nginx/conf.d/default.template
+COPY docker/frontend/config.template.json /var/www/
 
-CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/conf.d/default.template > /etc/nginx/nginx.conf && cat /etc/nginx/nginx.conf && nginx -g 'daemon off;'"
+CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/conf.d/default.template > /etc/nginx/nginx.conf && \
+    cat /etc/nginx/nginx.conf && \
+    envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /var/www/config.template.json > /var/www/config.json && \
+    nginx -g 'daemon off;'"
