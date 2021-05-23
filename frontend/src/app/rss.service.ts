@@ -12,16 +12,15 @@ export class RssService {
     constructor(private http: HttpClient) {}
 
     getRssFeeds(): Observable<RssFeed[]> {
-        return this.http.get<IRssFeed[]>('backend/rss').pipe(
-            map((result) => {
-                return result.map((feed) => new RssFeed(feed));
-            }),
-        );
+        return this.http.get<IRssFeed[]>('/backend/feedConfig')
+            .pipe(map(result => {
+                return result.map(f => new RssFeed(f));
+            }));
     }
 
     getArticles(feed: RssFeed): Observable<RssArticle[]> {
         return timer(0, 600000).pipe(
-            switchMap(() => this.http.get<IRssArticle[] | null>(`backend/rss/${feed.id}/article`)),
+            switchMap(() => this.http.get<IRssArticle[] | null>(`/backend/article${feed.id}`)),
             map(result => (result || []).map((article) => new RssArticle(article))),
         );
     }

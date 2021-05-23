@@ -1,8 +1,8 @@
 export interface IRssArticle {
     title: string;
-    description: string;
     url: string;
-    content: SyndContent[];
+    content: string;
+    htmlContent?: string;
 }
 
 export interface SyndContent {
@@ -12,22 +12,12 @@ export interface SyndContent {
 
 export class RssArticle implements IRssArticle {
     title: string;
-    description: string;
     url: string;
-    content: SyndContent[];
-    longDescription: string;
+    content: string;
 
     constructor(article: IRssArticle) {
         this.title = article.title;
-        this.description = article.description;
+        this.content = article.htmlContent || article.content;
         this.url = article.url;
-        this.content = article.content;
-
-        const htmlContent = this.content.find(
-            (content) => content.type === 'html',
-        );
-        this.longDescription = htmlContent
-            ? htmlContent.value
-            : this.description;
     }
 }

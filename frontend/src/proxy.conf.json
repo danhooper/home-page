@@ -1,7 +1,8 @@
 {
   "/backend": {
-    "target": "http://home-page-backend-dev:8080",
+    "target": "https://storage.googleapis.com",
     "secure": false,
-    "pathRewrite": {"^/backend" : ""}
+    "pathRewrite": {"^/backend" : "/dh-home-page"},
+    "changeOrigin": true
   }
 }
