@@ -32,4 +32,8 @@ RUN npm run build:prod
 FROM nginx:1.19.5-alpine
 
 COPY --from=builder /var/opt/frontend/src/app/dist/home-page/ /var/www
-COPY docker/frontend/nginx.conf /etc/nginx/nginx.conf
+COPY docker/frontend/nginx.conf /etc/nginx/conf.d/default.template
+
+CMD sh -c "envsubst \"`env | awk -F = '{printf \" \\\\$%s\", $1}'`\" < /etc/nginx/conf.d/default.template > /etc/nginx/nginx.conf && \
+    cat /etc/nginx/nginx.conf && \
+    nginx -g 'daemon off;'"

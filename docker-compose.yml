@@ -6,14 +6,10 @@ services:
       context: ./
       dockerfile: docker/frontend/Dockerfile
     container_name: home_page_frontend
-    depends_on:
-      - backend
     image: home-page-frontend
     ports:
-      - 443:443
+      - 80:80
     restart: always
-    volumes:
-      - ssl:/opt/ssl
 
   backend:
     build:

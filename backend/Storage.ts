@@ -20,7 +20,7 @@ export async function createBucketWithStorageClassAndLocation(bucketName: string
     const storage = new Storage();
     const response = await storage.getBuckets({maxResults: 1, prefix: bucketName});
     const [bucket] = response[0];
-    await bucket.setCorsConfiguration([{origin: ['http://localhost:4200'], method: ['GET']}]);
+    await bucket.setCorsConfiguration([{origin: ['http://localhost:4200'], method: ['GET']}, {origin: ['https://frontend-yrznrlpvba-uk.a.run.app'], method: ['GET']}]);
     console.log('Updated bucket cors');
   }
   
