@@ -1,14 +1,14 @@
-FROM gradle:6.7.1-jdk15 as builder
-USER root
-RUN mkdir -p /var/build
-WORKDIR /var/build
-COPY ./gradlew build.gradle settings.gradle /var/build/
-COPY backend/ /var/build/backend/
-RUN gradle build --no-daemon
+FROM node:14.15.1-alpine3.12 as builder
 
-FROM openjdk:15.0-slim
+# set working directory
+RUN mkdir -p /var/backend
 WORKDIR /var/backend
-COPY --from=builder /var/build/backend/build/libs/*  /var/backend
-EXPOSE 8080
-CMD java -jar *.jar
 
+# install and cache app dependencies
+COPY backend/package*.json /var/backend
+RUN npm install
+
+# add app
+COPY backend/  /var/backend
+
+ENTRYPOINT [ "npx", "ts-node", "index.ts" ]

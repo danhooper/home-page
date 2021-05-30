@@ -17,11 +17,11 @@ services:
       dockerfile: docker/backend/Dockerfile
     container_name: home_page_backend
     image: home-page-backend
-    ports:
-      - 18080:8080
     restart: always
     volumes:
       - ./backend/config:/var/backend/config
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/var/backend/config/google.json
 
 volumes:
   ssl:
