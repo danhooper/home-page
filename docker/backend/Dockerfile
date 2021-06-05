@@ -5,7 +5,7 @@ RUN mkdir -p /var/backend
 WORKDIR /var/backend
 
 # install and cache app dependencies
-COPY backend/package*.json /var/backend
+COPY backend/package*.json /var/backend/
 RUN npm install
 
 # add app
