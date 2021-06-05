@@ -30,7 +30,7 @@ export class RssFeed implements IRssFeed {
         const parser = new Parser();
         const results = await parser.parseURL(this.feedUrl);
 
-        return results.items.map(item => {
+        return results.items.slice(0, 10).map(item => {
 
             return new RssArticle({
                 content: (item.content || 'No Content').trim(),
