@@ -1,6 +1,6 @@
 export interface IRssArticle {
     title: string;
-    url: string;
+    link: string;
     content: string;
     htmlContent?: string;
 }
@@ -12,12 +12,12 @@ export interface SyndContent {
 
 export class RssArticle implements IRssArticle {
     title: string;
-    url: string;
+    link: string;
     content: string;
 
     constructor(article: IRssArticle) {
         this.title = article.title;
         this.content = article.htmlContent || article.content;
-        this.url = article.url;
+        this.link = article.link;
     }
 }
