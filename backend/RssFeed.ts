@@ -33,10 +33,10 @@ export class RssFeed implements IRssFeed {
         return results.items.map(item => {
 
             return new RssArticle({
-                content: item.content || 'No Content',
-                htmlContent: item['content:encoded'],
-                link: item.link, 
-                title: item.title || 'No Title',
+                content: (item.content || 'No Content').trim(),
+                htmlContent: (item['content:encoded'] || '').trim(),
+                link: item.link.trim(), 
+                title: (item.title || 'No Title').trim(),
             });
         });
 
