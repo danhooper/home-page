@@ -19,6 +19,7 @@ services:
     image: home-page-backend
     restart: 'no'
     volumes:
+      - ./backend/cache:/var/backend/cache
       - ./backend/config:/var/backend/config
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/var/backend/config/google.json

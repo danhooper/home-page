@@ -1,4 +1,5 @@
 import {Storage} from '@google-cloud/storage';
+import * as fs from 'fs';
 
 export async function createBucketWithStorageClassAndLocation(bucketName: string, location: string = 'US') {
     const storage = new Storage();
@@ -23,14 +24,38 @@ export async function createBucketWithStorageClassAndLocation(bucketName: string
     await bucket.setCorsConfiguration([{origin: ['http://localhost:4200'], method: ['GET']}, {origin: ['https://frontend-yrznrlpvba-uk.a.run.app'], method: ['GET']}]);
     console.log('Updated bucket cors');
   }
+
+  export function contentsChanged(destination: string, contents: string): boolean {
+    const cacheDir = 'cache';
+    const cacheFile = `${cacheDir}/${destination}.json`;
+
+    if (fs.existsSync(cacheFile)) {
+      const oldContents = fs.readFileSync(cacheFile, 'utf-8');
+
+      if (contents === oldContents) {
+        console.log(cacheFile, 'contents have not changed')
+        return false;
+      }
+    }
+
+    fs.writeFileSync(cacheFile, contents);
+
+    return true;
+  }
   
   export async function uploadObject(bucketName: string, destination: string, contents: string): Promise<void> {
+    if (!contentsChanged(destination, contents)) {
+      return;
+    }
+
     const storage = new Storage();
     const file = storage.bucket(bucketName).file(destination)
     await file.save(contents);
+
     await file.setMetadata({
       cacheControl: 'public, max-age=300',
-    })
-    console.log('uploaded data to ', bucketName)
+    });
+
+    console.log('uploaded data to ', bucketName, destination);
   }
    
