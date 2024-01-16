@@ -50,7 +50,12 @@ export async function createBucketWithStorageClassAndLocation(bucketName: string
 
     const storage = new Storage();
     const file = storage.bucket(bucketName).file(destination)
-    await file.save(contents);
+    try {
+        await file.save(contents);
+    } catch(error) {
+        console.log('Error saving file', error);
+	return;
+    }
 
     await file.setMetadata({
       cacheControl: 'public, max-age=300',

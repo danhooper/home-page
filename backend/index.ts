@@ -17,9 +17,13 @@ try {
     await updateBucketCors(config.bucketName);
     await uploadObject(config.bucketName, config.destConfigFilename, JSON.stringify(feeds.map(f => f.toDto())));
     for (const feed of feeds) {
+	    try {
       const articles = await feed.getArticles();
       const destination = `${config.destArticlePrefix}${feed.id}`;
       await uploadObject(config.bucketName, destination, JSON.stringify(articles));
+	    } catch (err) {
+		    console.error('Error getting articles', err);
+	    }
     }
     // await createBucketWithStorageClassAndLocation(config.bucketName);
 } catch (e) {

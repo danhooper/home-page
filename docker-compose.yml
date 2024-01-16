@@ -18,6 +18,7 @@ services:
     container_name: home_page_backend
     image: home-page-backend
     restart: 'no'
+    network_mode: 'host'
     volumes:
       - ./backend/cache:/var/backend/cache
       - ./backend/config:/var/backend/config
