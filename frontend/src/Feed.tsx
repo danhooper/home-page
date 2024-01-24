@@ -1,22 +1,22 @@
-import './App.css'
-import { Link, Paper, Typography } from '@mui/material'
-import { Article } from './Article'
-import { styled } from '@mui/system'
-import { type IRssFeedWithArticles } from '@dh-home-page/models/RssFeedDto'
+import './App.css';
+import { Link, Paper, Typography } from '@mui/material';
+import { Article } from './Article';
+import { styled } from '@mui/system';
+import { type IRssFeedWithArticles } from '@dh-home-page/models/RssFeedDto';
 
 const StyledH4 = styled(Typography)({
-  textAlign: 'center',
-  marginTop: 10
-})
+    textAlign: 'center',
+    marginTop: 10,
+});
 
 const StyledPaper = styled(Paper)({
-  backgroundColor: '#373737',
-  textAlign: 'center',
-  padding: 10
-})
+    backgroundColor: '#373737',
+    textAlign: 'center',
+    padding: 10,
+});
 
-export function Feed ({ feed }: { feed: IRssFeedWithArticles }): JSX.Element {
-  return (
+export function Feed({ feed }: { feed: IRssFeedWithArticles }): JSX.Element {
+    return (
         <>
             <StyledH4 variant='h4'>
                 <Link
@@ -37,5 +37,5 @@ export function Feed ({ feed }: { feed: IRssFeedWithArticles }): JSX.Element {
                 </StyledPaper>
             )}
         </>
-  )
+    );
 }

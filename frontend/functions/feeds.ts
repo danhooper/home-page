@@ -9,20 +9,20 @@
  */
 
 export interface Env {
-  // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
-  // MY_KV_NAMESPACE: KVNamespace;
-  //
-  // Example binding to Durable Object. Learn more at https://developers.cloudflare.com/workers/runtime-apis/durable-objects/
-  // MY_DURABLE_OBJECT: DurableObjectNamespace;
-  //
-  // Example binding to R2. Learn more at https://developers.cloudflare.com/workers/runtime-apis/r2/
-  bucket: R2Bucket
-  //
-  // Example binding to a Service. Learn more at https://developers.cloudflare.com/workers/runtime-apis/service-bindings/
-  // MY_SERVICE: Fetcher;
-  //
-  // Example binding to a Queue. Learn more at https://developers.cloudflare.com/queues/javascript-apis/
-  // MY_QUEUE: Queue;
+    // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
+    // MY_KV_NAMESPACE: KVNamespace;
+    //
+    // Example binding to Durable Object. Learn more at https://developers.cloudflare.com/workers/runtime-apis/durable-objects/
+    // MY_DURABLE_OBJECT: DurableObjectNamespace;
+    //
+    // Example binding to R2. Learn more at https://developers.cloudflare.com/workers/runtime-apis/r2/
+    bucket: R2Bucket;
+    //
+    // Example binding to a Service. Learn more at https://developers.cloudflare.com/workers/runtime-apis/service-bindings/
+    // MY_SERVICE: Fetcher;
+    //
+    // Example binding to a Queue. Learn more at https://developers.cloudflare.com/queues/javascript-apis/
+    // MY_QUEUE: Queue;
 }
 // const corsHeaders = {
 //     'Access-Control-Allow-Headers': '*', // What headers are allowed. * is wildcard. Instead of using '*', you can specify a list of specific headers that are allowed, such as: Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Authorization.
@@ -31,17 +31,17 @@ export interface Env {
 // };
 
 export const onRequest: PagesFunction<Env> = async (context) => {
-  const object = await context.env.bucket.get('feeds.json')
+    const object = await context.env.bucket.get('feeds.json');
 
-  if (object === null) {
-    return new Response('Object Not Found', { status: 404 })
-  }
+    if (object === null) {
+        return new Response('Object Not Found', { status: 404 });
+    }
 
-  const headers = new Headers()
-  object.writeHttpMetadata(headers)
-  headers.set('etag', object.httpEtag)
+    const headers = new Headers();
+    object.writeHttpMetadata(headers);
+    headers.set('etag', object.httpEtag);
 
-  return new Response(object.body, {
-    // headers: corsHeaders,
-  })
-}
+    return new Response(object.body, {
+        // headers: corsHeaders,
+    });
+};

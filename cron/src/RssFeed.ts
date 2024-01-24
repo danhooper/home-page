@@ -1,4 +1,4 @@
-import { IRssArticle } from '@dh-home-page/models/RssArticle';
+import { type IRssArticle } from '@dh-home-page/models/RssArticle';
 import { type IRssFeed } from '@dh-home-page/models/RssFeed';
 import { RssFeedDto } from '@dh-home-page/models/RssFeedDto';
 import Parser from 'rss-parser';
