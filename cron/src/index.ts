@@ -17,7 +17,6 @@ export async function main(): Promise<void> {
         }),
     );
 
-    console.log('done fetching results', JSON.stringify(results));
     await fs.writeFile('./feeds.json', JSON.stringify(results));
     console.log('wrote file');
     process.exit();
