@@ -241,3 +241,5 @@ gradle-app.setting
 #
 backend/config/application.yml
 docker-compose.override.yml
+wrangler.toml
+.wrangler
