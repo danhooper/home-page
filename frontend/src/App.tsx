@@ -20,7 +20,7 @@ function App(): JSX.Element {
     return (
         <>
             <Grid container spacing={2}>
-              {isLoading && <CircularProgress />}
+              {isLoading && <Grid item sx={{display: 'flex', justifyContent: 'center', width: '100%'}}><CircularProgress /></Grid>}
                 {feeds.map((feed: IRssFeedWithArticles) => (
                     <Grid
                         key={feed.title + feed.websiteUrl}
