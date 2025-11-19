@@ -13,14 +13,18 @@ function App(): JSX.Element {
             const response = await fetch('/feeds');
 
             setFeeds((await response.json()) as IRssFeedWithArticles[]);
-            setIsLoading(false)
+            setIsLoading(false);
         })();
     }, []);
 
     return (
         <>
             <Grid container spacing={2}>
-              {isLoading && <Grid item sx={{display: 'flex', justifyContent: 'center', width: '100%'}}><CircularProgress /></Grid>}
+                {isLoading && (
+                    <Grid item sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <CircularProgress />
+                    </Grid>
+                )}
                 {feeds.map((feed: IRssFeedWithArticles) => (
                     <Grid
                         key={feed.title + feed.websiteUrl}
