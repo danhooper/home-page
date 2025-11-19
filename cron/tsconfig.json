@@ -106,10 +106,10 @@
         // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
         "skipLibCheck": true,
         "paths": {
-            "@dh-home-page/models/*": ["../models/src/*"]
-        }
+            "@dh-home-page/models/*": ["../models/src/*"],
+        },
     },
     "ts-node": {
-        "require": ["tsconfig-paths/register"]
-    }
+        "require": ["tsconfig-paths/register"],
+    },
 }

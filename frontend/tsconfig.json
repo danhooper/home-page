@@ -20,10 +20,10 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "paths": {
-            "@dh-home-page/models/*": ["../models/src/*"]
-        }
+            "@dh-home-page/models/*": ["../models/src/*"],
+        },
     },
     "include": ["src"],
     "exclude": ["functions/**/*"],
-    "references": [{ "path": "./tsconfig.node.json" }]
+    "references": [{ "path": "./tsconfig.node.json" }],
 }
