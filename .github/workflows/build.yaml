@@ -1,11 +1,6 @@
 name: Build
 
-on:
-  push:
-    branches:
-      - master
-      - github-actions
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
