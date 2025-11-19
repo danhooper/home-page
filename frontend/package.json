@@ -7,8 +7,11 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "deploy": "npm run build && npx wrangler pages deploy dist",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prettier": "prettier --check *",
+        "eslint": "eslint --max-warnings=0 \"**/*.{ts,tsx}\"",
+        "prettier-fix": "prettier --write *",
+        "eslint-fix": "eslint --fix \"**/*.{ts,tsx}\""
     },
     "dependencies": {
         "@emotion/react": "^11.11.3",

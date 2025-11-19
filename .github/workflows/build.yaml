@@ -21,3 +21,28 @@ jobs:
       - name: TypeScript Check
         run: npm run eslint && npm run prettier
 
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 25
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run eslint && npm run prettier
+
+      - name: Install frontend dependencies
+        run: npm install
+        working-directory: frontend
+
+      - name: Lint
+        run: npm run eslint && npm run prettier
+        working-directory: frontend
