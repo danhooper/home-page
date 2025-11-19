@@ -1,12 +1,17 @@
-import fs from 'fs/promises';
+import fs from 'node:fs/promises';
 import { RssFeed } from './RssFeed';
-import { type Config } from './Config';
+import { isConfig } from './Config';
 import yaml from 'js-yaml';
-import { type IRssFeedWithArticles } from '@dh-home-page/models/RssFeedDto';
+import type { IRssFeedWithArticles } from '@dh-home-page/models/RssFeedDto';
 
 export async function main(): Promise<void> {
-    const doc: Config = yaml.load(await fs.readFile('config/config.yml', 'utf8')) as any;
-    const feeds = doc.feeds.map((f) => new RssFeed(f));
+    const config = yaml.load(await fs.readFile('config/config.yml', 'utf8'));
+
+    if (!isConfig(config)) {
+        throw new Error('config.yml config is invalid');
+    }
+
+    const feeds = config.feeds.map((f) => new RssFeed(f));
 
     const results: IRssFeedWithArticles[] = await Promise.all(
         feeds.map(async (feed) => {
@@ -22,5 +27,4 @@ export async function main(): Promise<void> {
     process.exit();
 }
 
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
 main();

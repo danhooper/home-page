@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, type JSX } from 'react';
 import './App.css';
 import {
     Accordion,
@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { type IRssArticle } from '@dh-home-page/models/RssArticle';
+import type { IRssArticle } from '@dh-home-page/models/RssArticle';
 import Fade from '@mui/material/Fade';
 
 const CustomizedAccordionDetails = styled(AccordionDetails)`
@@ -30,7 +30,7 @@ const CustomizedAccordionDetails = styled(AccordionDetails)`
     }
 `;
 
-const CustomizedAccordion = styled(Accordion)(({}) => ({
+const CustomizedAccordion = styled(Accordion)(() => ({
     backgroundColor: '#373737',
     '&::before': {
         backgroundColor: '#ff8a65',
@@ -47,7 +47,7 @@ const CustomizedAccordion = styled(Accordion)(({}) => ({
     },
 }));
 
-const StyledExpandMoreIcon = styled(ExpandMoreIcon)(({}) => ({
+const StyledExpandMoreIcon = styled(ExpandMoreIcon)(() => ({
     fill: '#ff8a65',
 }));
 
@@ -58,12 +58,10 @@ export function Article({ article }: { article: IRssArticle }): JSX.Element {
     useEffect(() => {
         if (expanded) {
             setTimeout(() => {
-                Array.from(accordionRef?.current?.querySelectorAll('a') ?? []).forEach(
-                    (el: any) => {
-                        el.setAttribute('target', '_blank');
-                        el.setAttribute('rel', 'noopener');
-                    },
-                );
+                Array.from(accordionRef?.current?.querySelectorAll('a') ?? []).forEach((el) => {
+                    el.setAttribute('target', '_blank');
+                    el.setAttribute('rel', 'noopener');
+                });
             }, 300);
         }
     }, [accordionRef, expanded]);
@@ -89,7 +87,6 @@ export function Article({ article }: { article: IRssArticle }): JSX.Element {
                 <CustomizedAccordionDetails>
                     <div
                         ref={accordionRef}
-                        // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions
                         dangerouslySetInnerHTML={{ __html: article.htmlContent || article.content }}
                     />
                 </CustomizedAccordionDetails>

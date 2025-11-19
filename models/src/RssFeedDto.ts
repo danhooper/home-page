@@ -1,4 +1,4 @@
-import { type IRssArticle } from './RssArticle';
+import type { IRssArticle } from './RssArticle';
 
 export interface IRssFeedDto {
     title: string;
