@@ -1,4 +1,4 @@
-import { type IRssArticle } from '@dh-home-page/models/RssArticle';
+import type { IRssArticle } from '@dh-home-page/models/RssArticle';
 
 export class RssArticle {
     content: string;
@@ -6,10 +6,10 @@ export class RssArticle {
     link?: string;
     title: string;
 
-    constructor(article: IRssArticle) {
-        this.content = article.content;
-        this.htmlContent = article.htmlContent;
-        this.link = article.link;
-        this.title = article.title;
+    constructor({ content, htmlContent, link, title }: IRssArticle) {
+        this.content = content;
+        this.htmlContent = htmlContent;
+        this.link = link;
+        this.title = title;
     }
 }
