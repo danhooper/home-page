@@ -6,6 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "prepare": "husky install",
+        "prettier": "prettier --check *",
+        "eslint": "eslint --max-warnings=0 \"**/*.{ts,tsx}\"",
         "prettier-fix": "prettier --write *",
         "eslint-fix": "eslint --fix \"**/*.{ts,tsx}\""
     },
